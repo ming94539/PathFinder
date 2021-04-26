@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 import time
 
 browser = webdriver.Chrome("./chromedriver")
+browser.set_window_size(1920, 1080)
 browser.get("https://www.linkedin.com")
 
 username = browser.find_element_by_id("session_key")
@@ -20,9 +21,13 @@ login_button.click()
 
 browser.get("https://www.linkedin.com/jobs")
 
-time.sleep(3)
-job_search_bar = browser.find_element_by_id("jobs-search-box-keyword-id-ember37")
+time.sleep(5)
+job_search_bar = browser.find_element_by_class_name("jobs-search-box__text-input")
 job_search_bar.send_keys("Software Engineer")
+
+time.sleep(2)
+# msg_button=browser.find_element_by_id("ember164")
+# msg_button.click()
 
 job_search_button = browser.find_element_by_class_name("jobs-search-box__submit-button")
 job_search_button.click()
@@ -81,7 +86,7 @@ while current < pages:
     lxml_soup = BeautifulSoup(browser.page_source, 'lxml')
     page_buttons = lxml_soup.find_all('li', class_ = 'artdeco-pagination__indicator')
     pg_num = 3
-    pg_id = _
+    pg_id = ""
     for page_button in page_buttons:
         target_button = "data-test-pagination-page-btn=\""+str(pg_num)+"\""
         if str(page_button).find(target_button) >= 0:
