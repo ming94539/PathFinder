@@ -12,10 +12,10 @@ class Scraper:
 		if is_headless: 
 			self.current_options = Options()
 			self.current_options.headless = True
-			self.driver = webdriver.Chrome(options=self.current_options)
+			self.driver = webdriver.Chrome("./chromedriver",options=self.current_options)
 		#set the driver path
 		else:
-			self.driver = webdriver.Chrome()
+			self.driver = webdriver.Chrome("./chromedriver")
 
 	#navigates the scraper to a page at the given URL
 	def get_page(self, url):

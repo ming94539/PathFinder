@@ -90,3 +90,49 @@ Job function
 EngineeringInformation Technology
 Industries
 Information Technology and ServicesComputer SoftwareInternet
+Zoomies help the world connect — and deliver happiness while doing it. We set out to build the best video conferencing product for the enterprise, and today help people communicate better with products like Zoom Phone, Zoom Rooms, Zoom Video Webinars, Zoom Apps, and OnZoom.
+
+We’re problem-solvers and self-starters, working at a fast pace to design solutions with our customers and users in mind. Here, you’ll work across teams to dig deep into impactful projects that are changing the way people communicate, and enjoy opportunities to advance your career in a diverse, inclusive environment.
+
+Zoom is an award-winning workplace. We have been recognized by Comparably as #1 CEO, Company Happiness, Benefits, Compensation, Diversity, and more! Not to mention we’ve been awarded by Glassdoor as the 2nd Best US workplace & Best Large Company US CEO in 2018, Wealthfront, and Business Insider. Our culture focuses on delivering happiness, our commitment to transparency, and the tangible benefits we provide our employees and our customers.
+
+Java Full Stack Developer
+
+Responsibilities
+Design, development, and testing of features/functions delivered via applications and services
+Working with operations teams to ensure your applications and services are highly available and reliable
+Hands on software development for product that will perform at scale, be supportable, and be extensible.
+
+Requirements
+BS degree or equivalent in a directly related discipline (CS, Eng, etc.).
+Have prior internship or related work experience. (3+ years work experience)
+Have successfully built, deployed, and supported an enterprise-scale web application in the cloud.
+Ideally have full-stack experience, with expertise in at least one layer.
+Hands-on software development experience in Java.
+Hands-on software development experience in JavaScript with a modern MVC framework.
+Cognizant of modern database/storage technologies
+Understands complex workflows and develop and validate innovative solutions to solve difficult problems.
+Experience with multi-threaded programming.
+Experience developing application on Linux.
+
+Preferred Qualifications
+Experience solving internet scale problems
+Experience working on cloud (on-demand) software
+Excellent verbal and written communication skill
+Cloud experience
+
+Explore Zoom
+Hear from our leadership team
+Browse Awards and Employee Reviews on Comparably
+Visit our Blog
+Zoom with us!
+Find us on social at the links below and on Instagram
+Show less
+Seniority level
+Not Applicable
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Computer Software, and Internet
