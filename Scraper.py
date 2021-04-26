@@ -30,10 +30,19 @@ class Scraper:
 		self.driver.quit()
 	#this scrapes the job details from a given Linkedin page
 	def scrape_linkedin(self):
-		self.driver.find_element_by_class_name("show-more-less-html__button").click()
+		if(self.check_element("show-more-less-html__button")):
+			self.driver.find_element_by_class_name("show-more-less-html__button").click()
+
 		print(self.driver.find_element_by_class_name("description").text, file = open("results.txt","a"))
 		return 
 
+	#from stackoverflow question 47791232
+	def check_element(self,element):
+		try:
+			self.driver.find_element_by_class_name(element)
+			return True
+		except(NoSuchElementException) as e:
+			return False
 
 def main():
 	test = Scraper()

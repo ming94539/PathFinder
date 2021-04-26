@@ -6,10 +6,11 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from bs4 import BeautifulSoup
 import time
-
+from Scraper import Scraper
 browser = webdriver.Chrome("./chromedriver")
 browser.set_window_size(1920, 1080)
 browser.get("https://www.linkedin.com")
+scraper = Scraper()
 
 username = browser.find_element_by_id("session_key")
 username.send_keys("mjeng@ucsc.edu")
@@ -99,3 +100,9 @@ while current < pages:
     next_button = browser.find_element_by_id(pg_id)
     next_button.click()
     current+=1
+
+for i in range(10):
+	to_scrape = "https://www.linkedin.com/jobs/search/?currentJobId={}&keywords=software%20engineer&start=50".format(id_list[i])
+	scraper.get_page(to_scrape)
+	scraper.scrape_linkedin()
+scraper.end_scraping()

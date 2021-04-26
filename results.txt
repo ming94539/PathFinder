@@ -136,3 +136,448 @@ Job function
 Engineering and Information Technology
 Industries
 Information Technology and Services, Computer Software, and Internet
+Direct message the job poster from RennerBrown
+John Insabella
+Staffing Specialist at RennerBrown
+The Financial Systems Programmer/Analyst will design and write computer programs for financial systems as well as assist in database design and data retrieval/manipulation. Primary tasks will include integration, reporting, modification and maintenance.
+
+Typical responsibilities include, but are not limited to, the following:
+Design and implement programs and utilities. Perform database design in support of same.
+Gain sufficient mastery of current database in order to quickly respond to ad hoc requests for data
+Work with Business Analyst to help gather program & data specifications based upon client requirements.
+Integrate third-party software and data into the Firm’s financial systems. Perform knowledge-transfer with vendors who have supplied custom software to the firm in order to take over responsibility of same.
+Adhere to standards for programming, documentation and source code control. Monitor team adherence to said standards.
+Ability to work in a team environment. Participate in, and contribute to, regular team meetings. Interact with Information Systems personnel as needed.
+Ability to take over a project from another developer while maintaining the original design methodology without having to “begin from scratch”.
+Assist in recommendation for best approach to a project by using variety of programming tools, languages and databases.
+Assist Business Analyst in creating documentation of financial systems and processes
+ Requirements:
+Must have in-depth knowledge in one or more of the following computer languages and databases: MS Visual Studio (C# or VB.Net), MS Azure, SSRS, SSIS, MS SQLServer
+Experience with HTML/XML/CSS
+Proficient in Microsoft Office including advanced Excel (design, lookups, pivot tables).
+Experience with business intelligence and data analytics software such as Power BI, Tableau, Alteryx a plus
+Experience working with Aderant, Practice Management Systems or other ERP systems
+Familiarity with professional services firms.
+Excellent analytical skills.
+Strong communication (oral and written) skills.
+Solid interpersonal skills.
+Excellent organizational and time management abilities.
+Candidate must adopt a problem-solving approach to projects.
+Have experience with user support.
+Ability to prioritize and meet conflicting deadlines
+
+
+Bachelor’s degree in Computer Information Systems or related field or 5 years programming experience.
+Minimum 4+ years’ experience in similar capacity.
+Show less
+Seniority level
+Associate
+Employment type
+Full-time
+Job function
+EngineeringInformation Technology
+Industries
+Financial ServicesLaw Practice
+Direct message the job poster from WideOrbit
+Karla Xochicale-Denicia (She/Her)
+Talent Acquisition Coordinator at WideOrbit
+About WideOrbit:
+Say hello to a Wider World. WideOrbit helps media companies do more business by making it easier to complete more sales. We build the one platform that ties everything together – from TV, radio, and digital ad sales, to reporting, invoicing, and payments. Chances are if there’s an ad on your local TV or radio station, or on your favorite streaming service or podcast, we helped put it there. Our customers include NBCUniversal, AMC Networks, ViacomCBS, A+E Networks, Hearst Media, and many more industry leaders around the world.
+
+At WideOrbit, we make preserving our inclusive environment an ongoing priority, empowering team members to contribute at every level, in every function. We hire high-energy innovators who value diversity, unafraid to wield their passion and expertise to advocate for our customers and each other. At WideOrbit, you’ll make a difference and see your impact every day, while learning, growing, and enjoying what you do!
+ Job Description:
+As our Software Engineer, you will be a major contributor to a small, experienced team. You will work on our next-generation streaming media and podcasting solutions and your code will make an impact on the product. We build powerful web services, complex data pipelines, and modern UI. You’ll have a chance to focus on areas you’re already skilled in and take on new challenges over time. Our distributed team has a fun and inclusive environment with a commitment to work-life balance.
+ What it’s like to work on this team:
+Start your day with coffee in your own home office. Write some code before lunch, and then take a break. You can catch up on some reading, join in one of our occasional lunch gaming sessions, or learn something that interests you through your provided Udemy and Pluralsight accounts. Finish the code you’re working on, update tests, and if you finish a feature submit a PR. Then checkout by 5. We work to live, not the other way around, and we encourage healthy working hours.
+We are developers and we understand what developers need.  We’ll provide you with a work environment where collaboration is encouraged but you’re not bombarded with superfluous interruptions. We have highly encouraged quiet times each afternoon so that everyone can focus without worrying they’re missing anything. We work in modern agile feature teams that self-organize and work together to build great software. You’ll have the opportunity to contribute new ideas, learn new technologies, and build new features. Our friendly code reviews make us all better and you get to be a part of that by both reviewing codes and having yours reviewed. We have fun doing what we do, and you will too.
+ Here is what success will look like:
+Designing and developing enterprise-level web service software solutions
+Building fresh, dynamic interfaces in ReactJS
+Defining testing requirements, and authoring Unit and Behavioral cases plus working alongside QA to ensure quality
+Participating in Tech Spikes and Feasibility studies to help flesh out new ideas and unknowns
+Partnering with development, product support, QA, and other DAS teams to make the best product we can
+Acquiring new skills, broadening existing skills, and contributing to others through knowledge sharing – we are better together
+       To thrive in this role, we’re looking for:
+You possess 4+ years’ experience writing quality modern web apps in PHP or GoLang 
+You understand that services need to scale, and you take pride in making sure yours do so commendably
+You enjoy creating modern UI in JavaScript and are interested in working in React
+You’re enthusiastic about the power of databases and have experience with MySQL or a similar technology
+You’ll contribute your awesome verbal and written communication skills
+You take ownership of the things you build. You look at everything with a critical eye, and fixing a bug is as satisfying as adding a great new feature (You’ll get to do both!)
+You work well with competing tasks, and if things change, you pivot quickly and execute smoothly
+If you have experience in the radio broadcast or streaming industry, that’s a plus
+Degree in Computer Science or related field, or equivalent practical experience
+ Other things we do that you could contribute to:
+Docker, C#, Cassandra, Big Query, AWS, and GCP technologies
+Powerful dynamic ad decisioning engines
+Advanced data reporting and forecasting
+Audio engineering
+Best in class streaming audio tools
+
+Location:
+This is a telecommute / remote position. If you’re located near Vancouver, WA, it's a plus.
+
+Compensation, Benefits, and Perks:
+Besides a great work environment with smart and friendly coworkers, access to leadership, and knowledge about how your work impacts company success, here are some of our benefits and perks:
+
+A competitive salary, health insurance, sabbatical leaves, great vacation package, work/life balance, life event benefits, casual work attire, stocked café, 401(k) match, and plenty of opportunities to grow! 
+ 
+We are committed to treating all applicants fairly, WideOrbit is an equal opportunity employer that prohibits unlawful discrimination based on race, color, religion, sex, national origin, age, physical or mental disability, medical condition, sexual orientation, marital status, military or veteran status, gender identity and expression, genetic information, or any other factor protected by law. Additionally, we consider qualified applicants whose histories are impacted by our justice system, consistent with applicable federal, state, and local law.
+Show less
+Seniority level
+Mid-Senior level
+Employment type
+Full-time
+Job function
+Engineering
+Industries
+Computer SoftwareBroadcast Media
+The Opportunity
+
+Software Engineering plays a key role in insitro’s approach to rethinking drug development. Our team is responsible for the software platform at insitro, which covers everything from providing orchestration and workflow software for our automated lab (LIMS, data review/visualization), data pipelines for ingesting data from pharma and research collaborators, bioinformatic pipelines for our genomic datasets, and APIs and tooling for our data science and machine learning teams. You will work closely with a cross-functional team of scientists, bioengineers, and data scientists to identify areas where software engineering can make a difference. You will design, implement, and deploy software systems across broad domains: full stack web development, backend APIs, data warehousing, data and bioinformatic pipelines, cloud infrastructure, data science and machine learning tooling. You will work as part of a team to rigorously design our software platform, identify key architectural performance improvements and support ongoing discovery and automation platforms.
+
+You will be joining as the founding team of a biotech startup that has long-term stability due to significant funding, but yet is very much in formation. A lot can change in this early and exciting phase, providing many opportunities for significant impact. You will work closely with a very talented team, learn a broad range of skills, and help shape insitro’s culture, strategic direction, and outcomes. Join us, and help make a difference to patients!
+
+About You
+BS, MS, or Ph.D. in computer science, statistics, mathematics, physics, engineering, or equivalent practical experience
+Expertise in one or more general-purpose programming languages (such as Python, Java, Scala, C/C++, or Go)
+Demonstrated ability to write high-quality, production-ready code (readable, well-tested, with well-designed APIs)
+Familiarity with cloud computing services (AWS or GCP)
+Familiarity with relational databases.
+Familiarity with web services and application frameworks (Django, Flask).
+Ability to communicate effectively and collaborate with people of diverse backgrounds and job functions
+Proficiency in Linux environment (including shell scripting), experience with database languages (e.g., SQL, No-SQL) and experience with version control practices and tools (Git, Mercurial, etc.)
+Passion for making a difference in the world
+
+
+Nice to Have
+Experience with working lab and scientist stakeholders in a health tech or genomics field.
+Experience with medium-sized data sets (100TB+)
+Demonstrated ability to develop novel data engineering methods that go beyond putting together of existing code, and to apply problem-solving skills to complex issues
+
+
+Benefits at insitro
+Excellent medical, dental, and vision coverage
+Open vacation policy
+Team lunches (catered daily)
+Commuter benefits
+Paid parental leave
+This role may be based remotely, if preferred
+
+
+About Insitro
+
+insitro is a drug discovery and development company using machine learning and data generation at scale to transform the way that drugs are discovered and delivered to patients. We rely on human genetic cohorts, human-derived cellular disease models, and high-throughput biology and chemistry to identify coherent patient segments, actionable therapeutic targets, and new or existing chemical matter. The goal is to deliver predictive insights to improve the probability of success and reduce the number of costly dead ends along the R&D journey. The company has established enabling collaborations with Gilead in NASH and Bristol Myers Squibb in ALS and is building a pipeline of wholly owned and partnered medicines leveraging its unique insights on patient biomarkers, targets, and molecules. insitro is located in South San Francisco, CA and has raised over $600M from top tech, biotech, and crossover investors since formation in 2018. For more information on insitro, please visit the company’s website at www.insitro.com .
+Show less
+Seniority level
+Mid-Senior level
+Employment type
+Full-time
+Job function
+EngineeringInformation Technology
+Industries
+Biotechnology
+About G2 - Our People
+
+G2 was founded to create a place where people will love to work. We strive to create meaning in work and provide more than just a job: a true calling. At the heart of our community and culture are our people. Our global G2 team comes from a wide range of backgrounds and experiences, and that’s what makes our G2 community strong and vibrant. We want everyone to bring their authentic selves to work, and we do this through our company and team events, our G2 Gives charitable initiatives, and our Employee Resource Groups (ERGs).
+
+Our employee-led, leadership-supported ERGs celebrate the diversity of our team, foster inclusivity and belonging, and create a space to connect to each other. Through connections and understanding, we build a stronger and more dynamic global team and help every person reach their personal peak.
+
+Due to Covid, G2 is currently operating fully remote until it is safe to return to the office.
+
+About G2 - The Company
+
+G2 is revolutionizing the way businesses discover, buy and manage software and services. More than six million users per month rely on G2 to help them find and buy the best software for their businesses. G2 features over 1 million authentic customer reviews, has built a global team of nearly 400 talented, motivated professionals, and has raised $100M in total funding from some of the world’s leading investors .
+
+About The Role
+
+At G2 we make solutions with Ruby on Rails and React with an emphasis on good code design and quality. We enjoy quarterly weeks of creativity where engineers work they see our customers have. Apply and start a conversation today if you wish to join an experienced and passionate team whose authenticity and kindness will help you grow. If you wish to join an experienced passionate team whose kindness and authenticity will help you grow then apply and start a conversation with us today!
+
+In This Role You Will
+Report to Engineering Manager dedicated to the delivery team
+Develop a high-quality, stable, and well-tested web application
+Apply database skills against a large and growing dataset
+Create full features in short development cycles, including frontend and backend code
+Work in close coordination with designers, product managers, data scientists, developers, and partners
+Track metrics alongside core features to help make informed decisions
+Balance development with collaborative meetings
+
+
+Minimum Qualifications
+
+We realize applying for jobs can feel daunting at times. Even if you don’t check all the boxes in the job description, we encourage you to apply anyway.
+0+ years of experience
+Knowledge of at least one development language such as Ruby on Rails or JavaScript
+
+
+What Can Help Your Application Stand Out
+Internship or other prior team software development experience
+Prior programming experience in a web environment
+Degree in Computer Science or a completed Bootcamp
+Experience with Ruby on Rails or React
+Git based version control
+Database skills such as SQL within Postgresql
+
+Our Commitment to Inclusivity and Diversity
+
+At G2, we are committed to creating an inclusive and diverse environment where people of every background can thrive and feel welcome. We consider applicants without regard to race, color, creed, religion, national origin, genetic information, gender identity or expression, sexual orientation, pregnancy, age, or marital, veteran, or physical or mental disability status. Learn more about our commitments here .
+
+Our Benefits
+Comprehensive healthcare plans
+Unlimited PTO
+Paternity/Maternity Leave
+401k with Match
+Employee Resource Groups
+Show less
+Seniority level
+Associate
+Employment type
+Full-time
+Job function
+Engineering
+Industries
+Internet
+Direct message the job poster from Ocuvera
+Jennifer Nottlemann
+COO at Ocuvera
+Every person at Ocuvera believes deeply in our mission of saving patient lives and we have built some of the most innovative AI software you’ll ever see- just ask Microsoft, who named our solution as the most innovative AI technology in healthcare in 2020. We have are some of the smartest and most dedicated people you will ever meet working on saving human lives every day.
+
+If you want to be proud to tell your family and friends that your work helps save lives, if you want to be part of a mission-driven team that is creating, selling, supporting, and deploying technology that is changing the future of healthcare, then Ocuvera might be your new workplace.
+
+We are looking for people who want to be compelled by their job, who believe they are capable of greatness in the right environment, who will teach as often as learn, and who will do the hard work to make others’ lives easier.
+
+We are a team where everyone is treated equally, no matter role or title. We know that great ideas come from everywhere. You will make a significant difference for the company, our customers, and hospital patients worldwide. Come join our team and help us change the world!
+
+Role Overview 
+We are looking for a Web Developer who will be responsible for building and maintaining both customer facing and internal web applications. Will also participate in the design and development of many other parts of a large, complex platform and help diagnose and resolve production issues.   
+  Day in the life 
+Owns development of customer facing web application 
+Owns development of internal diagnostic web applications 
+Contributes development to other areas of the system 
+Writes code 
+Reviews code - both yours and others - to ensure quality and effectiveness 
+Collaborates with teammates to find best solutions to problems 
+Contributes to brainstorming and prioritizing features 
+Works with support and diagnostic tools to troubleshoot and resolve issues
+ Your skills / What you have? 
+Takes initiative to investigate and address issues 
+Ability to balance “perfect” and “good enough” 
+Actively looks for ways to build their technical skills 
+Enjoys solving extremely complex problems 
+Balances code quality and deadlines 
+Web development experience on a Microsoft stack 
+C# experience 
+ASP.NET experience 
+TypeScript experience 
+ What can you expect? 
+To be a valued team member – great ideas come from everywhere, we know that and embrace it (ask our CEO his favorite thing to do – it is to engage in discussions with our team members around the office)! 
+A safe work environment – we know that today, we all have unique challenges, so we are committed to offering a safe working environment for our team members as well as the flexibility to work from outside the office when needed 
+Culture, Culture, Culture – you must see it to believe it! We are a group of people who are committed to the mission and one another as we continue to grow our company.  
+Be part of a team that is productive, thriving and growing! 
+Benefits – you need them we got them; health, life, disability, dental and vision insurance, employee stock options, stocked kitchen, unlimited PTO and random days where we tell you to go do something you enjoy!!
+Show less
+Seniority level
+Mid-Senior level
+Employment type
+Full-time
+Job function
+EngineeringInformation Technology
+Industries
+Computer SoftwareHospital & Health Care
+Optomi, in partnership with a Fortune 150 company, is seeking a Sr. AWS Chatbot Software Engineer!
+
+What are we looking for? Motivated and energetic developers who are passionate about building amazing software. Qualified developers will have an opportunity to work on an array of challenging problems with the potential to be placed on a wide variety of teams having a direct impact on the day-to-day experiences of both our employees and customers alike.
+
+Senior Software Engineers are primarily responsible for designing highly complex solutions then building and overseeing the execution of those designs.
+Individuals with this role are required to:
+
+• Design and build highly complex software solutions using agile/XP/TDD.
+• Program well-designed, efficient code independently.
+• Collaborate with designers, developers, and product owners to build solutions.
+• Clearly communicate team-wide progress and identify blocking processes/patterns that hold a team back.
+• Participate in paired programming and code reviews with juniors to expand the team’s collective knowledge and understanding of software engineering.
+• Complete independent research to refine best practices and present work to peers.
+• Turn complex ideas into manageable pieces of work to complete as part of a product team.
+• Coach and mentor software developers.
+• Provide technical guidance to leadership so that solutions are built with innovation and sustainability in mind.
+• Learn the business drivers of a product and help drive the technical direction of a product to fulfill the desired vision.
+Requirements
+
+Senior Software Engineer must possess:
+• 5-7 years’ previous experience in software development. (Either 7 years of experience specifically in software development or 5 years of experience in software development in combination with an Associates Degree in an Information Technology related field). Ideally has a portfolio of work – code samples, etc.
+• AWS Lex and AWS Lambda development experience.
+Show less
+Seniority level
+Mid-Senior level
+Employment type
+Full-time
+Job function
+Information Technology
+Industries
+Information Technology and Services
+At Sonos we want to create the ultimate listening experience for our customers and know that it starts by listening to each other. As part of the Sonos team, you’ll collaborate with people of all styles, skill sets, and backgrounds to realize our vision while fostering a community where everyone feels included and empowered to do to the best work of their lives.
+
+Sonos is looking for a Software Developer to join our Enterprise Integrations team. The team is responsible for implementing, enhancing, and operating key business systems as well as integrating those systems with external parties. You will be working with a full-stack of technologies with a focus on back-office systems, integration platforms, and APIs. 
+
+An ideal candidate will have a solid computer science foundation, an effective combination of business acumen and technical skills, and a passion for learning. They understand the nature of critical business applications, the capabilities of those systems, and what they provide to a holistic back-office ecosystem. 
+  What You’ll Do
+
+Architect and develop enterprise system integrations, APIs, and custom applications. 
+Contribute to all phases of the development lifecycle (analysis, design, implementation, deployment and support). 
+Work with analysts to translate complex business specs into technical specs.
+Troubleshoot application issues and coordinate resolution with operations, functional, and technical teams.
+Drive your work forward and exercise your strong technical aptitude to influence positive change and innovation.
+
+Basic Qualifications
+
+B.Sc. in Computer Science or a related field.
+5+ years of experience in a senior enterprise integrations development role.
+Strong development skills in a modern object-oriented language like Java or C#.
+Good analytical and problem-solving skills, ability to triage technical issues and drive resolution with cross functional teams.
+Strong communication skills with ability to communicate across the enterprise and with partners globally.
+
+Preferred Qualifications
+
+ Experience building integrations for ERP, CRM, and eCommerce platforms.
+Experience leveraging an integration platform such as Dell Boomi.
+Experience developing event-driven integrations and using message broker service such as Solace PubSub.
+Experience developing microservices.
+Experience working with relational databases and writing complex SQL procedures.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+EngineeringInformation Technology
+Industries
+Consumer Electronics
+Research shows that women and underrepresented groups only apply to jobs only if they think they meet 100% of the qualifications on a job description. IMO is committed to considering all candidates even if you don’t think you meet 100% of the qualifications listed. We look forward to receiving your application!
+
+Work that is meaningful. A job that has impact. Colleagues that inspire. That’s what you’ll find at Intelligent Medical Objects (IMO), a growing health IT company creating clinical terminology and insights solutions that are used by more than 500,000 US physicians and 4,500 US hospitals to power better patient care and support meaningful analytics.
+
+Engineers come to IMO to write clean, quality, testable code that supports rapid delivery via Continuous Integration, Delivery, and automated deployments. Our engineers find creative and innovative approaches to complex problems in the Healthcare IT field. They also lead and participate in design and architecture decisions by working and learning in a cross-functional agile team. We want you to be passionate and continue to advance your craft every day.
+
+From day one, you develop solutions as part of a team. Your team possesses the knowledge and ability to own all aspects of the solution - from design, through implementation and testing, to deployment. We mainly focus on web-based service-oriented architecture. We use agile principles and Scrum processes and milestones (Planning, Refinement, Daily Stand-ups, Review and Retrospective) to guide this work.
+
+Responsibilities
+Delivers quality code via unit and integration testing through a suite of automated tests.
+Performs basic source code management tasks at the direction of more senior software engineers.
+Works with the team who are responsible for coding, validating, debugging, reliability, performance analysis and the ongoing operational aspects of the product in an Agile environment.
+Troubleshoots and resolves low to moderate complexity software bugs or issues, with close direction from more senior software engineers, and finds the real root cause and provides an efficient fix.
+Writes automated unit and integration-level tests with direction from other team members.
+Follows development standards and effectively demonstrates technical solutions to other software engineers in code reviews.
+
+Requirements
+A relevant technical BA/ BS Degree and one years of experience, or three years of relevant professional experience in web-based software development, ideally full stack RESTful API
+Familiarity with at least one of the following general-purpose programming languages, including but not limited to: C#, JavaScript, Angular 2 or 4, Typescript, ASP.NET , Java, C++, Python.
+Professional experience working with Amazon Web Services and an Infrastructure as Code tool like Terraform or CloudFormation is required
+An enjoyment of technical challenges and eagerness to explore new approaches.
+A willingness to ask for help and able to communicate what you need to do your best work.
+Familiarity with modern JavaScript frameworks such as React or others.
+
+At IMO, we celebrate diversity and are committed to creating an inclusive environment for all employees. IMO is proud to be an equal opportunity workplace and is an affirmative action employer.
+Show less
+Seniority level
+Mid-Senior level
+Employment type
+Full-time
+Job function
+EngineeringInformation Technology
+Industries
+Information Technology and ServicesComputer SoftwareHospital & Health Care
+Direct message the job poster from seer
+Christina Czap
+CEO and Founder at Seer
+We're looking for passionate people to join us on our mission to revolutionize retail through personalization. We're excited you're considering working with us and look forward to meeting you. I'd love to share more about the impact Seer will have on global retail sales and how we'd like your help to get there.
+
+https://www.helloseer.com/
+
+Skills:
+Django/Python/DRF, JavaScript.
+Runs on AWS/CDK/Lambda.
+
+Role:
+Our team needs a versatile backend engineer. You will lead projects from start to finish and incrementally ship useful features. We're a small startup and you'll wear many hats!
+
+
+Requirements:
+- Python skills.
+- Positive and solution-oriented mindset.
+- Communicate well with engineers and non-engineers alike.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+EngineeringInformation Technology
+Industries
+Information Technology and Services
+About Houzz
+
+Houzz is the world’s leading platform for home remodeling and design, helping more than 2.5 million home professionals in over 100 categories to grow and manage their business. Through Houzz, a community of more than 65 million homeowners and home design enthusiasts, find ideas, hire professionals, source products and access tools to update their homes from start to finish. Houzz is available in every country around the world with localized platforms in more than 10 countries across North America, Europe, Asia and Australia.
+
+About The Role
+
+As a Back-End Software Engineer, you will work on our newly established SaaS platform team. You will work on horizontal platform projects that enable Houzz Pro SaaS applications, such as Authentication, Search, Entitlement, Team Support and Access Control. You will work across the entire backend stack, including Node.js, GraphQL, Thrift, Kafka, MySQL, Cassandra, Redis, Elasticsearch and Kubernetes. And you will leverage a strong understanding of OOP and design patterns. We are looking for candidates who have a passion for tackling complexity and building platforms that can scale and serve different business needs.
+
+__________________
+
+What You'll Do
+Take high level ideas and transforming them into live products, to be used by millions of professionals from around the world
+Design and build horizontal platforms/frameworks that empower Houzz Pro applications
+Work collaboratively with engineering, product, and design teams
+At a Minimum, We’d Like You to Have
+Independence, self-direction and experience owning complete projects
+Proficiency in web application programming in OOP (Java/C++, Go, PHP, etc.)
+A good understanding of algorithms, distributed systems and web services
+B.S., M.S., or Ph.D. in Computer Science or equivalent
+Ideally, You’ll Also Have
+Experience developing backend system for serving requests from millions of consumers
+Familiarity with GraphQL and RPC frameworks is a plus
+Familiarity with NoSQL databases is a plus
+Familiarity with Kafka and Elasticsearch is a plus
+1-3 years experience
+__________________
+
+Be Who You Are and Do What You Love at Houzz
+
+We’re a Family
+
+At Houzz, we strive to create and foster a strong family environment in our workplace. We collaborate to accomplish our goals, always working as a team. We aim to build a culture of inclusion — celebrating and leveraging our differences for the betterment of one another, our products and our community.
+
+Houzz team members come from many backgrounds and bring diverse experiences to the company. We take pride in making each person feel at home.
+
+We Build the Future
+
+Join Houzz in revolutionizing the home remodeling and design industry and have an impact on our community of more than 65 million homeowners and home design enthusiasts who use our platform and the 2.5 million-plus home professionals around the world who grow and manage their business with Houzz Pro. Houzz has been named one of the most innovative companies in the world by CNBC and others, and is backed by top venture capitalists. At Houzz, you can help drive the future of an industry worth over $1 trillion in the U.S. and Europe alone.
+
+We Make Things Happen
+
+Our team members play a key role in guiding the direction of our company and are able to work across multiple groups to implement fresh ideas that allow Houzz to be the industry leader. If you are interested in applying your passion to create products that will transform the lives of millions of people who are designing, remodeling and decorating their homes, welcome to Houzz.
+
+Benefits and Perks
+
+Competitive salary
+Flexible paid time off
+Commuter benefits
+Medical, dental, vision and pet insurance
+Maternity/paternity leave program
+Employee assistance program
+401k retirement savings plan
+Flexible spending accounts
+Healthy at Houzz program
+
+Houzz is an Equal Opportunity Employer.
+
+If you are a California resident applying for a job, you consent to our California Job Applicant Privacy Notice
+Show less
+Seniority level
+Not Applicable
+Employment type
+Full-time
+Job function
+EngineeringInformation Technology
+Industries
+Computer SoftwareInternetMarketing and Advertising
