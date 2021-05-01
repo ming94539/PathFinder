@@ -4,7 +4,7 @@ from time import sleep
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from bs4 import BeautifulSoup
-
+from selenium.common.exceptions import NoSuchElementException
 
 class Scraper:
 	def __init__ (self, is_headless = True):
@@ -16,6 +16,7 @@ class Scraper:
 		#set the driver path
 		else:
 			self.driver = webdriver.Chrome("./chromedriver")
+		self.driver.set_window_size(1920, 1080)
 
 	#navigates the scraper to a page at the given URL
 	def get_page(self, url):
@@ -43,12 +44,3 @@ class Scraper:
 			return True
 		except(NoSuchElementException) as e:
 			return False
-
-def main():
-	test = Scraper()
-	test.get_page('https://www.linkedin.com/jobs/search/?currentJobId=2488392591&geoId=103644278&keywords=software%20engineer&location=United%20States&position=3&pageNum=0')
-	test.scrape_linkedin()
-	test.end_scraping()
-
-if __name__ == "__main__":
-	main()
