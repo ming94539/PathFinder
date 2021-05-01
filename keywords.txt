@@ -1,0 +1,1390 @@
+gherkin
+blazemeter
+scenario testing
+a/b testing
+ab initio
+ad-hoc distribution (mobile)
+appium
+arquillian
+autoit
+automation testing
+baseline testing
+bazel
+behat
+black-box testing
+blazemete
+calabash
+casperjs
+chai
+charles
+codacy
+controller
+cross-browser testing
+cucumber
+dbunit
+defect tracking
+dynamic analysis
+e2e testing
+easymock
+endurance testing
+enzyme
+fitnesse
+functional, regression testing tools
+functional testing
+galen framework
+gatling
+gray-box testing
+hp performance center
+hp quality center
+ibm rpt
+integration testing
+iperf
+jasmine
+javascript testing tools
+jbehave
+jest
+jmeter
+jtest
+kali linux
+karma
+load, stress and performance testing tools
+load testing
+loadrunner
+loadui
+manual testing
+microsoft test manager
+mocha
+mockito
+monkey testing
+negative testing
+neoload
+nightwatch.js
+nodeunit
+nose
+okapi framework
+penetration testing
+performance testing
+testing
+phantomjs
+phpunit
+protractor
+pytest
+qc
+qtest
+qtp
+quality assurance (qa)
+quickcheck
+qunit
+ranorex
+regression testing
+reportng
+robolectric
+sanity testing
+security testing
+selenium
+siege
+sinon
+soapui
+smoke testing
+spiratest
+spock
+static analysis
+stlc
+stress testing
+sumo logic
+surefire
+telerik test studio
+test case
+testlink
+testng
+tosca
+types of testing
+uat
+uft (unified functional testing)
+unit testing
+wapt
+watin
+webdriver
+white-box testing
+xamarin.uitest
+xcuitest
+zombie
+website testing
+system testing
+test strategy
+mobile application testing
+qa engineering
+bug tracking
+test planning
+fps
+role-playing game
+allegro
+autodesk maya
+blender
+box2d
+chipmunk2d
+cocos2d-x
+cocos denshion
+corona
+game​kit
+gamesalad
+godot
+heroengine
+heroscript
+libgdx
+ogre
+panda3d
+phaser
+spritekit
+torque 3d
+unity
+unreal engine
+infrastructure as code
+amazon eks
+api gateway
+ucp
+patch management
+containerization
+datadog
+amazon ecs
+fortify
+adfs
+containers
+consul
+aix
+akamai
+amazon s3
+amqp
+ansible
+apache
+appfabric
+as2
+lan
+bash
+bgp
+bmc portal
+bmc remedy
+cacti
+cdn
+centos
+cfengine
+chef
+cm tools
+common lisp
+configuration management (cm)
+container orchestration
+infrastructure
+corba
+cpu
+data center
+debian
+dhcp
+deployment
+devops
+dns
+docker
+docker swarm
+dos
+ci/cd
+drone
+dovecot
+elasticache
+exim
+fedora
+filezilla
+firewalls
+freebsd
+ftp
+ganglia
+gateway
+geoserver
+gnu
+gunicorn
+haproxy
+hardware installation
+hp diagnostics
+http
+https
+hyper-convergence
+icinga
+iis
+im
+imap
+ipsec
+iptables
+istio
+itil
+jconsole
+kerberos
+kernel module
+kubernetes
+kvm
+ldap
+linux
+linux distributions
+linux kernel
+linux server
+linux shell
+lisp
+load balancer
+mac os x
+mcollective
+mcp
+monitoring tools
+mrp
+munin
+mqtt
+nagios
+netflix oss
+network monitoring
+network protocols
+new relic
+nfs
+nginx
+nmap
+npm
+oauth
+odata
+okhttp
+openid connect
+openssl
+oracle linux system administrator
+os
+ospf
+otrs
+pagerduty
+pepper
+perfmon
+pop3
+postfix
+postman
+proftpd
+prometheus
+puppet
+qnx
+rabbitmq
+rancher
+rancid
+raygun
+rdp
+red hat
+rhce
+rhcsa
+rhel
+rpm
+rtp
+sailfish os
+saltstack
+screen
+sensu
+servers
+shell
+shell script
+sip
+site reliability engineering
+smb
+smp
+smtp
+snmp
+software installations and upgrades
+solaris
+solus
+spdy
+spring cloud
+sqs
+ssh
+ssis
+ssl
+stp
+sunos
+system administration
+system engineering
+tcp
+tcp/ip
+terraform
+tls
+ubuntu
+ubuntu juju
+udp
+unix
+vcp-dcv
+virtualization
+virtualization tools
+vlan
+vpn
+vrrp
+vxworks
+wamp
+wan
+wds
+web api
+web server
+webrtc
+websockets
+wily introscope
+windows
+windows server
+xen
+xul
+adobe xd
+ui design
+ux design
+advanced design system
+adobe after effects
+adobe creative suite
+adobe illustrator
+adobe photoshop
+alignment
+avocode
+axure rp
+balsamiq
+contextual inquiry
+design layout
+digital design
+dreamweaver
+experience design
+figma
+flinto
+flat ui
+framer
+gimp
+google web designer
+gui
+header
+heuristic evaluation
+imagemagick
+indesign
+information design
+interaction design
+invision
+justinmind
+material design
+mockup
+paintcode
+paper prototyping
+pixel
+principle
+proto.io
+responsive web design
+script
+semantic ui
+sketch
+svg
+trackduck
+ui
+ui development
+usability testing
+user-centered design
+ux
+uxpin
+visual design
+web design
+webflow
+wireframe
+zeplin
+backlog
+customer
+growth
+hotjar
+market analysis
+market research
+mba
+mixpanel
+mvp
+product
+product lifecycle
+product management
+product manager
+product metrics
+product specification
+product strategy
+sdlc
+product design
+sprint
+stakeholder
+user
+user research
+requirements analysis
+product roadmap
+business analysis
+change management
+customer development
+confluence
+csm
+cspo
+disaster recovery
+financial analysis
+jira
+lean six sigma
+pmo
+pmi-acp
+pmp
+release management
+requirements gathering
+product development
+product marketing
+project management
+project planning
+roadmapping
+safe
+sap
+sdlc
+sfdc
+six sigma
+scope
+brand development
+budget management
+business development
+business process management
+business strategy
+compliance
+consulting
+communication
+design strategy
+entrepreneurship
+enterprise architecture
+financial risk
+financial modeling
+logi analytics
+mentorship
+operations management
+partner management
+performance monitoring
+process improvement
+procurement
+program management
+risk management
+sap erp
+strategic planning
+team building
+team leadership
+team management
+test management
+training
+design-driven development
+innersource
+agile methodology
+agile
+bdd
+ddd
+fdd
+iconix
+lean software development
+ovm
+pair programming
+prince2
+rad
+rup
+tdd
+xp (extreme programming)
+kanban
+uvm
+v-model
+waterfall
+scrum
+hexagonal architecture
+self-contained system
+api endpoint
+event-driven architecture
+monolithic architecture
+rpc
+data flow
+active directory
+api
+anti patterns
+design pattern examples
+design patterns
+di
+esb
+dry
+fiddler
+event-driven programming
+event sourcing
+grpc
+hp server
+json
+jwt
+markup (formatting and processing of text)
+microservices
+mobile design
+ms exchange server
+mule
+mvc
+mvp
+mvvm
+ood
+openmp
+protobuf
+rest
+restful api
+retrofit
+rras
+shiny
+soa
+soap
+ssot
+software architecture
+solid
+solution architecture
+swagger
+system architecture
+uml
+web application
+web development
+web services
+webservices
+winapi
+wml
+x86 assembly language
+xaml
+xml
+xml parser
+xmpp
+xpath
+xsl
+xslt
+information architecture
+network architecture
+parallel system
+accessibility (a11y)
+asynchronous (async) requests
+asynchronous i/o
+availability
+caching
+concurrency
+data binding
+data migration
+distributed system
+failover
+high-performance computing
+internationalization (i18n)
+localization (l10n)
+memory management
+multithreading
+performance optimization
+redundancy
+refactoring
+robust
+scalability
+security
+thread
+tuning
+websockets
+dsl
+functional languages
+functional programming
+languages with oo features
+metaprogramming
+ooad
+oop
+programming paradigm
+pwa
+reactive programming
+scripting languages
+classification
+ggplot
+sisense
+lingpipe
+corenlp
+nltk
+gensim
+spss
+raw data
+gluon
+mxnet
+qubole
+azure databricks
+amazon sagemaker
+xgboost
+pyspark
+apache nifi
+lstm
+pentaho
+zoomdata
+azkaban
+snaplogic
+visio
+erwin
+airflow
+amazon emr
+ambari
+analysis
+apache avro
+cntk
+hyper
+clustering
+apache beam
+apache flink
+apache hive
+data analysis
+apache mahout
+apache pig
+apache spark
+apache flume
+apache zeppelin
+applied mathematics
+r language
+artificial intelligence
+artificial neural networks
+numpy
+bayesian statistics
+big data
+pandas
+keras
+big data tools
+caffe
+computer vision
+convolutional neural network
+data set
+data extraction
+pytorch
+data mining
+data model
+data modeling
+data structure
+data visualization
+data warehousing
+decision tree
+hadoop
+scikit-learn
+hbase
+hdfs
+hdp
+image processing
+impala
+tensorflow
+jaql
+kinesis
+ksql
+kylin
+logistic regression
+luigi
+mathematics
+mapreduce
+microsoft excel
+mllib
+mxnet
+neural networks
+optimization
+pattern recognition
+predictive modeling
+oozie
+qlikview
+quantitative analytics
+quantitative finance
+random forest
+samza
+snaplogic extreme
+spacy
+spark mllib
+spark streaming
+sqoop
+statistical modeling
+statistics
+tableau
+time series analysis
+torch ai
+vertica
+weka
+yarn
+machine learning
+opennlp
+sas
+data science
+deep learning
+nlp
+rnn
+serp api
+aws appsync
+aws amplify
+mapbox
+vss
+jaeger
+spinnaker
+parity substrate
+aws codedeploy
+adobe premiere
+activex
+assembler
+aem
+apache ivy
+apache mesos
+apex
+api.ai
+apm
+appdynamics
+appscan
+appveyor
+artifactory
+asana
+assembla
+aws codebuild
+bamboo
+basecamp
+birt
+bitbucket
+bug (issue) tracking tools
+bug/issue tracking system
+matlab
+bugzilla
+ca plex
+camunda
+celery
+ceph
+checkstyle
+ci tools
+circleci
+cisco ngips
+clearcase
+clearquest
+codeblocks
+codeship
+compiler
+continuous delivery
+continuous deployment (cd)
+continuous integration (ci)
+cq5
+cqrs
+crucible
+cruisecontrol
+crystal reports
+curl
+cvs
+debugging
+django cms
+disassembler
+dnn
+dynatrace
+eclipse
+elastic beanstalk
+elasticsearch
+eda tools
+elk
+emacs
+enterprise architect
+episerver
+adobe analytics
+ethereum
+exago
+final cut pro
+flashdevelop
+fluentd
+fogbugz
+gcc
+genesys
+gerrit
+git
+gitflow
+github
+gitlab
+google analytics
+google closure
+google drive
+grafana
+graphite
+grep
+hg
+hiera
+high-load tools
+hudson
+ide (editors for code)
+inkscape
+jedi
+jellyfish
+jenkins
+kibana
+kunagi
+labview
+lazarus
+lemp
+liferay
+llvm
+logstash
+lotus
+lvm
+maltego
+mantis
+mapforce
+markdown
+mathematica
+mercurial
+metasploit
+micro-cap
+mockserver
+moodle
+moss
+mplab
+nant
+netbeans
+nsis
+ntfs
+ocr
+odoo
+opencv
+openldap
+openproject
+openroad
+opentok
+oracle applications
+oracle enterprise manager
+oracle fusion applications
+packer
+perforce
+phabricator
+powershell
+processwire
+redshift (app)
+qemu
+qmake
+rational team concert
+redmine
+rhinoscript
+rsync
+samba
+sap lumira
+sap-web
+scrumdesk
+scst
+sentry
+sharepoint
+silverlight
+simulink
+slack
+slurm
+sonarqube
+sourcetree
+splunk
+sql developer
+squid
+storm
+svn
+switchyard
+tail
+targetprocess
+teamcity
+team foundation
+teamscale
+testrail
+tfs
+xymon
+thrift
+traceur
+travis ci
+trac
+trello
+unisys
+vagrant
+varnish
+vcs services
+vcs tools
+velocity
+version control system (vcs)
+vi
+vim
+visual sourcesafe
+visual studio code
+vmware
+vsphere
+vsts
+webex
+wechat
+wercker
+wireshark
+wit.ai
+wsus
+xampp
+xmind
+xtext
+yeoman
+youtrack
+zabbix
+zookeeper
+zoom
+agile coach
+application developer
+automation qa engineer
+back-end developer
+big data engineer
+build release engineer
+business analyst
+business intelligence analyst
+cpo
+cto
+data scientist
+data warehouse developer
+devops engineer
+electrical engineer
+front-end developer
+full-stack developer
+graphic designer
+interaction designer
+manual qa engineer
+mobile developer
+network engineer
+principle software engineer
+product analyst
+product owner
+quality engineer
+salesforce developer
+scrum master
+site reliability engineer
+software architect
+solution architect
+system administrator
+systems engineer
+team leader
+technical account manager
+ui designer
+ux designer
+web developer
+controller area network
+embedded
+embedded c
+embedded database
+embedded java
+embedded linux
+embedded operating system
+embedded software
+embedded sql
+embedded system
+kmdf
+mongoose
+ole
+opengl es
+wdf
+wince
+windows embedded
+aws fargate
+serverless framework
+elb
+amazon sns
+talend
+amazon aurora
+cloud native
+elastic load balancing
+amazon route 53
+comptia network+
+comptia a+
+comptia server+
+switch
+routers
+microsoft office 365
+cloud storage
+cloud computing
+amazon ec2
+aws lambda
+amazon kinesis
+aws
+aws cloudformation
+azure
+baas
+bigquery
+cloudera cdh
+cloudfront
+cloudstack
+cloudwatch
+cloud foundry
+dbaas
+digitalocean
+enterprise pki
+fastly
+fcm
+google cloud platform
+saas
+heroku
+iaas
+ibm cloud
+kops
+maas
+netsuite
+onedrive
+openshift
+openstack
+owncloud
+paas
+power bi
+rackspace
+serverless computing
+shippable
+amazon rds
+security breach
+acas
+access control list
+apt
+antivirus
+ethical hacking
+anti-malware
+anti spam firewall
+arcsight
+authentication
+ccna
+ccnp
+ceh
+check point firewall
+cisa
+cisco
+cisco asa
+cisco certifications
+cisco certified cyberops associate
+cisco ise
+cisco switches
+cisco technologies
+cism
+cissp
+cloud security
+computer forensics
+computer security
+cryptography
+cybersecurity
+cyber risk remediation analysis
+digital forensics
+dlp
+dod 8570
+dynamic malware analysis
+emass
+encryption
+gcia
+gcih
+grc
+gsec
+hbss
+hips
+identity and access management
+incident detection
+incident response
+information assurance
+information security
+information security architecture
+intrusion detection
+ips
+iso
+itil
+cobit
+log analysis
+malware
+malware analysis
+mcsa
+mcse
+nessus
+network address translation
+network security
+next generation firewall
+nist cybersecurity framework
+openswan
+palo alto networks
+pci dss
+qradar
+reverse engineering malware
+risk management framework
+routing
+sans giac certifications
+security architecture
+security compliance
+security+
+siem
+scap
+sccm
+soc
+sscp
+stig
+switching
+threat intelligence
+threat modeling
+threat remediation
+ts/sci
+ttp
+vulnerability
+vulnerability assessment
+vulnerability management
+web application firewall
+web proxy
+wireless security
+bitcoin wallet
+cv compiler
+serp
+software development
+source control
+cross-functional team
+orchestration
+universal web app
+slicing
+oss
+authorization
+bi
+data conversion
+b2b
+crm
+virtual reality
+vlookup
+cisco unified computing system
+async/await
+synopsys tools
+erp
+spanning tree
+slam kinematics
+red hat satellite server
+kpi
+sap dashboard
+ecommerce
+sap businessobjects
+salesforce marketing cloud
+register-transfer level (rtl) design
+robot operating system
+recovery time
+reinforcement learning
+raspberry pi
+rapid7
+pivot table
+oracle fusion middleware
+multidimensional expressions
+model-based engineering
+lauterbach
+informatica powercenter
+human intelligence
+hlookup
+high availability
+gis analyst
+gradient boosting machines
+google ads
+sybase
+finance
+video game design
+field programmable gate arrays
+fibre channel
+f5 load balancer
+eoat design
+ensemble methods
+emc storage
+electronic circuit design
+semiconductor device fabrication
+dc drive
+electronic data interchange
+data archiving
+counter-terrorism
+counterintelligence
+compiler validation
+optimizing compiler
+close, consolidation and reporting
+cadence virtuoso layout editor
+virtuoso layout suite
+backup and restore
+augmented reality
+code reviews
+analog design
+adobe connect
+ac drives
+3d printing
+design thinking
+wireless networking
+windows xp
+windows programming
+windows mobile
+venture capital
+technical writing
+technical support
+talent management
+systems design
+system deployment
+supply chain management
+storage area network
+static timing analysis
+solution selling
+real-time programming
+qualitative research
+power management
+numerical modeling
+numerical analysis
+new media
+operations research
+network administration
+account management
+agency model ota
+aes
+aidc
+algorithm
+alm
+aob
+app publisher (mobile)
+app store
+app store optimisation
+application development
+arcgis
+ariba
+asf
+altium designer
+atmel avr
+automation
+back-end
+base sas
+bitcoin
+blockchain
+boilerplate code
+brand identity
+bug
+build automation
+business object
+business process
+business requirements
+bytecode
+cad
+cam
+ccent
+channel partner
+cgi
+cli
+clickstream analysis
+codecs (video)
+community outreach
+computer architecture
+competitive analysis
+computer hardware
+computer graphics
+computer science
+content development
+content management
+conversion rate (ecommerce)
+cpc
+creative director
+cross-platform mobile development
+cryptocurrency
+ctr
+customer experience
+customer service
+dashboard
+dependency management
+des
+device driver
+digital marketing
+digital media
+digital security
+digital signal processing
+digital strategy
+direct selling
+dynamic programming
+email marketing
+emc
+enterprise solutions
+enterprise software
+event management
+event planning
+eset
+finite element analysis
+fme
+fpga
+framework
+freemium
+fullcalendar
+gcm
+gis
+go-to-market strategy
+google app engine
+google maps
+google play market
+graphical design
+hardware
+hardware architecture
+hedge fund
+human-computer interaction
+hyperledger
+ide
+information technology
+infosys
+internet explorer
+iot
+ip
+iser
+istqb
+it management
+it operation
+itom
+kiss
+lead generation
+lean manufacturing
+legacy codebase
+logo design
+mac
+mac address
+mailchimp
+marketing communications
+marketing management
+marketing strategy
+mathematical modeling
+mcitp
+mcommerce
+mechanical engineering
+megabyte
+merchant model ota
+microcontrollers
+microsoft project
+microsoft office
+microsoft word
+middleware
+mixed-signal integrated circuit
+mobile communication
+mobile devices
+mobile technology
+monetization
+native mobile development
+network programming
+networking
+ntp
+olap
+online marketplace
+online marketing
+open source
+opengl
+orm
+ota
+owasp
+parallel computing
+parser
+parsing
+pcb design
+performance tuning
+plm
+plug-in
+poi
+pos
+ppc
+problem solving
+proprietary software
+public speaking
+qgis
+rapid prototyping
+resource management
+rfp
+ris
+r&d
+regular expression
+rendering engine
+ria
+robotic process automation (rpa)
+sales enablement
+scientific computing
+sdd
+sdk
+sem
+seo
+set-top box
+signal processing
+sme
+social media
+social media campaign
+social media marketing
+social networking
+spa
+subscription model
+trading system
+troubleshooting
+unix-like
+user scenario
+vault
+vendor management
+video streaming
+virtual
+visual programming language
+vod
+voip
+w3c
+web analytics
+zephyr
