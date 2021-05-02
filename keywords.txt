@@ -1,3 +1,783 @@
+cv compiler
+axios
+material-ui
+ngrx
+apprun
+ssr
+angular universal
+styled components
+storybook
+typeorm
+rollup
+webgpu
+svelte
+css animations
+ajax
+amp
+angular
+angular 2
+angularfire
+angular cli
+ant design
+atom
+aurelia
+babel
+babylonjs
+backbone.js
+bem
+blaze
+bootstrap
+bourbon
+bower
+brackets
+broccoli
+browserify
+brunch
+canvasjs
+chart.js
+clojurescript
+compass
+core.js
+css
+css modules
+css preprocessor
+css-related
+cypress
+d3.js
+dhtml
+dojo
+dom
+dust.js
+ecmascript
+electron
+ember.js
+eslint
+extjs
+flexbox
+flux
+foundation
+front-end
+graphql
+grunt
+gsap
+gulp
+haml
+handlebars.js
+highcharts
+html
+html-related
+htmlpad
+hyper-v
+immutable.js
+infragistics
+isomorphic apps
+javascript
+javascript frameworks
+jface
+jquery
+jquery ui
+jss
+jsx
+kendo
+knockout
+leaflet
+less
+marionette
+masonry
+mercury
+mobx
+modernizr
+mustache
+nunjucks
+nvd3
+oocss
+paperjs
+pixijs
+polymer
+postcss
+primeng
+prototype
+reactjs
+redux
+redux-saga
+relay
+rematch
+requirejs
+rxjs
+saml
+sass
+scss
+skeleton
+socket.io
+spine js
+stylus
+sublime text
+three.js
+thunk
+turret
+typescript
+underscore.js
+vanilla js
+vue
+vuex
+webdriverio
+webgl
+webkit
+webpack
+webrx
+websphere
+webstorm
+winforms
+wsdl
+xhtml
+yaml
+puppeteer
+nestjs
+stencil.js
+nw.js
+deno
+asm.js
+cycle.js
+derby
+express.js
+flow
+hapi
+koa
+mean
+meteor
+next
+node.js
+openlayers
+oracle jet
+restify
+sails
+seneca
+feathersjs
+php codesniffer
+drush
+apc
+bitrix framework
+blackfire
+cakephp
+cms
+codeception
+codeigniter
+composer
+doctrine
+drupal
+gearman
+guzzle
+hhvm
+joomla
+kohana
+lamp
+laravel
+lumen
+magento
+mamp
+memcached
+mockery
+modx
+mysqli
+opencart
+phalcon
+php
+php frameworks
+php keywords
+php-fig
+php-fpm
+phpdocumentor
+phpspec
+phpstorm
+psr
+silex
+silverstripe
+slim
+smarty
+symfony
+tideways
+twig
+typo3
+woocommerce
+wordpress
+xdebug
+yii
+zend framework
+resque
+active record
+brakeman
+bundler
+capistrano
+capybara
+crystal
+erb
+eventmachine
+factorybot
+grape
+jekyll
+jruby
+minitest
+padrino
+passenger
+phoenix
+rake
+rspec
+rubocop
+ruby
+rubygems
+ruby arrays
+ruby deployment
+ruby frameworks
+ruby on rails
+ruby testing tools
+rvm
+sidekiq
+sinatra
+watir
+webrick
+cv compiler
+core java
+reactor
+micronaut
+java profiler
+activemq
+adf
+apache ant
+apache camel
+apache mina
+apollo
+burp suite
+cactus
+cleartk
+cdi
+dropwizard
+dwr
+eclipselink
+ehcache
+ejb
+facelets
+freemarker
+gemfire
+glassfish
+google guice
+gradle
+grails
+groovy
+guava
+gwt
+hibernate
+hybris
+intellij idea
+jaas
+jackson
+jade
+jaf
+jasperreports
+java
+java build tools
+java deployment
+java ee
+java ee frameworks
+java me
+java orm frameworks
+java se
+java se frameworks
+java testing tools
+javacc
+javafx
+jaxb
+jax-rs
+jax-ws
+jboss
+jbpm
+jdbc
+jdeferred
+jdeveloper
+jdk
+jersey
+jetty
+jflex
+jfr
+jmc
+jmm
+jmock
+jms
+jmx
+jni
+jpa
+jpql
+jre
+jsf
+jsoup
+jsp
+jstl
+junit
+jvm
+keystore
+kotlin
+lambda
+launch4j
+log4j
+lucene
+maven
+meshcms
+netty
+oc4j
+osgi
+powermock
+primefaces
+proguard
+resin
+resteasy
+richfaces
+roboguice
+seam
+servlet
+slf4j
+spring
+spring boot
+spring integration
+spring mvc
+spring webflux
+sts
+struts
+struts 2
+swing
+thymeleaf
+tomcat
+tomee
+uima
+vaadin
+weblogic
+wicket
+wildfly
+zk
+zxing
+asp.net web forms
+identityserver
+asp.net web api
+asp.net ajax
+.net
+accord.net framework
+ado.net
+asp.net
+asp.net core
+asp.net mvc
+autofac
+automapper
+c#
+c# frameworks
+c# testing tools
+chart fx
+clr
+entity framework
+f#
+kentico
+linq
+log4net
+mono
+moq
+msbuild
+ms dynamics 365
+mstest
+nancy
+.net core
+nhibernate
+ninject
+nuget
+nunit
+octopus
+orm frameworks
+owin
+p/invoke
+razor
+resharper
+roslyn (.net compiler platform)
+servicestack
+signalr
+sitecore cms
+specflow
+ssrs
+stylecop
+telerik devcraft
+unsafe code
+vb.net
+visual c#
+webmatrix
+wcf
+wpf
+xunit.net
+pipenv
+django rest framework
+asyncio
+beeware
+bokeh
+bottle
+buildbot
+cherrypy
+cpython
+dask
+django
+django channels
+docutils
+flask
+jinja2
+jupyter (ipython)
+kivy
+matplotlib
+pybrain
+pycharm
+pygtk
+pylons
+pyparsing
+pyramid
+pyston
+python
+python frameworks
+scapy
+scrapy
+seaborn
+statsmodels
+sympy
+sqlalchemy
+theano
+scipy
+tornado
+twisted
+virtualenv
+web2py
+web.py
+wxpython
+tortoisesvn
+ace
+asio
+boost
+c++ 11
+c++
+c++ 14
+c++ 17
+c++ frameworks
+caffe
+clang
+clion
+cppcheck
+cppdb
+glsl
+gperf
+gstreamer
+loki
+mfc
+opencl
+opengl mathematics
+openinventor
+poco
+pwc (contract programming)
+qt
+qt creator
+rapidjson
+rust
+socket programming
+stl
+template metaprogramming
+valgrind
+vba
+visual c++
+visual studio
+wxwidgets
+zeromq
+ansi c
+c language
+cuda
+libmicrohttpd
+kore
+monix
+akka
+akka http
+apache kafka
+blueeyes
+cats
+chaos
+colossus
+finatra
+finch
+http4s
+lift
+lift 3.0-rc1
+play
+play 2.5.0
+sbt
+sbt 0.13.12
+scala
+scala frameworks
+scalatra
+scalaz
+scalding
+shapeless
+slick
+spray
+beego
+buffalo
+echo
+gin
+go
+goland
+gorilla
+iris
+revel
+absinthe
+exunit
+clojure
+elixir
+elm
+erlang
+haskell
+idris
+ocaml
+wadl
+actionscript
+ada
+assembly language
+ccl
+cobol
+coffeescript
+cypher
+dart
+delphi
+hack
+haxe
+lua
+maple
+perl
+rpg
+vbscript
+verilog
+xtend
+swinject
+nsoperation
+ghunit
+3d touch
+accelerate framework
+afnetworking
+alamofire
+apns
+appcode
+auto layout
+arc
+arkit
+avfoundation
+bond
+carthage
+clean architecture (viper)
+cocoa
+cocoa touch
+cocoapods
+core animation
+core bluetooth
+core data
+core graphics
+core location
+corefoundation
+coreimage
+eventkit
+fabric
+fastlane
+flurry
+gcd
+hockeyapp
+in app purchase
+ios
+ios 10 speech recognition api
+ios frameworks
+ios programming languages
+ios sdk
+ios tools
+mapkit
+memory graph debugger
+messageui
+metal
+moya framework
+multitasking
+nimble
+nsoperation
+objective-c
+pop
+property lists
+quick
+quickblox
+reactive code
+reactivecocoa
+reactivekit
+realm
+rxswift
+stack views
+storekit
+storyboard
+swift
+swiftyjson
+testflight
+tvos
+typhoon
+uikit
+xcode
+xctest
+watchkit
+watchos
+android jetpack
+android
+android keywords
+actionbarsherlock
+adb
+adt
+andengine
+android auto
+android ide
+android n
+android ndk
+android sdk
+android studio
+android tv
+android wear
+appcompat
+butterknife
+conductor
+dagger
+dbflow
+espresso
+evernote
+fresco
+greendao
+gtest
+leakcanary
+logcat
+mortar
+mosby
+picasso
+reactive pattern
+recyclerview
+robospice
+robotium
+room library
+rxandroid
+rxjava
+spongycastle
+support library
+volley
+ui automator
+bloc pattern
+native mobile app
+mobile application development
+apache flex
+bitrise
+cordova
+cross-platform mobile (mostly javascript)
+cross-platform mobile development
+dojo mobile
+firebase
+flutter
+glide
+hybrid app
+ionic
+ionic creator
+jquery mobile
+lottie
+marmalade
+mlkit
+phonegap
+react native
+sencha
+titanium
+xamarin
+xamarin studio
+xamarin.forms
+mobile applications
+spark sql
+jsonb
+clickhouse
+scylladb
+key-value database
+pipelinedb
+rdms
+database administration
+apache druid
+aerospike
+allegrograph
+cratedb
+dbms
+azure cosmos db
+arangodb
+awr
+berkeley db
+big table
+cassandra
+cockroachdb
+couchbase
+couchdb
+crud
+csv
+data architecture
+data pipeline
+database
+database design
+database development
+db2
+dbf
+dynamodb
+enterprisedb
+event store
+firebird
+graphdb
+hana
+influxdb
+interbase
+google compute engine
+liquibase
+magic keywords for dba
+mariadb
+memsql
+mongodb
+ms access
+ms sql server
+mysql
+navicat
+neo4j
+nosql
+nosql databases
+object-related mapping (orm)
+oracle database
+ord
+otbi
+orientdb
+percona db
+pervasivesql
+pl/sql
+postgis
+postgresql
+presto
+primary key
+rdbms
+database migration
+redis
+redshift
+relational db
+rethinkdb
+riak
+etl (extract, transform and load)
+rocksdb
+sap maxdb
+snowflake
+solr
+spanner
+sphinx
+sql
+sql server alwayson
+sql server
+sqlite
+sqlmap
+ssas
+t-sql
+teradata
+toad
+voldemort
 gherkin
 blazemeter
 scenario testing

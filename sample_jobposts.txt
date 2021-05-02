@@ -1,0 +1,140 @@
+BREAK8478375
+Zoomies help the world connect — and deliver happiness while doing it. We set out to build the best video conferencing product for the enterprise, and today help people communicate better with products like Zoom Phone, Zoom Rooms, Zoom Video Webinars, Zoom Apps, and OnZoom.
+
+We’re problem-solvers and self-starters, working at a fast pace to design solutions with our customers and users in mind. Here, you’ll work across teams to dig deep into impactful projects that are changing the way people communicate, and enjoy opportunities to advance your career in a diverse, inclusive environment.
+
+Zoom is an award-winning workplace. We have been recognized by Comparably as #1 CEO, Company Happiness, Benefits, Compensation, Diversity, and more! Not to mention we’ve been awarded by Glassdoor as the 2nd Best US workplace & Best Large Company US CEO in 2018, Wealthfront, and Business Insider. Our culture focuses on delivering happiness, our commitment to transparency, and the tangible benefits we provide our employees and our customers.
+
+Java Full Stack Developer
+
+Responsibilities
+Design, development, and testing of features/functions delivered via applications and services
+Working with operations teams to ensure your applications and services are highly available and reliable
+Hands on software development for product that will perform at scale, be supportable, and be extensible.
+
+Requirements
+BS degree or equivalent in a directly related discipline (CS, Eng, etc.).
+Have prior internship or related work experience. (3+ years work experience)
+Have successfully built, deployed, and supported an enterprise-scale web application in the cloud.
+Ideally have full-stack experience, with expertise in at least one layer.
+Hands-on software development experience in Java.
+Hands-on software development experience in JavaScript with a modern MVC framework.
+Cognizant of modern database/storage technologies
+Understands complex workflows and develop and validate innovative solutions to solve difficult problems.
+Experience with multi-threaded programming.
+Experience developing application on Linux.
+
+Preferred Qualifications
+Experience solving internet scale problems
+Experience working on cloud (on-demand) software
+Excellent verbal and written communication skill
+Cloud experience
+
+Explore Zoom
+Hear from our leadership team
+Browse Awards and Employee Reviews on Comparably
+Visit our Blog
+Zoom with us!
+Find us on social at the links below and on Instagram
+Show less
+Seniority level
+Not Applicable
+Employment type
+Full-time
+Job function
+EngineeringInformation Technology
+Industries
+Information Technology and ServicesComputer SoftwareInternet
+Zoomies help the world connect — and deliver happiness while doing it. We set out to build the best video conferencing product for the enterprise, and today help people communicate better with products like Zoom Phone, Zoom Rooms, Zoom Video Webinars, Zoom Apps, and OnZoom.
+
+We’re problem-solvers and self-starters, working at a fast pace to design solutions with our customers and users in mind. Here, you’ll work across teams to dig deep into impactful projects that are changing the way people communicate, and enjoy opportunities to advance your career in a diverse, inclusive environment.
+
+Zoom is an award-winning workplace. We have been recognized by Comparably as #1 CEO, Company Happiness, Benefits, Compensation, Diversity, and more! Not to mention we’ve been awarded by Glassdoor as the 2nd Best US workplace & Best Large Company US CEO in 2018, Wealthfront, and Business Insider. Our culture focuses on delivering happiness, our commitment to transparency, and the tangible benefits we provide our employees and our customers.
+BREAK
+Java Full Stack Developer
+
+Responsibilities
+Design, development, and testing of features/functions delivered via applications and services
+Working with operations teams to ensure your applications and services are highly available and reliable
+Hands on software development for product that will perform at scale, be supportable, and be extensible.
+
+Requirements
+BS degree or equivalent in a directly related discipline (CS, Eng, etc.).
+Have prior internship or related work experience. (3+ years work experience)
+Have successfully built, deployed, and supported an enterprise-scale web application in the cloud.
+Ideally have full-stack experience, with expertise in at least one layer.
+Hands-on software development experience in Java.
+Hands-on software development experience in JavaScript with a modern MVC framework.
+Cognizant of modern database/storage technologies
+Understands complex workflows and develop and validate innovative solutions to solve difficult problems.
+Experience with multi-threaded programming.
+Experience developing application on Linux.
+
+Preferred Qualifications
+Experience solving internet scale problems
+Experience working on cloud (on-demand) software
+Excellent verbal and written communication skill
+Cloud experience
+
+Explore Zoom
+Hear from our leadership team
+Browse Awards and Employee Reviews on Comparably
+Visit our Blog
+Zoom with us!
+Find us on social at the links below and on Instagram
+Show less
+Seniority level
+Not Applicable
+Employment type
+Full-time
+Job function
+EngineeringInformation Technology
+Industries
+Information Technology and ServicesComputer SoftwareInternet
+Zoomies help the world connect — and deliver happiness while doing it. We set out to build the best video conferencing product for the enterprise, and today help people communicate better with products like Zoom Phone, Zoom Rooms, Zoom Video Webinars, Zoom Apps, and OnZoom.
+
+We’re problem-solvers and self-starters, working at a fast pace to design solutions with our customers and users in mind. Here, you’ll work across teams to dig deep into impactful projects that are changing the way people communicate, and enjoy opportunities to advance your career in a diverse, inclusive environment.
+
+Zoom is an award-winning workplace. We have been recognized by Comparably as #1 CEO, Company Happiness, Benefits, Compensation, Diversity, and more! Not to mention we’ve been awarded by Glassdoor as the 2nd Best US workplace & Best Large Company US CEO in 2018, Wealthfront, and Business Insider. Our culture focuses on delivering happiness, our commitment to transparency, and the tangible benefits we provide our employees and our customers.
+BREAK
+Do what you love. Love what you do.
+
+At Workday, we help the world’s largest organizations adapt to what’s next by bringing finance, HR, and planning into a single enterprise cloud. We work hard, and we’re serious about what we do. But we like to have fun, too. We put people first, celebrate diversity, drive innovation, and do good in the communities where we live and work.
+
+Job Description
+
+About the Team
+
+We believe if you do what you love, you’ll love what you do. There’s a lot to love at Workday. Part of a global, high-growth technology company, our Workday team has the unique opportunity of developing the next generation of Workday’s game-changing collaborative products supporting a customer base of more than 31 million strong. You will solve complex problems and influence teams across Workday as you build enterprise software. Thrive in our fun, people-first culture that creates an environment focused on your success and ability to do your best work. Join us as we change the way millions of people work.
+
+About the Role
+
+The Workday HCM and WFM Machine Learning team is seeking an energetic and self-driven Software Engineer to design, implement, and deliver highly scalable Machine Learning features. As a member of this fast paced group you will have a unique and rewarding opportunity to shape and contribute towards microservices that power Workday Machine Learning features in production. In this role, you will partner with Data Scientists, Machine Learning Engineers, and other Software Engineers to create the technology that that brings these features to life.
+
+About You
+
+In addition to using your technical abilities to drive feature development, you must have a mindset of continuous improvement, passion for quality, scale, and security. You must derive joy from creating delightful customer experience. You must be intellectually curious and creative in applying technology to build services that scale, are secure, and highly usable. A strong sense of ownership and teamwork are key to succeed in this role. 
+
+Key Responsibilities:
+Design, implement, and maintain large-scale systems (1M+ requests per day) that bring machine learning models into production
+Conduct performance testing on API endpoints and batch jobs to identify and correct CPU and memory bottlenecks
+Uptake new technologies made available within Workday
+Forecast hardware capacity needs to support growing scale
+Troubleshoot, improve, and scale Continuous Integration pipelines
+Write design documents to build consensus for new systems components and enhancements to existing components
+Develop relationships with software engineers, machine learning engineers, and data scientists on partner teams
+Respond to alerts and debug production issues
+Review pull requests from data scientists and software engineers, and enforce consistency, performance, readability, and security across codebase
+Develop documentation to share knowledge with other engineers
+
+Basic Qualifications:
+B.A./B.S. in Computer Science (PhD / Masters preferred)
+4+ years of full-time industry experience in software engineering, preferably with machine learning exposure
+Strong programming skills in Python and knowledge of Bash / Linux command line
+Proven experience designing and deploying high performance systems in production
+Experience with industry tools used to build scalable machine learning systems, such as SQL, NoSQL, Elastic Search, and/or Spark
+Experience with data pipelines (e.g. Airflow)
+DevOps experience, and knowledge of common industry tools like Git, Kubernetes and Jenkins
+Self-motivation and a strong sense of ownership.
+An ability to balance a sense of urgency with shipping high quality and pragmatic solutions
+Strong communication and interpersonal skills 
