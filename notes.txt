@@ -10,5 +10,4 @@ Takes in list of search terms from job_list (added 'Data Analyst' for testing an
 For testing only; clear or view contents of table in db
 
 Other notes:
-This might be because i've been running the program on windows, but
-I'm getting errors when pages are being scraped, and the program crashes entirely when around 5-7 job descriptions have been scraped in a row. If this doesn't happen for you guys, this can be disregarded.
+This might be because i've been running the program on windows, but I'm getting errors when pages are being scraped, and the program crashes entirely when around 5-7 job descriptions have been scraped in a row. If this doesn't happen for you guys, this can be disregarded.
