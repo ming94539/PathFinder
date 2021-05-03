@@ -5,7 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from bs4 import BeautifulSoup
 from selenium.common.exceptions import NoSuchElementException
-
+import random
 class Scraper:
 	def __init__ (self, is_headless = True):
 		#puts the browser in headless mode (no UI) if is_headless is true
@@ -20,6 +20,8 @@ class Scraper:
 
 	#navigates the scraper to a page at the given URL
 	def get_page(self, url):
+		sleep_time = random.randint(1,61)
+		sleep(sleep_time)
 		self.driver.get(url)
 		self.driver.implicitly_wait(5)
 		sleep(2)
