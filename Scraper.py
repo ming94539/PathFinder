@@ -34,8 +34,9 @@ class Scraper:
 		if(self.check_element("show-more-less-html__button")):
 			self.driver.find_element_by_class_name("show-more-less-html__button").click()
 
-		print(self.driver.find_element_by_class_name("description").text, file = open("results.txt","a"))
-		return 
+		return self.driver.find_element_by_class_name("description").text
+		# print(self.driver.find_element_by_class_name("description").text, file = open("results.txt","a"))
+		# return 
 
 	#from stackoverflow question 47791232
 	def check_element(self,element):
