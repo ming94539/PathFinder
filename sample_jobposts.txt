@@ -138,3 +138,110 @@ DevOps experience, and knowledge of common industry tools like Git, Kubernetes a
 Self-motivation and a strong sense of ownership.
 An ability to balance a sense of urgency with shipping high quality and pragmatic solutions
 Strong communication and interpersonal skills 
+BREAK
+Uber AI’s mission is to optimize and innovate Uber’s products and business using machine learning and AI. The group consists of Uber's machine learning platform team which enables machine learning at scale, AI building blocks which enable product teams to build unique experiences and engagements with product teams on their business problems.
+
+We are developing a platform around recommendation and personalization across Uber products. We strive to understand our riders, drivers, restaurants and build more personal experience across all users.
+
+The group consists of machine learning engineers, mobile engineers, backend engineers and research scientists and engineers.
+
+About The Role
+
+Uber AI Building Blocks establishes core, reusable ML systems that can be applied across problems. Through close collaboration we deliver innovative Machine Learning/AI solutions for core business problems.
+
+We focus on productionizing ML to improve end user experiences and drive the business. As a core offering, we are developing a platform around recommendation and personalization across Uber products. We strive to understand our riders, drivers, restaurants and build more personal experience across all users. As an engineer, you would be responsible for developing and deploying models that are high performant and can operate at high scale (imagine every Uber trip). You will deliver these solutions from inception to production.
+
+What You’ll Do
+Develop innovative ML/AI solutions for challenging business problems that are fundamental for Uber.
+Partner with product teams to analyze key business problems.
+Collaborate with data science and engineering teams to integrate and validate machine learning solutions end-to-end.
+Deliver enduring value in terms of software and modeling artifacts
+Help build a predictions engine that can support a wide variety of personalization and recommendations use cases.
+
+Basic Qualifications
+2+ years of industry experience in applied ML, or a Ph.D. with some industry experience obtained through e.g. internships.
+Proficiency in Python, Java
+Experience running production engineering systems
+Experience with ML frameworks such as PyTorch and TensorFlow.
+
+Preferred Qualifications
+4+ years of industry experience in applied ML, or a Ph.D. and 2+ years of industry experience.
+Experience building, deploying and maintaining models in production systems
+Expertise in recommendation systems, or deep learning.
+Proficiency in one or more coding languages such as Java, Go, C, C++.
+Experience with any of the following: Spark, Hive, Kafka, Cassandra.
+Ability to innovate, as proven by a track record of software artifacts or publications.
+Ability to deliver end-to-end solutions, including data preparation, training, and deployment.
+Experience working with product teams.
+Ability to work with ambiguous problem definitions.
+Proven ability to communicate technical knowledge to a business audience.
+Collaborative attitude and constructive approach.
+BREAK
+Kuaishou is the leading short video and photo sharing App in China where our mission is to provide users with a personal space to share moments from their lives. With over 700 million audience and more than 200 million active daily users, Kwai provides an almost limitless look at everyday slices of life that unfolds in real time. Viewers can explore a rich array of glimpses into fitness, homes, cooking, health and wellness, fashion, and other interests.
+
+
+Kuaishou is a user-oriented, technology-driven company which uses cutting edge machine learning techniques for instantly curated presentations and develops new AI algorithms and technologies to solve challenging industrial problems.
+
+
+You may visit https://usrdc.kuaishou.com/ to learn more about us.
+
+
+About the Position:
+
+We are an applied research and engineering team responsible for developing advanced AI technologies and hardware platforms for efficient inferences on cloud servers or edge devices across Kuaishou products. We are looking for Deep Learning Software Interns at our Palo Alto Office to develop exciting technologies for Kuaishou’s next generation products. 
+
+
+JOB RESPONSIBILITIES:
+
+• Develop and prototype new deep learning models and training algorithms for speech recognition, computer vision, and natural language processing
+
+• Train deep learning models on computing clusters to perform audio and visual recognition tasks
+
+• Analyze and optimize deep neural algorithms, and associated pre-/post-processing code, including not limit to model compresion, quantization, and acceleration
+
+• Develop fixed-point implementation of common operators in Tensorflow or PyTorch 
+
+MINIMUM QUALIFICATIONS
+
+• Master or PhD in Computer Engineering, Computer Science and Electrical Engineering or other related fields 
+
+• Familiar with basic deep learning concepts, including convolutional neural network and recurrent neural network 
+
+• Proficiency in at least one major machine learning framework, such as Tensorflow and PyTorch
+
+• Hands-on programming and debugging experience in C/C++ or Python
+
+• Creativity and curiosity for solving highly complex problems
+
+• Excellent communication and collaboration skills
+
+
+PREFERRED QUALIFICATIONS
+
+• Solid mathematical background, especially in optimization theory, random process, and linear algebra
+
+• Knowledge in neural network optimization techniques, such as quantization, compression, pruning and layer fusion
+
+• Basic understanding of computer architecture and computing platforms, such as CPU, GPU, FPGA or DSP
+
+• Familiar with neural network, image processing and video compression
+
+Applicant rank
+Top 50% of 159 applicants
+Contact the job poster
+Job poster profile
+Meiqi Wu
+快手 - HR（招聘）
+
+Send InMail
+Job Details
+Seniority Level
+Internship
+
+Industry
+Internet
+Employment Type
+Internship
+
+Job Functions
+Science  Engineering
