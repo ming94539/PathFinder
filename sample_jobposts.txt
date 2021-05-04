@@ -112,8 +112,8 @@ About the Role
 The Workday HCM and WFM Machine Learning team is seeking an energetic and self-driven Software Engineer to design, implement, and deliver highly scalable Machine Learning features. As a member of this fast paced group you will have a unique and rewarding opportunity to shape and contribute towards microservices that power Workday Machine Learning features in production. In this role, you will partner with Data Scientists, Machine Learning Engineers, and other Software Engineers to create the technology that that brings these features to life.
 
 About You
-
-In addition to using your technical abilities to drive feature development, you must have a mindset of continuous improvement, passion for quality, scale, and security. You must derive joy from creating delightful customer experience. You must be intellectually curious and creative in applying technology to build services that scale, are secure, and highly usable. A strong sense of ownership and teamwork are key to succeed in this role. 
+In addition to using your technical abilities to drive feature development, you must have a mindset of continuous improvement, passion for quality, scale, and security. You must derive joy from creating delightful customer experience. You must be intellectually curious and creative in appl
+ying technology to build services that scale, are secure, and highly usable. A strong sense of ownership and teamwork are key to succeed in this role. 
 
 Key Responsibilities:
 Design, implement, and maintain large-scale systems (1M+ requests per day) that bring machine learning models into production
