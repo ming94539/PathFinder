@@ -1,0 +1,13 @@
+--Scraper.py--
+Instead of printing to results.txt, scrape_linkedin() returns its result for use in Selenium_Navigation.py
+
+--Selenium_Navigation.py--
+Organized code into functions
+Avoids scraping duplicate job listing if job_id already exists in db (uses table "Test" for now)
+Takes in list of search terms from job_list (added 'Data Analyst' for testing and reduced number of listings scraped to 5 from 10) 
+
+--clearTable.py--
+For testing only; clear or view contents of table in db
+
+Other notes:
+This might be because i've been running the program on windows, but I'm getting errors when pages are being scraped, and the program crashes entirely when around 5-7 job descriptions have been scraped in a row. If this doesn't happen for you guys, this can be disregarded.
