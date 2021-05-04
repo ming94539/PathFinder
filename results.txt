@@ -834,3 +834,2333 @@ Job function
 Engineering and Information Technology
 Industries
 Information Technology and Services
+Description
+
+Position at Logitech
+
+The Role
+
+Our Video Collaboration products help companies stay connected and can be found in the conference rooms of some of the biggest businesses in the world. We are a small nimble group and we are growing our team. We create amazing experiences in the conference room using creative design, surprising science, and innovation. We love what we do because we are passionate about connecting people and we use the products we create every day to stay connected to our team. Want to be part of this team of collaboration innovators?We are looking for an innovative and passionate software engineer to help us get to the next level. You will be working with a small team of developers focused on making the video collaboration an amazing experience and the software you create will be used by thousands of people every day.
+
+Your Contribution
+
+Role
+
+We are looking for a talented and motivated Senior Software Engineer to play a key role in our Desktop Applications development team
+You will use your great development skills to design and create innovative solutions to common and uncommon problems
+You have great development skills and you like to show people by writing awesome code that is both functional and elegant
+You like to document what you do so everyone can easily understand what your code does
+You are always on the lookout for new technologies and development tools that you can leverage to become better or that will help make better products
+You prefer to develop on Windows and Mac OS but you are also adaptable to different languages, devices and operating systems depending on the situation
+
+Key Qualifications
+Bachelor’s degree in Computer Science or related field required; Master’s degree desired
+6+ years related industry experience
+Strong debugging skills, especially with regard to memory management, threads, data structures, and profiling
+Ability to deliver results in a fast-paced, Agile development environment
+In addition to being hands-on coder, should be able to provide architectural guidance to the team
+Excellent verbal and written communication skills
+Experience with multi-threaded programming, INFs and USB device drivers, as well as IO control operations such as UVC and HID preferred
+Familiar with software best practices, including continuous integration and test driven development
+Previous video conferencing experience a major plus
+React Native OR React-JS a big plus
+Mac: Objective C, XCode, Cocoa
+Windows: C, C++, C#, MFC, .NET, Visual Studio
+
+Logitech is the sweet spot for people who are passionate about products, making a mark, and having fun doing it. As a company, we’re small and flexible enough for every person to take initiative and make things happen. But we’re big enough in our portfolio, and reach, for those actions to have a global impact. That’s a pretty sweet spot to be in and we’re always striving to keep it that way.
+
+“All qualified applicants will receive consideration for employment without regard to race, sex, color, religion, sexual orientation, gender identity, national origin, protected veteran status, or on the basis of disability.”
+
+If you require an accommodation to complete any part of the application process, or are limited in the ability or unable to access or use this online application process and need an alternative method for applying, you may contact us at 510-713- 4866 for assistance.
+
+Show less
+Seniority level
+Not Applicable
+Employment type
+Full-time
+Job function
+Design, Information Technology, and Engineering
+Industries
+Consumer Electronics, Design, and Information Technology and ServicesSentient Science provides digital twin technology to predict the life of mechanical systems. Sentient's DigitalClone® SaaS solutions use proprietary physics-based modeling and machine learning AI to unlock insights that lower the costs of designing, operating, and sustaining high value assets. Sentient Science is a leader in prognostic solutions with one patent awarded in 2019 for physics-based life prediction and six additional patents pending. Sentient has won more than $22 million in SBIR/STTR funding from the U.S. Government – with agencies including Dept of Energy, Dept of Defense, and NASA.
+
+The technology has been recognized by the SBIR program with the 2014 Tibbetts Award, by Bloomberg as New Energy Pioneer Award in 2016, and Frost & Sullivan in 2017 with the New Product Innovations Award for Wind Prognostics.
+
+The role:
+The Software Engineer supports a multi-disciplinary team and leads efforts to expand the capabilities of Sentient’s cloud-based predictive analytics platform. This position produces scalable software, driving business growth and dramatically increasing the productivity of our technical, business, and customer-facing teams. The Software Engineer will be working directly on new features of our DigitalClone software and will be exposed to utilizing best practices to achieve business goals.
+
+Responsibilities:
+Collaborating with different teams engineers to implement solutions that align with and heighten the DigitalClone Platform and solutions
+Building software components and tools to support and expand the Platform capabilities
+Enhancing applications by identifying opportunities for improvement, making recommendations, and designing and implementing systems
+Maintaining and improving existing codebases and peer review code changes
+Assisting with process optimization
+Develop automated build and deployment pipelines for your services
+Participating in post-implementation and system maintenance support
+Develop / integrate leading-edge tools and frameworks to build and deploy scalable and efficient machine learning solutions
+
+Experience & Qualifications:
+Proficiency working with a modern programming language (e.g. Javascript or Python)
+Proven expertise in developing cloud-based, scalable software applications and services
+Experience deploying production applications to a public cloud (bonus points for AWS)
+Experience with cloud environments, serverless architecture, SQL/NoSQL databases, containers (Docker)
+Knowledgeable in developing and consuming APIs and micro-services to facilitate data access, business logic, and workflows
+Experience building and deploying end-to-end systems using either in-house infrastructure or cloud ML environments e.g. SageMaker
+Experience setting up and optimizing DBs for production usage for ML systems
+US citizen or permanent resident required
+
+Competencies:
+Solid understanding of web services and computer science fundamentals (theory, data structures, algorithms).
+Ability to work in a fast-paced environment with a demonstrated ability to accomplish multiple tasks and meet deadlines
+Excellent written/oral communication and interpersonal skills are essential
+Excellent relationship skills and ability to work cross-functionally Good professionalism/customer interaction skills
+Strong attention to detail
+Ability to work independently and as part of a team
+
+Preferred experience:
+Experience with the NodeJS Express API framework
+Experience with the Vue.js front-end framework
+Experience with Postgres, DynamoDB, and ElasticSearch
+Experience with AWS and infrastructure as code
+Experience with Git and GitHub: Branching, merging, pull requests, etc…
+
+Benefits:
+Medical
+Dental
+401K
+Short/Long Term Disability
+Life/AD&D insurance
+Unlimited Paid Time Off (Unrestricted), plus 12 annual company holidays
+Flexible working hours and fully remote option available
+Our commitment to inclusion across race, gender, age, religion, identity, and experience drives us forward every day
+
+Show less
+Employment type
+Full-timeDescription
+
+Description of Services:
+Create new software features in the lidar driver.
+Debug customer issues and implement fixes
+Develop new software and driver features as directed
+Create software and analysis tools to support sales demonstrations.
+Set up and run tests to characterize the sensor, which includes creating experiments and tests to ensure the sensor is performing as expected and analyzing how it performs under certain conditions, and creating supporting software tools to run and analyze the test results.
+Create automated testing scripts.
+Skills
+
+lidar, ROS, C++, python
+
+Top Skills Details
+
+Minimum experience, skills, and attributes:
+BS or MS in Computer Science, Physics, or related field or equivalent experience
+Strong programming skills in C++ (Python a plus)
+Experience with embedded systems
+Proficient in numerical analysis and data visualization with tools such as Matlab, NumPy, or Matplotlib
+Preferred Experience, Skills, And Attributes
+Hands-on experience in robotics or autonomous systems projects
+LiDAR or other 3D point cloud perception knowledge (e.g. object recognition or SLAM)
+Experience using and developing for the Robot Operating System (ROS)
+Experience in machine learning or related fields is a plus
+#LIJOBS
+
+About Aerotek
+
+We know that a company's success starts with its employees. We also know that an individual's success starts with the right career opportunity. As a Best of Staffing® Client and Talent leader, Aerotek's people-focused approach yields competitive advantage for our clients and rewarding careers for our contract employees. Since 1983, Aerotek has grown to become a leader in recruiting and staffing services. With more than 250 non-franchised offices, Aerotek's 8,000 internal employees serve more than 300,000 contract employees and 18,000 clients every year. Aerotek is an Allegis Group company, the global leader in talent solutions. Learn more at Aerotek.com.
+
+The company is an equal opportunity employer and will consider all applications without regards to race, sex, age, color, religion, national origin, veteran status, disability, sexual orientation, gender identity, genetic information or any characteristic protected by law.
+Show less
+Seniority level
+Entry level
+Employment type
+Contract
+Job function
+Engineering and Information Technology
+Industries
+Staffing and Recruiting, Hospital & Health Care, and PharmaceuticalsTL;DR
+
+High-impact software development jobs for smart people.
+
+Code that saves lives.
+
+As a software developer at Epic, you’ll write software that impacts the lives of 75% of Americans and 250 million patients around the world. Working in your own office, surrounded by thousands of high-caliber developers, you’ll use modern development methodologies and employ user-centered design, analytics, and machine learning tools to drive innovation in healthcare. Using leading-edge technologies and languages like JS, TS, and C#, you’ll invent better ways to reduce medical errors, streamline record sharing between hospitals, and provide the quality of care a patient deserves.
+
+Write software for the most innovative health systems on the planet.
+
+The top 15 health systems in U.S. News and World Report are Epic customers. Our community includes major systems like the Mayo Clinic, Johns Hopkins, Cleveland Clinic, and Kaiser Permanente, as well as leading academic medical centers at the University of Wisconsin, University of Michigan, University of California, University of Texas, The Ohio State University, and many more.
+
+Work in your own office, eat delicious food, and travel the world.
+
+We don’t believe in cubicles. (Well, we believe they exist, but…) You will work in an individual office that will heighten your ability to get stuff done. For lunch, visit King’s Cross or Cassiopeia for a wide array of meal options, or go to one of our smaller, themed bistros, featuring wood-rotisserie, pan-Asian, and Latin-inspired cuisine. All meals are restaurant-quality but cost only a few dollars, and they’re prepared by a team comprised of kitchen talent from restaurants around the country. And, after five years here, you’ll earn a four-week sabbatical anywhere in the world. Staff have kayaked in Patagonia, attended a Beyoncé concert in Ireland, built a library in Tanzania, and run a marathon in Antarctica.
+
+Live affordably in a city known for its rising tech talent.
+
+Epic is located just outside Madison, Wisconsin the second fastest growing market for tech talent in the United States and home to the state capital and the University of Wisconsin. Madison, a city surrounded by water, has received accolades for being the greenest city in America (NerdWallet), the best city for renters (SmartAsset), fittest city in America (Fitbit), and, for the gamers, is one of a handful of US cities to have a Killer Queen arcade game, located at Madison’s first arcade bar.
+
+More than just important work.
+
+We offer comprehensive benefits to keep you healthy and happy as you grow in your life and career, and your merit-based compensation will reflect the impact your work has on the company and our customers. You'll also be eligible for annual raises and bonuses, as well as stock grants, which give you an even greater stake in the success of Epic and our customers. Epic is an Equal Opportunity employer. Please see our full non-discrimination statement at https //careers.epic.com/EEO.
+Relocation to Madison, WI area (reimbursed)
+BS/BA or greater in Computer Science, Mathematics, Software Engineering, Computer Engineering, or a related field
+A history of academic excellence or professional success
+Eligible to work in the United States without visa sponsorship (persons with appropriate qualifications and eligible for TN status under NAFTA may apply)
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering
+Industries
+Information Technology and Services, Computer Software, and Hospital & Health CareDescription
+
+
+Who are we and why should you join us?
+We help people change their lives. BetterHelp is the world’s largest therapy service. We set out on a mission to provide everyone with easy, affordable, and private access to professional counseling: anytime, anywhere. To date, our network of over 15,000 licensed, accredited, and board-certified therapists have assisted more than 1,000,000 people. Every month, our secure website and mobile app facilitate over 5,000,000 messages, chats, voice calls, and video sessions that help people face life’s challenges.
+We’re taking mental healthcare to the next level. We combine clinical care, cutting-edge technology and data-driven product development to constantly learn, iterate, and improve. We are relentless in our pursuit of better, always questioning the status quo and discovering new ways to get things done and serve our members.
+We are a community that grows together - both professionally and personally. Even with our exponential growth, our team is kept agile and nimble, allowing you to have a huge impact and carve your own path from day one. We invest in our team’s well-being and professional development because we know that business and individual growth go hand-in-hand. You will move fast, remain flexible, and be challenged every day. Join us!
+
+
+What are we looking for?
+
+BetterHelp is looking for a Product Data Analyst / Data Scientist to help us scale and increase our impact. You will use data to drive insight into the product and business with a focus on new user growth, retention and quality. The ideal candidate would have experience analyzing large and complex data sets related to web products. You'll be doing plenty of experiment design and post-hoc analysis, both to support product improvements and business decisions, as well as setting up infrastructure and frameworks for more efficient analysis.
+
+What will you do?
+Collaborate with the product team and development team to design effective A/B tests.
+Be the go-to person for product data tracking questions for our engineers
+Monitor and analyze several A/B tests with statistical rigor, present the data and insights to the team and drive product decisions.
+Slice and dice an enormous amount of data to gain insight on how to improve our products.
+Look at complex problems and come up with testable models and algorithms to optimize the platform.
+Develop theories that can be explored with analysis to help us improve.
+Set up BI tools and regular reporting services and interfaces.
+Live and breathe SQL.
+Enjoy great teamwork, have lots of fun, and take pride in building a world-class product that makes a difference on people's lives.
+
+
+What will you NOT do?
+You will NOT worry about "runway", "cash left", or "how much time we have until the next round". We have the startup DNA but we're fully backed and funded, all the way to success.
+You will NOT be confined to your "job". You will get involved in product, marketing, business strategy, and almost everything we do.
+You will NOT be bogged down by office politics, ego, or bad attitude. Only positive, pleasure-to-work-with people allowed here!
+You will NOT get yourself burned out. We work hard but we believe in maintaining sustainable work/life balance. Really.
+
+
+
+Requirements
+
+BSc/MA in a quantitative discipline such as Statistics, Math, Economics, or Engineering
+At least 1 year of experience in a quantitative data analysis role involving user behavior (e.g. marketing, product) and large data sets
+Proven success supporting or making business decisions based on your data analysis
+Advanced experience with SQL
+Advanced knowledge of statistics, especially as it relates to hypothesis testing
+Expert in using tools like R and Python for data analysis
+Experience analyzing A/B tests
+Experience with BI tools like Tableau and Looker
+Experience analyzing large and complex data sets to drive business insights and decisions
+Great grasp of numbers with love for data and analytics, knowledge of statistics
+Excellent communication (oral and written), attention to detail, time management and organizational skills
+
+
+
+Bonus (great To Have But Not Required)
+
+Experience building predictive models
+Experience with b2c, market place products
+Experience in or supporting a growth team
+
+
+
+Benefits
+
+Competitive salary & equity compensation
+Excellent health, dental, and vision coverage
+401k benefits with employer matching contribution
+Ridiculous perks program
+Office in the heart of downtown Mountain View, a three-minute walk from Caltrain
+Commuter benefits, FSA accounts, and Employee Stock Purchase Programs
+Building something that matters - loved by the people and admired by the press
+Any piece of hardware or software that will make you happy and productive
+Awesome people to work with
+Nothing to slow you down
+Helping people live a better life, every day
+
+
+At BetterHelp we thrive on difference and individuality, and as part of the Teladoc Health family, we are proud to be an Equal Opportunity Employer. We never have and never will discriminate against any job candidate or employee due to age, race, ethnicity, religion, sex, color, national origin, gender, gender identity, sexual orientation, medical condition, marital status, parental status, disability, or Veteran status.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Information Technology
+Industries
+Internet, Health, Wellness and Fitness, and Mental Health CareDirect message the job poster from DISYS
+Ujwal Babu Kotla
+Need Mask Layout Designer(FinFet) in Cupertino CA | Battery Test Engineer in Cupertino CA. Please share resume to UJWAL.BABU@DISYS.COM. For more ACTIVE Roles please check my summary.
+About the job
+Digital Intelligence Systems (DISYS) has been engaged to find a talented Data Analyst in Frisco TX or Kansas City MO for a Telecommunications Company. 
+
+To be eligible, consultants must be able to work directly for DISYS on a W2 basis and not be Visa dependent.
+
+Will support manager by pulling data reports, creating & maintaining data lists from multiple sources, and manipulation of the data to develop sourcing opportunities based on specific criteria. 
+At least 5 years relevant experience required, including a strong working knowledge of Microsoft Excel.
+Working knowledge of Salesforce tool set, as well as previous project management experience a plus.
+Excel and Power BI is required. 
+
+For more information regarding this exciting opportunity and company, please contact Ujwal (UJ) at 857.362.7231. Thank you for your interest!
+
+
+Digital Intelligence Systems, LLC (DISYS) is an Equal Opportunity Employer that recruits and hires qualified candidates without regard to race, religion, sex, sexual orientation, gender identity, age, national origin, ancestry, citizenship, disability, or veteran status.
+Show less
+Seniority level
+Mid-Senior level
+Employment type
+Contract
+Job function
+Information Technology and Analyst
+Industries
+Information Technology and Services and TelecommunicationsDirect message the job poster from TDK Corporation of America
+Jean Dubay, SHRM-SCP
+Human Resources Manager at TDK Corporation of America
+TDK Corporation of America is looking for a Data Analyst who will support the strategic account sales team and management staff with the gathering, consolidation and analysis of complex data from various databases and sources.
+
+The employee will develop reports, summaries, recommendations, and visual representations, develop and/or maintain databases. The position will be responsible for extracting and analyzing data, patterns, and related trends is needed, with the subsequent ability to synthesize the data into information consumable by sales management and senior business decision-makers.
+We are looking for someone that loves to work as a part of a high energy team, and enjoys working in a fast paced, busy environment.
+
+Qualifications
+Associates Degree required, Bachelor's degree preferred.
+4+ years' Data Analysis, forecasting and budgeting experience.
+Must be Proficient in Microsoft Excel and Power point, as well as Tableau.
+International business experience, Fluent in Japanese would be beneficial.
+
+TDK offers great benefits including 401K and pension. TDK is an equal opportunity employer. Minority/Female/Disability/Veteran. No relocation offered for this position.
+Show less
+Seniority level
+Mid-Senior level
+Employment type
+Full-time
+Job function
+Analyst, Product Management, and Strategy/Planning
+Industries
+Electrical/Electronic Manufacturing, Semiconductors, and TelecommunicationsJob Title: Data Analyst
+100% Remote
+Duration: 06 months  
+
+About Our Client: Our Client is a leading global professional services company, providing a broad range of services and solutions in strategy, consulting, digital, technology and operations. Combining unmatched experience and specialized skills across more than 40 industries and all business functions – underpinned by the world’s largest delivery network – Our Client works at the intersection of business and technology to help clients improve their performance and create sustainable value for their stakeholders. With approximately 425,000 people serving clients in more than 120 countries, Our Client drives innovation to improve the way the world works and lives
+
+A Data Analyst is responsible for developing metrics, and/or Key Performance Indicators (KPIs) that measure critical work processes and compare against benchmarks and standards for performance by using Tableau and Power BI. Develops and/or generates appropriate reports/dashboards as needed by the business aligned with the standardized reports.
+
+About ASK: ASK Consulting is an award-winning technology and professional services recruiting firm servicing Fortune 500 organizations nationally. With 5 nationwide offices, two global delivery centers, and employees in 42 states-ASK Consulting connects people with amazing opportunities
+
+ASK Consulting is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all associates.
+Show less
+Seniority level
+Mid-Senior level
+Employment type
+Contract
+Job function
+Information Technology, Finance, and Engineering
+Industries
+Information Technology and Services, Financial Services, and BankingDescription
+
+Data Analyst
+
+IGN Entertainment (IGN.com) is seeking a new Data Analyst.
+
+As a part of IGN’s Business Intelligence team, the Data Analyst (“you”) will help shape our decision making process through the compilation and presentation of analytical information and insights. You’ll primarily be working with 1st party web analytics but will also use 2nd and 3rd party data sets to fill out your understanding and provide more accurate, nuanced insights. You’ll also work closely with our product, content and sales teams to help them understand how they are tracking against their goals.
+
+This role is suitable for those looking to get into either data science or data insight career tracks. Some travel may be required.
+
+What does that mean for responsibilities?
+Maintain and improve mechanisms to report regular, key analytics information to
+stakeholders.
+Support internal groups with their requests for information. Teach and train internal
+groups on how to self-serve.
+Utilize analytics, usability studies, research and qualitative feedback to provide accurate
+information.
+Identify opportunities to make more, actionable information available to a wider audience
+internally.
+Execute and possibly lead 1st party research studies. (Depending on experience)
+Owning day to day relationships with some of our analytics vendors.
+Developing new systems and/or tools that help IGN process, interpret, and provide insights from our vast variety of data sources.
+What will get you in the door?
+An intermediate background in various forms of data manipulation such as aggregation,
+hygiene, analysis and presentation, and the various forms of math required to do so.
+
+(Recent school experience acceptable)
+Experience working with Excel and Google Sheets. Bonus points for experience with R,SQL, SPSS or business intelligence applications such as Mode or Looker.
+Experience working with web analytics and digital media.
+Excellent written and verbal communication skills, of course, but also the ability to distill
+complex, nuanced insights into easily digestible formats for a wide variety of audiences.
+Comfortable with public speaking and presenting your ideas to others.
+Must be self-motivated, able to manage and prioritize workload and meet deadlines.
+Attention to detail and a “measure twice, cut once” mentality.
+You have a passion for games or entertainment related to the gaming audience.
+Here’s the good stuff about us…
+You’ll make an impact. We reach 250MM unique users each month. We’re big time, but
+we are a small team — and we’re not afraid to give you real opportunities to make a
+
+difference in grand, visible ways.
+Gaming, Movies and TV are the culture here. That means it’s actually fun, even when we’re not trying. We share the same passions as our audience, and want to be here.
+We value irreverence. We want you to be yourself, speak your mind, lead shenanigans,
+and know that nothing here is above question.
+There is value in games and entertainment. We’re the experts and we’re preparing for a
+future where gaming is everywhere.
+
+Come geek out with us, but be prepared to work as hard as you play. It’s serious business, after all.
+
+#IGN
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Information Technology
+Industries
+Marketing and Advertising, Online Media, and EntertainmentTL;DR
+
+High-impact software development jobs for smart people.
+
+Code that saves lives.
+
+As a software developer at Epic, you’ll write software that impacts the lives of 75% of Americans and 250 million patients around the world. Working in your own office, surrounded by thousands of high-caliber developers, you’ll use modern development methodologies and employ user-centered design, analytics, and machine learning tools to drive innovation in healthcare. Using leading-edge technologies and languages like JS, TS, and C#, you’ll invent better ways to reduce medical errors, streamline record sharing between hospitals, and provide the quality of care a patient deserves.
+
+Write software for the most innovative health systems on the planet.
+
+The top 15 health systems in U.S. News and World Report are Epic customers. Our community includes major systems like the Mayo Clinic, Johns Hopkins, Cleveland Clinic, and Kaiser Permanente, as well as leading academic medical centers at the University of Wisconsin, University of Michigan, University of California, University of Texas, The Ohio State University, and many more.
+
+Work in your own office, eat delicious food, and travel the world.
+
+We don’t believe in cubicles. (Well, we believe they exist, but…) You will work in an individual office that will heighten your ability to get stuff done. For lunch, visit King’s Cross or Cassiopeia for a wide array of meal options, or go to one of our smaller, themed bistros, featuring wood-rotisserie, pan-Asian, and Latin-inspired cuisine. All meals are restaurant-quality but cost only a few dollars, and they’re prepared by a team comprised of kitchen talent from restaurants around the country. And, after five years here, you’ll earn a four-week sabbatical anywhere in the world. Staff have kayaked in Patagonia, attended a Beyoncé concert in Ireland, built a library in Tanzania, and run a marathon in Antarctica.
+
+Live affordably in a city known for its rising tech talent.
+
+Epic is located just outside Madison, Wisconsin the second fastest growing market for tech talent in the United States and home to the state capital and the University of Wisconsin. Madison, a city surrounded by water, has received accolades for being the greenest city in America (NerdWallet), the best city for renters (SmartAsset), fittest city in America (Fitbit), and, for the gamers, is one of a handful of US cities to have a Killer Queen arcade game, located at Madison’s first arcade bar.
+
+More than just important work.
+
+We offer comprehensive benefits to keep you healthy and happy as you grow in your life and career, and your merit-based compensation will reflect the impact your work has on the company and our customers. You'll also be eligible for annual raises and bonuses, as well as stock grants, which give you an even greater stake in the success of Epic and our customers. Epic is an Equal Opportunity employer. Please see our full non-discrimination statement at https //careers.epic.com/EEO.
+Relocation to Madison, WI area (reimbursed)
+BS/BA or greater in Computer Science, Mathematics, Software Engineering, Computer Engineering, or a related field
+A history of academic excellence or professional success
+Eligible to work in the United States without visa sponsorship (persons with appropriate qualifications and eligible for TN status under NAFTA may apply)
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering
+Industries
+Information Technology and Services, Computer Software, and Hospital & Health CareDescription
+
+Position at Logitech
+
+The Role
+
+Our Video Collaboration products help companies stay connected and can be found in the conference rooms of some of the biggest businesses in the world. We are a small nimble group and we are growing our team. We create amazing experiences in the conference room using creative design, surprising science, and innovation. We love what we do because we are passionate about connecting people and we use the products we create every day to stay connected to our team. Want to be part of this team of collaboration innovators?We are looking for an innovative and passionate software engineer to help us get to the next level. You will be working with a small team of developers focused on making the video collaboration an amazing experience and the software you create will be used by thousands of people every day.
+
+Your Contribution
+
+Role
+
+We are looking for a talented and motivated Senior Software Engineer to play a key role in our Desktop Applications development team
+You will use your great development skills to design and create innovative solutions to common and uncommon problems
+You have great development skills and you like to show people by writing awesome code that is both functional and elegant
+You like to document what you do so everyone can easily understand what your code does
+You are always on the lookout for new technologies and development tools that you can leverage to become better or that will help make better products
+You prefer to develop on Windows and Mac OS but you are also adaptable to different languages, devices and operating systems depending on the situation
+
+Key Qualifications
+Bachelor’s degree in Computer Science or related field required; Master’s degree desired
+6+ years related industry experience
+Strong debugging skills, especially with regard to memory management, threads, data structures, and profiling
+Ability to deliver results in a fast-paced, Agile development environment
+In addition to being hands-on coder, should be able to provide architectural guidance to the team
+Excellent verbal and written communication skills
+Experience with multi-threaded programming, INFs and USB device drivers, as well as IO control operations such as UVC and HID preferred
+Familiar with software best practices, including continuous integration and test driven development
+Previous video conferencing experience a major plus
+React Native OR React-JS a big plus
+Mac: Objective C, XCode, Cocoa
+Windows: C, C++, C#, MFC, .NET, Visual Studio
+
+Logitech is the sweet spot for people who are passionate about products, making a mark, and having fun doing it. As a company, we’re small and flexible enough for every person to take initiative and make things happen. But we’re big enough in our portfolio, and reach, for those actions to have a global impact. That’s a pretty sweet spot to be in and we’re always striving to keep it that way.
+
+“All qualified applicants will receive consideration for employment without regard to race, sex, color, religion, sexual orientation, gender identity, national origin, protected veteran status, or on the basis of disability.”
+
+If you require an accommodation to complete any part of the application process, or are limited in the ability or unable to access or use this online application process and need an alternative method for applying, you may contact us at 510-713- 4866 for assistance.
+
+Show less
+Seniority level
+Not Applicable
+Employment type
+Full-time
+Job function
+Design, Information Technology, and Engineering
+Industries
+Consumer Electronics, Design, and Information Technology and ServicesDirect message the job poster from Virufy
+Amil Khanzada
+Founder at Virufy
+Virufy is a US-based nonprofit research organization with members across 25+ countries using artificial intelligence (AI) to diagnose COVID-19 from cough patterns, rapidly and at no cost through use of a smartphone. We are a Stanford University COVID-19 Response Innovation Lab project, have been featured in One Young World, and in more than 300 press releases including Forbes, CNN, and MSN.
+
+Our work is soon expected to benefit millions of lives and we welcome talented individuals looking to be part of our team curbing the pandemic.
+
+[IMPORTANT] For your application to be considered, please apply here:
+https://forms.gle/GEkQzAq65Psj73mx5
+
+Responsibilities:
+Assist in scaling our state-of-the-art ML approaches for detecting COVID from coughs.
+Train, build, and deploy AI models into production.
+Produce clean code and APIs to facilitate understanding within the team.
+Collaborate with product management and leadership to deliver on expectations.
+Build data ingest and data transformation infrastructure.
+Process and feature extract from a wide array of input data types.
+Identify transfer learning opportunities and auxiliary training datasets.
+
+Requirements for strong candidates:
+1-2 years of experience working with frameworks and open source technologies in an SDE role.
+Passionate and committed to the Virufy mission. Show up to stand-up meetings on time, communicate effectively, and share learnings with the team
+Strong Python programming experience with toolkits such as Pandas, NumPy, Librosa
+Bonus: Experience in training models with frameworks like Scikit-learn, Tensorflow, Pytorch, Keras
+Bonus: Hands-on AI programming experience working on (ideally) enterprise products
+Bonus Experience using AI for healthcare in clinical research studies and solving real-world problems
+
+Time Commitment:
+Minimum 10 hours per week, including stand-up, sprint review, and other meetings
+
+For more details, please visit below.
+https://docs.google.com/document/d/1MuIagdfF3PO6zhndfCQHjf7N8YEtMoPNbtds7q0SHTg/edit
+Show less
+Employment type
+VolunteerDirect message the job poster from Informatica
+Srinivasa Dokku (He/Him)
+Manager Talent Acquisition - Engineering - We're hiring
+Job Number: 30466
+
+Position
+
+Title: Software Engineer
+
+Description
+
+External Description:
+
+We’re currently looking for a Software Engineer with strong programming background with good problem-solving skills to join our team in Redwood City, California.
+
+Job Summary
+
+The Cloud Data Engineering DevOps team is responsible for development and delivery of continuous deployment pipeline. As our Software Engineer, you will have the opportunity to be part of the enthusiastic team developing the cloud deployment platform with microservices containerization and using Kubernetes to manage deployments with the goal of ensuring zero-downtime, high security, high availability, performance, scalability of production systems across AWS, Azure and GCP cloud ecosystems. In the role of Software Engineer, you must be able to work and adapt in a fluid, fast-paced environment. Working as the Software Engineer you must have strong technical, communication, collaboration, and leadership skills.
+
+Day-to-day Duties? Here's What You'll Be Doing
+Participate in the design and development of cloud deployment platform to support zero-downtime, security, availability, performance, scalability of production systems.
+Develop advanced tooling for CI/CD operations to support deployments across multiple environments on different cloud ecosystems across different geographies.
+Troubleshoot complex production issues, including performance and function issues
+Strive for reliability and performance of large-scale environments
+Authoring technical documentation for workflows/processes/best practices.
+Technology You’ll Use: (Only for R & D Jobs)
+Python/Java/Groovy, Linux scripting
+Container technologies like Docker/Kubernetes
+Cloud ecosystems AWS/Azure/GCP
+Perforce, Git version control systems
+Puppet/Chef, Jenkins, Spinnaker
+Key Essentials
+2+ years of experience in DevOps or Software development
+BS degree in a related field, MS preferred
+What We’d Like To See
+Proficiency in a Python, Java or Groovy
+Strong analytical and troubleshooting skills
+Willing to learn and adapt
+Good fundamentals on Release Management & continuous Integration
+Experience with CI/CD, Containers and/or virtualization, Jenkins, GitHub CI flows
+Exposure with container-based workloads management using Kubernetes is a plus
+Good verbal and written communications skills
+Proficiency in shell scripting
+Experience with system administration on Amazon AWS or Microsoft Azure or Google GCP
+City: Redwood City
+
+State
+
+Seniority Level: Associate
+
+Alternative Location(s) :
+
+Community / Marketing Title: Software Engineer
+
+
+
+Company Profile
+
+Unleash Your Potential
+
+A career with Informatica gives you all the opportunities and benefits that can only come from working for the trusted industry leader. By joining our team, you'll be able to solve real-life problems, make a difference, have a global impact, and join a supportive group of globally diverse teammates. We encourage you to be yourself, grow with us and unleash your potential.
+
+EEO Employer Verbiage
+
+Informatica is the enterprise cloud data management leader, helping enterprises overcome critical business challenges by leading with the power of data. Processing over 15 trillion cloud transactions a month, Informatica enables the world’s most innovative companies to take a cloud-first, cloud-native approach to modernize their data infrastructure, gain a 360-degree view of their business, and drive data governance and privacy. Informatica is the market leader in all five key categories of enterprise data management and has been the trusted partner to more than 9,500 customers. Connect with Informatica at www.informatica.com, LinkedIn, Twitter, and Facebook.
+
+Conquering the Impossible with data, come join #LifeAtINFA!
+
+All qualified applicants will receive consideration for employment without regard to race, sex, color, religion, sexual orientation, gender identity, national origin, protected veteran status, or on the basis of disability.
+
+Travel Requirement: Limited
+
+Show less
+Seniority level
+Associate
+Employment type
+Full-time
+Job function
+Quality Assurance, Design, and Engineering
+Industries
+Computer SoftwareZoomies help the world connect — and deliver happiness while doing it. We set out to build the best video conferencing product for the enterprise, and today help people communicate better with products like Zoom Phone, Zoom Rooms, Zoom Video Webinars, Zoom Apps, and OnZoom.
+
+We’re problem-solvers and self-starters, working at a fast pace to design solutions with our customers and users in mind. Here, you’ll work across teams to dig deep into impactful projects that are changing the way people communicate, and enjoy opportunities to advance your career in a diverse, inclusive environment.
+
+The Zoom web client is looking to bring on a Frontend Engineer to help us provide a rich, engaging, real time communication experience in all modern web browsers and across platforms, serving hundreds of millions of users from around the world.
+
+In Addition, You Will
+
+As an integral member of the team, your primary responsibility will be to design, develop, and maintain the Zoom web client and progressive web application.
+Collaborate closely with cross-functional team members to understand, refine, and implement product requirements with quality, accuracy, and speed;
+Diligently produce and champion robust, high-quality, sustainable code;
+Rapidly prototype and validate (or invalidate) solutions for complex, real time video and audio communications in the browser;
+Engage with and support a healthy team environment through effective communication, respect, empathy, and a strong sense of personal responsibility;
+Stay up to date with and encourage the appropriate use of the latest technologies and industry best practices;
+Enthusiastically advocate for the best customer experience, helping us to fulfill our mission to Deliver Happiness .
+Competencies & Skills
+To support our browser-based, real time experiences, the following competencies and skills are required or highly preferred:
+Team player with excellent written and verbal communication skills
+5+ years of demonstrable experience delivering highly available web applications at scale
+Foundational computer science knowledge including data structures, algorithms, and distributed systems design
+Strong proficiency in JavaScript (ES6+), DOM manipulation, the JavaScript object model
+Thorough understanding of fundamental web technologies including HTTP, HTML5, CSS, and RESTful web services
+Experience with ReactJS (react, redux, react-router) and Typescript
+Experience with common front-end development tools such as Babel, NPM, etc.
+Knowledge of web application security, defensive/offensive programming concepts, and related best practices
+PWA architecture and development
+Multi-threaded development (Web Workers, Service Workers, Worklets)
+Web Audio, Canvas, WebGL APIs
+WebAssembly (Wasm)
+WebTransport, WebRTC, and WebSocket APIs
+
+Explore Zoom
+Hear from our leadership team
+Browse Awards and Employee Reviews on Comparably
+Visit our Blog
+Zoom with us!
+Find us on social at the links below and on Instagram
+Show less
+Seniority level
+Not Applicable
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Computer Software, and InternetRippleX is a division at Ripple focused on accelerating adoption of the digital asset XRP and the XRP Ledger in blockchain projects across industries and technologies. RippleX aims to build a robust ecosystem of third-party developers, projects and companies that build, grow and monetize their applications on XRP, Interledger Protocol and other blockchain technologies.
+
+RippleX has built technologies like ILP, that enables sending money in any currency and any amount to be as easy, fast and inexpensive as sending information across the internet; PayString, which enables interoperability between payment networks; and toolkits and API’s in several Languages that enable developers to build on top of the XRP ecosystem.
+
+We believe that interoperability is critical to achieving the Internet of Value and envision a widely available network allowing anyone to pay or get paid in the currency of their choice, nearly instantaneously and at minimal cost. We are looking for engineers who share in that vision. It’s a big vision and we have a lot of work to get there but we are committed to building out the team to achieve this.
+
+This role is based in San Francisco.
+
+Key Responsibilities
+Work on integration libraries and SDKs to interface with our server and APIs
+Expose the power of blockchain technology through user friendly interfaces
+Contribute to an ecosystem of decentralized finance applications
+Quickly learn and utilize modern development tools and libraries
+Build services that aggregate and leverage on-chain data
+Requirements
+You love programming!
+You have worked on open source projects, developer platforms, and/or API-driven businesses
+Bachelor’s in Computer Science or similar years of hands on Software Development experience
+You are experienced working with any of: Typescript/Javascript, Java, Rust, Go, or Python
+You are excited about blockchains, the technical details and the potential benefits
+You seek to deeply understand the low-level details of the technologies you work with and the problems you work on
+You look to solve problems with simple solutions, rather than technically perfect ones
+What We Offer
+The chance to work in a fast-paced start-up environment with experienced industry leaders
+A learning environment where you can dive deep into the latest technologies and make an impact
+Competitive salary and equity
+100% paid medical and dental and 95% paid vision insurance for employees starting on your first day
+401k (with match), fully paid parental leave, commuter benefits
+Generous wellness reimbursement and weekly onsite programs
+Flexible vacation policy - work with your manager to take time off when you need it
+Employee giving match
+Modern office in San Francisco’s Financial District
+Fully-stocked kitchen with organic snacks, beverages, and coffee drinks
+Weekly company meeting - ask me anything style discussion with our Leadership Team
+Team outings to sports games, happy hours, game nights and more!
+Who We Are
+
+Ripple provides one frictionless experience to send money globally using the power of blockchain. By joining Ripple’s growing, global network (RippleNet), financial institutions can process their customers’ payments anywhere in the world instantly, reliably and cost-effectively. Banks and payment providers can use the digital asset XRP to further reduce their costs and access new markets.
+
+With offices in San Francisco, New York, London, Mumbai, Singapore, São Paulo, Reykjavík, Washington D.C. and Dubai, Ripple has more than 300 customers around the world.
+
+Ripple is an Equal Opportunity Employer. We’re committed to building a diverse and inclusive team. We do not discriminate against qualified employees or applicants because of race, color, religion, gender identity, sex, sexual preference, sexual identity, pregnancy, national origin, ancestry, citizenship, age, marital status, physical disability, mental disability, medical condition, military status, or any other characteristic protected by local law or ordinance.
+
+Please find our UK/EU applicant privacy notice here.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Financial Services, Investment Banking, and Investment ManagementAbout Wurl, Inc.
+
+The world's TV viewing is rapidly migrating to internet-based production and delivery. Wurl is the market leader in helping content companies distribute and monetize their video programming. Our B2B network reaches over 150 million TVs delivering hundreds of millions of hours of programming and billions of ads for Wurl customers. Wurl enables leading content companies to create and manage streaming TV channels, live broadcasts, and on-demand content for distribution to streamers around the world. Wurl is based in Palo Alto, CA (HQ) and has offices in Santa Monica, New York and London.
+
+At Wurl, you will help change what "TV" means for hundreds of millions of viewers around the world. This is a rare opportunity to be one of the first 100 employees for one of the fastest growing companies in Silicon Valley.
+
+Software Engineer
+
+We are looking for a Streaming Software Engineer to join our team of highly skilled, motivated and collaborative engineers. In this role you would be a key contributor to identifying and solving many of the critical tasks on our roadmap including:
+CREATE new play-out and delivery systems to enable video distribution to global video services (OTT, social, live)
+DEVELOP state-of-the-art tech and services to enhance live, linear and VOD video distribution
+EXTEND Wurl's server-side dynamic ad insertion platform
+BUILD our network to blanket the planet
+
+If you are passionate about solving complex problems with elegant and creative solutions, then this job maybe a perfect fit for you.
+5+ years of complete software lifecycle experience.
+Proven experience with Golang, NodeJS or Ruby and/or other modern languages.
+Prior experience delivering highly resilient, distributed micro services on public/private cloud infrastructures.
+Experience working with AWS services like EC2, Lambda, RDS, S3, SQS etc.
+Experience working in Agile teams.
+Great team player with can do attitude.
+
+A plus if you have:
+Experience with HTTP video delivery/Dynamic Ad Insertion (DAI)/CDN technologies
+Knowledge of open-source software like FFMPEG and nginx.
+An understanding of video storage and delivery standards (HLS, MP4, RTMP, DASH, MRSS, RTMP)
+
+
+What We Offer
+
+Wurl is a high growth company with a generous stock options plan. Wurl provides a competitive compensation and excellent benefits package including medical, dental, vision, life/disability insurance, paid time off, paid holidays, 401(k), flexible schedules and HSA. We also offer $1000 to set up your work from home office. We are a fun, creative and collaborative remote work environment, headquartered in Palo Alto, CA. We live our values (PASSION, OWNERSHIP, RESPECT, EXCELLENCE) everyday in how we work with one another and support our clients. Wurl is truly a unique place to learn, create and have a daily impact on millions of people around the world every day.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+InternetCoupa Software (NASDAQ: COUP), a leader in business spend management (BSM), has been certified as a “Great Place to Work” by the  Great Place to Work organization. We deliver “Value as a Service” by helping our customers maximize their spend under management, achieve significant cost savings and drive profitability. Coupa provides a unified, cloud-based spend management platform that connects hundreds of organizations representing the Americas, EMEA, and APAC with millions of suppliers globally. The Coupa platform provides greater visibility into and control over how companies spend money. Customers – small, medium and large – have used the Coupa platform to bring billions of dollars in cumulative spend under management. Learn more at  www.coupa.com . Read more on the  Coupa Blog  or follow  @Coupa on Twitter .
+
+Do you want to work for Coupa Software, the world's leading provider of cloud-based spend management solutions? We’re a company that had a successful IPO in October 2016 (NASDAQ: COUP) to fuel our innovation and growth. At Coupa, we’re building a great company that is laser focused on three core values:
+
+1. Ensure Customer Success  – Obsessive and unwavering commitment to making customers successful.
+2. Focus On Results  – Relentless focus on delivering results through innovation and a bias for action.
+3. Strive For Excellence  – Commitment to a collaborative environment infused with professionalism, integrity, passion, and accountability.
+
+Responsibilities:
+Help scale our platform as we expand and find the right balance between the power of a consolidated codebase and the flexibility of microservices
+Collaborate with Product and Development teams to build new features
+Find creative and elegant solutions to complex problems
+Work in an agile environment where quick iterations and good feedback are a way of life
+
+
+
+Requirements:
+2+ years of software development experience in Ruby on Rails
+Strong object-oriented design and analysis skills
+Good understanding of common design patterns
+Experience with React.js (or similar Javascript framework) and CSS
+Experience with GoLang is a plus
+Comfortable working collaboratively with a globally distributed team
+Critical thinker with a curious, passionate, and growth-oriented mindset
+
+
+
+At Coupa, we have a strong and innovative team dedicated to improving the spend management processes of today’s dynamic businesses. It’s our people who make it happen, and we strive to attract and retain the best in every discipline.
+
+We take care of our employees every way we can, with competitive compensation packages, as well as restricted stock units, an Employee Stock Purchase Program (ESPP), comprehensive health benefits for employees and their families, a 401(k) match, a flexible work environment, no limit vacations for exempt employees, non-exempt employees are on an accrual basis for PTO, catered lunches…And much more!
+As part of our dedication to the diversity of our workforce, Coupa is committed to Equal Employment Opportunity without regard for race, ethnicity, gender, protected veteran status, disability, sexual orientation, gender identity or religion.
+
+Please be advised, inquiries or resumes from recruiters will not be accepted.
+Show less
+Seniority level
+Not Applicable
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Computer SoftwareA resourceful engineer who wants to be a part of a small team, and as such, and hop around various projects and take on a large amount of ownership. Majority of projects in the near-term will be frontend-heavy.
+
+The salary range for this position is $130,000 - $150,000
+
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering
+Industries
+Computer SoftwareSoftware Engineer, Test Platform
+Santa Monica, CA
+Mountain View, CA
+Seattle, WA
+
+Snapchat is a camera and messaging app that connects people to their friends and the world. Every day around the globe, millions of people use Snapchat to communicate with friends, build relationships, play, and learn. No matter where you are or how you express yourself, it’s always the fastest way to share a moment!   
+ Snap Engineering teams build fun and technically sophisticated products that reach hundreds of millions of Snapchatters around the world, every day. We’re deeply committed to the well-being of everyone in our global community, which is why our values are at the root of everything we do. We move fast, with precision, and always execute with privacy at the forefront.
+ Some core features we build and maintain include Snapchat’s Camera, Creative Tools, Maps, Chat, Memories, Stories, Discover, Games, and Minis. Our Infrastructure teams deliver an innovative and cost-efficient platform that ensures Snapchat is the fastest way to communicate with your friends, no matter where you are in the world. We have one of the fastest growing digital ad platforms, and our Monetization teams drive measurable returns for advertisers through novel ad formats like Augmented Reality. As a Snap Engineering team member, you’ll help us build the future of communication.
+ We’re looking for software engineers to join the Test Platform team! Our tremendous growth requires a powerful client test automation infrastructure (both iOS and Android) to quickly integrate, build and test code. You will be involved in the team that is building new test automation frameworks to support functional and UI testing. 
+
+What you’ll do:
+Build best in class testing tools and infrastructure to support functional and UI testing of Snapchat’s iOS and Android apps.
+Architect new framework and services to speed up detection of bugs and regressions in the CI/CD pipeline.
+Work across teams to understand product requirements, evaluate trade-offs, and deliver the solutions needed to build innovative products
+Advocate for and apply best practices when it comes to availability, scalability, operational excellence, and cost management
+Being part of a passionate team that is building Snapchat’s testing tools and infrastructure
+
+What we’re looking for:
+3+ years work experience as a software development engineer and/or software development engineer in test
+Experience with one or more mobile test automation frameworks, such as XCUITest, Espresso, Appium
+Experience with build infrastructure and continuous integration/deployment
+Experience with test frameworks supporting different layers of the Test Pyramid (unit test, snapshot test, module test, etc.) is a plus
+The drive to learn new technologies and frameworks
+A self starter who enjoys building new tools and services
+A team player attitude who enjoys working with other passionate engineers
+
+At Snap, we believe that having a team of diverse backgrounds and voices working together will enable us to create innovative products that improve the way people live and communicate. Snap is proud to be an equal opportunity employer, and committed to providing employment opportunities regardless of race, religious creed, color, national origin, ancestry, physical disability, mental disability, medical condition, genetic information, marital status, sex, gender, gender identity, gender expression, pregnancy, childbirth and breastfeeding, age, sexual orientation, military or veteran status, or any other protected classification, in accordance with applicable federal, state, and local laws. EOE, including disability/vets. If you have a disability or special need that requires accommodation, please don’t be shy and contact us at accommodations-ext@snap.com.
+ Our Benefits: Snap Inc. is its own community, so we’ve got your back! We do our best to make sure you and your loved ones have everything you need to be happy and healthy, on your own terms. Our benefits are built around your needs and include paid maternity & paternity leave, comprehensive medical coverage, emotional and mental health support programs, and compensation packages that let you share in Snap’s long-term success!
+Show less
+Seniority level
+Mid-Senior level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Computer SoftwareSentient Science provides digital twin technology to predict the life of mechanical systems. Sentient's DigitalClone® SaaS solutions use proprietary physics-based modeling and machine learning AI to unlock insights that lower the costs of designing, operating, and sustaining high value assets. Sentient Science is a leader in prognostic solutions with one patent awarded in 2019 for physics-based life prediction and six additional patents pending. Sentient has won more than $22 million in SBIR/STTR funding from the U.S. Government – with agencies including Dept of Energy, Dept of Defense, and NASA.
+
+The technology has been recognized by the SBIR program with the 2014 Tibbetts Award, by Bloomberg as New Energy Pioneer Award in 2016, and Frost & Sullivan in 2017 with the New Product Innovations Award for Wind Prognostics.
+
+The role:
+The Software Engineer supports a multi-disciplinary team and leads efforts to expand the capabilities of Sentient’s cloud-based predictive analytics platform. This position produces scalable software, driving business growth and dramatically increasing the productivity of our technical, business, and customer-facing teams. The Software Engineer will be working directly on new features of our DigitalClone software and will be exposed to utilizing best practices to achieve business goals.
+
+Responsibilities:
+Collaborating with different teams engineers to implement solutions that align with and heighten the DigitalClone Platform and solutions
+Building software components and tools to support and expand the Platform capabilities
+Enhancing applications by identifying opportunities for improvement, making recommendations, and designing and implementing systems
+Maintaining and improving existing codebases and peer review code changes
+Assisting with process optimization
+Develop automated build and deployment pipelines for your services
+Participating in post-implementation and system maintenance support
+Develop / integrate leading-edge tools and frameworks to build and deploy scalable and efficient machine learning solutions
+
+Experience & Qualifications:
+Proficiency working with a modern programming language (e.g. Javascript or Python)
+Proven expertise in developing cloud-based, scalable software applications and services
+Experience deploying production applications to a public cloud (bonus points for AWS)
+Experience with cloud environments, serverless architecture, SQL/NoSQL databases, containers (Docker)
+Knowledgeable in developing and consuming APIs and micro-services to facilitate data access, business logic, and workflows
+Experience building and deploying end-to-end systems using either in-house infrastructure or cloud ML environments e.g. SageMaker
+Experience setting up and optimizing DBs for production usage for ML systems
+US citizen or permanent resident required
+
+Competencies:
+Solid understanding of web services and computer science fundamentals (theory, data structures, algorithms).
+Ability to work in a fast-paced environment with a demonstrated ability to accomplish multiple tasks and meet deadlines
+Excellent written/oral communication and interpersonal skills are essential
+Excellent relationship skills and ability to work cross-functionally Good professionalism/customer interaction skills
+Strong attention to detail
+Ability to work independently and as part of a team
+
+Preferred experience:
+Experience with the NodeJS Express API framework
+Experience with the Vue.js front-end framework
+Experience with Postgres, DynamoDB, and ElasticSearch
+Experience with AWS and infrastructure as code
+Experience with Git and GitHub: Branching, merging, pull requests, etc…
+
+Benefits:
+Medical
+Dental
+401K
+Short/Long Term Disability
+Life/AD&D insurance
+Unlimited Paid Time Off (Unrestricted), plus 12 annual company holidays
+Flexible working hours and fully remote option available
+Our commitment to inclusion across race, gender, age, religion, identity, and experience drives us forward every day
+
+Show less
+Employment type
+Full-timeDirect message the job poster from PDS
+Destiny Banik
+Software Developer
+ PDS is seeking a strong mid-level .Net developer with at least five years of experience using C#, ASP.Net, Razor, HTML, CSS, JavaScript, JQuery and other JavaScript frameworks. This position is with one of our clients, which is an outstanding, growing company. They are one of the top ranked companies in Utah to work for. This role assists in the design and development of server side API’s and intranet/extranet based applications.
+ Job Functions
+Design websites that are compliant with the major browsers.
+Design intuitive, responsive and simple web-based user interfaces.
+Anticipate, identify, and mitigate problem areas.
+Develop prototypes and proofs of concept for end users.
+Meet with staff to ascertain website requirements.
+Participate in code reviews with other developers.
+Performs testing of websites.
+ Requirements:
+Bachelor’s degree in a computer related field or equivalent experience.
+Experienced in C#, ASP.Net, Blazor, and Razor.
+Experience in server side development, including web services, WCF and Web API
+Experience using JavaScript and JS frameworks such as JQuery, Angular, etc.
+Experience with object-oriented JavaScript and JSON format.
+Ability to create screen layouts using HTML, CSS and JavaScript.
+Bonus: Experience with website security and security best practices.
+Ability to write flexible, reusable and documented code.
+Knowledge of SQL databases, including T-SQL.
+Proficiency with versioning tools, such as SVN or GIT.
+Understanding of HTTP and REST architecture.
+Bonus: Experience with PHP and MySQL.
+
+ 
+
+
+Please contact our Recruiting Team for more information: utahjobs@pdsinc.com
+Show less
+Seniority level
+Mid-Senior level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and ServicesAbout The Team
+
+DoorDash Labs is an independent team within DoorDash. We’re hiring software engineers to work at the intersection of software engineering and robotics to solve key business problems with elegant technical solutions. If you have a passion for applying robotics solutions to a service loved by millions of people, then we want to talk to you!
+
+What You'll Do
+Design and implement backend services for real time communication with robots, focused on reliability, and future extensibility
+Improve performance, reliability, scalability and security for our backend systems
+Evolve our software platform for supporting robotics use cases
+Introduce tools and best practices to accelerate our development process
+Develop and define the backend architecture and tech stack for a product area
+Pave the path for deploying robots at large scale
+Shape and build our engineering culture and best practices
+
+
+What We're Looking For
+B.S., M.S., or PhD. in Computer Science or equivalent
+5+ years of industry experience as a backend software engineer
+Ability to analyze and improve efficiency, scalability, and stability of various system resources
+Experience with service oriented architecture, writing API’s, unit testing, and architectural designs
+Experience with SQL and NoSQL databases
+Adaptability, resilience, and being able to thrive in ambiguity - things change quickly in our fast-paced team and you’ll need to be able to keep up!
+
+Nice to Have
+
+Experience with these specific technologies or similar alternatives is not required but helpful:
+Kotlin, Java, or other JVM languages and frameworks, Node.js
+gRPC, Kafka, Redis, Postgres, Cassandra
+AWS, Kubernetes, Docker
+
+Why You’ll Love Working at DoorDash
+We are leaders - Leadership is not limited to our management team. It’s something everyone at DoorDash embraces and embodies.
+We are doers - We believe the only way to predict the future is to build it. Creating solutions that will lead our company and our industry is what we do -- on every project, every day.
+We are learning - We’re not afraid to dig in and uncover the truth, even if it’s scary or inconvenient. Everyone here is continually learning on the job, no matter if we’ve been in a role for one year or one minute.
+We are customer obsessed - Our mission is to grow and empower local economies. We are committed to our customers, merchants, and dashers and believe in connecting people with possibility.
+We are all DoorDash - The magic of DoorDash is our people, together making our inspiring goals attainable and driving us to greater heights.
+We offer great compensation packages and comprehensive health benefits.
+
+
+About DoorDash
+
+DoorDash is a technology company that connects customers with their favorite local and national businesses in over 4,000 cities and all 50 states across the United States and Canada. Founded in 2013, DoorDash empowers merchants to grow their businesses by offering on-demand delivery, data-driven insights, and better in-store efficiency, providing delightful experiences from door to door. By building the last-mile delivery infrastructure for local cities, DoorDash is bringing communities closer, one doorstep at a time. Read more on the DoorDash blog or at www.doordash.com.
+
+Our Commitment to Diversity and Inclusion
+
+We’re committed to growing and empowering a more inclusive community within our company, industry, and cities. That’s why we hire and cultivate diverse teams of the best and brightest from all backgrounds, experiences, and perspectives. We believe that true innovation happens when everyone has room at the table and the tools, resources, and opportunity to excel.
+Show less
+Seniority level
+Not Applicable
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Marketing and Advertising, Computer Software, and InternetWe're seeking a developer to be a primary contributor in the development of a new product in medical diagnostic testing. You will be a core member in a small collaborative team, working in a lean startup environment with no BS or pointy haired bosses. You will be involved in all aspects of development over the complete product life cycle. You will have the opportunity to learn and use a diverse range of technologies.
+
+Sample Activities
+Web server programming in Scala
+AWS server configuration and maintenance
+Browser client programming in Scala.js
+Desktop application programming in C++
+Data analysis programming in Scala
+Requirements
+Professional and collaborative attitude
+Motivation to make great software
+Dedication to quality, and pride in the work you produce
+The ability to work and finish a project independently
+Knowledge, understanding, and respect for good software practices and development methodologies
+Minimum 4 years of programming experience
+Fluency with Scala or C++ strongly preferred
+Things We Use
+
+C++, Scala, Python, C++/CX, AWS, Apache, Mysql, Play framework, Visual Studio, IntelliJ, Windows, iOS, Android, OpenAPI, Confluence, Jira, Trello, Mercurial, Git
+
+Compensation
+
+Salary 100k - 140k depending on qualifications and experience + equity
+
+Great benefits including retirement, vacation, holidays, healthcare
+
+Location
+
+Berkeley, CA
+
+Remote work a possibility
+
+How To Apply
+
+Cover letter and resume
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Computer Software, and InternetPlease send your resume to: rehire@enhanceit.com
+
+Who We Are
+
+Enhance IT is an IT/Management firm that specializes in training, placement and IT consultation. We are an industry leader in providing top-level skilled and experienced consultants in a variety of technologies to meet our client’s needs in today’s fast paced environment.
+
+What You Will Be Doing
+
+You will be joining our cutting-edge development team as it grows. We want individuals who are comfortable asking “why?” The ideal candidate for this role is motivated, energized and has a creative thought process. They are a team player possessing strong analytical as well as technical skills and are able to communicate the logic behind technical decisions to non-tech stakeholders. They must be comfortable working in an agile environment and have the ability to “take the wheel” when necessary.
+
+What You Need For This Position
+An object-oriented programming language such as Java, C# or Kotlin.
+Sound understanding of the entire Software Development Lifecycle.
+Strong knowledge of Software Design Patterns, data structures and best practices.
+Bachelor's degree in Computer Science, Computer Engineering, MIS or related field.
+Strong written and verbal communication skills.
+Availability to travel and live in the U.S.
+Bonus Points
+
+Hands on experience...
+developing software with Agile Scrum or Kanban methodologies.
+interacting with REST Web APIs (XML or Json).
+using a VCS like Git or SVN.
+working with third party libraries for Java using Maven or Gradle.
+Additional Criteria/ Skills
+
+Hands on experience with…
+Software Testing using tools like JUnit and Mockito.
+Software Integration tools like JIRA, Jenkins.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Computer Software, and Staffing and RecruitingSoftware Developer Engineer in Test
+Engineering & Tech Operations | San Francisco, California OR Walnut Creek, California
+
+If position is eligible for remote employment, it will exclude the following locations: Alaska, Colorado, Hawaii, Iowa, Maine, Mississippi, North Dakota, South Dakota, Vermont, West Virginia and Wyoming
+
+Our agreement with employees
+
+DocuSign is committed to building trust and making the world more agree-able for our employees, customers and the communities in which we live and work. You can count on us to listen, be honest, and try our best to do what’s right, every day. At DocuSign, everything is equal. We each have a responsibility to ensure every team member has an equal opportunity to succeed, to be heard, to exchange ideas openly, to build lasting relationships, and to do the work of their life. Best of all, you will be able to feel deep pride in the work you do, because your contribution helps us make the world better. And for that, you’ll be loved by us, our customers, and the world in which we live.
+
+The Team
+
+Our Engineering & Tech Operations team builds and operates complex solutions for global business challenges that cross cultures, legal jurisdictions, and impacts millions of people and businesses every day. We hire people with a broad set of skills and people who want to work on creating never-been-done-before solutions at scale while ensuring world-class reliability and security. Our Agreement Cloud is a revolutionary solution that changes the way people live, work, and come to agreement.
+
+Position Summary
+
+The System Quality and Reliability Engineering team is essential to the success of our cloud services. As a Software Developer Engineer in Test on this team, you will be working on complex systems running on-prem as well as in the cloud, relational databases and large and complex datasets. You will focus on optimizing overall product quality, performance and reliability. You will be defining, building, and enhancing test automation framework to speed up DocuSign’s ML and AI product delivery with highest software quality. The key qualities we’re looking for is a true self-started, problem solver, someone who enjoys digging deeper and has a need to understand systems and how they’re wired.
+
+This position reports to the Director of Quality Engineering.
+
+Responsibilities
+Collaborate with the Engineering, Support and Product Management teams to review and document requirements, execute performance tests and troubleshoot/resolve issues
+Design test plan & test cases with complex workloads and complex simulated customer contracts to expose potential bottlenecks and failure points
+Design, build and enhance test automation frameworks for REST APIs & Web applications
+Improve QA efficiency by building new tools and process
+Continuous improvement of regression test assets
+Be a focused results-oriented team member
+
+
+Basic Qualifications
+Degree in Computer Science or a related technical field
+This role is not eligible for OPT or sponsorship now or in the future
+
+
+Preferred Qualifications
+Coding and design experience, preferably in an object oriented programming language like Java, Ruby, C#
+Completed courses focused on Object Oriented Programming, Data Structures and Algorithms
+Completed courses focused on Artificial Intelligence or Machine learning
+Experience with consuming, Testing and building RESTful web services.
+Experience with git, continuous integration, and deployment tools.
+Experience in unit testing tools like TestNG, Junit or something similar
+Excellent communication skills
+
+
+About DocuSign
+
+DocuSign® helps organizations connect and automate how they prepare, sign, act on, and manage agreements. As part of the DocuSign Agreement Cloud, DocuSign offers eSignature: the world's #1 way to sign electronically on practically any device, from almost anywhere, at any time. Today, hundreds of thousands of customers and hundreds of millions of users in over 180 countries use DocuSign to accelerate the process of doing business and simplify people's lives. Plus, we save more trees together! And that’s a good thing.
+
+DocuSign is an Equal Opportunity Employer. DocuSign is committed to building a diverse team of talented individuals who bring different perspectives to the discussion and who feel a sense of inclusion and belonging when they join our team. Individuals seeking employment at DocuSign are considered without regards to race, ethnicity, color, age, sex, religion, national origin, ancestry, pregnancy, sexual orientation, gender identity, gender expression, genetic information, physical or mental disability, registered domestic partner status, caregiver status, marital status, veteran or military status, citizenship status, or any other legally protected category.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Computer SoftwarePosition is located in CA, GA, FL, NJ, OR, or WA.
+
+Valant is a market-leading, software-as-a-service organization serving the needs of the behavioral healthcare industry. Our mission is to develop disruptive technology solutions that exponentially improve behavioral healthcare quality to better serve mental health providers and their patients. We’re seeking enthusiastic, passionate individuals to join us as we transform the industry!
+
+What We’re Looking For
+You enjoy contributing to a team solving complex data, usability, and scalability problems
+You enjoy figuring out how to incrementally modernize and clean up legacy aspects of web applications
+You’re a full stack developer, and like working in front end, databases, API and middle tier
+You enjoy working across many functional areas of a product
+You have an opinion, and think holistically about all aspects of software development including testing, monitoring, deployments, and software development life cycle
+You’re excited to leverage the cloud infrastructure of AWS to create new market-changing solutions, while working in a lean methodology
+You love to work on robust service layer technologies (RESTful APIs, JSON, ASP.NET, and other APIs), highly scalable data technologies
+ What You’ll Do
+Work on, and build features for a highly configurable, user-friendly, cloud-based platform for behavioral health care practices, agencies, and clinicians using ASP.NET MVC, Angular, .NET Core, C#, Docker, SQL Server
+Work with architects to transform our product to our next generation architecture
+Refactor and reduce technical debt incrementally
+Be a key member of a high performing engineering team, working within a scrum/agile framework
+ What You’ll Need
+A proven ability to work hands-on in a fast-paced changing environment requiring creativity and independent judgement
+Ability to manage multiple priorities in a dynamic environment
+3+ years of relevant work experience
+Proficiency in, at least, one modern programming language such as C, C++, C#, Java, Perl, or JavaScript
+Knowledge and experience with cloud-hosted, service-oriented architecture
+ What We Offer
+Radically remote flexible work schedule
+Competitive compensation package, including 100% employer-paid medical, dental, and vision premiums
+Employer contribution to Health Savings Account (HSA)
+Generous paid time off policy
+Bonus plans
+401k
+Company-paid ORCA pass
+The chance to drive an important industry forward through next-generation technology
+  Show less
+Employment type
+Full-timeLocation
+
+Redwood City, CA
+
+Overview
+
+Equilar provides an industry-leading database and product suite for over 1,000 enterprise and professional service clients. Our approach is to never compromise on quality or integrity—an approach that has earned us the respect of the entire industry.
+
+Over the past three years, we have invested heavily in product development and are beginning to expand into adjacent markets. We’re looking for an experienced developer to join our dedicated team and help us reach the aggressive goals we’ve set over the next few years.
+
+Responsibilities
+Modifying software to add features, fix errors, improve performance, and upgrade interfaces.
+Testing software for defects and documenting the defects and solutions.
+Documenting software and API services for internal reference.
+Consulting with teams, departments, and customers on project status.
+Working with customers or departments on technical issues including software system design and maintenance.
+Analyzing information to recommend and plan the deployment of new software solutions or modifications of an existing solution.
+Consulting with engineering staff to evaluate APIs and develop specifications and performance requirements.
+Conferring with project managers to obtain information on limitations and capabilities.
+What We’re Looking For
+
+We are looking for an open, effective communicator who enjoys working in teams. Our ideal candidate will have an excellent foundation in computer science, a keen eye for data, and strong competencies in data structures, data algorithms, relational databases, and software design.
+
+Lastly, we’ll be looking for experience in the following key areas:
+Java. Ex: experience with Java, Eclipse RCP, and/or Spring/Hibernate.
+Database. Ex: experience with database system architecture, relational database design, Postgres, Search engines like ElasticSearch, and Document databases like Mongo.
+Web development. Ex: experience with JSON, HTML, CSS, Javascript, JQuery, AngularJs, Spring, and/or Python/Django Web Framework.
+Experience deploying an application with Docker and Kubernetes Engine.
+Education, Quality, Unity, Innovation, Leadership, Accountability, Results. These are the values we seek in everyone we hire.
+
+Requirements
+Bachelors in Computer Science, Information Systems, or related technical discipline
+2+ years of relevant work experience
+Start-up experience preferred
+WHO IS EQUILAR?
+
+Equilar is dedicated to the idea that better leaders make better companies. We help leaders and companies improve by providing information and tools that strengthen corporate governance, enable broader and deeper board searches and build bridges between people at the top.
+
+With offices in the Bay Area, Chicago, and New York City, Equilar’s award-winning suite of online databases is the first choice of companies seeking corporate governance and executive networking solutions. Equilar’s clients include leading human-capital consulting firms, over 1,100 publicly traded corporations (including over half of the Fortune 500), law firms, private-equity investors, search firms, executive associations and individual executives. These clients all rely on Equilar to provide insight into the top leadership of corporate America.
+
+Equilar’s work is featured regularly in The New York Times and The Wall Street Journal , on CNBC, and in other leading media outlets.
+
+WHY JOIN THE EQUILAR TEAM?
+
+Performance-Driven Culture. We come from diverse backgrounds and top universities with proven track records of success. We seek top-quartile performers who strive to be the best at everything that they do. We are 100% employee-owned and reward our top performers with a unique profit-sharing program.
+
+Great Career Opportunities. As a rapidly growing market leader, we offer plenty of opportunities for those passionate about career advancement and developing a broad skill set. We also offer paid time off and a stipend through our Learn Grow Lead program for employees to participate in seminars and classes outside of the workplace.
+
+Financial Strength. Our business is built on a profitable, subscription-based model with high client retention rates. We take pride in our disciplined fiscal approach and have consciously avoided the financial irresponsibility that has taken down many startups in Silicon Valley.
+
+In Summary, we offer the energy and ambition of a startup and the stability and benefits of a publicly traded company. We are growing rapidly and looking for exceptional talent who share our values to join our team and help take our business to the next level.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Computer Software, and Management ConsultingAbout The Job
+
+Software Engineer (10 positions), Google LLC. Mountain View, CA: Design, dev, mod, and/or test sw needed for various Google projects. MS (or foreign equiv.) in CS, Engg, Comp Info Syst, Math, Phys, or a related field and completion of a university-level course, research proj, internship, thesis, or 1 yr exp in: C, C++, Java, JavaScript, Objective-C, Cocoa, HTML, or CSS; obj. oriented analysis and design; and adv algorithms, multi-threading, mach learning, artificial intelligence, data mining, APIs, natural language processing, or MapReduce. Any suitable combo of ed, train, or exp is acceptable.
+
+Salary: $120,931 - $150,000
+
+Sched: M-F, 9am—6pm.
+
+Send resumes to: Recruitment and Employment Office, Google LLC. Attn: Job Ref #: GOO82948, P.O. Box 56625, Atlanta, GA 30343.
+
+Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. See also Google's EEO Policy and EEO is the Law. If you have a disability or special need that requires accommodation, please let us know by completing this form .
+Show less
+Seniority level
+Not Applicable
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Services and InternetForward is on a bold mission to make high quality healthcare available to a billion people across the globe. We’re building the world’s most advanced healthcare platform from the ground up, combining hardware, software and doctors under one roof. We are scaling our engineering team and looking for world-class engineers with experience and expertise in building scalable software solutions for real-world problems. As an early member of our engineering team, you’ll have a key role in building the future of healthcare from first principles.
+
+Forward was founded in January 2016 by former executives and engineering leaders from Google and Uber. We are funded by some of the world's best investors and entrepreneurs including Founder's Fund, Khosla Ventures, First Round Capital, Eric Schmidt (Google/Alphabet Chairman), Marc Benioff (Salesforce Founder), Joe Lonsdale (Palantir Founder), and Garrett Camp (Uber co-Founder).
+
+Press And Videos
+
+Virtual Tour of Forward [YouTube]
+
+"How Forward Thinks About AI" [Engineering Blog Post]
+
+'Forward at Home' Product Launch [TechCrunch]
+
+"Health Moves Forward" [CEO Blog Post]
+
+Forward Doctors Respond to COVID-19 [FastCompany]
+
+What You'll Do
+Tackle problems on the boundary of software, hardware, and the real world.
+Work with top-flight software and hardware engineering talent from places like Google, Amazon, Nvidia, Palantir, and NASA JPL.
+Own entire projects while working alongside cross-functional teams of physicians, designers, and operators.
+Lay the foundational groundwork for our engineering systems and practices.
+Collaborate with domain experts in fields like AI and NLP. Our engineers made major contributions to projects such as Amazon Go and TensorFlow.
+Your work will directly contribute to saving and improving people’s lives. For real. :)
+
+What We're Looking For
+Impact - You’re deeply mission-driven and you think there’s more to life than software that enables puppy ears to be superimposed on photos. Although we concede those are cute.
+Full stack - You’ve done front-end, back-end, and every kind of end.
+Product passion - You care about the bits you ship ending up in users’ hands, and work backwards from user needs to come up with solutions to problems.
+Entrepreneurship - You’re a self-starter who loves to own things end-to-end. You don’t ask for permission - you’re too busy making things happen.
+Team player - You know how to make those around you better and feed off their energy. You take care of your teammates.
+Curiosity - You like to mess around with computer vision, hardware hacking, or bioinformatics in your free time? You made your own smart mirror? Boy have we got some fun things for you…
+You have a BS or MS in computer science or a related field
+You have a minimum of 2 years experience working in a related field
+
+WHY JOIN FORWARD?
+
+We don’t want to just move dollars around the healthcare industry - we want to rebuild it and fix it. All of it. You’d be a major part of the story behind one of the most ambitious startup attempts of the past decade and you’d work with a team of people who want to use their talents for good.
+
+We are an equal opportunity employer. In accordance with anti-discrimination law, it is the purpose of this policy to effectuate these principles and mandates. We prohibit discrimination and harassment of any type and afford equal employment opportunities to employees and applicants without regard to race, color, religion, sex, national origin, disability status, protected veteran status, or any other characteristic protected by law. We conform to the spirit as well as to the letter of all applicable laws and regulations. Pursuant to the San Francisco Fair Chance Ordinance and the Los Angeles Fair Chance Initiative for Hiring, we will consider for employment qualified applicants with arrest and conviction records.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Computer Software, Internet, and Hospital & Health CarePacketized Energy is seeking a talented, highly motivated and mission driven individual to join our team as a Software Engineer.
+
+At Packetized Energy our mission is to enable a future with clean, affordable, and resilient energy for all people. Our Nimble platform transforms energy devices at the edge of the grid, such as HVAC systems, water heaters, EV chargers, and behind-the-meter batteries, into valuable grid resources (virtual batteries) for the electricity industry. Through the Nimble platform, we provide software-based grid services and energy IoT devices to electric utilities and to wholesale electricity markets, while providing comfort and value for consumers. And we do all of this in a way that greatly simplifies the complexity of deploying and managing distributed energy resources, so that grid operators and electric utilities can reliably and cost-effectively transition to renewable energy sources, and consumers get clean, resilient, and easy-to-use energy for their homes.
+
+Software engineers at Packetized work across technology stacks to build a full-stack software platform for grid operators and homeowners. Utilizing serverless technologies allows us to easily scale our services to ever-increasing numbers of energy resources. Our cloud platform enables grid operators to manage devices and monitor available flexibility across their fleet. Our mobile app gives homeowners unique views into their energy usage and allows them to participate in clean energy programs with their community.
+
+Our vision is to do all of this in a way that is human-friendly. We work hard and have fun building awesome products that people love, and we are actively committed to enabling greater diversity, equity, and inclusion in the energy industry. Our team works collaboratively from our headquarters in Vermont and from other locations including New York, California and Boston (Greentown Labs). As a distributed team, we value clear communication and cultivate systems that support remote work. We are constantly on the lookout for better ways to share information, support one another, and learn from the strengths and creativity of our team members.
+
+Requirements
+
+Your responsibilities will include
+Delivering high-quality code daily
+Designing scalable cloud-based architectures within the AWS ecosystem
+Working closely with our product team and customers to understand requirements
+Ensuring that we always have people’s comfort, privacy and security at the forefront of our design
+Staying on top of technical innovation in computer science, distributed systems, security, energy, and IoT technologies
+Evaluating whether and when to incorporate new technologies into our stack
+Providing guidance to other engineers on the team through code reviews, pair coding, and mentorship
+
+
+Qualifications
+1-2 years experience in software development
+Experience with modern server-side frameworks such as Node.js/Express
+Experience with modern front-end frameworks such as React.js
+Strong communication skills
+Demonstrated ability to self-motivate and problem solve
+Demonstrated ability to quickly pick up domain expertise
+
+
+Preferred Qualifications
+Experience with Node.js
+Experience with React.js
+Experience working with cloud-native tools in AWS Lambda, DynamoDB, SNS, SQS, ECS, etc.
+Prior startup experience
+Demonstrated ability to set goals and deliver results in a complex domain
+
+Packetized Energy values diversity and inclusion and we highly encourage applicants from groups underrepresented in the tech industry. We consider candidates holistically, so go ahead and apply even if you’re not sure you meet all the requirements. Packetized Energy is an equal opportunity employer.
+
+Benefits
+
+Benefits include stock options, health care, a retirement savings plan, and the opportunity to work with a team of amazing people who are passionate about solving energy problems. We have a flexible working environment
+Work remotely from anywhere within the US
+If you're in the Burlington, VT area, you have the option of working out of our main office at Chase Mill in Burlington, VT, just across the river from Winooski
+If you're in the Boston, MA area, you have the option of working out of our office at Greentown Labs located near Union Square in Somerville, MA
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering
+Industries
+Information Technology and Services, Computer Software, and InternetJunior Software Developer
+Conshohocken, PA 19428
+Full time W2 position
+Visa or Corp-to-Corp candidates need not apply
+ Please send resume to asim.ghosh@insourcenow.com
+ Position Summary
+We are looking for a recent college graduate with a Bachelor’s (or a Master’s) Degree in Computer Science or similar discipline, and 2 years of hands-on development experience using Microsoft technical stack.
+ Responsibilities
+Design and develop existing and new software
+Write well-structured and efficient code that is easy to understand and maintain
+Analyze business processes and plans
+Debug, analyze, develop, fix and test new and existing code that perform and deliver timely
+Develop easy to use interfaces and better UX
+Update own project status and collaborate with other members of the team
+Prepare specifications and documentations on tasks and projects
+Learn new technologies easily and quickly
+Solve problems independently and timely
+ Qualifications
+2 years of experience designing and developing software applications using .NET stack. This includes:
+Experience in Visual Studio, SQL Server, Reporting, BI and the .NET Framework
+Experience in Object-Oriented Design and Code using C# (Clean Code, SOLID)
+Writing SQL queries and procedures
+Web services, microservices, API, Databases, SQL
+JavaScript, ASP.NET MVC, Bootstrap, HTML5
+Passion for coding and building great software
+Familiarity with Agile methodologies
+Ability to work both independently and as a part of a team
+Excellent oral and written communication skills (English)
+Ability to troubleshoot with attention to detail
+Show less
+Seniority level
+Associate
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and ServicesNetflix is the world's leading streaming entertainment service with 208 million paid memberships in over 190 countries enjoying TV series, documentaries and feature films across a wide variety of genres and languages. Members can watch as much as they want, anytime, anywhere, on any internet-connected screen. Members can play, pause and resume watching, all without commercials or commitments.
+
+At the heart of Netflix technology is the Platform, which serves as the foundation for Netflix application development, and powers the viewing experience of millions of customers every day. This Platform needs to be highly available at scale, robust, resilient and ergonomic.
+
+The Service Networking team owns all things service-to-service communication at Netflix. We’re defining the future of mid-tier service architecture, and this role is instrumental in helping us fulfill the vision. You will be rolling out Service Mesh, the next generation Service Discovery, and solving a myriad of challenging problems in the domain along the way.
+
+Are You
+Passionate about defining and evolving service-to-service communication patterns and practices?
+Always looking for new ways to raise the level of abstraction and improve development experience at scale?
+Willing to adjust your decisions based on new data, and being curious about others’ ideas?
+Do You
+Focus on the big picture, display ownership, and take pride in your work?
+Enjoy collaborating closely with others to find solutions to a wide range of problems?
+Think in terms of trade-offs, and understand how to ship iteratively?
+Must Haves
+Microservice architecture experience (preferred at scale)
+Solid understanding of what can go wrong in a large scale Network
+Development experience on a cloud provider (AWS, GCP, Azure)
+Experience working with partner and stakeholder teams on creating solutions with myriad, sometimes conflicting, requirements
+Nice To Have
+Recent experience in C++
+Solid understanding of client-side load balancing
+Experience with using and/or extending Envoy, NGINX, Linkerd, Apache, IIS
+We are looking for a pragmatic software engineer/technical leader who is willing to learn, empathise with application developers, and is ready to work through complex use cases across the organization and drive them to completion. The candidate should have a proven track record of building distributed infrastructure systems and shipping software at scale, and a solid understanding of what makes mid-tier services resilient and robust.
+Show less
+Seniority level
+Not Applicable
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Entertainment, Internet, and Motion Pictures and FilmJob Description
+
+General Summary
+
+Designs, develops, troubleshoots and analyzes software programs for computer-based systems.
+
+Principal Duties and Responsibilities (*Essential functions)
+Designs, develops, tests and implements software programs *
+Analyzes user’s software program needs and assists in troubleshooting *
+Design and develops software using basic compilers, assemblers, utility programs and operating systems *
+Performs systems modeling, simulation and analysis *
+May advise hardware design engineers on machine characteristics that affect software systems
+May provide input for documentation of new or existing programs
+
+
+At COLSA, people are our most valuable resource and centered at our core value. We invite you to unite your talents with opportunity and be a part of our “Family of Professionals!” Learn about our employee-centric culture and benefits
+
+Required Experience
+Bachelors’ degree in computer science, information systems, engineering, business or other related field or equivalent
+Minimum of 2 years applicable software design engineering experience
+Ability to use desktop applications such as word processing, spreadsheet, and database programs
+Working knowledge of current operating systems and programming languages
+Experience in web technologies (HTML or HTML5)
+Experience in front-end technologies (JavaScript, AngularJS, Vue.js, or Typescript)
+Experience in front-end styling technologies (CSS, SCSS, SASS, Grunt, or Bootstrap)
+U.S. Citizenship
+Must be able to obtain/maintain a DoD Clearance
+
+
+Preferred Qualifications
+Experience in Agile methodologies (Scrum, Kanban, or etc.)
+Experience in source repositories (Git, Bitbucket or Perforce)
+Experience in Atlassian JIRA and Confluence
+Experience with build/deploy libraries like webpack and Babel
+Experience using container technologies (Docker)
+Experience using GUI frameworks like Vuetify
+
+
+Applicant selected will be subject to a government security investigation and must meet eligibility requirements for access to classified information. COLSA Corporation is an Equal Opportunity Employer, Minorities/Females/Veterans/Disabled. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, or national origin.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Defense & Space, and Computer SoftwareJoin our team dedicated to developing and executing innovative solutions in support of customer mission success. Novetta is committed to cultivating a diverse, inclusive workplace culture, embracing our differences and perspectives to build a stronger, more successful company.
+
+Job Description:
+
+Develop and sustain integrated, feature-rich capabilities that promote modernization of visualization and presentation tools. The software development team will provide application development and support to tools that allow mission analytic users to view existing data or contribute new information in a collaborative environment. The Software Engineer for this position may be professionally focused on UI or may be a full stack SWE with an interest in performing UI development. The Software Engineer with experience using React, modern Javascript Frameworks (React or Vue primarily), node/npm, webpack, Git, and Jest testing will be given preference.
+
+Basic Qualifications:
+
+Bachelor's degree in Computer Science or related discipline from an accredited college or university is required.
+Four (4) years of SWE experience on projects with similar software processes may be substituted for a bachelor's degree
+No demonstrated experience is required.
+Analyze user requirements to derive software design and performance requirements
+Debug existing software and correct defects
+Provide recommendations for improving documentation and software development process standards
+Design and code new software or modify existing software to add new features
+Integrate existing software into new or modified systems or operating environments
+Develop simple data queries for existing or proposed databases or data repositories
+
+Security Clearance Requirements:
+
+Active TS/SCI with favorable polygraph
+
+
+Novetta, from complexity to clarity.
+
+Novetta delivers highly scalable advanced analytics and secure technology solutions to address challenges of national and global significance. Focused on mission success, Novetta pioneers disruptive technologies in machine learning, data analytics, full-spectrum cyber, cloud engineering, open source analytics, and multi-INT fusion for Defense, Intelligence Community, and Federal Law Enforcement customers. Novetta is headquartered in McLean, VA with over 1,300 employees across the U.S.
+
+Our culture is shaped by a commitment to our core values:
+
+Integrity
+We hold ourselves accountable to the highest standards of integrity and ethics.
+
+Customer Success
+We strive daily to exceed expectations and achieve customer mission success.
+
+Employee Focus
+We invest in our employees' professional development and training, respecting individuality, and fostering a culture of diversity and inclusion.
+
+Innovation
+We know that discovering new and innovative ways to solve problems is critical to our success and makes us a great company.
+
+Excellence in Execution
+We take pride in flawless execution as we build a company that is best in class.
+
+Earn a REFERRAL BONUS for the qualified people you know.
+
+For more details or to submit a referral, visit bit.ly/NovettaReferrals.
+
+Novetta is an equal opportunity/affirmative action employer.
+
+All qualified applicants will receive consideration for employment without regard to sex, gender identity, sexual orientation, race, color, religion, national origin, disability, protected veteran status, age, or any other characteristic protected by law.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Defense & Space, and Computer SoftwareWe're growing our team with a junior level on-site software engineer in Charlottesville, VA. Castle Hill Gaming develops slot machine titles and provides customer-first sales and support to Native American casinos across the US.
+
+You're a match for our team if you
+
+Are able to relocate to Charlottesville, VA
+Are looking to learn from seasoned veterans of the online video and casino gaming industries
+Would love our first class employee benefits
+Have 1+ years of software development experience
+Are familiar with .Net and C#
+Have a strong understanding of object-oriented programming
+Understand and have experience with client-server development
+Are able to debug software
+Have excellent organizational and communication skills
+Are detail oriented
+Have integrity and high ethical standards
+Are a team player with high performance standards
+It's a bonus if you have exposure to game development platforms such as Flash, GoDot, or Unity
+
+As a junior software engineer, you'll be part of the development team for Castle Hill Gaming's slot machine and casino titles. Specifically, we'll ask you to...
+
+Develop code for new and existing projects while adhering to company best practices and coding standards
+Work collaboratively with others to complete projects
+Work with team to come up with ways to improve overall development processes
+Document software functionality
+Understand business needs and how to build software to support those needs
+Work on field issues as assigned
+Complete assigned tasks in a timely manner
+We are not offering Visa sponsorship or transfers for this position, now or in the future.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Computer Software, and Gambling & CasinosThe coolest jobs on this planet… or any other… are with Lockheed Martin Space.
+
+At the dawn of a new space age, Lockheed Martin Space is a pioneer, partner, innovator and builder. Our amazing people are on a mission to make a difference in the world. Every single day we use our unique skills and experiences to craft, design and build solutions to some of the worlds’ hardest engineering problems. Our culture inspires employees to dream big, perform with excellence and build incredible products. We provide the resources, support, and the focus. You bring the passion and courage to envision limitless possibilities, and we’ll build a better tomorrow with you!
+
+Would you like the opportunity to work with a leading team on a groundbreaking new program?
+
+In This Role, You Will
+Engineer, develop, integrate, and support deploying software solutions for specific user requirements not addressed in current baseline applications (one-off solutions), when necessary.
+Develop, test, schedule and coordinate as necessary, obtaining necessary approvals, and then deployment of all system software to customer’s standards.
+Ensure the customer’s configuration management practices are followed.
+Deploy customer-approved changes to the appropriate system and ensure that all customer approved changes are performing as expected and providing the desired solution.
+*Position is contingent upon program award expected late 2020 or early 2021*
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Defense & SpaceDirect message the job poster from e.biT Consulting
+Blake Angove
+Your Business. Our Expertise. Talent Delivered.
+Location: Chicago, IL
+Type: Full-time Position
+
+Our client provides Intelligent Automation for the consumer financial services industry applying machine learning, natural language processing and robotic process automation to next generation financial products. They're focused on applying the rapidly evolving technologies in cognitive computing to enable next generation consumer finance service offerings. They enable their clients to transform their business by combing digital agents with traditional operating models and dramatically improve their business results.
+
+They provide the best of both worlds, a start-up environment in a coworking space alongside deep connections with the financial industry, providing a creative and rewarding work environment where people are encouraged to grow personally and professionally. As a rapidly growing start-up company based in Chicago, they're interested in attracting people who share their vision for the potential of automation.
+
+Position Description - there are several openings for software engineers who are interested in working at the intersection of cognitive computing and financial services. This is a unique opportunity to work in a small and rapidly growing company where you will have an outsized influence on business and technology decisions. This is a great position for recent graduates who are interested in entrepreneurial ventures and looking to apply their software engineering skills in a dynamic and rewarding environment. This position will also allow you to further advance your skill set via company provided training, mentoring and direct client exposure.
+
+Position Requirements:
+• College graduates with degree in computer science (requirement)
+• Object oriented development and agile software development skills
+• Interest in expanding your skills in the areas of machine learning, natural language processing and robotic process automation
+• Solid critical thinking and problems solving skills
+• Passion for developing innovative software engineering solutions
+• Interest in new ventures and high growth companies
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Information Technology and Engineering
+Industries
+Information Technology and Services and Computer SoftwareCompany Description
+
+READY TO ACCELERATE YOUR CAREER?
+
+Whatever your current station — looking for a change, or seeking accelerated professional growth — you've come to the right place to advance your career. At RadialSpark, we pride ourselves on hiring, developing, and enabling people of all backgrounds and experience levels to learn, thrive, and become among the best in their field. If you're passionate about your work and driven to succeed (while being great to work with, no brilliant jerks allowed), you will do more and advance farther here than anywhere else.
+
+RadialSpark is a fast-growing consulting and custom software development company that specializes in designing and building business apps and solutions that give our clients a competitive advantage, allowing them to outpace or disrupt the marketplace. Due to our close partnerships and strategic focus, we work on market-changing projects with some of the most innovative companies in the world and work with market-leading platforms and technologies such as Salesforce, Heroku, Node.js, AI, and IoT.
+
+If you're looking to get to the next level in your career — doing trailblazing work alongside talented colleagues in a fun exciting environment — apply today to join our growing team.
+
+Job Description
+
+Job Description
+
+We are looking for a motivated and inspired individual who is looking to jump-start their career in software development. As a Junior Software Developer, you will participate in a six-week training program, which will provide you with all of the fundamentals and best practices necessary to dive right in and get started with development on the Salesforce platform. Upon finishing training, you will work alongside other talented developers to build a wide variety of applications involving cutting-edge technology emerging in the Salesforce ecosystem, providing game-changing ROI and innovation to our clients.
+
+HATS YOU'RE EXPECTED TO WEAR:
+Participate in the full-stack development of applications - Leverage best practices to produce high-quality software utilizing cutting-edge technology
+Assist in debugging - Utilize appropriate tools and methodologies for identifying and solving issues within applications
+Engage in QA processes - Write unit tests to hit 90% code coverage, while ensuring that all positive and negative cases are addressed
+Qualifications
+
+Core Qualifications You Must Have
+Experience with at least one of the following programming languages: JavaScript, Java, Python, PHP, or C#
+Bootcamp graduate, or self-taught with regular participation in meetups and groups such as Girl Develop It
+Ability to think creatively to solve problems
+Ability to take direction from tasks and work with minimal oversight
+Eagerness to learn new skills and technologies
+Strong written and verbal communication skills
+Must be a US citizen or have valid Employment Visa, no sponsorship provided
+Awesome If You Also Have The Following
+Node.Js Expertise
+College degree
+Experience with database technologies, such as SQL and NoSQL databases
+Salesforce development experience and certifications
+Familiar with version control systems, such as Git
+Additional Information
+
+Employment Benefits
+
+Along with an incredibly unique opportunity that offers an unmatched potential for personal and professional growth, RadialSpark offers a fun and casual work environment that provides each team member with the best tools and proper support to do amazing and rewarding work. In addition, we offer all employees the following benefits:
+Multiple Health Insurance Plans
+Competitive 401(k) Matching
+Generous Paid Time Off (PTO) Policy
+Flexible Work Schedule
+And so much more!
+RadialSpark is proud to be an equal opportunity workplace. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or veteran status.
+
+All your information will be kept confidential according to EEO guidelines.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Computer Software, and Management ConsultingKellyMitchell matches the best IT and business talent with premier organizations nationwide. Our clients, ranging from Fortune 500 corporations to rapidly growing high-tech companies, are exceptionally served by our 1500+ IT and business consultants. Our industry is growing rapidly, and now is a great time to launch your career with the KellyMitchell team.
+
+Junior Software Engineer
+
+Job Summary
+
+As a generalist engineer you will have the opportunity to contribute to a variety of areas within our team depending on your unique skill sets. These opportunities include Research, prototype, and implementing native augmentations to our proprietary cross-platform game engine. This includes writing custom new features for the engine to enhance the functionality of the collaboration applications we develop across all the platforms we support.
+
+Duties
+Work with the Pipeline team to enable more robust integration of our tool suite with our engine allowing the Content and UX teams greater control over the interactive scenes within the applications.
+Develop improvements to and assist in the maintenance of our CI systems to ensure our applications adhere to CI best practices.
+Work with the UX and Content team to create the user flow and interactions for each application to create an engaging experience for the user.
+Desired Skills
+
+/Experience
+Experience developing applications with Unreal Engine or another commercial game engine via both C++ and scripting systems on multiple platforms
+Expert in C++ with exceptional problem solving and debugging skills.
+Experience with other languages in use and desire to learn additional languages as needed:
+Python, C#, Java, Batch, Shell
+1 - 4 years of relevant professional experience developing commercial products in a team environment with at least one released product.
+Familiarity with operating systems, tools and technologies we use:
+Windows, Linux, OSX, CMake, Gradle, Git, Bitbucket, Perforce, Swarm, Jenkins, Docker
+Experience profiling applications CPU and GPU usage
+Knowledge of different software development methods such as Test-Driven Development, Unit Testing, Agile etc.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Computer Software, and Financial ServicesDuties / Responsibilities: (day to day responsibilities)
+Leverage an Agile Testing Automation Framework to develop and execute automated test cases of Web and RESTful API based systems, which uses and/or integrates the following technology tool stack:
+Ruby/Cucumber
+Selenium/Watir
+Sauce Labs
+MySQL/PostgreSQL/NoSQL
+Jenkins
+TestRail
+Jira
+Confluence
+GitHub
+SonarQube
+Assist in implementing a continuous testing architecture using CI/CD tools to orchestrate many different types of software testing to include functional, security, accessibility, and performance
+Responsible for system requirements, task sequencing and prioritization, team collaboration, peer code reviews, and strategic planning for future requirements
+Provide leadership and guidance to more junior members of automated testing staff
+Design and execute automated tools for testing at all levels (unit, functional, integration, system and peripheral testing) to ensure quality and code coverage
+Investigate and promote technical and process advancements to improve earlier testing, testing automation, and test reporting
+Preferred Experience
+Bachelor’s Degree in Computer Science, Software Engineer, or related technical discipline
+Direct experience the following Testing Automation Framework Tools Stack technologies:
+Ruby/Cucumber
+Selenium/Watir
+Sauce Labs
+MySQL/PostgreSQL/NoSQL
+Jenkins
+TestRail
+Jira
+Confluence
+GitHub
+SonarQube
+Sauce Labs or other cross-browser/platform experience
+Demonstrable passion for product quality
+Experience working within an Agile team
+Strong knowledge of Agile test methodologies, process, and tools
+Excellent written and verbal communication skills
+Experience designing and executing tests, analyzing data, and presenting results
+Experience testing RESTful web service APIs
+Experience with relational and non-relational databases
+Familiarity with instrumentation systems and the ability to collaborate with DevOps to create highly available systems
+Experience with Test and Behavioral Driven Development implementations
+Product development or testing experience leveraging Scaled Agile Framework (SAFe)
+One or more technology, discipline, or process relevant certifications:
+Amazon Web Services: Certified Solutions Architect
+ICAgile: Agile Test Automation (ICP-ATA) and/or Agile Testing (ICP-TST)
+Scaled Agile Framework: Certified Agilist and/or Certified SAFe Advanced Scrum Master (SASM)
+Scrum Alliance: Certified Scrum Master (CSM)
+Scrum.org: Professional Scrum Master (PSM)
+Founded in 2012, Titania is a Public Sector Technical Services company headquartered in Warrenton, VA. Our core capabilities include Agile Software Development, DevSecOps, Automated Testing, Intelligence Training, and Program Management Support. Our corporate leadership spent their careers in uniform, government service, and in growing and managing service organizations of excellence; building and earning a reputation of quality, superior customer support, ethical conduct, and dedication to partnership. Titania functions with large business sophistication and acumen while maintaining small business agility and responsiveness. We're deeply committed to taking care of our employees, partners, customers, and those in our community.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Defense & Space, and Computer & Network SecurityFeedzai is the market leader in managing financial risk with AI. We’re coding the future of commerce with today’s most advanced risk management platform powered by big data and machine learning. Founded and developed by data scientists and aerospace engineers, Feedzai has one mission: to make banking and commerce safe. The world’s largest banks, processors, and retailers use Feedzai’s fraud prevention and anti-money laundering products to manage risk, while improving customer Experience.
+
+The Customer Success team ensures our global customers achieve their business goals using our product. Everything you do matters: all your code, machine learning models, advisory, management, and other actions/roles will have a material impact on the way our clients run their business and how effectively we fight fraud and protect people from wrongdoing. You will be able to interact and meet many people from widely different cultures around the world and understand the business like few others. You will be able to say you protect people on a daily basis. You will be challenged with new technology, new processes, and new mindsets and will be asked to contribute to ensure continuous improvement. Come and change the world with us.
+
+Responsibilities
+Execute full software development life cycle building integrations and enhancements to Feedzai core product.
+Write well-designed, testable code.
+Integrate multiple software components into a fully functional software system.
+Troubleshoot, debug and upgrade existing systems.
+Deploy and support systems in production.
+Comply with best practices and industry standards.
+Work with Agile principles to regularly deliver quality products
+Ensure proper feature deployment or product upgrades.
+Provide Second Tier support for clients that are live.
+Other duties as needed.
+
+
+Requirements
+Experience in Java software development or other modern language
+A BS or MS in computer science, or a comparable field, or equivalent experience.
+Client engagement experience and ability to work with a client in a consultative manner.
+Excellent English communication skills, both verbal and written
+Availability to travel up to 25%
+Experience with SQL or NoSQL databases
+Experience with Zookeeper, RabbitMQ, Cassandra, Ansible, Docker (optional)
+
+Feedzai is an equal opportunity Employer
+
+Feedzai does not accept unsolicited resumes from recruiters or employment agencies
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Computer Software, Financial Services, and Information Technology and ServicesMisfits Market is a mission-driven company offering a more sustainable alternative to the traditional grocery store model. We’re a high-growth startup hyper-focused on making fresh, organic food more affordable for more people. Since 2018, we’ve rescued more than 80 million pounds of food and made it accessible to millions of subscribers across the country. Fixing a broken food system isn’t easy. It requires passionate and motivated problem-solvers ready to chart the course towards a future where food waste and exorbitant food costs don’t exist. 
+
+We are now seeking a Junior Full Stack Software Engineer to join our team, working on our logistics platform. As a Junior Software Engineer at Misfits Market, you will be responsible for maintaining and iterating on all parts of our logistics platform. This system powers our inbound and outbound shipping network.
+
+You will:
+Maintain our existing logistics platform, which handles inbound and outbound routing from our network of warehouses.
+Develop flexible solutions to meet business needs, drive down technical debt and defects, and write adaptable code.
+Collaborate with the Logistics team to review requirements, feasibility, and scope of new projects for the platform.
+
+You have:
+Bachelor’s Degree in CS or related degree or experience
+1-3 years of experience developing software in a production environment
+A proven track record of working in fast-paced environments
+A solid understanding of the modern web stack
+Preferred Qualifications
+Experience with PHP
+Experience with React
+Experience with AWS
+
+Benefits:
+Unlimited PTO
+Flexible work location with remote availability
+Monthly Stipend for Misfits Market
+Multiple health, dental, and vision plan options 
+Annual Learning & Development Stipend
+Life Insurance
+401k plan 
+Commuter benefits
+Show less
+Seniority level
+Associate
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Food & BeveragesDirect message the job poster from Boeing Intelligence & Analytics
+Chris Cummings, STA
+Senior Talent Acquisition Advisor at Boeing
+Boeing Intelligence & Analytics (BI&A) is seeking a  Jr Software Developer to join their Prime top-tier team. 
+DUTIES TO INCLUDE:
+Work with a team of developers supporting and enhancing a suite of complex web applications and services that provide content management and collaboration in support of critical missions.
+Develop new features as needed and improve software efficiency and reliability.
+Assist Tier I and II staff with troubleshooting issues and provide after-hours, on-call support on a rotating schedule with other team members.
+ REQUIRED EDUCATION AND EXPERIENCE
+Active TS/SCI clearance with polygraph
+At least two (2) years in software development/engineering including requirements analysis, software development, installation, integration, evaluation, enhancement, maintenance, testing, and problem diagnosis/resolution.
+At least two (2) years experience developing software in an enterprise environment.
+At least two (2) years developing software for Windows, UNIX or Linux OS. At least one (1) year of this experience must have been obtained within the last two (2) years.
+Experienced with Javascript, JQuery, Typescript, ReactJS, AngularJS or equivalents for UI developers and SpringBoot, Tomcat, JUnit, Docker or equivalents for Java developers.
+At least one (1) year in software integration and software testing, to include developing and implementing test plans and test scripts.
+Demonstrated technical writing skills and shall have generated at least two (2) documents in support of a software development project.
+Availability to provide after-hours, on-call Tier III support as needed, in coordination with organizations providing Tier I and Tier II support. (Support is on a rotational schedule)
+ EXPERIENCE DESIRED :
+Experience consuming and writing RESTful backend microservices in Java and NodeJs.
+Experience with SpringBoot 2 and embedded tomcat deployments
+Familiar with Typescript and Javascript frameworks such as jQuery, Angular, or ReactJs to build dynamic and responsive web clients that leverage backend web services over RESTful interfaces
+Experience using and managing/optimizing NoSQL queries and databases such as MongoDB to persist data for web applications at a large scale (100+ queries per second)
+Familiar with Apache NiFi to create and manage data extract, transform, load (ETL) operations for critical data flows
+Utilized Docker, Kubernetes, or similar containerized environments to provide re-useable components that are agnostic of underlying cloud infrastructures
+Experience with Elastic Stack technologies (ElasticSearch, Logstash, Kibana) to provide metrics and monitoring of distributed microservices
+Experience with Agile methodologies (SCRUM)
+Familiar with implementing and testing web services with various automated test frameworks (JUnit, Mockito, Selenium, Jest, Enzyme, Jasmine, Mocha, Protractor, etc)
+Proven technical debugging/troubleshooting ability on multi-threaded and distributed systems.
+Experience integrating new architectures/systems/services with complicated legacy code bases
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Information Technology
+Industries
+Defense & SpaceDirect message the job poster from AvantGuard Monitoring Centers
+Nicole Tolman
+Talent Acquisition Manager | Becklar - AvantGuard - Freeus
+Junior Software Engineer
+Headquartered in Ogden, UT, Becklar is the parent company of AvantGuard Monitoring and Freeus. Our mission is to save lives through our state-of-the-art mobile personal emergency response systems (mPERS) and alarm monitoring centers. Freeus is an award winning wholesale provider of mobile personal emergency response systems (mPERS). We develop two-way voice mPERS that work both inside the home and away from home, offering peace of mind to seniors and their caregivers. AvantGuard is one of the largest and fastest growing monitoring companies in the nation. We monitor alarms (security, fire, medical, environmental, IoT) and we are are growing at over 100,000 accounts per year. What makes us stand out is that We Care FIRST about our employees and our customers and you get to join a team that helps save lives every day!
+We are at the cutting edge of technology working in IOT and AI and with our rapid growth we are looking to add a Junior Software Engineer to our Solutions software development team. In this role you will be responsible for assigned programming tasks and using programming languages such as Node.js, C#, and javascript. You will support other members of the team in executing and completing projects.
+In addition to a competitive salary, you will enjoy:
+Medical, vision, and dental benefits
+401(k) retirement plan with company match
+3+ weeks of paid time off
+Company-paid Life and AD&D insurance
+Short-term and long-term disability benefits
+Work-from-home ability
+Tons of growth opportunities
+Other perks such as free snacks, company parties and events, an awesome team, and more!
+What You'll Do:
+Build and provide support and maintenance for critical systems within an AI environment 
+Execute full software development life cycle (SDLC) using Agile methodology 
+Develop flowcharts, layouts and documentation to identify requirements and solutions 
+Write well-designed, testable code 
+Drive the planning and implementation of projects 
+Follow established SDLC processes and continuous improvement 
+Coordinate with internal and external stakeholders to support, monitor, test and troubleshoot software and hardware problems 
+Produce specifications and determine operational feasibility 
+Integrate software components into a fully functional software system 
+Develop software verification plans and quality assurance procedures 
+Document and maintain software functionality 
+Troubleshoot, debug and upgrade existing systems 
+Deploy programs and evaluate user feedback 
+Ensure software is updated with latest features 
+Skills Needed:
+Bachelor’s Degree in Computer Science, Technology, or related field or equivalent combination of education and experience 
+0 – 3 years work experience as a Software Engineer or Software Developer 
+Ability to develop software in JavaScript frameworks (React, Angular, Vue), or other programming languages 
+Solid foundational knowledge of SQL databases  
+Experience working in Tableau preferred 
+Proficiency in software engineering tools 
+Ability to document requirements and specifications 
+Demonstrate understanding of how business requirements impact technical requirements 
+Results-oriented, creative-problem solver  
+Excellent written and verbal communication skills 
+Work well under pressure for extended periods of time  
+Attention to detail, focus, follow-up and follow-through 
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Security and InvestigationsJunior Software Engineer – Java / Spring Boot / Python / CI/CD
+
+DETAILS
+Location: Dallas, TX
+Position Type: Direct-Hire / Contract-to-Hire
+Salary: BOE!
+Residency Requirements: Candidates authorized to work in the US are encouraged to apply. No sponsorship is being offered at this time. (No third party or C2C are being considered)
+
+ABOUT THE POSITION
+Junior Software Engineer for a Direct-Hire or Contract-to-Hire opportunity (candidates must sit in Central or Eastern Time zones).
+ The Junior Software Engineer will join a team building a turn-key platform for CI/CD to support all engineering teams across our client’s enterprise. This role will focus on the Continuous Deployment aspect of the CI/CD pipeline, so a deep understanding of CI/CD, Containerization, and DevOps principles is a must. With the platform end-users all being engineering teams, a passion for developing scalable and secure platform with clean code is required. Ideally, our client will allow engineering teams to pick and choose with elements of the delivery process will be utilized on the platform, on a team-by-team basis.
+ Our client has partnered with a managed services team to help monitor the instances in Spinnaker (the open-source, continuous deployment multi-cloud platform selected), so the engineering teams will be focus on new development of features and plugins. Currently, our client is a Point-of-Concept phase, and the timeline for build, re-factoring, and deployment is by end-of-year.
+ The Junior Software Engineer will utilize Java, Sprint Boot, and Python for their development.
+
+TECHNICAL REQUIREMENTS
+1-2+ years in the following skill sets…
+Platform or Application Development utilizing Java and Spring Boot
+Designing and Implementing applications highly optimized and scalable architectures
+Understanding of CI/CD and Containerization (Docker or Kubernetes highly desired)
+Development and scripting with Python
+ PREFERRED
+Previous experience with Spinnaker or similar CI/CD platform
+Show less
+Seniority level
+Associate
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services and AutomotiveJob Title
+
+Junior Software Engineer
+
+Requisition ID
+
+R005962
+
+Job Description
+
+As a Junior Software Engineer (6-month contract) at Activision, you will work within the Experience Optimization Org to build innovative and impactful player optimization and personalization platforms and products that help to build loyalty and drive engagement for Activision’s industry leading games.
+
+The right candidate will be someone who loves working with different web technologies on all stages of the development lifecycle.
+
+Responsibilities Can Range From
+Participate in development of new features and defect resolution on existing applications, as well as assist with scoping and designing new product initiatives.
+Support privacy compliance efforts within Consumer Technology such as GDPR requests and adding OneTrust Cookie Management to our websites
+Work within an enterprise email marketing system. Create topology rules and triggered email campaigns.
+Create experimentation, personalization and recommendations using a web testing framework. Analyze and create reports on the data afterwards so we can optimize our websites
+Work with different Tag Manager platforms to execute scripts on our websites.
+Be able to troubleshoot issues when working with different web technologies
+
+Requirements
+1-2 years of professional experience
+Bachelor’s degree or student working towards bachelor’s degree in Computer Science, Computer Engineering, Computer Information Systems, Informatics, Management Information Systems, Information Technology, Mathematics or related technical program
+Working knowledge of at least 1 or more software development languages (preferably Java and JavaScript)
+Strong technical, analytical, communication organizational skills
+Ability to work independently, learn quickly and be proactive
+Self-starter who is excited about learning new technologies
+
+About Us
+
+Great Games Start with Great People! This is an exciting time to join us!
+
+Ask anyone who works at Activision, or with Activision, their favorite thing about it, and they’ll tell you, it’s the people. We have world class brands, infrastructure and resources, but our success doesn’t come from assembly lines producing widgets. Our success comes from people producing greatness together. We are nothing without our employee’s brilliance. So if you’re interested in our biggest priority, it’s the people.
+
+Headquartered in Santa Monica, CA, Activision operates at the intersection of technology, entertainment, esports, and consumer products. Activision is more than just the leading developer and publisher of video games, we are the creators of some of the world’s biggest, most ground-breaking titles in the industry. Our portfolio includes Call of Duty®, Crash Bandicoot®, and Skylanders®.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Marketing and Advertising, Information Technology and Services, and Computer SoftwareWe believe that learning a language should be fun, rewarding, and a gateway to the best experiences life has to offer. If you agree, we’d love to talk.
+
+If you are a software engineer looking to use your talent in teaching the world English, take a look at Voxy. Voxy software engineers will change the way millions of people around the world learn English by using sound science combined with innovative (and patented!) technology. We are implementing research-driven learning activities coupled with live streaming for topic-based live tutoring sessions using advanced algorithms to build a customized experience using authentic content sources from names you know (Bloomberg, AP, Financial Times and more.). Voxy’s goal is to become THE vendor of first choice in the $80 billion dollar English language education market and our development team will be instrumental in reaching this goal.
+
+What You’ll Be Doing
+Collaborate with peers to build nicely-instrumented code that is testable and deployable without downtime
+Evolve our big data pipeline to use real time feedback for an optimal platform for learners
+Design a best in breed application that is enjoyable to work with, performant to our partners, and evolves with our learners
+Scale the Voxy application and make it ready for feeding our upcoming projects in NLP and machine learning
+
+
+What We’re Looking For
+Experience working as a software developer
+Recent college and bootcamp graduates welcome
+Curiosity and knowledge about technologies and architectural patterns of software engineering across the entire stack
+Pragmatism in understanding when to build the solution that scales to 1 million users or works for 100 users
+Ability to design data models that reflect the Voxy business using advanced SQL/NoSQL/ORM’s
+
+
+What Would Be Nice To Have
+Django or Django Rest Framework
+AWS and devops
+B.S. or higher in computer science, science or engineering discipline, or equivalent experience
+
+
+Working Here, You'll Enjoy
+Competitive salary and stock options
+Great benefits: medical insurance, cell phone & wifi reimbursement, home office & wellness budget, team events
+Remote friendly work policies
+Professional development budget
+Language classes w/ Voxy
+Work with an awesome international team of super bright, creative, talented, and passionate individuals based in the U.S. and globally
+
+
+Voxy Engineering Team’s Values
+Trust
+We trust our colleagues by respecting their decisions and opinions to collaborate effectively, do the right thing and maintain good working relationships.
+Open Communication:
+Communicate openly by sharing our thoughts (pros & cons), being outspoken, having important decisions written down for the entire team, and staying in touch with the rest of Voxy outside Engineering to ensure that the team is on the same page and build & increase trust both within the engineering team and within Voxy.
+Pragmatism
+Consider the impact of our choices to find an effective way to solve a problem.
+Engineers Help Design the Product
+Actively direct the product to design elegant features at the early stages of the design process as well as continue to improve the design when we work on them.
+
+>>You can read more about the Voxy Engineering Team’s values in an article written by Iswarya Parupudi, Co-Director of Engineering at Voxy. See link here.
+
+We are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, or marital, veteran, or disability status.
+
+Want to know more about us?
+
+Voxy is a U.S. - based company that is changing the way the world learns English. Our proprietary personalization technology and exclusive partnerships with leading content publishers enable us to deliver a one-of-a-kind solution to over 2.5 million English learners across the globe. Our mobile and web applications make it possible for individuals to learn from the world around them, turning everyday experiences and content into fun, game-like activities. Our custom-built, live one-on-one tutoring platform brings the necessary human element front and center, and is a core piece of our methodology. Voxy’s disruption of the $80B market for English language education has been recognized by leading education investors and the company has been deemed a pioneer by The New York Times, CNN Money, Fast Company, Mashable, Univision, Veja (Brazil), Venturebeat, and others.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Computer Software, and InternetOur customers know us as the #1 marketing calendar that helps them save a ton of time and get more traffic. Our team knows us as the best place in North Dakota to do what you love, and love what you do. Every. Day.
+
+You should know us as a startup (with all the perks), and the fastest growing technology company in North Dakota. Every day we build, market, and support an amazing product that customers from 100+ countries love. Are you ready to join us?
+
+Our customers include some of the largest brands in the world and everything you do here affects thousands of consumers. When we push code, our customers notice, and they LOVE what we do.
+
+Our positions are in-office positions located in Fargo or Bismarck, ND.
+
+Position Overview
+
+As a Junior Software Engineer, you will work closely with some of the smartest engineering and product minds in our region. We offer a unique opportunity to work with bleeding-edge technology, thrive as a professional, and grow rapidly in a small-team startup environment with endless career growth opportunities.
+
+We code primarily in JavaScript using Node.js and Ember.js. We love things like Github, continuous deployment, testing, and dev ops. We like anything that can help us move and scale faster. It's not uncommon for us to push code to production several times a day. We also have weekly internal meet-ups for all software engineers in the company to get together and talk code and best practices.
+
+Job Summary
+Develop front-end and back-end software components
+Code primarily in JavaScript using Node.js, Ember.js
+Opportunity to participate in design and code reviews
+Ship awesome code. Every. Day.
+Learn a bias for simplicity and appreciation for good software craftsmanship
+Attend and contribute to engineering Best Practices meetings
+Participate in Agile team ceremonies and processes
+Partner with Product Owners, UI / UX Designers, Product Marketers and other team members to scope project features
+
+
+At CoSchedule, our product team is multidisciplinary with design, front-end and back-end engineering combined. While specialization is important, we discourage pigeonholing. Our most effective people work across design and implementation, making the right technology decisions to build the best product.
+
+Requirements
+
+Job Requirements
+2+ years of education or training in the Software Engineering field or related technical field
+Knowledge of web technologies
+Excellent problem solving, critical thinking and communication skills
+Should be able to successfully perform mathematical calculations
+Excellent organizational skills
+You have a customer first attitude and focus on quality of work you produce
+
+The Technologies We Use
+
+We mostly use Node.js, Ember.js, and store data in Postgres. Experience in our day-to-day toolset is a plus but is, by no means, a requirement. Good people will adjust quickly and have fun learning something new or helping us learn something new.
+
+The “That’d Be Great”
+Experience building real-time web applications
+Prior experience with HTML, JavaScript, PHP, especially Node.js or Ember.js
+Knowledge/experience with WordPress, and building custom WordPress plugins
+Experience working with a variety of social APIs (Twitter, Facebook, etc.)
+Hands on experience with AWS and deploying to cloud environments
+Even your mom calls you a data nerd
+You’re not afraid of the command line
+Experience working with Salesforce
+
+Benefits
+
+The Perks
+Fully-paid benefits package with Vision, Dental and Medical.
+Fully-paid Life, Short and Long-Term Disability.
+Health Savings Account + Dependent Care FSA.
+401(k) and company match.
+Free Parking.
+Free coffee, tea, soda, water -- all the hydration you need!
+No limits on sick or vacation days.
+Yearly learning allowance.
+Yearly health + wellness allowance.
+Referral Bonus.
+Company supplied MacBook Pro.
+Casual dress Monday, Tuesday, Wednesday, Thursday…and Friday.
+We hold an annual Bratwurst Blowout that usually includes pellet guns and go carts.
+Unpredictable appearance of breakfast pastries.
+Free faxing! (…for all your faxing needs)
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering
+Industries
+Marketing and Advertising, Computer Software, and InternetDirect message the job poster from Rave Business Systems LLC
+Mitali Mandal
+Hiring Junior Software Developers!
+Job Description-
+
+As a national leader in IT consulting, Rave Bizz is seeking Java professionals who are skilled in SQL to expand and accelerate their career opportunities. Through a 6-8 week training program, our hired consultants become full-time iOS mobile application development subject matter experts within a matter of months.
+
+With Rave Bizz Company and our carefully structured, intensive, free training program in iOS mobile application development, you will start a new career in 6-8 weeks. Upon completion of the training course, you will have opportunities to travel across the U.S. to our mid-range to Fortune 500 clients, including Microsoft, Intel, IBM, Amazon, Bank of America, Delta, and many more.
+
+Pay during training: $300/week
+Pay rate after training: $27-$30+/hr
+Location: Philadelphia, PA
+Start Date: 3rd May 2021, Monday
+Contract: 2 Years
+Requirement: Associate or bachelor's degree
+
+Our company will provide…
+- Free, fully furnished corporate housing during training (Office Address - 104 S 20th St, Philadelphia, PA 19103, USA)
+- Free training materials and equipment for use during training and on projects.
+- Travel to and from training and clients’ project sites.
+- 2 weeks of hotel accommodations on each project.
+- Full W2 benefits packages including medical, dental, and vision insurance.
+- You will be paid during the Training of 6-8 weeks of the training period
+
+PROCESS: WHAT WILL I EXPERIENCE?
+One of Rave Bizz Company’s business focuses is the success of each and every single one of our consultants. We have honed our processes to provide an exceptional level of support and development.
+
+Interview (phone and Skype)
+Streamlined 3-step interviewing process, guided by your dedicated Technical Recruiter
+1. Skype Technical Interview- 30 minutes of an interview conducted via Skype audio call; will include coding questions and live coding from an SME.
+2. Second Round of Interview- 20-25 minutes of Skype video call with the Instructor/Trainer
+3. Final Round of Interview- 20-25 minutes of a telephonic call with the founder/president of the company to finalize the pay rate for the candidate.
+
+Our Career Advancement Training (CAT) is interactive, innovative, and led by field-experienced trainers in our training facilities. Did we mention we will be paying you 40 hours/week for training?!
+- Each training day consists of 4-6 hours of hands-on application development followed by assignments to complete with training group team members.
+- Each trainee will receive coaching from experienced Rave Bizz Company technical experts who also provide 24/7 technical support during training and while on the project.
+- Each trainee will be assigned a dedicated Consultant Manager, who mentors and furthers each consultant’s professional development.
+- Weekly “How to Be a consultant” seminars focus on the non-technical aspects of the job.
+Start your new career!
+1. Develop custom mobile applications using the iOS SDK.
+2. Provide consulting services to our mid-range to Fortune 500 clients.
+3. Contribute to the design, testing, and debugging of enterprise solutions.
+4. Enhance your management, technical, design, and planning skills.
+
+Interested candidates can send their resumes on mitali@ravebizz.com
+Show less
+Employment type
+Full-timeAbout Us: Innovating to solve real-world problems
+
+At Bridges, an Applied Insight Company, we leave no stone unturned in solving our customers’ technology challenges. Supporting the Federal Government with the strongest mission focus, our solutions empower people to collaborate more effectively in delivering services vital to the nation.
+
+On joining the Bridges, an Applied Insight company team, you’ll be working to solve real-world problems on missions that matter with people who share your passions and encourage your ambition. It’s vital to us that we hire committed people who are great at what they do. We return that commitment by empowering them with the autonomy, the support and the tools they need to fulfill their true potential.
+
+Bridges is expanding, and we are seeking experienced Junior Software Engineers to assist with the design, development, testing, deployment, documentation, maintenance, and enhancement of software systems based upon documented requirements. These systems might include, but are not limited to processing­ intensive analytics, novel algorithm development, manipulation of extremely large data sets, real-time systems, business management information systems, and systems which incorporate data repositories, data transport services, and application and systems development and monitoring.
+
+Responsibilities
+Works individually or as part of a team
+Reviews and tests software components for adherence to the design requirements and documents test results
+Resolves software problem reports
+Utilizes software development and software design methodologies appropriate to the development environment
+Provides specific input to the software components of system design to include hardware/software trade-offs, software reuse, use of Open Source Software (OSS) and/or Commercial Off­The-Shelf (COTS) Government Off-The-Shelf (GOTS) software in place of new development, and requirements analysis and synthesis from system level to individual software components
+Experience developing in UNIX
+Ability to perform shell scripting
+Working knowledge of Configuration Management (CM) tools and Web Services implementation
+
+
+Required Qualifications
+***Active TS/SCI w/ Polygraph Clearance***
+Master's degree in Computer Science or related discipline from an accredited college or university
+OR
+Bachelor's degree in Computer Science or related discipline from an accredited college or university, plus two (2) years of experience as a SWE, in programs and contracts of similar scope, type, and complexity
+OR
+Four (4) years of experience as a SWE, in programs and contracts of similar scope, type, and complexity
+Within the last 2 years, demonstrated experience developing in C++ in a Unix environment
+
+
+Desired Skills
+Experience writing scripts using Bash/Python
+Experience with using the Unix command line
+Experience with the Atlassian Tool Suite (JIRA, Confluence)
+Familiar with Agile development best practices
+Familiar with using JSON as a lightweight data-interchange format
+Experience with containerization technologies such as Docker
+Experience with container orchestration technologies such as Swarm, Helm, Kubernetes
+Experience developing RESTful services
+
+What we will provide in return: Excellent compensation and amazing benefits
+Multiple health insurance options from CareFirst which include a PPO plan and 2 HMP Plans
+401k Immediate Vesting. Company matches 100% of the first 3% contributed and 50% of the next 2% contributed. 3% 401K profit share contribution.
+Fully paid long-term disability, short-term disability, and life insurance.
+Flexible Spending Account options.
+Generous paid time off that includes one bucket of leave to use how the employee sees fit; sick and vacation. Plus 80 hours of Holiday leave (10 days)
+Flexible work schedules with the ability to bank extra hours for additional time off. -per month
+Everyone is eligible for an annual bonus based on performance
+Employee centric culture and a belief that we should empower those who are good at what they do and then give them the tools they need to achieve success and grow their career.
+A commitment to learning and growth and easy ways to achieve both including a training budget, education assistance, mentorship programs and collaborative learning sessions.
+A collaborative environment that fosters communication and an open door policy.
+Show less
+Seniority level
+Mid-Senior level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Computer Software, and Computer & Network SecurityJunior Software Developer
+
+U.S Citizenship with an active DoD Secret Clearance is required***
+
+Roles and Responsibilities:
+
+The FSB Junior Software Developer will work in a team-based development environment building state-of-the-art web applications and will be involved in coding, testing, debugging, and documenting those systems.
+
+Develop code using object orientated principles and design standards.
+Object orientated software development for the overall development domain including: languages, frameworks, and design patterns.
+SQL and RDBMS systems.
+Support production by leading efforts to troubleshoot production issues.
+
+Minimum Required Experience:
+
+At the Junior Software Developer level, required experience for the position are: relevant education with undergraduate degree, training, or professional experience with the requisite Development Platforms or Technologies utilized by FSB.
+Development Systems and Technologies utilized by FSB:
+NET
+C#
+JavaScript
+Java
+IIS
+Apache
+IBM WebSphere
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Defense & Space, and Computer SoftwareSummary
+
+Of Position
+
+This position will participate in a small production support developer group in which personal contribution and ambition are highly valued and encouraged.
+
+Duties & Responsibilities
+Work within an agile scrum team in a collaborative, fast-paced environment.
+Collaborate with assigned mentor to solve production support issues.
+Perform maintenance, support, and bug-fixes for existing code.
+Develop, test and debug solutions for assigned enhancement projects.
+Communicate with internal and external peers as well as leadership to demonstrate progress and advise of challenges encountered on assigned projects.
+Participate in established development standard and software development lifecycle.
+Update job knowledge by studying state-of-the art development tools, programming techniques, and computing equipment; participating in educational opportunities.
+Protect operations by improving security and by keeping information confidential.
+Accomplish Zelis' mission by completing related results as needed.
+Follows established HIPAA, Compliance & Security policies
+Education And Experience
+Bachelor's Degree in Computer Science, Information Systems, Engineering, or other discipline related to software engineering
+1-2 years’ experience in software development through classes, internships or work opportunities .
+Experience using C#, SQL Server and Microsoft Visual Studio preferred
+Interpersonal & Professional Skills
+Applied Learning – Puts new knowledge, understanding, or skill to practical use on the job, works hard to better self in work role. Devotes significant time to personal and professional development. Ability to accept and learn from guidance provided by your department mentor.
+Problem Analysis and Solving – Ability to analyze and work through a problem effectively and provide a solution. Ability to troubleshoot and solve complex production issues under the supervision of a more experienced developer. Ability to understand and apply concepts of objected oriented programming.
+Teamwork/Collaboration – Proactively tries to build effective working relationships with other people. Treats people with dignity, respect and fairness. Ability to work both independently and collaboratively.
+Adaptability – Maintains effectiveness when experiencing major changes in work tasks or the work environment; adjusts effectively to work within new work structures, processes and requirements.
+Time Management – Effectively manages one’s time and resources to ensure that work is completed efficiently. Able to work both independently and as a team effectively.
+Communication – Communicates accurately and effectively both in oral and written form. Practices active listening. Expresses thoughts and ideas with confidence and respects opposing views
+Living the Vision and Values – Keeping the company’s vision and values at the forefront of decision-making and action.
+Physical Factors & Requirements
+Willingness to occasionally work outside of normal business hours as required to complete projects.
+Sitting at desk or in meetings for long periods of time
+Use standard office equipment
+Zelis is a healthcare and financial technology growth company and market-leading provider of claims cost management and payments optimization solutions to price, pay and explain healthcare claims. Zelis delivers integrated network analytics, network solutions, payment integrity, electronic payments and claims communications for payers, healthcare providers and consumers in the medical, dental and workers' compensation markets nationwide. Zelis is backed by Parthenon Capital Partners and Bain Capital.
+
+“We are an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, color, religion, sex, national origin, disability status, protected veteran status, or any other characteristic protected by law.”
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and ServicesThe Junior Software Engineer in this role will work closely with a highly technical team of engineers and scientists developing advanced software capabilities for missile defense radar simulation systems. The candidate will analyze the software implementation of existing simulation systems to identify, prototype, and recommend performance and quality improvements. The position will include collaboration within a team environment while emphasizing individual contributions to produce products that are valuable to the customer. Candidate must have good people skills and the desire to work with a highly technical team of engineers.
+
+Qualifications
+Candidate must possess a Bachelor's Degree in a related technical discipline (Electrical Engineering or Computer Engineering/Science) and at least academic exposure to radar related technologies.
+Proficiency in C++, Ada also preferred.
+Must be able to interact effectively with individuals of different experience levels and backgrounds including government and external industry personnel.
+Candidate must be a US Citizen and possess (and be able to maintain) a Final Secret Clearance or meet the eligibility to obtain (and maintain) a Secret Clearance.
+Preferred candidate will have direct experience developing software for the AN/TPY-2 radar and experience applying agile development.
+Since 1998, the company has been developing, integrating, and testing mission-critical and operational software for government and commercial customers. Our passion is building software products that make complex systems simple to understand in real-time. Our engineering team are experts in developing, integrating and testing mission-critical and operational software in systems like phased-array radars, air-traffic control, railway maintenance data analysis, missile defense, command and control.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology and Services, Defense & Space, and Computer SoftwareMetroStar Systems is looking for a Junior Software Systems Engineer to maintain currency, debug, and configures software products, interface with other system support groups to resolves problems, and design, code, test to support planning and conversion for new hardware/software products. If you want to join a company that values mission-critical work and are open to commuting to Washington, DC, we want you to work for MetroStar!
+
+Our team is responsible for supporting a high visibility, mission critical network and we want you to come be a game changer and join our team!
+
+You're a great fit if:
+
+You have meaningful experience maintaining currency, debugging, and configuring related software products.
+You have interfaced with other systems support groups to resolve problems.
+You can design, code, test, and submit input to the planning and conversion for new hardware/software products.
+You have prepared product documentation.
+You have interfaced with customers to gather information on system requirements or problems.
+
+You'll love our company if: (This is the stuff you MUST have to be a fit)
+
+You have an active TS/SCI eligible clearance
+You have a BA/BS in Computer Science, Computer Information Systems, or Software Engineering.
+You have a Security+ certification.
+You have at least three (3) years in the above-cited duties.
+
+The Admin Stuff: Applicants selected may be subject to a government security investigation and must meet eligibility requirements for potential access to classified information. Accordingly, US Citizenship is required.
+
+The Legal Stuff: MetroStar Systems is committed to creating a diverse environment and is proud to be an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, gender identity or expression, sexual orientation, national origin, genetics, disability, age, or veteran status. The statements herein are intended to describe the general nature and level of work being performed by employees, and are not to be construed as an exhaustive list of responsibilities, duties, and skills required of personnel so classified. Furthermore, they do not establish a contract for employment and are subject to change at the discretion of MetroStar Systems.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Information Technology
+Industries
+Information Technology and ServicesOneSky Flight is currently seeking a Junior Software Engineer who is passionate about innovation and web technologies to join our development team. OneSky empowers software engineers to learn, innovate, and apply their skills to deliver technical solutions. We have a proven track record of helping build entry level programmers into mid-level and senior level software engineers. Our team has opportunities to work with varied departments for multiple brands across the private aviation industry.
+  DUTIES & RESPONSIBILITIES
+·       Directly responsible for designing, developing and troubleshooting high performance and high availability web applications utilized throughout the business.
+·       Analyze technical requirements to design new components and applications.
+·       Manage new and existing products and applications throughout their lifecycle.
+·       Advise and support colleagues where your expertise will facilitate the achievement of common goals
+·       Introduce new solutions to the product and to your colleagues when appropriate for the business needs.
+·       Keep abreast of advancements in technologies and development techniques
+·       Interact with all departments and end users acting in development, technical design, and support roles.
+        EDUCATION & EXPERIENCE
+·       Bachelor’s Degree or equivalent formal training in related field or 2 years of equivalent work experience
+·       Solid understanding of object-oriented programming (OOP), Relational and NOSQL databases, and scripted front-end programming
+·       Experience working with Agile methodology
+·       Solid understanding and training in development of front-end websites, services/APIs, databases, cloud services, and the migration of legacy applications.
+  REQUIRED SKILLS & QUALIFICATIONS
+·       Working knowledge of an object-oriented programming language (Java or C#) along with the associated IDE and at least one Front-end Scripting framework (preferably Angular).
+·       Ability to quickly learn new concepts and software as necessary with an excitement for learning and a drive to grow as a developer.
+·       Ability to adapt quickly to an existing, complex environment.
+·       Candidate should be self-motivated, independent, and exhibit relationship management skills.
+·       Passionate about building high-quality systems with software implementation best practices.
+·       Exceptional attention to detail.
+·       Well-developed interpersonal skills that promote and foster a team culture.
+·       Candidate should drive towards team solutions instead of independent heroism
+·       Possess excellent organizational skills, and communication skills both written and verbal.
+Show less
+Seniority level
+Entry level
+Employment type
+Full-time
+Job function
+Information Technology
+Industries
+Aviation & Aerospace

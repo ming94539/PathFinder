@@ -121,7 +121,7 @@ def scrape_job(job, browser, scraper, engine):
 
     end_index = start_index
 
-    for i in range(5):
+    for i in range(len(id_list)):
         job_id = id_list[i]
 
         if not is_duplicate_id(engine, job_id):
@@ -130,14 +130,15 @@ def scrape_job(job, browser, scraper, engine):
             
             scraper.get_page(to_scrape)
             result = scraper.scrape_linkedin()
-
+            output = open("results.txt", "a")
+            output.write(result)
             # For now, (until we get data formatting finished)
             # insert first 20 chars into Test table
-            insert = f''' 
-                INSERT INTO Test (test_id, text)
-                VALUES ({job_id}, '{result[:20]}')
-            '''
-            engine.execute(text(insert))
+            # insert = f''' 
+            #     INSERT INTO Test (test_id, text)
+            #     VALUES ({job_id}, '{result[:20]}')
+            # '''
+            # engine.execute(text(insert))
 
 def main():
     job_list = ['Software Engineer', 'Data Analyst']
