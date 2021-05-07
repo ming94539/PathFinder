@@ -1,5 +1,4 @@
-CREATE TYPE stack_value AS ENUM ('backend', 'frontend', 'full-stack');
-CREATE TYPE education_value AS ENUM ('Bachleors', 'Masters', 'PhD');
+CREATE TYPE education_value AS ENUM ('bachleor', 'master', 'doctorate');
 
 CREATE TABLE JobIDTable (
 	jobID INTEGER,
@@ -7,28 +6,14 @@ CREATE TABLE JobIDTable (
 	PRIMARY KEY (jobID)
 );
 
-CREATE TABLE SoftwareEngineer (
+CREATE TABLE WebDeveloper (
 	jobID INTEGER NOT NULL,
 	seniority VARCHAR(60),
 	industry VARCHAR(60),
-	stack stack_value,
-	education education_value,
+	educationLevel education_value,
+	degreeTitle VARCHAR(60),
 	skills json NOT NULL,
 	language json NOT NULL,
-	preferences json,
 	PRIMARY KEY (jobID),
 	FOREIGN KEY (jobID) REFERENCES JobIDTable
-);
-
-CREATE TABLE Security (
-	jobID INTEGER NOT NULL,
-	seniority VARCHAR(60),
-	industry VARCHAR(60),
-	stack stack_value,
-	education education_value,
-	skills json NOT NULL,
-	language json NOT NULL,
-	preferences json,
-	PRIMARY KEY (jobID),
-	FOREIGN KEY (jobID) REFERENCES JobIDTable
-);
+); 
