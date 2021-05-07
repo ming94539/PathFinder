@@ -346,3 +346,88 @@ Job function
 Engineering and Information Technology
 Industries
 Information Technology and Services
+BREAK
+Direct message the job poster from Primary.Health
+Mykayla Banyai, SHRM-CP
+Human Resources Manager at Primary.Health
+Primary.Health is the engine behind your COVID-19 testing and vaccination programs. Our web-based platform provides government agencies, schools, healthcare facilities, and community based organizations the ability to quickly register participants, schedule appointments, arrange for easy onsite check-in and check-out, and exchange data between labs and state databases, easing the reporting process.
+
+JOB TITLE: Software Engineer 
+JOB TYPE: Full-time
+LOCATION: Remote
+
+JOB SCOPE:
+At Primary, our engineers are blazing new trails at the intersection of technology, software, and healthcare. We believe in tackling hard problems together as a team, with strong values around collaboration, ownership, and transparency.
+ MAJOR JOB DUTIES
+Writing clean, high-quality, high-performance, maintainable code.
+Develop and support software including applications, database integration, interfaces, and new functionality enhancements.
+Collaborate cross-functionally to plan and execute engineering projects.
+Solve tough technical problems at any level of the stack, and be persistent at getting to the solution, whether it involves front-end, back-end, or infrastructure work.
+Support test and deployment of new products and features.
+
+QUALIFICATIONS
+Bachelor's degree in Computer Science (or related field).
+2+ years of relevant work experience.
+You are fluent in at least one programming language and would be able to switch between multiple languages. In our stack we mainly use Ruby on Rails and React.
+You have solid experience building software on top of relational databases such as Postgres or MySQL.
+You can break down complex problems rigorously and you understand how to deliver great impactful products.
+You can write high quality testable code and you enjoy doing it.
+Ability to multi-task, organize, and prioritize work.
+Show less
+Employment type
+Full-time
+We're looking for people to join us who loe building software products. People who love thinking about the reasons a product exists, and the best ways for other people to use those products.
+
+In the role you will be exposed to:
+Full stack engineering -- we believe that building features is best done if someone can own the whole feature end to end.
+UI / UX -- if you are someone who cares about UI / UX, we give the freedom to make those choices
+Backend Architecture -- if you are someone who cares more about data plumbing / efficient backend processes, we also give you the freedom to implement your ideas
+High Standards -- we don't ship anything that we are not proud of. We make sure that every product and feature we ship meets our high quality bar.
+Show less
+Employment type
+Full-time
+Direct message the job poster from Constellation Agency
+Leylah Hadrovic
+Human Resources Coordinator at Constellation Agency
+Overview:  
+The Software Engineer utilizes their technical skills in collaboration with the engineering teams to develop, maintain, and test services and platforms for Constellation Agency's customers. You will be working with an agile product and technology-savvy team. Candidates who are eager to enhance their development, architecture, mentorship, and management skills will fit in perfectly.
+
+Essential Functions
+Design, develop, test, deploy, maintain and improve software.
+Oversee and collaborate with other developers to write and optimize code.
+Work closely with the technical leads, product and project managers to define specifications and timelines.
+Manage individual project priorities, deadlines, and deliverables.
+Work as part of a team in a fast-paced startup environment.
+Regular, dependable attendance and punctuality.
+Perform other duties as assigned.
+ Technologies
+React
+TypeScript
+NodeJS
+PostgreSQL
+DynamoDB
+Serverless Framework
+ Qualifications:     
+3+ years of prior professional experience in software development with the listed technologies.
+Comfortable working with frontend and backend web technologies. Passionate about quality - writing clean, readable, reusable code, supported by tests.
+Strong React/Redux experience building a complex multi-layered application.
+Good understanding of designing and building API's and core web services.
+Familiar with designing and building Relational and NoSQL Databases.
+Excellent written and verbal communication skills. Deadline and detail orientated.    
+Excellent algorithm and problem-solving skills.        
+Must be able to work independently with minimal supervision.
+Must be able to anticipate and solve problems.
+ About Constellation:
+Constellation is a SaaS company offering full-service digital marketing and creative services. Alexia, our Ad Engine, launches and manages campaigns at scale. Alexia can produce thousands of stunning creative assets and launch the same day encompassing both CMP (Creative Management Platform) and DCO (Dynamic Creative Optimization) capabilities. Our marketing SaaS offering can be paired with a bevy of additional AdTech tools for campaign execution and management across multiple ad platforms. Alexia allows us and other agencies to disrupt the traditional billable hours model and launch in the leanest way possible.
+ Constellation was named the #65 fastest growing private company in the US and the #7 fastest-growing marketing/advertising company on the Inc. 5000 list for 2020. They are also listed by Crain’s New York Business as the #7 fastest-growing company in New York. We are a women-owned and minority-owned business with a commitment to diversity.
+
+Other Job Information:
+This job description is not all inclusive. Constellation Agency reserves the right to amend this job description at any time. Constellation Agency is an Equal Opportunity Employer, committed to a diverse and inclusive work environment. Reasonable accommodations may be made to enable individuals with disabilities to perform essential job duties and responsibilities.
+
+This position involves regular walking, standing, hearing, and talking. May occasionally involve stooping, kneeling, or crouching. Involves close vision, color vision, depth perception, and focus adjustment. Must be able to move and/or lift at least 5 lbs.
+ Normally works in a general office environment with the use of computer, printer, and telephone. Lighting and temperature are adequate and there are no hazardous or unpleasant conditions caused by noise, etc.
+Show less
+Employment type
+Full-time
+Direct message the job poster from LinkedIn
+Lauren Seaton
