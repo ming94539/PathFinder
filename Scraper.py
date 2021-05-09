@@ -9,21 +9,23 @@ import random
 class Scraper:
 	def __init__ (self, is_headless = True):
 		#puts the browser in headless mode (no UI) if is_headless is true
+		self.PROXY = "megaproxy.rotating.proxyrack.net:222"
+		self.current_options = Options()
+		#self.chrome_options = WebDriver.ChromeOptions()
+		self.current_options.add_argument('--proxy-server=%s' % self.PROXY)
 		if is_headless: 
-			self.current_options = Options()
+			
 			self.current_options.headless = True
-			self.driver = webdriver.Chrome("./chromedriver",options=self.current_options)
+			
 		#set the driver path
-		else:
-			self.driver = webdriver.Chrome("./chromedriver")
+		self.driver = webdriver.Chrome("./chromedriver",options=self.current_options)
 		self.driver.set_window_size(1920, 1080)
 
 	#navigates the scraper to a page at the given URL
 	def get_page(self, url):
-		sleep_time = random.randint(1,61)
+		sleep_time = random.randint(1,31)
 		sleep(sleep_time)
 		self.driver.get(url)
-		self.driver.implicitly_wait(5)
 		sleep(2)
 	#returns the title at the current page
 	def get_title(self):
