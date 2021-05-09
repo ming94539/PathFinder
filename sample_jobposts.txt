@@ -1,4 +1,4 @@
-BREAK
+BREAK12345
 Zoomies help the world connect — and deliver happiness while doing it. We set out to build the best video conferencing product for the enterprise, and today help people communicate better with products like Zoom Phone, Zoom Rooms, Zoom Video Webinars, Zoom Apps, and OnZoom.
 
 We’re problem-solvers and self-starters, working at a fast pace to design solutions with our customers and users in mind. Here, you’ll work across teams to dig deep into impactful projects that are changing the way people communicate, and enjoy opportunities to advance your career in a diverse, inclusive environment.
@@ -50,7 +50,7 @@ Zoomies help the world connect — and deliver happiness while doing it. We set 
 We’re problem-solvers and self-starters, working at a fast pace to design solutions with our customers and users in mind. Here, you’ll work across teams to dig deep into impactful projects that are changing the way people communicate, and enjoy opportunities to advance your career in a diverse, inclusive environment.
 
 Zoom is an award-winning workplace. We have been recognized by Comparably as #1 CEO, Company Happiness, Benefits, Compensation, Diversity, and more! Not to mention we’ve been awarded by Glassdoor as the 2nd Best US workplace & Best Large Company US CEO in 2018, Wealthfront, and Business Insider. Our culture focuses on delivering happiness, our commitment to transparency, and the tangible benefits we provide our employees and our customers.
-BREAK
+BREAK156456
 Java Full Stack Developer
 
 Responsibilities
@@ -96,7 +96,7 @@ Zoomies help the world connect — and deliver happiness while doing it. We set 
 We’re problem-solvers and self-starters, working at a fast pace to design solutions with our customers and users in mind. Here, you’ll work across teams to dig deep into impactful projects that are changing the way people communicate, and enjoy opportunities to advance your career in a diverse, inclusive environment.
 
 Zoom is an award-winning workplace. We have been recognized by Comparably as #1 CEO, Company Happiness, Benefits, Compensation, Diversity, and more! Not to mention we’ve been awarded by Glassdoor as the 2nd Best US workplace & Best Large Company US CEO in 2018, Wealthfront, and Business Insider. Our culture focuses on delivering happiness, our commitment to transparency, and the tangible benefits we provide our employees and our customers.
-BREAK
+BREAK343546
 Do what you love. Love what you do.
 
 At Workday, we help the world’s largest organizations adapt to what’s next by bringing finance, HR, and planning into a single enterprise cloud. We work hard, and we’re serious about what we do. But we like to have fun, too. We put people first, celebrate diversity, drive innovation, and do good in the communities where we live and work.
@@ -138,7 +138,7 @@ DevOps experience, and knowledge of common industry tools like Git, Kubernetes a
 Self-motivation and a strong sense of ownership.
 An ability to balance a sense of urgency with shipping high quality and pragmatic solutions
 Strong communication and interpersonal skills 
-BREAK
+BREAK543454
 Uber AI’s mission is to optimize and innovate Uber’s products and business using machine learning and AI. The group consists of Uber's machine learning platform team which enables machine learning at scale, AI building blocks which enable product teams to build unique experiences and engagements with product teams on their business problems.
 
 We are developing a platform around recommendation and personalization across Uber products. We strive to understand our riders, drivers, restaurants and build more personal experience across all users.
@@ -176,7 +176,7 @@ Experience working with product teams.
 Ability to work with ambiguous problem definitions.
 Proven ability to communicate technical knowledge to a business audience.
 Collaborative attitude and constructive approach.
-BREAK
+BREAK754435
 Kuaishou is the leading short video and photo sharing App in China where our mission is to provide users with a personal space to share moments from their lives. With over 700 million audience and more than 200 million active daily users, Kwai provides an almost limitless look at everyday slices of life that unfolds in real time. Viewers can explore a rich array of glimpses into fitness, homes, cooking, health and wellness, fashion, and other interests.
 
 
@@ -245,7 +245,7 @@ Internship
 
 Job Functions
 Science  Engineering
-BREAK
+BREAK43546
 DoorDash Labs is an independent team within DoorDash. We’re hiring software engineers to work at the intersection of software engineering and robotics to solve key business problems with elegant technical solutions. If you have a passion for applying robotics solutions to a service loved by millions of people, then we want to talk to you!
 
 What You'll Do
@@ -346,7 +346,7 @@ Job function
 Engineering and Information Technology
 Industries
 Information Technology and Services
-BREAK
+BREAK23435
 Direct message the job poster from Primary.Health
 Mykayla Banyai, SHRM-CP
 Human Resources Manager at Primary.Health
