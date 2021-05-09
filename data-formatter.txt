@@ -44,7 +44,10 @@ Return set. So far are just 'cs','ce',and 'ee', haven't expanded to anything els
 ----Technical Documentation---
 
 Design choices:
-1. Abbreviation - B.A. B.S. - after my punctuation remover, it becomes B A B S. Making it miss stuff
-2. Tokenization - Miss key words with two or more words like "React Native"
-3. Double spaces - not completely sure yet but I think it's from the punctuation remover, but 
-the regex that removes multiple consecutive spaces can deal with that
+1. Abbreviation - B.A. B.S. - after my punctuation remover, it becomes B A B S. Making it miss stuff, handled this by just adding 'b a' 'b s' to the list
+2. Tokenization - Miss key words with two or more words like "React Native", so just stopped using tokenization and used "if 'react native' in text' 
+3. Double spaces - not completely sure yet but I think it's from the punctuation remover, but the regex that removes multiple consecutive spaces can deal with that
+
+Future Scaling Ideas:
+1. Skim job description to just requirements, preferred req, and education. Makes things faster and less error prone (keywords won't get detected in the description part instead of requirements)
+2. Handle more types of degree titles, might need to search through just the education section
