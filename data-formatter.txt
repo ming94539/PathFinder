@@ -1,0 +1,50 @@
+
+----For User -------
+How to Use:
+
+test-data-formatter.py is just the python file version of data-formatter-dev.ipynb (the Jupiter notebook used in development stage) that's cleaned up.
+
+@Input: A text file containing several job post descriptions each are separated by a line
+Containing "BREAK[job id]", the [job id] will be used for the output. Look at sample_jobposts.txt for example.
+
+Note: ALL job posts in the input text file should all belong to the SAME job title search term. For example, all job posts description in the text file should belong to "Web Developer" or "Front End Developer",etc..., can't have more than one job title in the input file due to how this module is designed. 
+
+@Output:  
+The code will return a long dictionary of the result of data extraction. I also let it print it to console.
+
+template = {'4385545':{'skills':{'javascript,python, angular'}, 
+                       'industries':['healthcare','telecommunication'],
+                       'degree_level':{'bachelor','master'},
+                       'seniority':'Senior',
+                       'yoe':5,
+                       'degree_title':{'ce','cs'}
+                      },
+            '5345465':{
+                ....
+            }
+           }
+Attributes:
+'skills': used a set() data structure instead of list to deal with repeats
+
+'industries': used a set() data structure instead of list to deal with repeats. The standardized industries can be found in linkedin_industries.txt (146 industries)
+
+'degree_level': used set(). 'a' - associates 'b'-bachelors 'm' - masters 'p' - phd 
+
+'seniority': just a string from one of the standardized LinkedIn terms: ['Internship','Entry level','Associate','Mid-Senior level','Director','Executive']
+And "N/A" when don't have this seniority attribute or have something not one of the above terms (shouldn't be possible, unless LinkedIn is inconsistent which does happen surprisingly) 
+
+yoe: 
+Just an int. Returns -1 when can't find this attribute.
+
+degree_title:
+Return set. So far are just 'cs','ce',and 'ee', haven't expanded to anything else yet like  math, applied math, bioinformatics, statistics, etc. since I need to add more error handling for these new ones as these terms might not be used in context of education level.
+
+
+
+----Technical Documentation---
+
+Design choices:
+1. Abbreviation - B.A. B.S. - after my punctuation remover, it becomes B A B S. Making it miss stuff
+2. Tokenization - Miss key words with two or more words like "React Native"
+3. Double spaces - not completely sure yet but I think it's from the punctuation remover, but 
+the regex that removes multiple consecutive spaces can deal with that
