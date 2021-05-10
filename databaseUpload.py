@@ -1,3 +1,5 @@
+import json
+
 # dictionary
 # jobID INTEGER NOT NULL,
 #	seniority VARCHAR(60),
@@ -14,14 +16,16 @@ table = {
 	'industry': ['healthcare','telecommunication'],
 	'educationLevel':['bachelor','master'],
 	'degreeTitle':['ce','cs'],
-	'skills':['valgrind, visual studio', 'c++ frameworks'],
+	'skills':['valgrind', 'visual studio', 'c++ frameworks'],
 	'languages': ['python', 'c++', 'c'],
 	'yoe': '5'
 }
 
 # validate data
-def data_validation:
+def data_validation():
 
+# convert lists to json
+def list_to_json(list):
 
 # establish session to database
 
