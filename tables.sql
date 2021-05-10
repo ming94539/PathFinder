@@ -1,5 +1,3 @@
-CREATE TYPE education_value AS ENUM ('bachleor', 'master', 'doctorate');
-
 CREATE TABLE JobIDTable (
 	jobID INTEGER NOT NULL,
 	table VARCHAR(60),
