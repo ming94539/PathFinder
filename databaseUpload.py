@@ -25,8 +25,76 @@ table = {
 	'yoe': '5'
 }
 
+seniorityVals = ['Internship', 'Entry Level', 'Associate', 'Mid-Senior Level', 'Director', 'Executive']
+educationVals = ['a', 'b', 'm', 'p']
+
 # validate data
-def data_validation():
+# Values:
+#	None = NULL
+#	0	 = No error
+#  -1	 = Error
+# Attributes:
+#	result[0] = seniority
+#	result[1] = industry
+#	result[2] = degreeTitle
+#	result[3] = educationLevel
+#	result[4] = skills
+#	result[5] = languages
+#	result[6] = yoe
+def data_validation(table):
+	result = []
+
+	seniority = table.get('seniority')
+	if seniority == -1:
+		result.append(None)
+	else if not (seniority in seniorityVals):
+		result.append(-1)
+	else:
+		result.append(0)
+
+	industry = table.get('industry')
+	if len(industry) == 0:
+		result.append(None)
+	else:
+		result.append(0)
+
+	degreeTitle = table.get('degreeTitle')
+	if len(industry) == 0:
+		result.append(None)
+	else:
+		result.append(0)
+
+	educationLevel = table.get('educationLevel')
+	if len(educationLevel) == 0:
+		result.append(None)
+	else if not (educationLevel in educationVals):
+		result.append(-1)
+	else:
+		result.append(0)
+
+	skills = table.get('skills')
+	if len(skills) == 0:
+		result.append(None)
+	else:
+		result.append(0)
+
+	languages = table.get('languages')
+	if len(languages) == 0:
+		result.append(None)
+	else:
+		result.append(0)
+
+	yoe = int(table.get('yoe')):
+	if yoe == -1:
+		result.append(None)
+	if yoe < 0 or yoe > 25:
+		result.append(-1)
+	else:
+		result.append(0)
+
+	return result
+
+
 <<<<<<< HEAD
 
 # convert lists to json
