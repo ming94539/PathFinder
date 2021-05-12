@@ -1,12 +1,4 @@
 
-'''
-1. Abbreviation - B.A. B.S. - after my punctuation remover, it becomes B A B S. Making it miss stuff
-2. Tokenization - Miss key words with two or more words like "React Native"
-3. Double spaces - not completely sure yet but I think it's from the punctuation remover, but 
-the regex that removes multiple consecutive spaces can deal with that
-'''
-
-
 import re
 from nltk.tokenize import word_tokenize 
 
@@ -37,22 +29,21 @@ def preprocessing(jobs_file):
         if l == len(jobslines)-1:
             jobPosts.append(post)
             origPosts.append(origPost)
-       # post += jobslines[l].replaceAll("[\\p{Punct}&&[^.]]", "").lower();
         post+= re.sub(r'[^\w\s]', ' ', jobslines[l].lower())
 
     print('----')
     for p in range(len(jobPosts)):
         jobPosts[p]= re.sub(' +', ' ', jobPosts[p].replace('\n',' ')) #remove unnecessary double/triple white space
-    # for p in range(len(jobPosts)):
-    #     jobPosts[p] = word_tokenize(jobPosts[p])
+
     return origPosts, jobPosts, id_list
 
 
 
-def read_termsFile(termsFile):
-    termsFile = open(termsFile,"r")
+def read_termsFile(termsFileName):
+    termsFile = open(termsFileName,"r")
     terms = termsFile.readlines()
-    print('number of tech terms',len(terms))
+    print('opened:',termsFileName)
+    print('number terms:',len(terms))
     keywords = [term.rstrip('\n').lower() for term in terms]
     return keywords
 
@@ -97,13 +88,13 @@ def extract_degree_lvl(post):
             if variation in post:
                 deg_lvls.append(d_key)
     #print('EDUCATION LEVEL',set(deg_lvls))
-    return set(deg_lvls)
+    return list(set(deg_lvls))
     
 def extract_degree_title(post):
     deg_titles = []
     deg_title = {'cs':['computer science','cs','c s'],
                  'ce':['computer engineering','ce','c e'],
-                  'ee':['electrical engineering','ee','e e']
+                  'ee':['electrical engineering','ee','e e'],
 
     }
 
@@ -114,7 +105,7 @@ def extract_degree_title(post):
                 deg_titles.append(d_key)
        
    #print('DEGREE TITLE', set(deg_titles))
-    return set(deg_titles)
+    return list(set(deg_titles))
 
 def extract_tech_terms(post,keywords):
     skills = []
@@ -123,10 +114,20 @@ def extract_tech_terms(post,keywords):
         if key in post:
             skills.append(key.strip())
    #print('SKILLS',set(skills))
-    return set(skills)
-    
-def extract_industry(o_P):
-    linkedin_industries = open("linkedin_industries.txt",'r').read().split('\n')
+    return list(set(skills))
+
+def extract_languages(post,languages):
+    lang = []
+    for key in languages:
+        key= " "+key+" "
+        if key in post:
+            lang.append(key.strip())
+   #print('SKILLS',set(skills))
+    return list(set(lang))
+
+
+def extract_industry(o_P,linkedin_industries):
+
     s_tag = ""
     s_boo =False
     industries = []
@@ -158,7 +159,8 @@ def extract_yoe(post):
     return -1
 
 
-def data_extraction(origPosts, jobPosts,keywords,id_list):    
+
+def data_extraction(origPosts, jobPosts,keywords,id_list,linkedin_industries,languages):    
     output = {}
     for i in range(len(jobPosts)):  
         output[id_list[i]] = {}
@@ -166,8 +168,10 @@ def data_extraction(origPosts, jobPosts,keywords,id_list):
         #SENIORITY
         output[id_list[i]]['seniorirty']=extract_seniority(o_P)
         #INDUSTRY
-        output[id_list[i]]['industries']=extract_industry(o_P)
+        output[id_list[i]]['industries']=extract_industry(o_P,linkedin_industries)
         #Keyword Extraction -----
+        #Languages
+        output[id_list[i]]['languages'] = extract_languages(jobPosts[i],languages)
         #TECH SKILLS
         output[id_list[i]]['skills']=extract_tech_terms(jobPosts[i], keywords)
         #Degree level
@@ -181,9 +185,6 @@ def data_extraction(origPosts, jobPosts,keywords,id_list):
     
 
 
-# In[16]:
-
-'''
 template = {'4385545':{'skills':['javascript,python, angular'], 
                        'industry':['healthcare','telecommunication'],
                        'education level':['bachelor','master'],
@@ -196,11 +197,15 @@ template = {'4385545':{'skills':['javascript,python, angular'],
             }
            }
 
-'''
+
 
 orig_posts, jobPosts, id_list = preprocessing("sample_jobposts.txt")
-keywords = read_termsFile("final_keywords.txt")
-output = data_extraction(orig_posts, jobPosts, keywords,id_list)
+keywords = read_termsFile("lists/final_keywords2.txt")
+languages = read_termsFile("lists/topLanguages.txt")
+linkedin_industries = open("lists/linkedin_industries.txt",'r').read().split('\n')
+print('opened lists/linkedin_industries.txt:\nnumber of terms',len(linkedin_industries))
+output = data_extraction(orig_posts, jobPosts, keywords,id_list,linkedin_industries,languages)
 import pprint
 
 pprint.pprint(output)
+

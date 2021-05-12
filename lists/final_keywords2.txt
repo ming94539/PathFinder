@@ -1,0 +1,2094 @@
+.net core
+3d printing
+3d touch
+a/b testing
+ab initio
+absinthe
+ac drives
+acas
+accelerate framework
+access control list
+accessibility (a11y)
+accord.net framework
+account management
+ace
+actionbarsherlock
+active directory
+active record
+activemq
+activex
+ad-hoc distribution (mobile)
+adb
+adf
+adfs
+ado.net
+adobe after effects
+adobe analytics
+adobe connect
+adobe creative suite
+adobe illustrator
+adobe photoshop
+adobe premiere
+adobe xd
+adt
+advanced design system
+aem
+aerospike
+aes
+afnetworking
+agency model ota
+agile
+agile coach
+agile methodology
+aidc
+airflow
+aix
+ajax
+akamai
+akka
+akka http
+alamofire
+algorithm
+alignment
+allegro
+allegrograph
+alm
+altium designer
+amazon aurora
+amazon ec2
+amazon ecs
+amazon eks
+amazon emr
+amazon kinesis
+amazon rds
+amazon route 53
+amazon s3
+amazon sagemaker
+amazon sns
+ambari
+amp
+amqp
+analog design
+analysis
+andengine
+android
+android auto
+android ide
+android jetpack
+android keywords
+android n
+android ndk
+android sdk
+android studio
+android tv
+android wear
+angular
+angular 2
+angular cli
+angular universal
+angularfire
+ansi c
+ansible
+ant design
+anti patterns
+anti spam firewall
+anti-malware
+antivirus
+aob
+apache
+apache ant
+apache avro
+apache beam
+apache camel
+apache druid
+apache flex
+apache flink
+apache flume
+apache hive
+apache ivy
+apache kafka
+apache mahout
+apache mesos
+apache mina
+apache nifi
+apache pig
+apache spark
+apache zeppelin
+apc
+api
+api endpoint
+api gateway
+api.ai
+apm
+apns
+apollo
+app publisher (mobile)
+app store
+app store optimisation
+appcode
+appcompat
+appdynamics
+appfabric
+appium
+application developer
+application development
+applied mathematics
+apprun
+appscan
+appveyor
+arangodb
+arcgis
+arcsight
+ariba
+arkit
+arquillian
+artifactory
+artificial intelligence
+artificial neural networks
+as2
+asana
+asf
+asio
+asm.js
+asp.net
+asp.net ajax
+asp.net core
+asp.net mvc
+asp.net web api
+asp.net web forms
+assembla
+assembler
+async/await
+asynchronous (async) requests
+asynchronous i/o
+asyncio
+atmel avr
+atom
+augmented reality
+aurelia
+authentication
+authorization
+auto layout
+autodesk maya
+autofac
+automapper
+automation
+automation qa engineer
+automation testing
+availability
+avfoundation
+avocode
+awr
+aws
+aws amplify
+aws appsync
+aws cloudformation
+aws codebuild
+aws codedeploy
+aws fargate
+aws lambda
+axios
+axure rp
+azkaban
+azure
+azure cosmos db
+azure databricks
+b2b
+baas
+babel
+babylonjs
+back-end
+back-end developer
+backbone.js
+backlog
+backup and restore
+balsamiq
+bamboo
+base sas
+basecamp
+baseline testing
+bayesian statistics
+bazel
+bdd
+beego
+beeware
+behat
+bem
+berkeley db
+bgp
+bi
+big data
+big data engineer
+big data tools
+big table
+bigquery
+birt
+bitbucket
+bitcoin
+bitcoin wallet
+bitrise
+bitrix framework
+black-box testing
+blackfire
+blaze
+blazemete
+blazemeter
+blender
+bloc pattern
+blockchain
+blueeyes
+bmc portal
+bmc remedy
+boilerplate code
+bokeh
+bond
+boost
+bootstrap
+bottle
+bourbon
+bower
+box2d
+brackets
+brakeman
+brand development
+brand identity
+broccoli
+browserify
+brunch
+budget management
+buffalo
+bug
+bug (issue) tracking tools
+bug tracking
+bug/issue tracking system
+bugzilla
+build automation
+build release engineer
+buildbot
+bundler
+burp suite
+business analysis
+business analyst
+business development
+business intelligence analyst
+business object
+business process
+business process management
+business requirements
+business strategy
+butterknife
+bytecode
+c language
+c# frameworks
+c# testing tools
+c++ 11
+c++ 14
+c++ 17
+c++ frameworks
+ca plex
+caching
+cacti
+cactus
+cad
+cadence virtuoso layout editor
+caffe
+caffe
+cakephp
+calabash
+cam
+camunda
+canvasjs
+capistrano
+capybara
+carthage
+casperjs
+cassandra
+cats
+ccent
+ccl
+ccna
+ccnp
+cdi
+cdn
+ceh
+celery
+centos
+ceph
+cgi
+chai
+change management
+channel partner
+chaos
+charles
+chart fx
+chart.js
+check point firewall
+checkstyle
+chef
+cherrypy
+chipmunk2d
+ci tools
+ci/cd
+circleci
+cisa
+cisco
+cisco asa
+cisco certifications
+cisco certified cyberops associate
+cisco ise
+cisco ngips
+cisco switches
+cisco technologies
+cisco unified computing system
+cism
+cissp
+clang
+classification
+clean architecture (viper)
+clearcase
+clearquest
+cleartk
+cli
+clickhouse
+clickstream analysis
+clion
+clojurescript
+close, consolidation and reporting
+cloud computing
+cloud foundry
+cloud native
+cloud security
+cloud storage
+cloudera cdh
+cloudfront
+cloudstack
+cloudwatch
+clr
+clustering
+cm tools
+cms
+cntk
+cobit
+cockroachdb
+cocoa
+cocoa touch
+cocoapods
+cocos denshion
+cocos2d-x
+codacy
+code reviews
+codeblocks
+codeception
+codecs (video)
+codeigniter
+codeship
+colossus
+communication
+community outreach
+competitive analysis
+compiler
+compiler validation
+compliance
+composer
+comptia a+
+comptia network+
+comptia server+
+computer architecture
+computer forensics
+computer graphics
+computer hardware
+computer security
+computer vision
+concurrency
+conductor
+configuration management (cm)
+confluence
+consul
+consulting
+container orchestration
+containerization
+containers
+content development
+content management
+contextual inquiry
+continuous delivery
+continuous deployment (cd)
+continuous integration (ci)
+controller
+controller area network
+conversion rate (ecommerce)
+convolutional neural network
+corba
+cordova
+core animation
+core bluetooth
+core data
+core graphics
+core java
+core location
+core.js
+corefoundation
+coreimage
+corenlp
+corona
+couchbase
+couchdb
+counter-terrorism
+counterintelligence
+cpc
+cpo
+cppcheck
+cppdb
+cpu
+cpython
+cq5
+cqrs
+cratedb
+creative director
+crm
+cross-browser testing
+cross-functional team
+cross-platform mobile (mostly javascript)
+cross-platform mobile development
+cross-platform mobile development
+crucible
+crud
+cruisecontrol
+cryptocurrency
+cryptography
+crystal reports
+csm
+cspo
+css animations
+css modules
+css preprocessor
+css-related
+csv
+cto
+ctr
+cucumber
+cuda
+customer
+customer development
+customer experience
+customer service
+cv compiler
+cv compiler
+cv compiler
+cvs
+cyber risk remediation analysis
+cybersecurity
+cycle.js
+cypher
+cypress
+d3.js
+dagger
+dashboard
+dask
+data analysis
+data architecture
+data archiving
+data binding
+data center
+data conversion
+data extraction
+data flow
+data migration
+data mining
+data model
+data modeling
+data pipeline
+data science
+data scientist
+data set
+data structure
+data visualization
+data warehouse developer
+data warehousing
+database
+database administration
+database design
+database development
+database migration
+datadog
+db2
+dbaas
+dbf
+dbflow
+dbms
+dbunit
+dc drive
+ddd
+debian
+debugging
+decision tree
+deep learning
+defect tracking
+deno
+dependency management
+deployment
+derby
+des
+design layout
+design pattern examples
+design patterns
+design strategy
+design thinking
+design-driven development
+device driver
+devops
+devops engineer
+dhcp
+dhtml
+di
+digital design
+digital forensics
+digital marketing
+digital media
+digital security
+digital signal processing
+digital strategy
+digitalocean
+direct selling
+disassembler
+disaster recovery
+distributed system
+django
+django channels
+django cms
+django rest framework
+dlp
+dnn
+dns
+docker
+docker swarm
+doctrine
+docutils
+dod 8570
+dojo
+dojo mobile
+dom
+dos
+dovecot
+dreamweaver
+drone
+dropwizard
+drupal
+drush
+dry
+dsl
+dust.js
+dwr
+dynamic analysis
+dynamic malware analysis
+dynamic programming
+dynamodb
+dynatrace
+e2e testing
+easymock
+echo
+eclipse
+eclipselink
+ecommerce
+eda tools
+ehcache
+ejb
+elastic beanstalk
+elastic load balancing
+elasticache
+elasticsearch
+elb
+electrical engineer
+electron
+electronic circuit design
+electronic data interchange
+elk
+emacs
+email marketing
+emass
+embedded
+embedded c
+embedded database
+embedded java
+embedded linux
+embedded operating system
+embedded software
+embedded sql
+embedded system
+ember.js
+emc
+emc storage
+encryption
+endurance testing
+ensemble methods
+enterprise architect
+enterprise architecture
+enterprise pki
+enterprise software
+enterprise solutions
+enterprisedb
+entity framework
+entrepreneurship
+enzyme
+eoat design
+episerver
+erb
+erp
+erwin
+esb
+eset
+eslint
+espresso
+ethereum
+ethical hacking
+etl (extract, transform and load)
+event management
+event planning
+event sourcing
+event store
+event-driven architecture
+event-driven programming
+eventkit
+eventmachine
+evernote
+exago
+exim
+experience design
+express.js
+extjs
+exunit
+f5 load balancer
+fabric
+facelets
+factorybot
+failover
+fastlane
+fastly
+fcm
+fdd
+feathersjs
+fedora
+fibre channel
+fiddler
+field programmable gate arrays
+figma
+filezilla
+final cut pro
+finance
+financial analysis
+financial modeling
+financial risk
+finatra
+finch
+finite element analysis
+firebase
+firebird
+firewalls
+fitnesse
+flashdevelop
+flask
+flat ui
+flexbox
+flinto
+flow
+fluentd
+flurry
+flutter
+flux
+fme
+fogbugz
+fortify
+foundation
+fpga
+fps
+framer
+freebsd
+freemarker
+freemium
+fresco
+front-end
+front-end developer
+ftp
+full-stack developer
+fullcalendar
+functional languages
+functional programming
+functional testing
+functional, regression testing tools
+galen framework
+gamesalad
+game​kit
+ganglia
+gateway
+gatling
+gcc
+gcd
+gcia
+gcih
+gcm
+gearman
+gemfire
+genesys
+gensim
+geoserver
+gerrit
+ggplot
+gherkin
+ghunit
+gimp
+gin
+gis
+gis analyst
+git
+gitflow
+github
+gitlab
+glassfish
+glide
+gluon
+gnu
+go-to-market strategy
+godot
+goland
+google ads
+google analytics
+google app engine
+google closure
+google cloud platform
+google compute engine
+google drive
+google guice
+google maps
+google play market
+google web designer
+gorilla
+gperf
+gradient boosting machines
+gradle
+grafana
+grails
+grape
+graphdb
+graphic designer
+graphical design
+graphite
+graphql
+gray-box testing
+grc
+greendao
+grep
+growth
+grpc
+grunt
+gsap
+gsec
+gstreamer
+gtest
+guava
+gui
+gulp
+gunicorn
+guzzle
+gwt
+hadoop
+haml
+hana
+handlebars.js
+hapi
+haproxy
+hardware
+hardware architecture
+hardware installation
+hbase
+hbss
+hdfs
+hdp
+header
+hedge fund
+heroengine
+heroku
+heroscript
+heuristic evaluation
+hexagonal architecture
+hg
+hhvm
+hibernate
+hiera
+high availability
+high-load tools
+high-performance computing
+highcharts
+hips
+hive
+hlookup
+hockeyapp
+hotjar
+hp diagnostics
+hp performance center
+hp quality center
+hp server
+html-related
+htmlpad
+http
+http4s
+https
+hudson
+human intelligence
+human-computer interaction
+hybrid app
+hybris
+hyper
+hyper-convergence
+hyper-v
+hyperledger
+iaas
+ibm cloud
+ibm rpt
+icinga
+iconix
+ide
+ide (editors for code)
+identity and access management
+identityserver
+iis
+im
+image processing
+imagemagick
+imap
+immutable.js
+impala
+in app purchase
+incident detection
+incident response
+indesign
+influxdb
+informatica powercenter
+information architecture
+information assurance
+information design
+information security
+information security architecture
+infosys
+infragistics
+infrastructure
+infrastructure as code
+inkscape
+innersource
+integration testing
+intellij idea
+interaction design
+interaction designer
+interbase
+internationalization (i18n)
+internet explorer
+intrusion detection
+invision
+ionic
+ionic creator
+ios
+ios 10 speech recognition api
+ios frameworks
+ios programming languages
+ios sdk
+ios tools
+iot
+ip
+iperf
+ips
+ipsec
+iptables
+iris
+iser
+iso
+isomorphic apps
+istio
+istqb
+it management
+it operation
+itil
+itil
+itom
+jaas
+jackson
+jaeger
+jaf
+jaql
+jasmine
+jasperreports
+java build tools
+java deployment
+java ee
+java ee frameworks
+java me
+java orm frameworks
+java profiler
+java se
+java se frameworks
+java testing tools
+javacc
+javafx
+javascript frameworks
+javascript testing tools
+jax-rs
+jax-ws
+jaxb
+jbehave
+jboss
+jbpm
+jconsole
+jdbc
+jdeferred
+jdeveloper
+jdk
+jedi
+jekyll
+jellyfish
+jenkins
+jersey
+jest
+jetty
+jface
+jflex
+jfr
+jinja2
+jira
+jmc
+jmeter
+jmm
+jmock
+jms
+jmx
+jni
+joomla
+jpa
+jpql
+jquery
+jquery mobile
+jquery ui
+jre
+jruby
+jsf
+json
+jsonb
+jsoup
+jsp
+jss
+jstl
+jsx
+jtest
+junit
+jupyter (ipython)
+justinmind
+jvm
+jwt
+kafka
+kali linux
+kanban
+karma
+kendo
+kentico
+keras
+kerberos
+kernel module
+key-value database
+keystore
+kibana
+kinesis
+kiss
+kivy
+kmdf
+knockout
+koa
+kohana
+kops
+kore
+kpi
+ksql
+kubernetes
+kunagi
+kvm
+kylin
+lambda
+lamp
+lan
+languages with oo features
+laravel
+launch4j
+lauterbach
+lazarus
+ldap
+lead generation
+leaflet
+leakcanary
+lean manufacturing
+lean six sigma
+lean software development
+legacy codebase
+lemp
+less
+libgdx
+libmicrohttpd
+liferay
+lift
+lift 3.0-rc1
+lingpipe
+linux
+linux distributions
+linux kernel
+linux server
+linux shell
+liquibase
+llvm
+load balancer
+load testing
+load, stress and performance testing tools
+loadrunner
+loadui
+localization (l10n)
+log analysis
+log4j
+log4net
+logcat
+logi analytics
+logistic regression
+logo design
+logstash
+loki
+lottie
+lotus
+lstm
+lucene
+luigi
+lumen
+lvm
+maas
+mac
+mac address
+mac os x
+machine learning
+magento
+magic keywords for dba
+mailchimp
+maltego
+malware
+malware analysis
+mamp
+mantis
+manual qa engineer
+manual testing
+mapbox
+mapforce
+mapkit
+mapreduce
+mariadb
+marionette
+markdown
+market analysis
+market research
+marketing communications
+marketing management
+marketing strategy
+markup (formatting and processing of text)
+marmalade
+masonry
+material design
+material-ui
+mathematica
+mathematical modeling
+mathematics
+matplotlib
+maven
+mba
+mcitp
+mcollective
+mcommerce
+mcp
+mcsa
+mcse
+mean
+mechanical engineering
+megabyte
+memcached
+memory graph debugger
+memory management
+memsql
+mentorship
+merchant model ota
+mercurial
+meshcms
+messageui
+metal
+metaprogramming
+metasploit
+meteor
+mfc
+micro-cap
+microcontrollers
+micronaut
+microservices
+microsoft excel
+microsoft office
+microsoft office 365
+microsoft project
+microsoft test manager
+microsoft word
+middleware
+minitest
+mixed-signal integrated circuit
+mixpanel
+mlkit
+mllib
+mobile application development
+mobile application testing
+mobile applications
+mobile communication
+mobile design
+mobile developer
+mobile devices
+mobile technology
+mobx
+mocha
+mockery
+mockito
+mockserver
+mockup
+model-based engineering
+modernizr
+modx
+monetization
+mongodb
+mongoose
+monitoring tools
+monix
+monkey testing
+mono
+monolithic architecture
+moodle
+moq
+mortar
+mosby
+moss
+moya framework
+mplab
+mqtt
+mrp
+ms access
+ms dynamics 365
+ms exchange server
+ms sql server
+msbuild
+mstest
+mule
+multidimensional expressions
+multitasking
+multithreading
+munin
+mustache
+mvc
+mvp
+mvp
+mvvm
+mxnet
+mxnet
+mysqli
+nagios
+nancy
+nant
+native mobile app
+native mobile development
+navicat
+negative testing
+neo4j
+neoload
+nessus
+nestjs
+netbeans
+netflix oss
+netsuite
+netty
+network address translation
+network administration
+network architecture
+network engineer
+network monitoring
+network programming
+network protocols
+network security
+networking
+neural networks
+new media
+new relic
+next.js
+next generation firewall
+nfs
+nginx
+ngrx
+nhibernate
+nightwatch.js
+nimble
+ninject
+nist cybersecurity framework
+nlp
+nltk
+nmap
+node.js
+nodeunit
+nose
+nosql databases
+npm
+nsoperation
+nsoperation
+ntfs
+ntp
+nuget
+numerical analysis
+numerical modeling
+numpy
+nunit
+nunjucks
+nvd3
+nw.js
+oauth
+object-related mapping (orm)
+oc4j
+ocr
+octopus
+odata
+odoo
+ogre
+okapi framework
+okhttp
+olap
+ole
+onedrive
+online marketing
+online marketplace
+ooad
+oocss
+ood
+oop
+oozie
+open source
+opencart
+opencv
+opengl
+opengl es
+opengl mathematics
+openid connect
+openinventor
+openlayers
+openldap
+openmp
+opennlp
+openproject
+openroad
+openshift
+openssl
+openstack
+openswan
+opentok
+operations management
+operations research
+optimization
+optimizing compiler
+oracle applications
+oracle database
+oracle enterprise manager
+oracle fusion applications
+oracle fusion middleware
+oracle jet
+oracle linux system administrator
+orchestration
+ord
+orientdb
+orm
+orm frameworks
+os
+osgi
+ospf
+oss
+ota
+otbi
+otrs
+ovm
+owasp
+owin
+owncloud
+p/invoke
+paas
+packer
+padrino
+pagerduty
+paintcode
+pair programming
+palo alto networks
+panda3d
+pandas
+paper prototyping
+paperjs
+parallel computing
+parallel system
+parity substrate
+parser
+parsing
+partner management
+passenger
+patch management
+pattern recognition
+pcb design
+pci dss
+penetration testing
+pentaho
+pepper
+percona db
+perfmon
+perforce
+performance monitoring
+performance optimization
+performance testing
+performance tuning
+pervasivesql
+phabricator
+phalcon
+phantomjs
+phaser
+phoenix
+phonegap
+php codesniffer
+php frameworks
+php keywords
+php-fig
+php-fpm
+phpdocumentor
+phpspec
+phpstorm
+phpunit
+picasso
+pipelinedb
+pipenv
+pivot table
+pixel
+pixijs
+play
+play 2.5.0
+plm
+plug-in
+pmi-acp
+pmo
+pmp
+poco
+poi
+polymer
+pop
+pop3
+pos
+postcss
+postfix
+postgis
+postman
+power bi
+power management
+powermock
+ppc
+predictive modeling
+presto
+primary key
+primefaces
+primeng
+prince2
+principle
+principle software engineer
+problem solving
+process improvement
+processwire
+procurement
+product
+product analyst
+product design
+product development
+product lifecycle
+product management
+product manager
+product marketing
+product metrics
+product owner
+product roadmap
+product specification
+product strategy
+proftpd
+program management
+programming paradigm
+proguard
+project management
+project planning
+prometheus
+property lists
+proprietary software
+proto.io
+protobuf
+prototype
+protractor
+psr
+public speaking
+puppet
+puppeteer
+pwa
+pwc (contract programming)
+pybrain
+pycharm
+pygtk
+pylons
+pyparsing
+pyramid
+pyspark
+pyston
+pytest
+python frameworks
+pytorch
+qa engineering
+qc
+qemu
+qgis
+qlikview
+qmake
+qnx
+qradar
+qt
+qt creator
+qtest
+qtp
+qualitative research
+quality assurance (qa)
+quality engineer
+quantitative analytics
+quantitative finance
+qubole
+quick
+quickblox
+quickcheck
+qunit
+r language
+r&d
+rabbitmq
+rackspace
+rad
+rake
+rancher
+rancid
+random forest
+ranorex
+rapid prototyping
+rapid7
+rapidjson
+raspberry pi
+rational team concert
+raw data
+raygun
+razor
+rdbms
+rdms
+rdp
+react native
+reactive code
+reactive pattern
+reactive programming
+reactivecocoa
+reactivekit
+reactjs
+reactor
+real-time programming
+realm
+recovery time
+recyclerview
+red hat
+red hat satellite server
+redis
+redmine
+redshift
+redshift (app)
+redundancy
+redux
+redux-saga
+refactoring
+register-transfer level (rtl) design
+regression testing
+regular expression
+reinforcement learning
+relational db
+relay
+release management
+rematch
+rendering engine
+reportng
+requirejs
+requirements analysis
+requirements gathering
+resharper
+resin
+resource management
+responsive web design
+resque
+rest
+resteasy
+restful api
+restify
+rethinkdb
+retrofit
+revel
+reverse engineering malware
+rfp
+rhce
+rhcsa
+rhel
+rhinoscript
+ria
+riak
+richfaces
+ris
+risk management
+risk management framework
+rnn
+roadmapping
+roboguice
+robolectric
+robospice
+robot operating system
+robotic process automation (rpa)
+robotium
+robust
+rocksdb
+role-playing game
+rollup
+room library
+roslyn (.net compiler platform)
+routers
+routing
+rpc
+rpm
+rras
+rspec
+rsync
+rtp
+rubocop
+ruby arrays
+ruby deployment
+ruby frameworks
+ruby on rails
+ruby testing tools
+rubygems
+rup
+rvm
+rxandroid
+rxjava
+rxjs
+rxswift
+saas
+safe
+sailfish os
+sails
+sales enablement
+salesforce developer
+salesforce marketing cloud
+saltstack
+samba
+saml
+samza
+sanity testing
+sans giac certifications
+sap
+sap businessobjects
+sap dashboard
+sap erp
+sap lumira
+sap maxdb
+sap-web
+sass
+sbt
+sbt 0.13.12
+scala frameworks
+scalability
+scalatra
+scalaz
+scalding
+scap
+scapy
+sccm
+scenario testing
+scientific computing
+scikit-learn
+scipy
+scope
+scrapy
+screen
+script
+scripting languages
+scrum
+scrum master
+scrumdesk
+scst
+scylladb
+sdd
+sdk
+sdlc
+sdlc
+seaborn
+seam
+security
+security architecture
+security breach
+security compliance
+security testing
+security+
+selenium
+self-contained system
+sem
+semantic ui
+semiconductor device fabrication
+sencha
+seneca
+sensu
+sentry
+seo
+serp
+serp api
+serverless computing
+serverless framework
+servers
+servicestack
+servlet
+set-top box
+sfdc
+shapeless
+sharepoint
+shell
+shell script
+shiny
+shippable
+sidekiq
+siege
+siem
+signal processing
+signalr
+silex
+silverlight
+silverstripe
+sinatra
+sinon
+sip
+sisense
+site reliability engineer
+site reliability engineering
+sitecore cms
+six sigma
+skeleton
+sketch
+slack
+slam kinematics
+slf4j
+slicing
+slick
+slim
+slurm
+smarty
+smb
+sme
+smoke testing
+smp
+smtp
+snaplogic
+snaplogic extreme
+snmp
+snowflake
+soa
+soap
+soapui
+soc
+social media
+social media campaign
+social media marketing
+social networking
+socket programming
+socket.io
+software architect
+software architecture
+software development
+software installations and upgrades
+solaris
+solid
+solr
+solus
+solution architect
+solution architecture
+solution selling
+sonarqube
+source control
+sourcetree
+spa
+spacy
+spanner
+spanning tree
+spark mllib
+spark sql
+spark streaming
+spdy
+specflow
+sphinx
+spine js
+spinnaker
+spiratest
+splunk
+spock
+spongycastle
+spray
+spring
+spring boot
+spring cloud
+spring integration
+spring mvc
+spring webflux
+sprint
+spritekit
+spss
+sql developer
+sql server
+sql server alwayson
+sqlalchemy
+sqlmap
+sqoop
+sqs
+squid
+ssas
+sscp
+ssh
+ssis
+ssl
+ssot
+ssr
+ssrs
+stack views
+stakeholder
+static analysis
+static timing analysis
+statistical modeling
+statistics
+statsmodels
+stencil.js
+stig
+stl
+stlc
+storage area network
+storekit
+storm
+storyboard
+storybook
+stp
+strategic planning
+stress testing
+struts
+struts 2
+sts
+stylecop
+styled components
+stylus
+sublime text
+subscription model
+sumo logic
+sunos
+supply chain management
+support library
+surefire
+svelte
+svg
+svn
+swagger
+swiftyjson
+swing
+swinject
+switch
+switching
+switchyard
+sybase
+symfony
+sympy
+synopsys tools
+system administration
+system administrator
+system architecture
+system deployment
+system engineering
+system testing
+systems design
+systems engineer
+tableau
+tail
+talend
+talent management
+targetprocess
+tcp
+tcp/ip
+tdd
+team building
+team foundation
+team leader
+team leadership
+team management
+teamcity
+teamscale
+technical account manager
+technical support
+technical writing
+telerik devcraft
+telerik test studio
+template metaprogramming
+tensorflow
+teradata
+terraform
+test case
+test management
+test planning
+test strategy
+testflight
+testing
+testlink
+testng
+testrail
+tfs
+theano
+thread
+threat intelligence
+threat modeling
+threat remediation
+three.js
+thrift
+thunk
+thymeleaf
+tideways
+time series analysis
+titanium
+tls
+toad
+tomcat
+tomee
+torch ai
+tornado
+torque 3d
+tortoisesvn
+tosca
+traceur
+trackduck
+trading system
+training
+travis ci
+trello
+troubleshooting
+ts/sci
+ttp
+tuning
+turret
+tvos
+twig
+twisted
+typeorm
+types of testing
+typhoon
+typo3
+uat
+ubuntu
+ubuntu juju
+ucp
+udp
+uft (unified functional testing)
+ui
+ui automator
+ui design
+ui designer
+ui development
+uikit
+uima
+uml
+underscore.js
+unisys
+unit testing
+universal web app
+unix
+unix-like
+unreal engine
+unsafe code
+usability testing
+user
+user research
+user scenario
+user-centered design
+uvm
+ux
+ux design
+ux designer
+uxpin
+v-model
+vaadin
+vagrant
+valgrind
+vanilla js
+varnish
+vault
+vb.net
+vba
+vbscript
+vcp-dcv
+vcs services
+vcs tools
+velocity
+vendor management
+venture capital
+version control system (vcs)
+vertica
+vi
+video game design
+video streaming
+vim
+virtual
+virtual reality
+virtualenv
+virtualization
+virtualization tools
+virtuoso layout suite
+visio
+visual c#
+visual c++
+visual design
+visual programming language
+visual sourcesafe
+visual studio
+visual studio code
+vlan
+vlookup
+vmware
+vod
+voip
+voldemort
+volley
+vpn
+vrrp
+vsphere
+vss
+vsts
+vue
+vuex
+vulnerability
+vulnerability assessment
+vulnerability management
+vxworks
+w3c
+wadl
+wamp
+wan
+wapt
+watchkit
+watchos
+waterfall
+watin
+watir
+wcf
+wdf
+wds
+web analytics
+web api
+web application
+web application firewall
+web design
+web developer
+web development
+web proxy
+web server
+web services
+web.py
+web2py
+webdriver
+webdriverio
+webex
+webflow
+webgl
+webgpu
+webkit
+weblogic
+webmatrix
+webpack
+webrick
+webrtc
+webrx
+webservices
+website testing
+websockets
+websockets
+websphere
+webstorm
+wechat
+weka
+wercker
+white-box testing
+wicket
+wildfly
+wily introscope
+winapi
+wince
+windows
+windows embedded
+windows mobile
+windows programming
+windows server
+windows xp
+winforms
+wireframe
+wireless networking
+wireless security
+wireshark
+wit.ai
+wml
+woocommerce
+wordpress
+wpf
+wsdl
+wsus
+wxpython
+wxwidgets
+x86 assembly language
+xamarin
+xamarin studio
+xamarin.forms
+xamarin.uitest
+xaml
+xampp
+xcode
+xctest
+xcuitest
+xdebug
+xen
+xgboost
+xhtml
+xmind
+xml
+xml parser
+xmpp
+xp (extreme programming)
+xpath
+xsl
+xtext
+xul
+xunit.net
+xymon
+yaml
+yarn
+yeoman
+yii
+youtrack
+zabbix
+zend framework
+zephyr
+zeplin
+zeromq
+zk
+zombie
+zookeeper
+zoom
+zoomdata
+zxing

@@ -12,7 +12,7 @@ Note: ALL job posts in the input text file should all belong to the SAME job tit
 @Output:  
 The code will return a long dictionary of the result of data extraction. I also let it print it to console.
 
-template = {'4385545':{'skills':{'javascript,python, angular'}, 
+template = {'4385545':{'skills':{'javascript, python, angular'}, 
                        'industries':['healthcare','telecommunication'],
                        'degree_level':{'bachelor','master'},
                        'seniority':'Senior',
@@ -33,13 +33,13 @@ Attributes:
 'seniority': just a string from one of the standardized LinkedIn terms: ['Internship','Entry level','Associate','Mid-Senior level','Director','Executive']
 And "N/A" when don't have this seniority attribute or have something not one of the above terms (shouldn't be possible, unless LinkedIn is inconsistent which does happen surprisingly) 
 
-yoe: 
+yoe: 	
 Just an int. Returns -1 when can't find this attribute.
 
 degree_title:
 Return set. So far are just 'cs','ce',and 'ee', haven't expanded to anything else yet like  math, applied math, bioinformatics, statistics, etc. since I need to add more error handling for these new ones as these terms might not be used in context of education level.
 
-
+	
 
 ----Technical Documentation---
 
