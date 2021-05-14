@@ -39,4 +39,5 @@ sql
 sqlite
 swift
 typescript
+verilog
 visual basic

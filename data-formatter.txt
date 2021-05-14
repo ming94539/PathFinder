@@ -15,6 +15,7 @@ The code will return a long dictionary of the result of data extraction. I also 
 template = {'4385545':{'skills':{'javascript, python, angular'}, 
                        'industries':['healthcare','telecommunication'],
                        'degree_level':{'bachelor','master'},
+		       'languages':['javascript','python']
                        'seniority':'Senior',
                        'yoe':5,
                        'degree_title':{'ce','cs'}
@@ -37,7 +38,7 @@ yoe:
 Just an int. Returns -1 when can't find this attribute.
 
 degree_title:
-Return set. So far are just 'cs','ce',and 'ee', haven't expanded to anything else yet like  math, applied math, bioinformatics, statistics, etc. since I need to add more error handling for these new ones as these terms might not be used in context of education level.
+Return set. So far are just 'computer science', etc. haven't expanded to anything else yet like  math, applied math, bioinformatics, statistics, etc. since I need to add more error handling for these new ones as these terms might not be used in context of education level.
 
 	
 
@@ -49,5 +50,6 @@ Design choices:
 3. Double spaces - not completely sure yet but I think it's from the punctuation remover, but the regex that removes multiple consecutive spaces can deal with that
 
 Future Scaling Ideas:
-1. Skim job description to just requirements, preferred req, and education. Makes things faster and less error prone (keywords won't get detected in the description part instead of requirements)
+1. Skim job description to just requirements, preferred req, and education. Makes things faster and less error prone (keywords won't get detected in the description part instead of requirements).
+This would require a very comprehensive list of variations of 'education','qualification' , "we would like to see", "what u should have" etc. 
 2. Handle more types of degree titles, might need to search through just the education section
