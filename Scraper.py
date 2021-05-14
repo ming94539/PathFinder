@@ -23,9 +23,10 @@ class Scraper:
 
 	#navigates the scraper to a page at the given URL
 	def get_page(self, url):
-		sleep_time = random.randint(1,31)
+		sleep_time = random.randint(1,11)
 		sleep(sleep_time)
 		self.driver.get(url)
+		self.current_url = url
 		sleep(2)
 	#returns the title at the current page
 	def get_title(self):
@@ -35,10 +36,22 @@ class Scraper:
 		self.driver.quit()
 	#this scrapes the job details from a given Linkedin page
 	def scrape_linkedin(self):
+
+		description_exists = self.check_element("description")
+		if(description_exists != True):
+			print("error loading page, retrying...")
+			max_num_retries = 5
+			num_retries = 0
+			while(description_exists != True and num_retries < max_num_retries):
+				print("error loading page, retrying... {} more times".format(max_num_retries-num_retries))
+				num_retries = num_retries + 1
+				sleep(random.randint(1,60))
+				self.get_page(self.current_url)
+				description_exists = self.check_element("description")
 		if(self.check_element("show-more-less-html__button")):
 			self.driver.find_element_by_class_name("show-more-less-html__button").click()
-
 		return self.driver.find_element_by_class_name("description").text
+
 		# print(self.driver.find_element_by_class_name("description").text, file = open("results.txt","a"))
 		# return 
 

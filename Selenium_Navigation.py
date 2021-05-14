@@ -9,7 +9,8 @@ from bs4 import BeautifulSoup
 import time
 from Scraper import Scraper
 from sqlalchemy import create_engine, text
-
+import pprint
+from dataFormatter import DataFormatter
 class Crawler:
     
     def __init__(self, is_headless = False):
@@ -22,6 +23,9 @@ class Crawler:
         self.engine = create_engine(conn_string)
         self.browser = self.init_browser(is_headless = is_headless)
         self.scraper = Scraper(is_headless = is_headless)
+        self.formatter = DataFormatter("final_keywords.txt")
+        self.output_file = open("results.txt","a+")
+        self.formatted_output = open("formatted.txt","a")
 
     # Return True if id exists in db, False otherwise
     def is_duplicate_id(self, id):
@@ -65,7 +69,8 @@ class Crawler:
         return browser
 
     # Scrapes results given by using `job` as the search term
-    def scrape_job(self, job):
+    def scrape_job(self, job, num_pages):
+        
         time.sleep(5)
         job_search_bar = self.browser.find_element_by_class_name("jobs-search-box__text-input")
         job_search_bar.clear()
@@ -79,10 +84,9 @@ class Crawler:
         #Potential bug - not able to find element unless i manually inspect  - https://stackoverflow.com/questions/50698342/selenium-cant-find-elements-until-i-inspect-the-page
 
 
-        pages = 4
         current = 0
         id_list = []
-        while current < pages:
+        while current < num_pages:
             # ------------------ Scraping the Linkedin Job Webpage's left rail (it's a two pane wrapper)
             # parsing the visible webpage
             pageSource = self.browser.page_source
@@ -117,46 +121,57 @@ class Crawler:
                     id_i= str(page_button).find('id')
                     #pg_id = str(page_buttons[1])[id_i+4:id_i+13]
                     pg_id = "ember"+re.findall(r'%s(\d+)' % "ember", str(page_button))[0]
-                    print(pg_id)
+                    # print(pg_id)
                     break
 
             next_button = self.browser.find_element_by_id(pg_id)
             next_button.click()
             current+=1
-        print(len(id_list))
+        
         current_url = self.browser.current_url
         start_index = current_url.index("?")
 
         end_index = start_index
 
         for i in range(5):
+
             job_id = id_list[i]
 
-            if not self.is_duplicate_id(job_id):
-                print("current ID is {}".format(job_id))
-                to_scrape = current_url[:start_index] + "?currentJobId=" + job_id + "&" + current_url[end_index:]
-                
-                self.scraper.get_page(to_scrape)
-                result = self.scraper.scrape_linkedin()
+            #if not self.is_duplicate_id(job_id):
+            print("current ID is {}".format(job_id))
+            to_scrape = current_url[:start_index] + "?currentJobId=" + job_id + "&" + current_url[end_index:]
+            
+            self.scraper.get_page(to_scrape)
+            result = self.scraper.scrape_linkedin()
 
-                # For now, (until we get data formatting finished)
-                # insert first 20 chars into Test table
-                insert = f''' 
-                    INSERT INTO Test (test_id, text)
-                    VALUES ({job_id}, '{result[:20]}')
-                '''
-                self.engine.execute(text(insert))
+            # For now, (until we get data formatting finished)
+            # insert first 20 chars into Test table
+            # insert = f''' 
+            #     INSERT INTO Test (test_id, text)
+            #     VALUES ({job_id}, '{result[:20]}')
+            # '''
+            # self.engine.execute(text(insert))
+
+            # print to a results file
+            print("BREAK{}".format(job_id), file = self.output_file)
+            print(result, file = self.output_file)
+        self.output_file.seek(0)
+        self.formatter.preprocessing(self.output_file)
+        output = self.formatter.data_extraction()
+        pprint.pprint(output, stream = self.formatted_output)
+        self.output_file.truncate(0)
+
     def end_crawling(self):
         self.scraper.end_scraping()
         self.browser.quit()
 
 def main():
-    job_list = ['Software Engineer', 'Data Analyst']
+    job_list = ['web developer']
 
     crawler = Crawler(is_headless = True)
 
     for job in job_list:
-        crawler.scrape_job(job)
+        crawler.scrape_job(job, 2)
 
     crawler.end_crawling()
 
