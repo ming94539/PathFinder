@@ -161,3 +161,4 @@ def db_uploadFunction(dbup_table):
 			db.add_stmt(insert_LanguagesTable)
 
 	db.execute()
+	return 0
