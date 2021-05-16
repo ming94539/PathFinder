@@ -42,7 +42,7 @@ def data_validation(table):
 	seniority = table.get('seniority')
 	if seniority == -1:
 		result.append(None)
-	else if not (seniority in seniorityVals):
+	elif not (seniority in seniorityVals):
 		result.append(-1)
 	else:
 		result.append(0)
@@ -62,7 +62,7 @@ def data_validation(table):
 	educationLevel = table.get('educationLevel')
 	if len(educationLevel) == 0:
 		result.append(None)
-	else if not (educationLevel in educationVals):
+	elif not (educationLevel in educationVals):
 		result.append(-1)
 	else:
 		result.append(0)
@@ -79,7 +79,7 @@ def data_validation(table):
 	else:
 		result.append(0)
 
-	yoe = int(table.get('yoe')):
+	yoe = int(table.get('yoe'))
 	if yoe == -1:
 		result.append(None)
 	if yoe < 0 or yoe > 25:
@@ -114,7 +114,7 @@ def db_uploadFunction(dbup_table):
 		seniority = dbup_table['seniority']
 		insert_JobTable = f"""
 		    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
-		    VALUES ({jobID}, '{seniority}', '{yoe}', ')
+		    VALUES ({jobID}, '{seniority}', '{yoe}')
 		"""
 		db.add_stmt(insert_JobTable)
 
@@ -124,7 +124,7 @@ def db_uploadFunction(dbup_table):
 		for i in industry:
 			insert_IndustyTable = f"""
 			    INSERT INTO Industries (jobID, industry)
-			    VALUES ({jobID}, '{i}', ')
+			    VALUES ({jobID}, '{i}')
 			"""
 			db.add_stmt(insert_IndustyTable)
 	
@@ -136,7 +136,7 @@ def db_uploadFunction(dbup_table):
 		for d, e in education(degreeTitle, educationLevel):
 			insert_EducationTable = f"""
 			    INSERT INTO Education (jobID, degreeTitle, educationLevel)
-			    VALUES ({jobID}, '{d}', '{e}', ')
+			    VALUES ({jobID}, '{d}', '{e}')
 			"""
 			db.add_stmt(insert_EducationTable)	
 
@@ -146,7 +146,7 @@ def db_uploadFunction(dbup_table):
 		for s in skills:
 			insert_SkillsTable = f"""
 			    INSERT INTO Skills (jobID, skill)
-			    VALUES ({jobID}, '{s}', ')
+			    VALUES ({jobID}, '{s}')
 			"""
 			db.add_stmt(insert_SkillsTable)
 
@@ -156,7 +156,7 @@ def db_uploadFunction(dbup_table):
 		for l in languages:
 			insert_LanguagesTable = f"""
 			    INSERT INTO Languages (jobID, language)
-			    VALUES ({jobID}, '{l}', ')COMMIT
+			    VALUES ({jobID}, '{l}')
 			"""
 			db.add_stmt(insert_LanguagesTable)
 

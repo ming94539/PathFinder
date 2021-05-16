@@ -1,5 +1,6 @@
 import re
 from nltk.tokenize import word_tokenize 
+from databaseUpload import db_uploadFunction
 
 def preprocessing(jobs_file):
     jobsFile = open(jobs_file)
@@ -145,6 +146,8 @@ def extract_industry(o_P,linkedin_industries):
                 industries.append(ind)
         #print('INDUSTRIES:', industries)
         return industries
+    else:
+        return []
 def extract_yoe(post):
     tokenize = post.split(' ')
     yoe_variation = ['years of experience','years of full time','years full time','years industry experience','years of industry experience','years work experience','years of work experience']
@@ -183,8 +186,8 @@ def data_extraction(origPosts, jobPosts,keywords,id_list,linkedin_industries,lan
         #Do the Data Base Upload and data validation
         dbup_table = output[id_list[i]].copy()
         dbup_table['jobID'] = id_list[i]
-       # dbup_table['table'] = "Web Developer"
-       # db_uploadFunction(dbup_table)
+        dbup_table['table'] = "Web Developer"
+        print(db_uploadFunction(dbup_table))
     return output
     
 
@@ -198,4 +201,4 @@ print('opened lists/linkedin_industries.txt:\nnumber of terms',len(linkedin_indu
 output = data_extraction(orig_posts, jobPosts, keywords,id_list,linkedin_industries,languages)
 import pprint
 
-pprint.pprint(output)
+#pprint.pprint(output)
