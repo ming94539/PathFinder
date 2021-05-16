@@ -103,7 +103,7 @@ def db_uploadFunction(dbup_table):
 	jobID = int(dbup_table['jobID'])
 
 	insert_JobIDTable = f"""
-	    INSERT INTO JobIDTable (jobID, table)
+	    INSERT INTO JobIDTable (jobID, tableName)
 	    VALUES ({jobID}, '{table}')
 	"""
 	db.add_stmt(insert_JobIDTable)
