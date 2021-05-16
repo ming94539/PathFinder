@@ -106,18 +106,17 @@ def db_uploadFunction(dbup_table):
 	    INSERT INTO JobIDTable (jobID, table)
 	    VALUES ({jobID}, '{table}')
 	"""
-	db.execute(insert_JobIDTable)
+	db.add_stmt(insert_JobIDTable)
 
 	# Insert to job table
 	# todo: check validation results for NULL values in seniority and yoe
 	if validationResults[SENIORITY] == 0 and validationResults[YEARS_OF_EXPERIENCE] == 0:
 		seniority = dbup_table['seniority']
-		yoe = dbup_table['yoe']
 		insert_JobTable = f"""
 		    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
 		    VALUES ({jobID}, '{seniority}', '{yoe}', ')
 		"""
-		db.execute(insert_JobTable)
+		db.add_stmt(insert_JobTable)
 
 	# Insert to industries table
 	if validationResults[INDUSTRY] == 0:
@@ -127,7 +126,7 @@ def db_uploadFunction(dbup_table):
 			    INSERT INTO Industries (jobID, industry)
 			    VALUES ({jobID}, '{i}', ')
 			"""
-			db.execute(insert_IndustyTable)
+			db.add_stmt(insert_IndustyTable)
 	
 	# Insert to education table
 	# todo: check validation results for NULL values in degree title and education level
@@ -139,7 +138,7 @@ def db_uploadFunction(dbup_table):
 			    INSERT INTO Education (jobID, degreeTitle, educationLevel)
 			    VALUES ({jobID}, '{d}', '{e}', ')
 			"""
-			db.execute(insert_EducationTable)	
+			db.add_stmt(insert_EducationTable)	
 
 	# Insert to skills table
 	if validationResults[SKILLS] == 0:
@@ -149,7 +148,7 @@ def db_uploadFunction(dbup_table):
 			    INSERT INTO Skills (jobID, skill)
 			    VALUES ({jobID}, '{s}', ')
 			"""
-			db.execute(insert_SkillsTable)
+			db.add_stmt(insert_SkillsTable)
 
 	# Insert to languages table
 	if validationResults[LANGUAGES] == 0:
@@ -157,6 +156,8 @@ def db_uploadFunction(dbup_table):
 		for l in languages:
 			insert_LanguagesTable = f"""
 			    INSERT INTO Languages (jobID, language)
-			    VALUES ({jobID}, '{l}', ')
+			    VALUES ({jobID}, '{l}', ')COMMIT
 			"""
-			db.execute(insert_LanguagesTable)
+			db.add_stmt(insert_LanguagesTable)
+
+	db.execute()
