@@ -1,32 +1,25 @@
-<<<<<<< HEAD
-=======
 from dbconnection import DBConnection
->>>>>>> bda92bf91ad16c67509252d0448c58f8d83c4fb6
-import json
 
-# dictionary
-# jobID INTEGER NOT NULL,
-#	seniority VARCHAR(60),
-#	industry VARCHAR(60),
-#	educationLevel education_value,
-#	degreeTitle VARCHAR(60),
-#	skills json NOT NULL,
-#	language json NOT NULL,
+#table = {
+#	'table': 'WebDeveloper',
+#	'jobID': '4385545',
+#	'seniority': 'Senior',
+#	'industry': ['healthcare','telecommunication'],
+#	'educationLevel':['bachelor','master'],
+#	'degreeTitle':['ce','cs'],
+#	'skills':['valgrind', 'visual studio', 'c++ frameworks'],
+#	'languages': ['python', 'c++', 'c'],
+#	'yoe': '5'
+#}
 
-table = {
-	'table': 'WebDeveloper',
-	'jobID': '4385545',
-	'seniority': 'Senior',
-	'industry': ['healthcare','telecommunication'],
-	'educationLevel':['bachelor','master'],
-	'degreeTitle':['ce','cs'],
-	'skills':['valgrind', 'visual studio', 'c++ frameworks'],
-	'languages': ['python', 'c++', 'c'],
-	'yoe': '5'
-}
-
-seniorityVals = ['Internship', 'Entry Level', 'Associate', 'Mid-Senior Level', 'Director', 'Executive']
-educationVals = ['a', 'b', 'm', 'p']
+# Global constants for checking data validation results
+SENIORITY           = 0
+INDUSTRY            = 1
+DEGREE_TITLE        = 2
+EDUCATION_LEVEL     = 3
+SKILLS              = 4
+LANGUAGES           = 5
+YEARS_OF_EXPERIENCE = 6
 
 # validate data
 # Values:
@@ -42,6 +35,8 @@ educationVals = ['a', 'b', 'm', 'p']
 #	result[5] = languages
 #	result[6] = yoe
 def data_validation(table):
+	seniorityVals = ['Internship', 'Entry Level', 'Associate', 'Mid-Senior Level', 'Director', 'Executive']
+	educationVals = ['a', 'b', 'm', 'p']
 	result = []
 
 	seniority = table.get('seniority')
@@ -94,46 +89,74 @@ def data_validation(table):
 
 	return result
 
+def db_uploadFunction(dbup_table):
 
-<<<<<<< HEAD
+	# establish session to database
+	db = DBConnection()
 
-# convert lists to json
-def list_to_json(list):
-=======
-	pass
->>>>>>> bda92bf91ad16c67509252d0448c58f8d83c4fb6
+	# validate table
+	validationResults = data_validation(dbup_table)
 
-# establish session to database
-db = DBConnection()
+	# insert into JobIDTable
+	table = dbup_table['table']
 
-# insert into JobIDTable
-table = table['table']
-jobID = int(table['jobID'])
+	jobID = int(dbup_table['jobID'])
 
-insert_JobIDTable = f"""
-    INSERT INTO JobIDTable (jobID, table)
-    VALUES ({jobID}, '{table}')
-"""
-db.execute(insert_JobIDTable)
+	insert_JobIDTable = f"""
+	    INSERT INTO JobIDTable (jobID, table)
+	    VALUES ({jobID}, '{table}')
+	"""
+	db.execute(insert_JobIDTable)
 
-# insert into specific table based on search
-seniority = table['seniority']
-industry = table['industry']
-educationLevel = table['educationLevel']
-degreeTitle = table['degreeTitle']
-skills = table['skills']
-languages = table['languages']
-yoe = table['yoe']
+	# Insert to job table
+	# todo: check validation results for NULL values in seniority and yoe
+	if validationResults[SENIORITY] == 0 and validationResults[YEARS_OF_EXPERIENCE] == 0:
+		seniority = dbup_table['seniority']
+		yoe = dbup_table['yoe']
+		insert_JobTable = f"""
+		    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
+		    VALUES ({jobID}, '{seniority}', '{yoe}', ')
+		"""
+		db.execute(insert_JobTable)
 
-# idk how to do the json stuff atm
-# skills_json = join(dirname(realpath(__file__), 'skills.json'))
-# language_json = join(dirname(realpath(__file__), 'language.json'))
+	# Insert to industries table
+	if validationResults[INDUSTRY] == 0:
+		industry = dbup_table['industry']
+		for i in industry:
+			insert_IndustyTable = f"""
+			    INSERT INTO Industries (jobID, industry)
+			    VALUES ({jobID}, '{i}', ')
+			"""
+			db.execute(insert_IndustyTable)
+	
+	# Insert to education table
+	# todo: check validation results for NULL values in degree title and education level
+	if validationResults[DEGREE_TITLE] == 0 and validationResults[EDUCATION_LEVEL] == 0:
+		degreeTitle = dbup_table['degreeTitle']
+		educationLevel = dbup_table['educationLevel']
+		for d, e in education(degreeTitle, educationLevel):
+			insert_EducationTable = f"""
+			    INSERT INTO Education (jobID, degreeTitle, educationLevel)
+			    VALUES ({jobID}, '{d}', '{e}', ')
+			"""
+			db.execute(insert_EducationTable)	
 
-insert_JobTable = f"""
-    INSERT INTO {table} (jobID, seniority, industry, educationLevel, degreeTitle, skills, language)
-    VALUES ({jobID}, '{seniority}', '{industry}', '{educationLevel}', '{degreeTitle}', ')
-"""
+	# Insert to skills table
+	if validationResults[SKILLS] == 0:
+		skills = dbup_table['skills']
+		for s in skills:
+			insert_SkillsTable = f"""
+			    INSERT INTO Skills (jobID, skill)
+			    VALUES ({jobID}, '{s}', ')
+			"""
+			db.execute(insert_SkillsTable)
 
-# commit changes
-
-# close connection
+	# Insert to languages table
+	if validationResults[LANGUAGES] == 0:
+		languages = dbup_table['languages']
+		for l in languages:
+			insert_LanguagesTable = f"""
+			    INSERT INTO Languages (jobID, language)
+			    VALUES ({jobID}, '{l}', ')
+			"""
+			db.execute(insert_LanguagesTable)
