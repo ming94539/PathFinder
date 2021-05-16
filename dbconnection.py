@@ -12,7 +12,11 @@ class DBConnection(object):
         db_name='testing'
         conn_string = f"postgresql://{user}:{pw}@{host}/{db_name}"
 
-        self.engine = create_engine(conn_string)
+        self.engine = create_engine(conn_string, 
+            execution_options={
+                "isolation_level": "SERIALIZABLE"
+            }
+        )   
         self.stmts = []
 	
     def execute(self):
@@ -23,13 +27,14 @@ class DBConnection(object):
         Session = sessionmaker(self.engine)
         session = Session()
 
-        for stmt in self.stmts:
-            try:
+        try:
+            for stmt in self.stmts:
                 session.execute(text(stmt))
-                session.commit()
-            except Exception as e:
-                print(e, file=sys.stderr)
-                session.rollback()
+
+            session.commit()
+        except Exception as e:
+            print(e, file=sys.stderr)
+            session.rollback()
 
         self.stmts = []
         session.close()
