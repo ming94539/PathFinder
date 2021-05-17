@@ -1,0 +1,21 @@
+{
+  "name": "cse183a-assignment9",
+  "version": "1.0.0",
+  "description": "CSE183 Assignment 9",
+  "author": "David Harrison <dcharris@ucsc.edu>",
+  "license": "UNLICENSED",
+  "repository": "none",
+  "devDependencies": {
+    "bestzip": "^2.1.7"
+  },
+  "scripts": {
+    "backend": "cd backend && npm start",
+    "frontend": "cd frontend && npm start",
+    "start": "(npm run backend) & (npm run frontend)"
+  },
+  "dependencies": {
+    "d3": "^6.7.0",
+    "draft-js": "^0.11.7",
+    "react-draft-wysiwyg": "^1.14.5"
+  }
+}
