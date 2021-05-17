@@ -1,0 +1,23 @@
+#
+# CSE183 Assignment 9 Backend
+#
+
+openapi: '3.0.3'
+
+info:
+  description: CSE183 Assignment 9 Backend
+  version: 0.1.0
+  title: CSE183 Assignment 9 Backend
+
+servers:
+  - url: http://localhost:3010/
+
+paths:
+  /v0/data/:
+    get:
+      summary: Get email by ID
+      responses:
+        200:
+          description: Email Response
+        400:
+          description: Invalid
