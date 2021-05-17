@@ -1,8 +1,8 @@
 {
-  "name": "cse183-assignment6",
+  "name": "cse115a-pathfinder",
   "version": "1.0.0",
-  "description": "CSE183 Assignment 6 - React II",
-  "author": "David Harrison <dcharris@ucsc.edu>",
+  "description": "CSE115A PathFinder",
+  "author": "Alice Liang <aliang12@ucsc.edu>",
   "license": "UNLICENSED",
   "repository": "none",
   "devDependencies": {
