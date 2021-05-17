@@ -1,8 +1,7 @@
 {
-  "name": "cse183a-assignment9",
+  "name": "cse115a-pathfinder",
   "version": "1.0.0",
-  "description": "CSE183 Assignment 9",
-  "author": "David Harrison <dcharris@ucsc.edu>",
+  "description": "CSE115A PathFinder",
   "license": "UNLICENSED",
   "repository": "none",
   "devDependencies": {
