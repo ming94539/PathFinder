@@ -26,6 +26,7 @@
     "swagger-ui-express": "^4.1.4"
   },
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "nodemon src/server.js",
+    "build": "cd ../frontend && npm install && npm run build"
   }
 }

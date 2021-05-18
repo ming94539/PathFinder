@@ -52,6 +52,7 @@ export default function CustomizedMenus() {
           return response.json();
         })
         .then((json) => {
+          console.log('success here');
           console.log(json);
         })
         .catch((error) => {
@@ -83,8 +84,44 @@ export default function CustomizedMenus() {
     setAnchorEl2(null);
   };
 
+  let selectedDemand = 'Most in Demand Skills';
+  let selectedJob = 'Web Developer';
+
+  // temp name?
+  function selectDemand(demand) {
+    // somehow pass selection into table_data.js
+    console.log('selected demand:', demand.target.value);
+    selectedDemand = demand.target.value;
+  }
+
+  function selectJob(job) {
+    // somehow pass selection into table_data.js
+    console.log('selected job:', job.target.value);
+    selectedJob = job.target.value;
+  }
+
   return (
     <div>
+      <div className="select">
+        <select onChange={(selection) => selectDemand(selection)}>
+          <option>Most in Demand Skills</option>
+          <option>textholder</option>
+          <option>textholder</option>
+        </select>
+      </div>
+      <br/>
+      <div className="select">
+        <select onChange={(selection) => selectJob(selection)}>
+          <option>Job Title</option>
+          <option>Web Developer</option>
+          <option>textholder</option>
+        </select>
+      </div>
+      <br/>
+      <button className="button is-link">
+        Submit (doesn't work yet)
+      </button>
+      <br/><br/>
       <Button
         aria-controls="customized-menu"
         aria-haspopup="true"
@@ -120,6 +157,7 @@ export default function CustomizedMenus() {
           <ListItemText primary="textholder" />
         </StyledMenuItem>
       </StyledMenu>
+      <br/><br/>
       <div>
         <Button
           aria-controls="customized-menu"
@@ -141,7 +179,7 @@ export default function CustomizedMenus() {
             <ListItemIcon>
               <SendIcon fontSize="small" />
             </ListItemIcon>
-            <ListItemText primary="Software Engineer" />
+            <ListItemText primary="Web Developer" />
           </StyledMenuItem>
           <StyledMenuItem>
             <ListItemIcon>

@@ -10,7 +10,9 @@
   "scripts": {
     "backend": "cd backend && npm start",
     "frontend": "cd frontend && npm start",
-    "start": "(npm run backend) & (npm run frontend)"
+    "start": "(npm run backend) & (npm run frontend)",
+    "build": "cd backend && npm run build"
+    
   },
   "dependencies": {
     "d3": "^6.7.0",

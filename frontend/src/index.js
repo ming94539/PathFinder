@@ -6,4 +6,3 @@ import ReactDOM from 'react-dom';
  *
  */
 ReactDOM.render(<Demo />, document.querySelector('#root'));
-

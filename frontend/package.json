@@ -15,12 +15,13 @@
     "jest-cli": "26.6.0",
     "jest-dev-server": "^4.4.0",
     "puppeteer": "^5.4.1",
-    "react-scripts": "4.0.0"
+    "react-scripts": "^4.0.0"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "axios": "^0.21.0",
+    "d3": "^6.7.0",
     "draft-js": "^0.11.7",
     "prop-types": "^15.7.2",
     "react": "17.0.1",
@@ -38,7 +39,8 @@
     "lint": "./node_modules/.bin/eslint . --ext .js",
     "start": "react-scripts start",
     "test-start": "react-scripts start",
-    "test": "jest --runInBand --testTimeout=2000"
+    "test": "jest --runInBand --testTimeout=2000",
+    "build": "react-scripts build"
   },
   "browserslist": {
     "production": [
