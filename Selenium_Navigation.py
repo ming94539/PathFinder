@@ -10,7 +10,7 @@ import time
 from Scraper import Scraper
 from sqlalchemy import create_engine, text
 import pprint
-from dataFormatter import DataFormatter
+from data_formatter import DataFormatter
 class Crawler:
     
     def __init__(self, is_headless = False):
@@ -157,7 +157,7 @@ class Crawler:
             print(result, file = self.output_file)
         self.output_file.seek(0)
         self.formatter.preprocessing(self.output_file)
-        output = self.formatter.data_extraction()
+        output = self.formatter.data_extraction(job)
         pprint.pprint(output, stream = self.formatted_output)
         self.output_file.truncate(0)
 
@@ -168,7 +168,7 @@ class Crawler:
 def main():
     job_list = ['web developer']
 
-    crawler = Crawler(is_headless = True)
+    crawler = Crawler(is_headless = False)
 
     for job in job_list:
         crawler.scrape_job(job, 2)

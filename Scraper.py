@@ -39,7 +39,7 @@ class Scraper:
 
 		description_exists = self.check_element("description")
 		if(description_exists != True):
-			print("error loading page, retrying...")
+			# print("error loading page, retrying...")
 			max_num_retries = 5
 			num_retries = 0
 			while(description_exists != True and num_retries < max_num_retries):

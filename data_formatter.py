@@ -13,7 +13,7 @@ class DataFormatter:
     def preprocessing(self,jobs_file):
         
         # jobsFile = open(jobs_file)
-        jobslines = jobsFile.readlines()
+        jobslines = jobs_file.readlines()
         self.origPosts = []
         self.jobPosts = []
         self.id_list = []
@@ -40,11 +40,11 @@ class DataFormatter:
             post+= re.sub(r'[^\w\s\+]', ' ', jobslines[l].lower())
 
         print('----')
-        for p in range(len(jobPosts)):
+        for p in range(len(self.jobPosts)):
             self.jobPosts[p]= re.sub(' +', ' ', self.jobPosts[p].replace('\n',' ')) #remove unnecessary double/triple white space
         # for p in range(len(jobPosts)):
         #     jobPosts[p] = word_tokenize(jobPosts[p])
-        return origPosts, jobPosts, id_list
+        # return origPosts, jobPosts, id_list
 
 
     def read_termsFile(self, termsFileName):
@@ -158,7 +158,7 @@ class DataFormatter:
             return industries
         else:
             return []
-    def extract_yoe(post):
+    def extract_yoe(self, post):
         tokenize = post.split(' ')
         yoe_variation = ['years of experience','years of full time','years full time','years industry experience','years of industry experience','years work experience','years of work experience']
         for w in range(len(tokenize)):
@@ -174,7 +174,7 @@ class DataFormatter:
 
     def data_extraction(self, job_name):    
         output = {}
-        for i in range(len(jobPosts)):  
+        for i in range(len(self.jobPosts)):  
             output[self.id_list[i]] = {}
             o_P = self.origPosts[i].split('\n')
             #SENIORITY
@@ -183,15 +183,15 @@ class DataFormatter:
             output[self.id_list[i]]['industry']=self.extract_industry(o_P,self.linkedin_industries)
             #Keyword Extraction -----
             #Languages
-            output[id_list[i]]['languages'] = self.extract_languages(self.jobPosts[i],self.languages)
+            output[self.id_list[i]]['languages'] = self.extract_languages(self.jobPosts[i],self.languages)
             #TECH SKILLS
-            output[id_list[i]]['skills']= self.extract_tech_terms(self.jobPosts[i], self.keywords)
+            output[self.id_list[i]]['skills']= self.extract_tech_terms(self.jobPosts[i], self.keywords)
             #Degree level
-            output[id_list[i]]['educationLevel'] = self.extract_degree_lvl(self.jobPosts[i])
+            output[self.id_list[i]]['educationLevel'] = self.extract_degree_lvl(self.jobPosts[i])
             #DEGREE TITLE
-            output[id_list[i]]['degreeTitle'] = self.extract_degree_title(self.jobPosts[i])
+            output[self.id_list[i]]['degreeTitle'] = self.extract_degree_title(self.jobPosts[i])
             #YoE
-            output[id_list[i]]['yoe']= self.extract_yoe(self.jobPosts[i])
+            output[self.id_list[i]]['yoe']= self.extract_yoe(self.jobPosts[i])
             print()
             #Do the Data Base Upload and data validation
             dbup_table = output[self.id_list[i]].copy()
