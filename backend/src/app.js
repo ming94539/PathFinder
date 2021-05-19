@@ -29,8 +29,8 @@ app.use(
 
 // Paths that we need to write
 // Since we don't plan letting users add to DB, we only need GET 
-app.get('/v0/data/', data.getData); // need to modify to enter arguments
-// app.get('/v0/data/:demand/:job', data.getData);
+// app.get('/v0/data/', data.getData); // need to modify to enter arguments
+app.get('/v0/data/s/', data.getData);
 
 // app use (dont ask me)
 app.use((err, req, res, next) => {

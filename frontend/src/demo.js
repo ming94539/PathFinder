@@ -43,8 +43,8 @@ const StyledMenuItem = withStyles((theme) => ({
  * @return {object} JSX
  */
 export default function CustomizedMenus() {
-  const handleSearchBar = (event) => {
-    fetch(`http://localhost:3010/v0/data/`)
+  const handleSubmit = (event) => {
+    fetch(`http://localhost:3010/v0/data/s/`)
         .then((response) => {
           if (!response.ok) {
             throw response;
@@ -52,36 +52,11 @@ export default function CustomizedMenus() {
           return response.json();
         })
         .then((json) => {
-          console.log('success here');
           console.log(json);
         })
         .catch((error) => {
           console.log(error);
         });
-  };
-
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [anchorEl2, setAnchorEl2] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-    // setAnchorEl2(event.currentTarget);
-    handleSearchBar();
-    console.log('thing to query');
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-    // setAnchorEl2(null);
-  };
-
-
-  const handleClick2 = (event) => {
-    setAnchorEl2(event.currentTarget);
-  };
-
-  const handleClose2 = () => {
-    setAnchorEl2(null);
   };
 
   let selectedDemand = 'Most in Demand Skills';
@@ -118,83 +93,10 @@ export default function CustomizedMenus() {
         </select>
       </div>
       <br/>
-      <button className="button is-link">
+      <button className="button is-link" onClick={handleSubmit}>
         Submit (doesn't work yet)
       </button>
       <br/><br/>
-      <Button
-        aria-controls="customized-menu"
-        aria-haspopup="true"
-        variant="contained"
-        color="primary"
-        onClick={handleClick}
-      >
-        Most in demand skills
-      </Button>
-      <StyledMenu
-        id="customized-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <StyledMenuItem>
-          <ListItemIcon>
-            <SendIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="Most in demand languages" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemIcon>
-            <DraftsIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="textholder" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemIcon>
-            <InboxIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="textholder" />
-        </StyledMenuItem>
-      </StyledMenu>
-      <br/><br/>
-      <div>
-        <Button
-          aria-controls="customized-menu"
-          aria-haspopup="true"
-          variant="contained"
-          color="primary"
-          onClick={handleClick2}
-        >
-            Job Title
-        </Button>
-        <StyledMenu
-          id="second-menu"
-          anchorEl={anchorEl2}
-          keepMounted
-          open={Boolean(anchorEl2)}
-          onClose={handleClose2}
-        >
-          <StyledMenuItem>
-            <ListItemIcon>
-              <SendIcon fontSize="small" />
-            </ListItemIcon>
-            <ListItemText primary="Web Developer" />
-          </StyledMenuItem>
-          <StyledMenuItem>
-            <ListItemIcon>
-              <DraftsIcon fontSize="small" />
-            </ListItemIcon>
-            <ListItemText primary="textholder" />
-          </StyledMenuItem>
-          <StyledMenuItem>
-            <ListItemIcon>
-              <InboxIcon fontSize="small" />
-            </ListItemIcon>
-            <ListItemText primary="textholder" />
-          </StyledMenuItem>
-        </StyledMenu>
-      </div>
 
       <BarChart/>
     </div>

@@ -13,8 +13,14 @@ servers:
   - url: http://localhost:3010/
 
 paths:
-  /v0/data/:
+  /v0/data/s?s={s}:
     get:
+      parameters: 
+      - in: query
+        name: s
+        schema:
+          type: string
+        description: demand
       summary: Get data
       responses:
         200:
