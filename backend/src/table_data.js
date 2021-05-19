@@ -3,6 +3,10 @@ const db = require('./db');
 // demand MUST match the alias used in its query template (ex: 's' for Skills s)
 // job should match one of our 
 exports.getData = async (req, res) => {
+  console.log(req);
+  console.log("between");
+  console.log(req.query);
+
   const demand = req.params.demand;
   // const job = req.params.job.replace(/ /g, '');
   // const demand='s';
@@ -33,13 +37,15 @@ exports.getData = async (req, res) => {
     default:
       break;
   }
+  console.log('grabbing');
   const grab_all = await db.dbGet(query);
   if (grab_all) {
     //formatting
+    console.log('grabbed:', grab_all)
     res.status(200).json(grab_all);
-    console.log(grab_all)
     return;
   } else {
+    console.log('404');
     res.status(404).send();
     return;
   }

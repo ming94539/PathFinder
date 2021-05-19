@@ -44,18 +44,30 @@ const StyledMenuItem = withStyles((theme) => ({
  */
 export default function CustomizedMenus() {
   const handleSubmit = (event) => {
-    fetch(`http://localhost:3010/v0/data/s/`)
+    console.log(event);
+    let url = 'http://localhost:3010/v0/data/s?s='+selectedJob.replace(' ', '');
+    console.log(url);
+    // fetch(url)
+    fetch(`http://localhost:3010/v0/data/s?s=${selectedJob}`)
+
+
+    // fetch(`http://localhost:3010/v0/data/demand?demand=s/`)
         .then((response) => {
           if (!response.ok) {
+            console.log('response not ok');
             throw response;
           }
-          return response.json();
+          console.log('json');
+          let json = response.json();
+          console.log('json:', json);
+          return json;
+          // return response.json();
         })
         .then((json) => {
           console.log(json);
         })
         .catch((error) => {
-          console.log(error);
+          console.log('catching error:', error);
         });
   };
 

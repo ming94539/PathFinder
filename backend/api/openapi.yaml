@@ -15,15 +15,15 @@ servers:
 paths:
   /v0/data/s?s={s}:
     get:
-      parameters: 
-      - in: query
-        name: s
-        schema:
-          type: string
-        description: demand
-      summary: Get data
+      description: Returns array of all emails
+      parameters:
+        - in: query
+          name: demand
+          schema:
+            type: string
+          description: check mailbox
       responses:
         200:
-          description: Response
-        400:
-          description: Invalid
+          description: Emails Response
+        default:
+          description: Unexpected Error
