@@ -13,7 +13,7 @@ servers:
   - url: http://localhost:3010/
 
 paths:
-  /v0/data/s?s={s}:
+  /v0/data/{selectedJob}:
     get:
       description: Returns array of all emails
       parameters:

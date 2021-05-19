@@ -43,34 +43,6 @@ const StyledMenuItem = withStyles((theme) => ({
  * @return {object} JSX
  */
 export default function CustomizedMenus() {
-  const handleSubmit = (event) => {
-    console.log(event);
-    let url = 'http://localhost:3010/v0/data/s?s='+selectedJob.replace(' ', '');
-    console.log(url);
-    // fetch(url)
-    fetch(`http://localhost:3010/v0/data/s?s=${selectedJob}`)
-
-
-    // fetch(`http://localhost:3010/v0/data/demand?demand=s/`)
-        .then((response) => {
-          if (!response.ok) {
-            console.log('response not ok');
-            throw response;
-          }
-          console.log('json');
-          let json = response.json();
-          console.log('json:', json);
-          return json;
-          // return response.json();
-        })
-        .then((json) => {
-          console.log(json);
-        })
-        .catch((error) => {
-          console.log('catching error:', error);
-        });
-  };
-
   let selectedDemand = 'Most in Demand Skills';
   let selectedJob = 'Web Developer';
 
@@ -87,6 +59,24 @@ export default function CustomizedMenus() {
     selectedJob = job.target.value;
   }
 
+  const handleSubmit = (event) => {
+    console.log("hi");
+    // let url = `http://localhost:3010/v0/data/${selectedJob}`;
+    // console.log(url);
+    fetch(`http://localhost:3010/v0/data/${selectedDemand}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw response;
+          }
+          return response.json();
+        })
+        .then((json) => {
+          console.log(json);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+  };
   return (
     <div>
       <div className="select">

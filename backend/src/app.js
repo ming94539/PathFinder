@@ -30,29 +30,16 @@ app.use(
 // Paths that we need to write
 // Since we don't plan letting users add to DB, we only need GET 
 // app.get('/v0/data/', data.getData); // need to modify to enter arguments
-// app.get('/v0/data/:demand', data.getData);
-// app.get('/v0/data/s?s={s}', data.getData);
 app.get('/v0/data/:s', data.getData);
-
 
 // app use (dont ask me)
 app.use((err, req, res, next) => {
-  res.locals.error = err;
-  const status = err.status || 500;
-  res.status(status);
+  res.status(err.status).json({
+    message: err.message,
+    errors: err.errors,
+    status: err.status,
+  });
 });
-
-// app.use((err, req, res, next) => {
-//   res.status(err.status).json({
-//     message: err.message,
-//     errors: err.errors,
-//     status: err.status || 500,
-//     // status: err.status,
-//   });
-//   res.status(status);
-// });
-
-
 
 // some stuff that may or may not be useful for deployment
 // https://www.freecodecamp.org/news/how-to-create-a-react-app-with-a-node-backend-the-complete-guide/
