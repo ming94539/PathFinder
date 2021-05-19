@@ -61,9 +61,11 @@ export default function CustomizedMenus() {
 
   const handleSubmit = (event) => {
     console.log("hi");
-    // let url = `http://localhost:3010/v0/data/${selectedJob}`;
-    // console.log(url);
-    fetch(`http://localhost:3010/v0/data/${selectedDemand}`)
+
+    // if(demand is null):
+    //   throw red text for now
+
+    fetch(`http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`)
         .then((response) => {
           if (!response.ok) {
             throw response;

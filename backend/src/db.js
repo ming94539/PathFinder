@@ -24,17 +24,6 @@ pool.connect();
   - that path is used by front end
  */
 
-// exports.dbGetAll = async () => {
-//   const select = `SELECT * FROM industries`;
-//   const query = {
-//     text: select,
-//     values: [],
-//   };
-//   const {rows} = await pool.query(query);
-//   console.log(rows);
-//   return rows;
-// };
-
 exports.dbGet = async (query) => {
   const q = {
     text: query,
