@@ -44,7 +44,7 @@ const StyledMenuItem = withStyles((theme) => ({
  */
 export default function CustomizedMenus() {
   let selectedDemand = 'Most in Demand Skills';
-  let selectedJob = 'Web Developer';
+  let selectedJob = 'Job Title';
 
   // temp name?
   function selectDemand(demand) {
@@ -73,7 +73,7 @@ export default function CustomizedMenus() {
           return response.json();
         })
         .then((json) => {
-          console.log(json);
+          console.log('result:', json);
         })
         .catch((error) => {
           console.log(error);

@@ -3,29 +3,23 @@ const db = require('./db');
 // demand MUST match the alias used in its query template (ex: 's' for Skills s)
 // job should match one of our 
 exports.getData = async (req, res) => {
-  // console.log(req.params.s); // demand
-  // console.log(req.params.t); // job title
-  // console.log(req.params.res);
-  // console.log(req.query.job);
 
-  const demand = req.params.s;
-  // const job = req.params.job.replace(/ /g, '');
-  // const demand='s';
-  const job= req.params.t;
-
-  // on submit: 
-  //   if job is null:
-  //     show all in demand skills
-  //   if both are not null:
-  //     query --> join demand.id on job.id
+  let demand = req.params.s;
+  let job = req.params.t.replace(/ /g, '');
 
   console.log('demand:', demand);
   console.log('job title:', job);
 
+  switch(demand) {
+    case('Most in Demand Skills'):
+      demand='s'; break;
+    default:
+      break;
+  }
 
   // If user has chosen a job, create additional string for query
   // to match jobID with that job
-  let jobTitleMatch = (job == 'Job Title') ? '' :
+  let jobTitleMatch = (job == 'JobTitle') ? '' :
     `, ${job} as j
     WHERE ${demand}.jobID = j.jobID`;
 
@@ -46,7 +40,8 @@ exports.getData = async (req, res) => {
     default:
       break;
   }
-  console.log('grabbing');
+
+  console.log('USING QUERY:', query);
   const grab_all = await db.dbGet(query);
   if (grab_all) {
     //formatting

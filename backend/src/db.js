@@ -30,6 +30,5 @@ exports.dbGet = async (query) => {
     values: []
   };
   const {rows} = await pool.query(q);
-  console.log('queried');
   return rows;
 }
