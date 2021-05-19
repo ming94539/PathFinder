@@ -133,7 +133,7 @@ class Crawler:
 
         end_index = start_index
 
-        for i in range(5):
+        for i in range(len(id_list)):
 
             job_id = id_list[i]
 
