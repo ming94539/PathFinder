@@ -196,6 +196,7 @@ class DataFormatter:
             #Do the Data Base Upload and data validation
             dbup_table = output[self.id_list[i]].copy()
             dbup_table['jobID'] = self.id_list[i]
+            
             dbup_table['table'] = job_name
             print(db_uploadFunction(dbup_table))
         return output

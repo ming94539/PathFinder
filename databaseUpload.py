@@ -156,11 +156,7 @@ def db_uploadFunction(dbup_table):
 		for l in languages:
 			insert_LanguagesTable = f"""
 			    INSERT INTO Languages (jobID, language)
-<<<<<<< HEAD
-			    VALUES ({jobID}, '{l}', ')
-=======
 			    VALUES ({jobID}, '{l}')
->>>>>>> e2d2adef9ca42f1b655b6e7e672bdb61e70436ad
 			"""
 			db.add_stmt(insert_LanguagesTable)
 

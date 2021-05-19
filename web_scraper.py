@@ -1,6 +1,11 @@
-import requests
+import sys
+import getopt
+from Selenium_Navigation import Crawler
 
-username = "nascentgoth"
-password = "592b91-5919f5-23ee2c-3df975-d1313b"
-
-PROXY_RACK_DNS = "megaproxy.rotating.proxyrack.net:222"
+def main(argv):
+	num_pages = 0:
+	num_jobs = 0
+	formatted_output = ""
+	job_list = ["Web Developer"]
+	options = "pjf:"
+	
