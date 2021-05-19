@@ -1,6 +1,7 @@
 CREATE TABLE JobIDTable (
-	jobID VARCHAR(15) PRIMARY KEY,
-	table VARCHAR(60)
+	jobID VARCHAR(15),
+	tablename VARCHAR(60),
+  PRIMARY KEY (jobID)
 );
 
 CREATE TABLE Industries (
