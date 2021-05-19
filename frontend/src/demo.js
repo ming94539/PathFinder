@@ -59,9 +59,8 @@ export default function CustomizedMenus() {
     selectedJob = job.target.value;
   }
 
+  let temp_data;
   const handleSubmit = (event) => {
-    console.log("hi");
-
     // if(demand is null):
     //   throw red text for now
 

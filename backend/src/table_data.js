@@ -3,10 +3,8 @@ const db = require('./db');
 function formatData(data) {
   let result = {};
   for (let index in data) {
-    result[index] = data
+    result[data[index].value] = data[index].count;
   }
-  console.log('result:', result)
-
   return result;
 }
 
@@ -56,8 +54,10 @@ exports.getData = async (req, res) => {
 
   if (grab_all) {
     //formatting
-    formatData(grab_all)
-    res.status(200).json(grab_all);
+    let return_val = formatData(grab_all);
+    console.log('200');
+    console.log(return_val);
+    res.status(200).json(return_val);
     return;
   } else {
     console.log('404');

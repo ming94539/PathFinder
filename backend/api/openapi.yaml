@@ -25,5 +25,16 @@ paths:
       responses:
         200:
           description: Emails Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
         default:
           description: Unexpected Error
+
+components:
+  schemas:
+    Error:
+      required:
+        - code
+        - message
