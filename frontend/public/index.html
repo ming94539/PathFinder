@@ -4,6 +4,7 @@
     <title>PathFinder</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/87af7ede63.css">
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 </head>
 <style>
     #root {
@@ -17,7 +18,14 @@
     <h1 class="title mt-6">PathFinder</h1>
     <!-- later separate selection and visualization into different divs -->
     <div class="box">
-        <div id="root"></div>
+        <div class="columns">
+            <div class="column">
+                <div id="menu"></div>
+            </div>
+            <div class="column">
+                <div id="piechart"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
