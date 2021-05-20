@@ -100,7 +100,7 @@ def db_uploadFunction(dbup_table):
 	# insert into JobIDTable
 	table = dbup_table['table']
 
-	jobID = int(dbup_table['jobID'])
+	jobID = dbup_table['jobID']
 
 	insert_JobIDTable = f"""
 	    INSERT INTO JobIDTable (jobID, tableName)
@@ -108,15 +108,19 @@ def db_uploadFunction(dbup_table):
 	"""
 	db.add_stmt(insert_JobIDTable)
 
+
 	# Insert to job table
 	# todo: check validation results for NULL values in seniority and yoe
-	if validationResults[SENIORITY] == 0 and validationResults[YEARS_OF_EXPERIENCE] == 0:
+	if validationResults[SENIORITY] != -1 and validationResults[YEARS_OF_EXPERIENCE] != -1:
 		seniority = dbup_table['seniority']
+		yoe = dbup_table['yoe']
 		insert_JobTable = f"""
 		    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
 		    VALUES ({jobID}, '{seniority}', '{yoe}', ')
 		"""
 		db.add_stmt(insert_JobTable)
+	else:
+		return -1
 
 	# Insert to industries table
 	if validationResults[INDUSTRY] == 0:
