@@ -39,15 +39,24 @@ const StyledMenuItem = withStyles((theme) => ({
     },
   },
 }))(MenuItem);
+
+
+let tmp = {selectedDemand: 'Most in Demand Skills',
+                  selectedJob: 'Job Title',
+                  data: {}
+                }
 /**
  * @return {object} JSX
  */
 // note: maybe convert this into a class so we can call function to update chart
 // export default function CustomizedMenus() {
 export class Demo extends React.Component {
+
+  // const [mailbox, setMailbox] = React.useState('Inbox');
+
   constructor(props) {
     super(props);
-    this.props = {selectedDemand: 'Most in Demand Skills',
+    this.tmp = {selectedDemand: 'Most in Demand Skills',
                   selectedJob: 'Job Title',
                   data: {}
                 }
@@ -60,14 +69,14 @@ export class Demo extends React.Component {
   selectDemand(demand) {
     // somehow pass selection into table_data.js
     console.log('selected demand:', demand.target.value);
-    this.props.selectedDemand = demand.target.value;
+    this.tmp.selectedDemand = demand.target.value;
     // selectedDemand = demand.target.value;
   }
 
   selectJob(job) {
     // somehow pass selection into table_data.js
     console.log('selected job:', job.target.value);
-    this.props.selectedJob = job.target.value;
+    this.tmp.selectedJob = job.target.value;
     // selectedJob = job.target.value;
   }
 
@@ -79,7 +88,7 @@ export class Demo extends React.Component {
     // if(demand is null):
     //   throw red text for now
 
-    fetch(`http://localhost:3010/v0/data/${this.props.selectedDemand}/${this.props.selectedJob}`)
+    fetch(`http://localhost:3010/v0/data/${this.tmp.selectedDemand}/${this.tmp.selectedJob}`)
         .then((response) => {
           if (!response.ok) {
             throw response;
@@ -87,8 +96,9 @@ export class Demo extends React.Component {
           return response.json();
         })
         .then((json) => {
-          data = json;
+          this.tmp.data = json; //?
           console.log('result:', json);
+          this.render();
         })
         .catch((error) => {
           // errorMessage = <p style="color: red">Bad Input!</p>
@@ -119,9 +129,8 @@ export class Demo extends React.Component {
         <button className="button is-link" onClick={this.handleSubmit}>
           Submit (doesn't work yet)
         </button>
+        <PieChart data={this.tmp.data} ></PieChart>
         <br/><br/>
-  
-        <PieChart />
       </div>
     );
   }
