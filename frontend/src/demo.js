@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import SharedContext from './SharedContext';
 import {withStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
@@ -41,81 +42,54 @@ const StyledMenuItem = withStyles((theme) => ({
 }))(MenuItem);
 
 
-let tmp = {selectedDemand: 'Most in Demand Skills',
-                  selectedJob: 'Job Title',
-                  data: {}
-                }
+// let tmp = {selectedDemand: 'Most in Demand Skills',
+//                   selectedJob: 'Job Title',
+//                   data: {}
+//                 }
 
 // const [mailbox, setMailbox] = React.useState('Inbox');
-/**
- * @return {object} JSX
- */
-// note: maybe convert this into a class so we can call function to update chart
-// export default function CustomizedMenus() {
-export class Demo extends React.Component {
 
+export default function Demo() {
+  const [selectedDemand, setSelectedDemand] = useState('Most in Demand Skills');
+  const [selectedJob, setSelectedJob] = useState('Web Developer');
+  const [data, setData] = useState({});
+
+  const handleDemandChange = event => {
+    setSelectedDemand(event.target.value);
+    console.log('changed to:', event.target.value)
+  }
+
+  const handleJobChange = event => {
+    setSelectedJob(event.target.value);
+    console.log('changed to:', event.target.value)
+  }
   
-
-  constructor(props) {
-    super(props);
-    this.tmp = {selectedDemand: 'Most in Demand Skills',
-                  selectedJob: 'Job Title',
-                  data: {}
-                }
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.selectDemand = this.selectDemand.bind(this);
-    this.selectJob = this.selectJob.bind(this);
+  const handleSubmit = event => {
+    fetch(`http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw response;
+        }
+        return response.json();
+      })
+      .then((json) => {
+        setData(json)
+      })
+      .catch((error) => {
+        console.log('error:', error);
+      });
   }
 
-  // let selectedDemand = 'Most in Demand Skills';
-
-  // temp name?
-  selectDemand(demand) {
-    // somehow pass selection into table_data.js
-    console.log('selected demand:', demand.target.value);
-    this.tmp.selectedDemand = demand.target.value;
-    // selectedDemand = demand.target.value;
-  }
-
-  selectJob(job) {
-    // somehow pass selection into table_data.js
-    console.log('selected job:', job.target.value);
-    this.tmp.selectedJob = job.target.value;
-    // selectedJob = job.target.value;
-  }
-
-  handleSubmit(event) {
-
-  // }
-
-  // const handleSubmit = (event) => {
-    // if(demand is null):
-    //   throw red text for now
-
-    fetch(`http://localhost:3010/v0/data/${this.tmp.selectedDemand}/${this.tmp.selectedJob}`)
-        .then((response) => {
-          if (!response.ok) {
-            throw response;
-          }
-          return response.json();
-        })
-        .then((json) => {
-          this.tmp.data = json; //?
-          // console.log('result:', json);
-          // this.render();
-        })
-        .catch((error) => {
-          // errorMessage = <p style="color: red">Bad Input!</p>
-          console.log('error:', error);
-        });
-  };
-
-  // move handlesubmit to piechart?
-  render() {
-    return (
-      <div>
+  return (
+    <div>
+      <SharedContext.Provider value={{
+        selectedDemand, setSelectedDemand,
+        selectedJob, setSelectedJob,
+        data, setData
+      }}
+      >
         <div className="select">
-          <select onChange={(selection) => this.selectDemand(selection)}>
+          <select onChange={handleDemandChange}>
             <option>Most in Demand Skills</option>
             <option>textholder</option>
             <option>textholder</option>
@@ -123,19 +97,111 @@ export class Demo extends React.Component {
         </div>
         <br/>
         <div className="select">
-          <select onChange={(selection) => this.selectJob(selection)}>
+          <select onChange={handleJobChange}>
             <option>Job Title</option>
             <option>Web Developer</option>
             <option>textholder</option>
           </select>
         </div>
         <br/>
-        <button className="button is-link" onClick={this.handleSubmit}>
+        <button className="button is-link" onClick={handleSubmit}>
           Submit (doesn't work yet)
         </button>
-        <PieChart data={this.tmp.data} ></PieChart>
+        <PieChart data={data} ></PieChart>
         <br/><br/>
-      </div>
-    );
-  }
+      </SharedContext.Provider>
+    </div>
+  )
 }
+
+/**
+ * @return {object} JSX
+ */
+// export default function CustomizedMenus() {
+// export class Demo extends React.Component {
+
+  
+
+//   constructor(props) {
+//     super(props);
+//     this.tmp = {selectedDemand: 'Most in Demand Skills',
+//                   selectedJob: 'Job Title',
+//                   data: {}
+//                 }
+//     this.handleSubmit = this.handleSubmit.bind(this);
+//     this.selectDemand = this.selectDemand.bind(this);
+//     this.selectJob = this.selectJob.bind(this);
+//   }
+
+//   // let selectedDemand = 'Most in Demand Skills';
+
+//   // temp name?
+//   selectDemand(demand) {
+//     // somehow pass selection into table_data.js
+//     console.log('selected demand:', demand.target.value);
+//     this.tmp.selectedDemand = demand.target.value;
+//     // selectedDemand = demand.target.value;
+//   }
+
+//   selectJob(job) {
+//     // somehow pass selection into table_data.js
+//     console.log('selected job:', job.target.value);
+//     this.tmp.selectedJob = job.target.value;
+//     // selectedJob = job.target.value;
+//   }
+
+//   handleSubmit(event) {
+
+//   // }
+
+//   // const handleSubmit = (event) => {
+//     // if(demand is null):
+//     //   throw red text for now
+
+//     fetch(`http://localhost:3010/v0/data/${this.tmp.selectedDemand}/${this.tmp.selectedJob}`)
+//         .then((response) => {
+//           if (!response.ok) {
+//             throw response;
+//           }
+//           return response.json();
+//         })
+//         .then((json) => {
+//           this.tmp.data = json; //?
+//           // console.log('result:', json);
+//           // this.render();
+//         })
+//         .catch((error) => {
+//           // errorMessage = <p style="color: red">Bad Input!</p>
+//           console.log('error:', error);
+//         });
+//   };
+
+//   // move handlesubmit to piechart?
+//   render() {
+//     return (
+//       <div>
+//         <div className="select">
+//           <select onChange={(selection) => this.selectDemand(selection)}>
+//             <option>Most in Demand Skills</option>
+//             <option>textholder</option>
+//             <option>textholder</option>
+//           </select>
+//         </div>
+//         <br/>
+//         <div className="select">
+//           <select onChange={(selection) => this.selectJob(selection)}>
+//             <option>Job Title</option>
+//             <option>Web Developer</option>
+//             <option>textholder</option>
+//           </select>
+//         </div>
+//         <br/>
+//         <button className="button is-link" onClick={this.handleSubmit}>
+//           Submit (doesn't work yet)
+//         </button>
+//         <PieChart data={this.tmp.data} ></PieChart>
+//         <br/><br/>
+//       </div>
+//     );
+//   }
+// }

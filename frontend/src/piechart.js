@@ -1,15 +1,18 @@
 import React, {Component} from 'react';
+import SharedContext from './SharedContext';
 import * as d3 from 'd3';
 /**
  * @return {object} JSX
  */
 
-export default function PieChart(props) {
+export default function PieChart() {
+  const {data, setData} =
+  React.useContext(SharedContext);
+
   const drawChart = () => {
-    console.log('drawing chart with data:', dataset);
-    var dataset = props.data;
-    var keys = Object.keys(dataset);
-    var counts = Object.values(dataset);
+    console.log('drawing chart with data:', data);
+    var keys = Object.keys(data);
+    var counts = Object.values(data);
 
     if (keys.length == 0) return;
 
@@ -59,6 +62,10 @@ export default function PieChart(props) {
       .style("font-size", 17);
 
   };
+
+  if (Object.keys(data).length != 0) {
+    drawChart();
+  }
 
   return (
     <div></div>
