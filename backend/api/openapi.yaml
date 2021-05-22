@@ -35,6 +35,4 @@ paths:
 components:
   schemas:
     Error:
-      required:
-        - code
-        - message
+      type: object

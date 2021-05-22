@@ -14,7 +14,7 @@ export class PieChart extends Component {
     // console.log(this.props.data);
     // this.state.data = props.data;
     console.log("in constructor");
-    console.log(props);
+    console.log(props.data.length == null);
     // this.state.week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
     //   'Friday', 'Saturday'];
   }
@@ -26,6 +26,10 @@ export class PieChart extends Component {
     //   console.log('data:', this.state.data);
       // this.drawChart();
     // }
+    if(this.props.data.length !=null){
+      this.drawChart();
+    }
+    
     console.log("in did mount");
   }
 
@@ -34,6 +38,9 @@ export class PieChart extends Component {
     //   this.drawChart();
     // }
     // console.log(prevProps);
+    if(this.props.data.length !=null){
+      this.drawChart();
+    }
     console.log("in did update");
   }
   

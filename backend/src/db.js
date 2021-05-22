@@ -25,6 +25,7 @@ pool.connect();
  */
 
 exports.dbGet = async (query) => {
+  
   const q = {
     text: query,
     values: []

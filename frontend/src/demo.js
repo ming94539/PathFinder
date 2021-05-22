@@ -45,6 +45,8 @@ let tmp = {selectedDemand: 'Most in Demand Skills',
                   selectedJob: 'Job Title',
                   data: {}
                 }
+
+// const [mailbox, setMailbox] = React.useState('Inbox');
 /**
  * @return {object} JSX
  */
@@ -52,7 +54,7 @@ let tmp = {selectedDemand: 'Most in Demand Skills',
 // export default function CustomizedMenus() {
 export class Demo extends React.Component {
 
-  // const [mailbox, setMailbox] = React.useState('Inbox');
+  
 
   constructor(props) {
     super(props);
@@ -97,8 +99,8 @@ export class Demo extends React.Component {
         })
         .then((json) => {
           this.tmp.data = json; //?
-          console.log('result:', json);
-          this.render();
+          // console.log('result:', json);
+          // this.render();
         })
         .catch((error) => {
           // errorMessage = <p style="color: red">Bad Input!</p>

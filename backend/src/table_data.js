@@ -34,7 +34,7 @@ exports.getData = async (req, res) => {
   // Most popular skill 
   let skillDemand = `
     SELECT s.skill as value, COUNT(*) AS count
-    FROM Skills s ${jobTitleMatch}
+    FROM Skills s 
     GROUP BY s.skill
     ORDER BY count DESC
   `;
@@ -55,8 +55,8 @@ exports.getData = async (req, res) => {
   if (grab_all) {
     //formatting
     let return_val = formatData(grab_all);
-    console.log('200');
-    console.log(return_val);
+    
+    console.log("200 status", return_val);
     res.status(200).json(return_val);
     return;
   } else {
