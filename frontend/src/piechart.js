@@ -47,6 +47,7 @@ export class PieChart extends Component {
   drawChart2() {
     console.log('drawing chart');
     var data = [2, 4, 8, 10];
+    // var keys = ['a', 'b', 'c', 'd']
     // var data = {a:2, b:4, c:8, d:10};
 
 		var svg = d3.select("svg"),
@@ -81,7 +82,16 @@ export class PieChart extends Component {
 			})
 			.attr("d", arc);
 
-    
+    // svg
+    //   .selectAll("mySlices")
+    //   .data(data)
+    //   .enter()
+    //   .append("text")
+    //   .text(function(d) {return (d.data.key)})
+    //   .attr("transform", function(d)
+    //     {return "translate(" + arcGenerator.centroid(d) + ")";})
+    //   .style("text-anchor", "middle")
+    //   .style("font-size", 12)
   }
   
   /**
