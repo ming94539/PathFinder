@@ -8,7 +8,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
 import SendIcon from '@material-ui/icons/Send';
-import {PieChart} from './piechart';
+import PieChart from './piechart';
 const StyledMenu = withStyles({
   paper: {
     border: '1px solid #d3d4d5',
@@ -63,6 +63,8 @@ export class Demo extends React.Component {
                   data: {}
                 }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.selectDemand = this.selectDemand.bind(this);
+    this.selectJob = this.selectJob.bind(this);
   }
 
   // let selectedDemand = 'Most in Demand Skills';
