@@ -18,7 +18,7 @@ class Scraper:
 			self.current_options.headless = True
 			
 		#set the driver path
-		self.driver = webdriver.Chrome("./chromedriver",options=self.current_options)
+		self.driver = webdriver.Chrome("./macChromeDriver",options=self.current_options)
 		self.driver.set_window_size(1920, 1080)
 
 	#navigates the scraper to a page at the given URL

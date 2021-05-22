@@ -53,7 +53,7 @@ class Crawler:
         if is_headless:     
             current_options.headless = True
 
-        browser = webdriver.Chrome("./chromedriver", options = current_options)
+        browser = webdriver.Chrome("./macChromeDriver", options = current_options)
         browser.set_window_size(1920, 1080)
         browser.get("https://www.linkedin.com")
 
@@ -168,7 +168,7 @@ class Crawler:
 def main():
     job_list = ['web developer']
 
-    crawler = Crawler(is_headless = False)
+    crawler = Crawler(is_headless = True)
 
     for job in job_list:
         crawler.scrape_job(job, 2)
