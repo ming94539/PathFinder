@@ -100,7 +100,7 @@ def db_uploadFunction(dbup_table):
 	# insert into JobIDTable
 	table = dbup_table['table']
 
-	jobID = int(dbup_table['jobID'])
+	jobID = dbup_table['jobID']
 
 	insert_JobIDTable = f"""
 	    INSERT INTO JobIDTable (jobID, tableName)
@@ -108,15 +108,19 @@ def db_uploadFunction(dbup_table):
 	"""
 	db.add_stmt(insert_JobIDTable)
 
+
 	# Insert to job table
 	# todo: check validation results for NULL values in seniority and yoe
-	if validationResults[SENIORITY] == 0 and validationResults[YEARS_OF_EXPERIENCE] == 0:
+	if validationResults[SENIORITY] != -1 and validationResults[YEARS_OF_EXPERIENCE] != -1:
 		seniority = dbup_table['seniority']
+		yoe = dbup_table['yoe']
 		insert_JobTable = f"""
 		    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
 		    VALUES ({jobID}, '{seniority}', '{yoe}')
 		"""
 		db.add_stmt(insert_JobTable)
+	else:
+		return -1
 
 	# Insert to industries table
 	if validationResults[INDUSTRY] == 0:
@@ -156,11 +160,7 @@ def db_uploadFunction(dbup_table):
 		for l in languages:
 			insert_LanguagesTable = f"""
 			    INSERT INTO Languages (jobID, language)
-<<<<<<< HEAD
-			    VALUES ({jobID}, '{l}', ')
-=======
 			    VALUES ({jobID}, '{l}')
->>>>>>> e2d2adef9ca42f1b655b6e7e672bdb61e70436ad
 			"""
 			db.add_stmt(insert_LanguagesTable)
 

@@ -7,8 +7,11 @@ from bs4 import BeautifulSoup
 from selenium.common.exceptions import NoSuchElementException
 import random
 class Scraper:
+
 	def __init__ (self, is_headless = True):
 		#puts the browser in headless mode (no UI) if is_headless is true
+		#sets up the proxy. NOTE that the proxy server can NOT be run if the
+		#IP is not whitelisted on the proxy service site
 		self.PROXY = "megaproxy.rotating.proxyrack.net:222"
 		self.current_options = Options()
 		#self.chrome_options = WebDriver.ChromeOptions()

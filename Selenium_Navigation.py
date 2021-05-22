@@ -29,16 +29,16 @@ class Crawler:
 
     # Return True if id exists in db, False otherwise
     def is_duplicate_id(self, id):
-        # query = f'''
-        #     SELECT jobID
-        #     FROM JobIDTable
-        #     WHERE jobID = {id}
-        # '''
         query = f'''
-            SELECT test_id
-            FROM Test
-            WHERE test_id = '{id}'
+            SELECT jobID
+            FROM JobIDTable
+            WHERE jobID = {id}
         '''
+        # query = f'''
+        #     SELECT test_id
+        #     FROM Test
+        #     WHERE test_id = '{id}'
+        # '''
         result = self.engine.execute(text(query))
         if result.rowcount > 0:
             print('duplicate id found:', id)
@@ -69,13 +69,13 @@ class Crawler:
         return browser
 
     # Scrapes results given by using `job` as the search term
-    def scrape_job(self, job, num_pages):
+    def scrape_job(self, job_name, num_pages):
         
         time.sleep(5)
         job_search_bar = self.browser.find_element_by_class_name("jobs-search-box__text-input")
         job_search_bar.clear()
-        job_search_bar.send_keys(job)
-        # job_search_bar.send_keys("Software Engineer")
+        job_search_bar.send_keys(job_name)
+        
 
         time.sleep(2)
 
@@ -93,8 +93,8 @@ class Crawler:
             time.sleep(2)
             lxml_soup = BeautifulSoup(pageSource, 'lxml')
             time.sleep(2)
-            # browser.implicitly_wait(10)
-            #job_container = lxml_soup.find('ul', class_ = 'jobs-search-results__list')
+
+            # find all jobs on the page
             job_container = lxml_soup.find_all('li', class_ = 'jobs-search-results__list-item')
             time.sleep(3)
 
@@ -119,7 +119,7 @@ class Crawler:
                 target_button = "data-test-pagination-page-btn=\""+str(pg_num)+"\""
                 if str(page_button).find(target_button) >= 0:
                     id_i= str(page_button).find('id')
-                    #pg_id = str(page_buttons[1])[id_i+4:id_i+13]
+                    #pg_id = str(page_buttons[1])[id_i+4:id_i+13] 
                     pg_id = "ember"+re.findall(r'%s(\d+)' % "ember", str(page_button))[0]
                     # print(pg_id)
                     break
@@ -137,7 +137,7 @@ class Crawler:
 
             job_id = id_list[i]
 
-            #if not self.is_duplicate_id(job_id):
+            # if not self.is_duplicate_id(job_id):
             print("current ID is {}".format(job_id))
             to_scrape = current_url[:start_index] + "?currentJobId=" + job_id + "&" + current_url[end_index:]
             
@@ -157,7 +157,8 @@ class Crawler:
             print(result, file = self.output_file)
         self.output_file.seek(0)
         self.formatter.preprocessing(self.output_file)
-        output = self.formatter.data_extraction(job)
+        print(job_name)
+        output = self.formatter.data_extraction(job_name)
         pprint.pprint(output, stream = self.formatted_output)
         self.output_file.truncate(0)
 
@@ -166,7 +167,7 @@ class Crawler:
         self.browser.quit()
 
 def main():
-    job_list = ['web developer']
+    job_list = ['Web Developer']
 
     crawler = Crawler(is_headless = True)
 
