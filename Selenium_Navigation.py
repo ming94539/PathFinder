@@ -69,7 +69,7 @@ class Crawler:
         return browser
 
     # Scrapes results given by using `job` as the search term
-    def scrape_job(self, job_name, num_pages):
+    def scrape_job(self, job_name, num_pages, num_jobs = 25):
         
         time.sleep(5)
         job_search_bar = self.browser.find_element_by_class_name("jobs-search-box__text-input")
@@ -133,7 +133,12 @@ class Crawler:
 
         end_index = start_index
 
-        for i in range(5):
+        if(num_jobs <= len(id_list)):
+            num_to_scrape = num_jobs
+        else:
+            num_to_scrape = len(id_list)
+
+        for i in range(num_to_scrape):
 
             job_id = id_list[i]
 
@@ -172,7 +177,7 @@ def main():
     crawler = Crawler(is_headless = False)
 
     for job in job_list:
-        crawler.scrape_job(job, 2)
+        crawler.scrape_job(job, 2, 10)
 
     crawler.end_crawling()
 
