@@ -41,17 +41,9 @@ const StyledMenuItem = withStyles((theme) => ({
   },
 }))(MenuItem);
 
-
-// let tmp = {selectedDemand: 'Most in Demand Skills',
-//                   selectedJob: 'Job Title',
-//                   data: {}
-//                 }
-
-// const [mailbox, setMailbox] = React.useState('Inbox');
-
 export default function Demo() {
   const [selectedDemand, setSelectedDemand] = useState('Most in Demand Skills');
-  const [selectedJob, setSelectedJob] = useState('Web Developer');
+  const [selectedJob, setSelectedJob] = useState('Job Title');
   const [data, setData] = useState({});
 
   const handleDemandChange = event => {
@@ -66,17 +58,21 @@ export default function Demo() {
   
   const handleSubmit = event => {
     fetch(`http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`)
+    // fetch(`https://pathfinder115.netlify.app/v0/data/${selectedDemand}/${selectedJob}`)
       .then((response) => {
         if (!response.ok) {
           throw response;
         }
-        return response.json();
+        let json = response.json();
+        console.log(json);
+        return json;
+        // return response.json();
       })
       .then((json) => {
         setData(json)
       })
       .catch((error) => {
-        console.log('error:', error);
+        console.log('Error fetching data:', error);
       });
   }
 
@@ -104,10 +100,10 @@ export default function Demo() {
           </select>
         </div>
         <br/>
-        <button className="button is-link" onClick={handleSubmit}>
-          Submit (doesn't work yet)
+        <button className="button is-primary" onClick={handleSubmit}>
+          Submit
         </button>
-        <PieChart data={data} ></PieChart>
+        <PieChart ></PieChart>
         <br/><br/>
       </SharedContext.Provider>
     </div>

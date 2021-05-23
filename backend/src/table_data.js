@@ -34,7 +34,7 @@ exports.getData = async (req, res) => {
   // Most popular skill 
   let skillDemand = `
     SELECT s.skill as value, COUNT(*) AS count
-    FROM Skills s 
+    FROM Skills s ${jobTitleMatch}
     GROUP BY s.skill
     ORDER BY count DESC
   `;

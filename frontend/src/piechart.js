@@ -11,8 +11,8 @@ export default function PieChart() {
 
   const drawChart = () => {
     console.log('drawing chart with data:', data);
-    var keys = Object.keys(data);
-    var counts = Object.values(data);
+    var keys = Object.keys(data).slice(0, 10);
+    var counts = Object.values(data).slice(0, 10);
 
     if (keys.length == 0) return;
 
@@ -60,6 +60,18 @@ export default function PieChart() {
       })
       .style("text-anchor", "middle")
       .style("font-size", 17);
+
+      // let path = path.data(pie(dataset)); // update pie with new data
+
+      arcs.transition() // transition of redrawn pie
+        .duration(750) // 
+        .attrTween('d', function(d) { // 'd' specifies the d attribute that we'll be animating
+          var interpolate = d3.interpolate(this._current, d); // this = current path element
+          this._current = interpolate(0); // interpolate between current value and the new value of 'd'
+          return function(t) {
+            return arc(interpolate(t));
+          };
+        });
 
   };
 

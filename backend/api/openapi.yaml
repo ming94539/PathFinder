@@ -1,5 +1,5 @@
 #
-# CSE183 Assignment 9 Backend
+# CSE 115A Backend
 #
 
 openapi: '3.0.3'
@@ -11,6 +11,7 @@ info:
 
 servers:
   - url: http://localhost:3010/
+  - url: https://pathfinder115.netlify.app/
 
 paths:
   /v0/data/{selectedDemand}/{selectedJobTitle}:
