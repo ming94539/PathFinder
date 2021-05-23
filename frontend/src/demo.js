@@ -58,15 +58,11 @@ export default function Demo() {
   
   const handleSubmit = event => {
     fetch(`http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`)
-    // fetch(`https://pathfinder115.netlify.app/v0/data/${selectedDemand}/${selectedJob}`)
       .then((response) => {
         if (!response.ok) {
           throw response;
         }
-        let json = response.json();
-        console.log(json);
-        return json;
-        // return response.json();
+        return response.json();
       })
       .then((json) => {
         setData(json)
