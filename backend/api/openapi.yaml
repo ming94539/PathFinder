@@ -35,4 +35,4 @@ paths:
 components:
   schemas:
     Error:
-      type: object
+      type: array

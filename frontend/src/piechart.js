@@ -11,8 +11,19 @@ export default function PieChart() {
 
   const drawChart = () => {
     console.log('drawing chart with data:', data);
-    var keys = Object.keys(data).slice(0, 10);
-    var counts = Object.values(data).slice(0, 10);
+
+    // var keys = Object.keys(data).slice(0, 10);
+    // var counts = Object.values(data).slice(0, 10);
+
+    var keys = [];
+    var counts = [];
+
+    for (let i=0; i<10; ++i) {
+      keys.push(data[i].value);
+      counts.push(data[i].count);
+    }
+    
+    console.log('keys:', keys);
 
     if (keys.length == 0) return;
 
@@ -52,14 +63,15 @@ export default function PieChart() {
 
     arcs.append("text")
       .text(function(d) {
-        return keys[keys.length-d.index-1];
+        return keys[d.index];
+        // return keys[keys.length-d.index-1];
         // return 'text';
       })
       .attr("transform", function(d) {
         return "translate(" + arc.centroid(d) + ")";
       })
       .style("text-anchor", "middle")
-      .style("font-size", 17);
+      .style("font-size", 17)
 
       // arcs.transition() // transition of redrawn pie
       //   .duration(750) // 

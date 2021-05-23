@@ -1,12 +1,12 @@
 const db = require('./db');
 
-function formatData(data) {
-  let result = {};
-  for (let index in data) {
-    result[data[index].value] = data[index].count;
-  }
-  return result;
-}
+// function formatData(data) {
+//   let result = {};
+//   for (let index in data) {
+//     result[data[index].value] = data[index].count;
+//   }
+//   return result;
+// }
 
 // demand MUST match the alias used in its query template (ex: 's' for Skills s)
 // job should match one of our 
@@ -54,10 +54,8 @@ exports.getData = async (req, res) => {
 
   if (grab_all) {
     //formatting
-    let return_val = formatData(grab_all);
-    
-    console.log("200 status", return_val);
-    res.status(200).json(return_val);
+    console.log("200 status", grab_all);
+    res.status(200).json(grab_all);
     return;
   } else {
     console.log('404');
