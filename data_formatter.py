@@ -46,17 +46,26 @@ class DataFormatter:
         #     jobPosts[p] = word_tokenize(jobPosts[p])
         # return origPosts, jobPosts, id_list
 
-
+    
     def read_termsFile(self, termsFileName):
+        '''
+        @Input the path of the file to be opened
+        @Output return a list with each element a line in the file
+        '''
         termsFile = open(termsFileName,"r")
         terms = termsFile.readlines()
         print('opened:',termsFileName)
         print('number terms:',len(terms))
         keywords = [term.rstrip('\n').lower() for term in terms]
+        termsFile.close()
         return keywords
 
-
+    #
     def extract_seniority(self, o_P):
+        '''
+        @Input list of strings o_P may contain a line "Seniority Level" (Linkedin Post attribute)
+        @Output return the seniority level (standarlized) if there is one, the element (next line) after "Seniority Level" 
+        '''
         seniority_levels = ['Internship','Entry level','Associate','Mid-Senior level','Director','Executive']
         s_tag = ""
         s_boo =False
@@ -75,7 +84,7 @@ class DataFormatter:
             elif o_P[seniorityIndex] == "Not Applicable":
                 return -1
             else:
-                print("Doesn't exist in seniority levels, weird.")
+                print("Doesn't exist in Linkedin's standard seniority levels, weird.")
                 return -1
         else:
             return -1

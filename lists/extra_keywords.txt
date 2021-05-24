@@ -1,0 +1,26 @@
+ant
+avro
+beam
+camel
+druid
+flex
+flink
+flume
+hive
+ivy
+kafka
+mahout
+mesos
+mina
+nifi
+pig
+spark
+zeppelin
+Restful apis
+Recommendation systems
+Ranking systems
+Bigtable
+Targeting systems
+Segmentation
+Domain adaptation
+Anomaly detection
