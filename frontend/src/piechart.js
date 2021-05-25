@@ -11,18 +11,28 @@ export default function PieChart() {
 
   const drawChart = () => {
     console.log('drawing chart with data:', data);
-
     // var keys = Object.keys(data).slice(0, 10);
     // var counts = Object.values(data).slice(0, 10);
 
     var keys = [];
     var counts = [];
+    
+    /*
+      Since there is only 1 job title right now (webdeveloper), 
+      data.length will be always. Changes to 10 when querying for
+      skills
+     */
+    let varyingLen;
+    if(data.length == 1){
+      varyingLen = 1;
+    } else {
+      varyingLen = 10;
+    }
 
-    for (let i=0; i<10; ++i) {
+    for(let i =0; i <varyingLen; i++){
       keys.push(data[i].value);
       counts.push(data[i].count);
     }
-    
     console.log('keys:', keys);
 
     if (keys.length == 0) return;
