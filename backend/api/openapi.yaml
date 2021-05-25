@@ -18,10 +18,28 @@ paths:
       description: Returns array of all emails
       parameters:
         - in: query
-          name: demand
+          name: demandJobTitle
           schema:
             type: string
           description: check mailbox
+      responses:
+        200:
+          description: Emails Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          description: Unexpected Error
+  /v0/data/{selectedDemand}:
+    get:
+      description: Most popular field
+      parameters:
+        - in: query
+          name: demand
+          schema:
+            type: string
+          description: grab all job tables
       responses:
         200:
           description: Emails Response

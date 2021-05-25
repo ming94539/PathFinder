@@ -66,10 +66,16 @@ export default function Demo() {
     if(selectedDemand == 'Pick a Statement'){
       setSelectedDemand('Pick a Statement');
       alert("Please pick a statement");
-    } else if (selectedJob == 'Job Title') {
+    } else if(selectedDemand == 'Most Popular Fields') {
+      if(selectedJob!= 'Job Title'){
+        alert("Please do not select a job title");
+      }
+      return `http://localhost:3010/v0/data/${selectedDemand}`;  
+    }
+    else if (selectedJob == 'Job Title') {
       setSelectedJob('Job Title');
       alert("Please select a job title");
-    } else {
+    } else{
       return `http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`;
     }
   }
