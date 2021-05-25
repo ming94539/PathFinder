@@ -42,7 +42,7 @@ const StyledMenuItem = withStyles((theme) => ({
 }))(MenuItem);
 
 export default function Demo() {
-  const [selectedDemand, setSelectedDemand] = useState('Most in Demand Skills');
+  const [selectedDemand, setSelectedDemand] = useState('Pick a Statement');
   const [selectedJob, setSelectedJob] = useState('Job Title');
   const [data, setData] = useState({});
 
@@ -55,10 +55,28 @@ export default function Demo() {
     setSelectedJob(event.target.value);
     console.log('changed to:', event.target.value)
   }
-  
+  /*
+    Issue: This guarantees that the fetched in url is always valid.
+    When invalid url gets passed, connection to db breaks and 
+    prevents any  submit buttons from having dv, even is dropdown 
+    values change. Forcing us to reconnect via rs. 
+    Fix: Resets values to default, and alerts.
+   */
+  const constructURL = event => {
+    if(selectedDemand == 'Pick a Statement'){
+      setSelectedDemand('Pick a Statement');
+      alert("Please pick a statement");
+    } else if (selectedJob == 'Job Title') {
+      setSelectedJob('Job Title');
+      alert("Please select a job title");
+    } else {
+      return `http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`;
+    }
+  }
         
   const handleSubmit = event => {
-    fetch(`http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`)
+    let url = constructURL();
+    fetch(url)
       .then((response) => {
         if (!response.ok) {
           throw response;
@@ -84,9 +102,9 @@ export default function Demo() {
       >
         <div className="select">
           <select onChange={handleDemandChange}>
+            <option>Pick a Statement</option>
             <option>Most in Demand Skills</option>
-            <option>textholder</option>
-            <option>textholder</option>
+            <option>Most Popular Fields</option>
           </select>
         </div>
         <br/>
@@ -94,6 +112,7 @@ export default function Demo() {
           <select onChange={handleJobChange}>
             <option>Job Title</option>
             <option>Web Developer</option>
+            <option>null</option>
           </select>
         </div>
         <br/>
