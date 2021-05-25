@@ -29,7 +29,6 @@ app.use(
 
 // Paths that we need to write
 // Since we don't plan letting users add to DB, we only need GET 
-// app.get('/v0/data/', data.getData); // need to modify to enter arguments
 app.get('/v0/data/:s/:t', data.getSkillsWithJob);
 app.get('/v0/data/:s', data.getPopularFields);
 
@@ -45,12 +44,10 @@ app.use((err, req, res, next) => {
 // some stuff that may or may not be useful for deployment
 // https://www.freecodecamp.org/news/how-to-create-a-react-app-with-a-node-backend-the-complete-guide/
 // Have Node serve files for the React app
-// app.use(express.static(path.resolve(__dirname, '../frontend/build')));
 app.use(express.static(path.resolve(__dirname, 'build')));
 
 // Fallback for unhandled GET requests
 app.get('*', (req, res) => {
-  // res.sendFile(path.resolve(__dirname, '../../frontend/public', 'index.html'));
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 })
 

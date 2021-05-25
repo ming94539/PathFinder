@@ -40,7 +40,8 @@ export default function PieChart() {
 		var svg = d3.select("svg"),
 			width = svg.attr("width"),
 			height = svg.attr("height"),
-			radius = Math.min(width, height) / 2,
+      margin = 5,
+			radius = Math.min(width, height) / 2 - margin,
 			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
     var color = d3.scaleOrdinal()
@@ -75,7 +76,6 @@ export default function PieChart() {
       .text(function(d) {
         return keys[d.index];
         // return keys[keys.length-d.index-1];
-        // return 'text';
       })
       .attr("transform", function(d) {
         return "translate(" + arc.centroid(d) + ")";

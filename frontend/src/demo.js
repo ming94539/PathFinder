@@ -106,25 +106,28 @@ export default function Demo() {
         data, setData
       }}
       >
-        <div className="select">
-          <select onChange={handleDemandChange}>
-            <option>Pick a Statement</option>
-            <option>Most in Demand Skills</option>
-            <option>Most Popular Fields</option>
-          </select>
+        <div id="selections">
+          <div className="select">
+            <select onChange={handleDemandChange}>
+              <option>Pick a Statement</option>
+              <option>Most in Demand Skills</option>
+              <option>Most Popular Fields</option>
+            </select>
+          </div>
+          <br/><br/>
+          <div className="select">
+            <select onChange={handleJobChange}>
+              {/* Maybe these options can disappear when Most Popular Fields is selected? */}
+              <option>Job Title</option>
+              <option>Web Developer</option>
+              <option>null</option>
+            </select>
+          </div>
+          <br/><br/>
+          <button className="button is-primary" onClick={handleSubmit}>
+            Submit
+          </button>
         </div>
-        <br/>
-        <div className="select">
-          <select onChange={handleJobChange}>
-            <option>Job Title</option>
-            <option>Web Developer</option>
-            <option>null</option>
-          </select>
-        </div>
-        <br/>
-        <button className="button is-primary" onClick={handleSubmit}>
-          Submit
-        </button>
         <PieChart ></PieChart>
         <br/><br/>
       </SharedContext.Provider>

@@ -1,7 +1,19 @@
 const db = require('./db');
 
-// demand MUST match the alias used in its query template (ex: 's' for Skills s)
-// job should match one of our 
+async function callQuery(res, query) {
+  const result = await db.dbGet(query);
+
+  if (result) {
+    console.log("200 status", result);
+    res.status(200).json(result);
+    return;
+  } else {
+    console.log('404');
+    res.status(404).send();
+    return;
+  }
+}
+
 exports.getSkillsWithJob = async (req, res) => {
 
   let demand = req.params.s;
@@ -46,17 +58,19 @@ exports.getSkillsWithJob = async (req, res) => {
   }
 
   console.log('USING QUERY:', query);
-  const grab_all = await db.dbGet(query);
+  // const grab_all = await db.dbGet(query);
 
-  if (grab_all) {
-    console.log("200 status", grab_all);
-    res.status(200).json(grab_all);
-    return;
-  } else {
-    console.log('404');
-    res.status(404).send();
-    return;
-  }
+  await callQuery(res, query);
+
+  // if (grab_all) {
+  //   console.log("200 status", grab_all);
+  //   res.status(200).json(grab_all);
+  //   return;
+  // } else {
+  //   console.log('404');
+  //   res.status(404).send();
+  //   return;
+  // }
 };
 
 exports.getPopularFields = async (req, res) => {
@@ -79,15 +93,17 @@ exports.getPopularFields = async (req, res) => {
   and table_name != 'jobidtable' and table_name != 'education' 
   ) t order by count DESC`;
 
-  const validQuery = await db.dbGet(rowsOfJobTitles);
-  if (validQuery) {
-    console.log("200 status", validQuery);
-    res.status(200).json(validQuery);
-    return;
-  } else {
-    console.log('404');
-    res.status(404).send();
-    return;
-  }
+  await callQuery(res, rowsOfJobTitles);
+
+  // const validQuery = await db.dbGet(rowsOfJobTitles);
+  // if (validQuery) {
+  //   console.log("200 status", validQuery);
+  //   res.status(200).json(validQuery);
+  //   return;
+  // } else {
+  //   console.log('404');
+  //   res.status(404).send();
+  //   return;
+  // }
 
 };
