@@ -23,7 +23,7 @@ class Crawler:
         self.engine = create_engine(conn_string)
         self.browser = self.init_browser(is_headless = is_headless)
         self.scraper = Scraper(is_headless = is_headless)
-        self.formatter = DataFormatter("final_keywords.txt")
+        self.formatter = DataFormatter()
         self.output_file = open("results.txt","a+")
         self.formatted_output = open("formatted.txt","a")
 
