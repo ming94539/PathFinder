@@ -10,6 +10,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
 import SendIcon from '@material-ui/icons/Send';
 import PieChart from './piechart';
+import './style.css';
 const StyledMenu = withStyles({
   paper: {
     border: '1px solid #d3d4d5',
@@ -46,6 +47,17 @@ export default function Demo() {
   const [selectedJob, setSelectedJob] = useState('Job Title');
   const [data, setData] = useState({});
   const [chartDrawn, setChartDrawn] = useState(false);
+  const [cards, setCards] = useState([
+    (<div className="card">
+      <div className="card-image">
+        <p>image here</p>
+      </div>
+      <div className="card-content">
+        <p>content here</p>
+      </div>
+    </div>
+    )
+  ]);
 
   useEffect(() => {
     console.log('dispatching with data:', data);
@@ -73,22 +85,37 @@ export default function Demo() {
   const constructURL = event => {
     if(selectedDemand == 'Pick a Statement'){
       setSelectedDemand('Pick a Statement');
-      alert("Please pick a statement");
+      // alert("Please pick a statement");
     } else if(selectedDemand == 'Most Popular Fields') {
       if(selectedJob!= 'Job Title'){
-        alert("Please do not select a job title");
+        // alert("Please do not select a job title");
       }
       return `http://localhost:3010/v0/data/${selectedDemand}`;  
     }
     else if (selectedJob == 'Job Title') {
       setSelectedJob('Job Title');
-      alert("Please select a job title");
+      // alert("Please select a job title");
     } else{
       return `http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`;
     }
   }
 
   const handleSubmit = event => {
+    setCards(prevCards => {
+      return ([
+        ...prevCards,
+        (<div className="card">
+          <div className="card-image">
+            <p>image here</p>
+          </div>
+          <div className="card-content">
+            <p>content here</p>
+          </div>
+        </div>
+        )
+      ])
+    });
+
     let url = constructURL();
     fetch(url)
       .then((response) => {
@@ -98,16 +125,14 @@ export default function Demo() {
         return response.json();
       })
       .then((json) => {
-        setData(json);
-        setChartDrawn(true);
+        // setData(json);
+        // setChartDrawn(true);
       })
       .catch((error) => {
         // should throw some user interface
-          alert('invalid input');
+          // alert('invalid input');
       });
   }
-
-
 
   return (
     <div>
@@ -118,8 +143,12 @@ export default function Demo() {
         chartDrawn, setChartDrawn
       }}
       >
+
         <div id="selections">
-          <div className="select">
+          <div className="scrolling-wrapper">
+            {cards}
+          </div>
+          {/* <div className="select">
             <select onChange={handleDemandChange}>
               <option>Pick a Statement</option>
               <option>Most in Demand Skills</option>
@@ -127,11 +156,10 @@ export default function Demo() {
               <option>Most Popular Fields</option>
               <option>What Degrees are Needed</option>
             </select>
-          </div>
+          </div> */}
           <br/><br/>
           <div className="select">
             <select onChange={handleJobChange}>
-              {/* Maybe these options can disappear when Most Popular Fields is selected? */}
               <option>Job Title</option>
               <option>Web Developer</option>
               <option>null</option>
