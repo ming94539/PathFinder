@@ -11,31 +11,33 @@ export default function PieChart() {
 
   const drawChart = () => {
     console.log('drawing chart with data:', data);
-    // var keys = Object.keys(data).slice(0, 10);
-    // var counts = Object.values(data).slice(0, 10);
 
     var keys = [];
     var counts = [];
     
     /*
-      Since there is only 1 job title right now (webdeveloper), 
-      data.length will be always. Changes to 10 when querying for
-      skills
+      Up to the first 10 entries of data
      */
-    let varyingLen;
-    if(data.length == 1){
-      varyingLen = 1;
-    } else {
-      varyingLen = 10;
-    }
+    let data_len = Object.keys(data).length;
+    let cnt = data_len < 10 ? data_len : 10;
 
-    for(let i =0; i <varyingLen; i++){
+    for (let i=0; i < cnt; ++i) {
       keys.push(data[i].value);
       counts.push(data[i].count);
     }
-    console.log('keys:', keys);
 
-    if (keys.length == 0) return;
+
+    // const DATA_LIMIT = 10;
+    // let data_len = Object.keys(data).length;
+    // if (data_len == 0) return;
+    // let trunc_data = data;
+
+    // if (data_len > DATA_LIMIT) {
+    //   for (let i=0; i < DATA_LIMIT; ++i) {
+    //     trunc_data.push(data[i]);
+    //   }
+    // }
+
 
 		var svg = d3.select("svg"),
 			width = svg.attr("width"),
@@ -82,6 +84,13 @@ export default function PieChart() {
       })
       .style("text-anchor", "middle")
       .style("font-size", 17)
+
+    // var path = arcs.selectAll('path')
+    //   .data(pie(trunc_data))
+    //   .enter()
+    //   .append('path')
+    //   .attr('d', arc)
+    //   .attr('fill')
 
       // arcs.transition() // transition of redrawn pie
       //   .duration(750) // 
