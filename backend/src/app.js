@@ -29,7 +29,7 @@ app.use(
 
 // Paths that we need to write
 // Since we don't plan letting users add to DB, we only need GET 
-app.get('/v0/data/:s/:t', data.getSkillsWithJob);
+app.get('/v0/data/:s/:t', data.getDemandWithJob);
 app.get('/v0/data/:s', data.getPopularFields);
 
 // app use (dont ask me)

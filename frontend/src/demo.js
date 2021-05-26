@@ -123,7 +123,9 @@ export default function Demo() {
             <select onChange={handleDemandChange}>
               <option>Pick a Statement</option>
               <option>Most in Demand Skills</option>
+              <option>Most in Demand Languages</option>
               <option>Most Popular Fields</option>
+              <option>What Degrees are Needed</option>
             </select>
           </div>
           <br/><br/>
