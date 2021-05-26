@@ -1488,7 +1488,7 @@ razor
 rdbms
 rdms
 rdp
-react native
+react
 reactive code
 reactive pattern
 reactive programming

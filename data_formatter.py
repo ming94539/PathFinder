@@ -137,11 +137,19 @@ class DataFormatter:
         return list(set(skills))
 
     def extract_languages(self, post,languages):
+        '''
+        @Input ASSUMES that the a language won't appear as the first or last word, the occurence of that happening
+        is very not likely (these job posts always have starting/ending words), so didn't put in the case to handle
+        otherwise
+        '''
         lang = []
         for key in languages:
-            key= " "+key+" "
-            if key in post:
-                lang.append(key.strip())
+            key2= " "+key+" "
+            if key2 in post:
+                lang.append(key2.strip())
+            elif (key in post) and (post.index(key) == 0 or post.index(key) == len(post)-len(key)):
+                #the first word or last word
+                lang.append(key)
        #print('SKILLS',set(skills))
         return list(set(lang))
 
@@ -169,7 +177,10 @@ class DataFormatter:
             return []
     def extract_yoe(self, post):
         tokenize = post.split(' ')
-        yoe_variation = ['years of experience','years of full time','years full time','years industry experience','years of industry experience','years work experience','years of work experience']
+        yoe_variation = ['years of experience',
+        'years of full time','years full time',
+        'years industry experience','years of industry experience',
+        'years work experience','years of work experience']
         for w in range(len(tokenize)):
             if tokenize[w].isdigit():
                 #print(tokenize[w-5:w],tokenize[w],tokenize[w+1:w+5])
@@ -181,7 +192,11 @@ class DataFormatter:
         return -1
 
 
-    def data_extraction(self, job_name):    
+    def data_extraction(self, job_name):  
+        '''
+        @Input self.jobPosts is a list of strings. Each job post is a long string with each word 
+        lower cased. Punctuations are removed.
+        '''      
         output = {}
         for i in range(len(self.jobPosts)):  
             output[self.id_list[i]] = {}
