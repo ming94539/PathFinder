@@ -12,8 +12,13 @@ CREATE TABLE Industries (
 
 CREATE TABLE Education (
   jobID VARCHAR(15) NOT NULL,
-  degreeTitle VARCHAR(50),
   educationLevel VARCHAR(1),
+  FOREIGN KEY (jobID) REFERENCES JobIDTable(jobID)
+);
+
+CREATE TABLE Degree (
+  jobID VARCHAR(15) NOT NULL,
+  degreeTitle VARCHAR(50) NOT NULL,
   FOREIGN KEY (jobID) REFERENCES JobIDTable(jobID)
 );
 
