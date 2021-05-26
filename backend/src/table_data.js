@@ -25,6 +25,8 @@ exports.getSkillsWithJob = async (req, res) => {
   switch(demand) {
     case('Most in Demand Skills'):
       demand='s'; break;
+    case('Most in Demand Languages'):
+      demand='l'; break;
     case('Most Popular Fields'):
       demand='f'; break;
     default:
@@ -44,11 +46,22 @@ exports.getSkillsWithJob = async (req, res) => {
     GROUP BY s.skill
     ORDER BY count DESC
   `;
+
+    // Most popular language 
+    let languageDemand = `
+    SELECT l.language as value, COUNT(*) AS count
+    FROM Languages l ${jobTitleMatch}
+    GROUP BY l.language
+    ORDER BY count DESC
+  `;
   
   let query = '';
   switch(demand) {
     case 's':
       query = skillDemand;
+      break;
+    case 'l':
+      query = languageDemand;
       break;
     case 'f':
       query = rowsOfJobTitles;
