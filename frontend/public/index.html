@@ -6,25 +6,27 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/87af7ede63.css">
 </head>
 <style>
-    #root {
+    /* #root {
         padding: 100px 150px;
-    }
+    } */
     .title {
         text-align: center;
     }
     #menu {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+        position: absolute;
+        top: 25%;
     }
     html {
         background-color: LightGrey;
+    }
+    .box {
+        height: 400px;
     }
 </style>
 <body>
     <h1 class="title mt-6">PathFinder</h1>
     <div class="columns is-mobile is-centered">
-        <div class="column is-vcentered is-three-quarters">
+        <div class="column is-vcentered">
             <div class="box mt-6">
                 <div class="columns is-mobile is-centered">
                     <div class="column is-one-third">
@@ -32,7 +34,7 @@
                     </div>
                     <div class="column is-one-third">
                         <div id="piechart">
-                            <svg width="350" height="350"></svg>
+                            <!-- <svg width="350" height="350"></svg> -->
                     </div>
                 </div>
             </div>

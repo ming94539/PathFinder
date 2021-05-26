@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import SharedContext from './SharedContext';
 import {withStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -45,6 +45,13 @@ export default function Demo() {
   const [selectedDemand, setSelectedDemand] = useState('Pick a Statement');
   const [selectedJob, setSelectedJob] = useState('Job Title');
   const [data, setData] = useState({});
+  const [chartDrawn, setChartDrawn] = useState(false);
+
+  useEffect(() => {
+    console.log('dispatching with data:', data);
+    const updateEvt = new CustomEvent('chartUpdate', {detail: data});
+    document.dispatchEvent(updateEvt);
+  })
 
   const handleDemandChange = event => {
     setSelectedDemand(event.target.value);
@@ -55,6 +62,7 @@ export default function Demo() {
     setSelectedJob(event.target.value);
     console.log('changed to:', event.target.value)
   }
+
   /*
     Issue: This guarantees that the fetched in url is always valid.
     When invalid url gets passed, connection to db breaks and 
@@ -79,7 +87,7 @@ export default function Demo() {
       return `http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`;
     }
   }
-        
+
   const handleSubmit = event => {
     let url = constructURL();
     fetch(url)
@@ -90,7 +98,8 @@ export default function Demo() {
         return response.json();
       })
       .then((json) => {
-        setData(json)
+        setData(json);
+        setChartDrawn(true);
       })
       .catch((error) => {
         // should throw some user interface
@@ -98,12 +107,15 @@ export default function Demo() {
       });
   }
 
+
+
   return (
     <div>
       <SharedContext.Provider value={{
         selectedDemand, setSelectedDemand,
         selectedJob, setSelectedJob,
-        data, setData
+        data, setData,
+        chartDrawn, setChartDrawn
       }}
       >
         <div id="selections">
@@ -128,7 +140,7 @@ export default function Demo() {
             Submit
           </button>
         </div>
-        <PieChart ></PieChart>
+        <PieChart data={data}></PieChart>
         <br/><br/>
       </SharedContext.Provider>
     </div>
