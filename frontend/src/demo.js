@@ -82,20 +82,20 @@ export default function Demo() {
         
   const handleSubmit = event => {
     let url = constructURL();
-    fetch(url)
-      .then((response) => {
-        if (!response.ok) {
-          throw response;
-        }
-        return response.json();
-      })
-      .then((json) => {
-        setData(json)
-      })
-      .catch((error) => {
-        // should throw some user interface
-          alert('invalid input');
-      });
+    // fetch(url)
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       throw response;
+    //     }
+    //     return response.json();
+    //   })
+    //   .then((json) => {
+    //     setData(json)
+    //   })
+    //   .catch((error) => {
+    //     // should throw some user interface
+    //       alert('invalid input');
+    //   });
   }
 
   return (
