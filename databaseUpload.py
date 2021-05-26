@@ -174,13 +174,13 @@ def db_uploadFunction(dbup_table):
 		degreeTitle = dbup_table['degreeTitle']
 		for d in degreeTitle:
 			insert_EducationTable = f"""
-			    INSERT INTO Degree (jobID, degreeTitle)
+			    INSERT INTO Degrees (jobID, degreeTitle)
 			    VALUES ({jobID}, '{d}')
 			"""
 			db.add_stmt(insert_EducationTable)
 	elif validationResults[DEGREE_TITLE] == -1:
 		degreeTitle = dbup_table['degreeTitle']
-		eprint(f"Error: Invalid degreeTitle '{degreeTitle}' in jobID {jobID}, skipping insertion into Degree table")	
+		eprint(f"Error: Invalid degreeTitle '{degreeTitle}' in jobID {jobID}, skipping insertion into Degrees table")	
 
 	# Insert to skills table
 	if validationResults[SKILLS] == 0:
