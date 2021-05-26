@@ -114,12 +114,34 @@ def db_uploadFunction(dbup_table):
 	if validationResults[SENIORITY] != -1 and validationResults[YEARS_OF_EXPERIENCE] != -1:
 		seniority = dbup_table['seniority']
 		yoe = dbup_table['yoe']
-		insert_JobTable = f"""
-		    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
-		    VALUES ({jobID}, '{seniority}', '{yoe}')
-		"""
+		if validationResults[SENIORITY] == None and validationResults[YEARS_OF_EXPERIENCE] == None:
+			insert_JobTable = f"""
+			    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
+			    VALUES ({jobID}, NULL, NULL)
+			"""			
+		elif validationResults[SENIORITY] == None:
+			insert_JobTable = f"""
+			    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
+			    VALUES ({jobID}, NULL, '{yoe}')
+			"""
+		elif validationResults[YEARS_OF_EXPERIENCE] == None:
+			insert_JobTable = f"""
+			    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
+			    VALUES ({jobID}, '{seniority}', NULL)
+			"""		
+		else:
+			insert_JobTable = f"""
+			    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
+			    VALUES ({jobID}, '{seniority}', '{yoe}')
+			"""
 		db.add_stmt(insert_JobTable)
 	else:
+		if validationResults[SENIORITY] == -1:
+			seniority = dbup_table['seniority']
+			eprint(f"Error: Invalid seniority value '{seniority}' in jobID {jobID}")
+		if validationResults[YEARS_OF_EXPERIENCE] == -1:
+			yoe = dbup_table['yoe']
+			eprint(f"Error: Invalid yoe value '{yoe}' in jobID {jobID}")
 		return -1
 
 	# Insert to industries table
@@ -131,18 +153,34 @@ def db_uploadFunction(dbup_table):
 			    VALUES ({jobID}, '{i}')
 			"""
 			db.add_stmt(insert_IndustyTable)
+	elif validationResults[INDUSTRY] == -1:
+		industry = dbup_table['industry']
+		eprint(f"Error: Invalid industry '{industry}' in jobID {jobID}, skipping insertion into Industries table")
 	
 	# Insert to education table
-	# todo: check validation results for NULL values in degree title and education level
-	if validationResults[DEGREE_TITLE] == 0 and validationResults[EDUCATION_LEVEL] == 0:
-		degreeTitle = dbup_table['degreeTitle']
+	if validationResults[EDUCATION_LEVEL] == 0:
 		educationLevel = dbup_table['educationLevel']
-		for d, e in education(degreeTitle, educationLevel):
+		for e in educationLevel:
 			insert_EducationTable = f"""
-			    INSERT INTO Education (jobID, degreeTitle, educationLevel)
-			    VALUES ({jobID}, '{d}', '{e}')
+			    INSERT INTO Education (jobID, educationLevel)
+			    VALUES ({jobID}, '{e}')
 			"""
-			db.add_stmt(insert_EducationTable)	
+			db.add_stmt(insert_EducationTable)
+	elif validationResults[EDUCATION_LEVEL] == -1:
+		educationLevel = dbup_table['educationLevel']
+		eprint(f"Error: Invalid educationLevel '{educationLevel}' in jobID {jobID}, skipping insertion into Education table")
+
+	if validationResults[DEGREE_TITLE] == 0:
+		degreeTitle = dbup_table['degreeTitle']
+		for d in degreeTitle:
+			insert_EducationTable = f"""
+			    INSERT INTO Degrees (jobID, degreeTitle)
+			    VALUES ({jobID}, '{d}')
+			"""
+			db.add_stmt(insert_EducationTable)
+	elif validationResults[DEGREE_TITLE] == -1:
+		degreeTitle = dbup_table['degreeTitle']
+		eprint(f"Error: Invalid degreeTitle '{degreeTitle}' in jobID {jobID}, skipping insertion into Degrees table")	
 
 	# Insert to skills table
 	if validationResults[SKILLS] == 0:
@@ -153,6 +191,9 @@ def db_uploadFunction(dbup_table):
 			    VALUES ({jobID}, '{s}')
 			"""
 			db.add_stmt(insert_SkillsTable)
+	elif validationResults[SKILLS] == -1:
+		skills = dbup_table['skills']
+		eprint(f"Error: Invalid skills '{skills}' in jobID {jobID}, skipping insertion into Skills table")
 
 	# Insert to languages table
 	if validationResults[LANGUAGES] == 0:
@@ -163,6 +204,9 @@ def db_uploadFunction(dbup_table):
 			    VALUES ({jobID}, '{l}')
 			"""
 			db.add_stmt(insert_LanguagesTable)
+	elif validationResults[LANGUAGES] == -1:
+		languages = dbup_table['languages']
+		eprint(f"Error: Invalid languages '{languages}' in jobID {jobID}, skipping insertion into Languages table")
 
 	db.execute()
 	return 0
