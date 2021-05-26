@@ -58,19 +58,7 @@ exports.getSkillsWithJob = async (req, res) => {
   }
 
   console.log('USING QUERY:', query);
-  // const grab_all = await db.dbGet(query);
-
   await callQuery(res, query);
-
-  // if (grab_all) {
-  //   console.log("200 status", grab_all);
-  //   res.status(200).json(grab_all);
-  //   return;
-  // } else {
-  //   console.log('404');
-  //   res.status(404).send();
-  //   return;
-  // }
 };
 
 exports.getPopularFields = async (req, res) => {
@@ -90,20 +78,8 @@ exports.getPopularFields = async (req, res) => {
       query_to_xml(format('select count(*) as cnt from %I.%I', table_schema, table_name), false, true, '') as xml_count
       from information_schema.tables
   where table_schema = 'public' and table_name != 'skills' and table_name != 'languages' and table_name != 'industries' 
-  and table_name != 'jobidtable' and table_name != 'education' 
+  and table_name != 'jobidtable' and table_name != 'education' and table_name != 'degree' 
   ) t order by count DESC`;
 
   await callQuery(res, rowsOfJobTitles);
-
-  // const validQuery = await db.dbGet(rowsOfJobTitles);
-  // if (validQuery) {
-  //   console.log("200 status", validQuery);
-  //   res.status(200).json(validQuery);
-  //   return;
-  // } else {
-  //   console.log('404');
-  //   res.status(404).send();
-  //   return;
-  // }
-
 };
