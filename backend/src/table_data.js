@@ -14,7 +14,7 @@ async function callQuery(res, query) {
   }
 }
 
-exports.getSkillsWithJob = async (req, res) => {
+exports.getDemandWithJob = async (req, res) => {
 
   let demand = req.params.s;
   let job = req.params.t.replace(/ /g, '');
@@ -27,6 +27,8 @@ exports.getSkillsWithJob = async (req, res) => {
       demand='s'; break;
     case('Most in Demand Languages'):
       demand='l'; break;
+    case('What Degrees are Needed'):
+      demand='d'; break;
     case('Most Popular Fields'):
       demand='f'; break;
     default:
@@ -54,6 +56,14 @@ exports.getSkillsWithJob = async (req, res) => {
     GROUP BY l.language
     ORDER BY count DESC
   `;
+
+    // Most popular language 
+    let degreeDemand = `
+    SELECT d.degreetitle as value, COUNT(*) AS count
+    FROM Degree d ${jobTitleMatch}
+    GROUP BY d.degreetitle
+    ORDER BY count DESC
+  `;
   
   let query = '';
   switch(demand) {
@@ -62,6 +72,9 @@ exports.getSkillsWithJob = async (req, res) => {
       break;
     case 'l':
       query = languageDemand;
+      break;
+    case 'd':
+      query = degreeDemand;
       break;
     case 'f':
       query = rowsOfJobTitles;
