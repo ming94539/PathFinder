@@ -58,7 +58,6 @@ exports.getSkillsWithJob = async (req, res) => {
   }
 
   console.log('USING QUERY:', query);
-
   await callQuery(res, query);
 };
 
