@@ -215,7 +215,7 @@ class TestDataFormatter(unittest.TestCase):
 		self.assertEqual(dataformatter.origPosts,['50+ years of experience??!@#$%^&*()_+ python. a-b testing'])
 		self.assertEqual(dataformatter.jobPosts,['50+ years of experience # _+ python a-b testing'])
 		self.assertEqual(dataformatter.id_list,[123456789])
-	
+		os.remove("test_jobs.txt")
 	
 	
 if __name__ == '__main__':
