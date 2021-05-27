@@ -8,7 +8,7 @@ import * as d3 from 'd3';
  */
 
 export default function PieChart(props) {
-  const {data, setData, chartDrawn, setChartDrawn} =
+  const {data, setData, chartDrawn, setChartDrawn, numCards, setNumCards} =
   React.useContext(SharedContext);
 
   const drawChart = () => {
@@ -81,7 +81,9 @@ export default function PieChart(props) {
    * Referenced:
    * https://codepen.io/thecraftcoderpdx/pen/jZyzKo
    */
-  const drawChart2 = (arg) => {
+  const drawChart2 = () => {
+    console.log('drawing chart at pie:', `#pie${numCards}`);
+    console.log('data:', data);
 
     let svg = d3.select('svg');
     // let width = svg.attr('width');
@@ -101,7 +103,7 @@ export default function PieChart(props) {
     var color = d3.scaleOrdinal(d3.schemeSet3);
     // more color scales: https://bl.ocks.org/pstuffa/3393ff2711a53975040077b7453781a9
 
-    svg = d3.select('#piechart') // select element in the DOM with id 'chart'
+    svg = d3.select(`#pie${numCards}`) // select element in the DOM with id 'chart'
       .append('svg') // append an svg element to the element we've selected
       .attr('width', width) // set the width of the svg element we just added
       .attr('height', height) // set the height of the svg element we just added
@@ -120,7 +122,7 @@ export default function PieChart(props) {
       .attr('class', 'legend');
 
     // define tooltip
-    var tooltip = d3.select('#piechart') // select element in the DOM with id 'chart'
+    var tooltip = d3.select(`#pie${numCards}`) // select element in the DOM with id 'chart'
       .append('div') // append a div element to the element we've selected                                    
       .attr('class', 'tooltip'); // add class 'tooltip' on the divs we just selected
 
@@ -193,7 +195,7 @@ export default function PieChart(props) {
     document.addEventListener('chartUpdate', function(event) {
       const newData = event.detail;
       // const newData = event.detail;
-      console.log('data in listener:', newData);
+      // console.log('data in listener:', newData);
       // console.log('path before update:', path, data);
       path = path.data(pie(newData)); // update pie with new data
       // console.log('path after update:', path, data);

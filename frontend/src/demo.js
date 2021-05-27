@@ -49,14 +49,10 @@ export default function Demo() {
   const [chartDrawn, setChartDrawn] = useState(false);
   
   const handleSubmit = event => {
-    setSelectedDemand(event.target.value);
-
-    setCards(prevCards => {
-      return ([
-        ...prevCards,
-        newCard(selectedJob)
-      ])
-    });
+    let demand = event.target.innerHTML;
+    console.log('selected demand:', demand);
+    setSelectedDemand(demand);
+    // setSelectedDemand(event.target.value);
 
     // let url = constructURL();
     let url = `http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`;
@@ -69,7 +65,11 @@ export default function Demo() {
       })
       .then((json) => {
         // setData(json);
-        // setChartDrawn(true);
+        setData([
+          {'less': 8},
+          {'adobe photoshop': 5},
+        ])
+        setChartDrawn(true);
       })
       .catch((error) => {
         // should throw some user interface
@@ -77,34 +77,55 @@ export default function Demo() {
       });
   }
 
+  const addCard = () => {
+    setCards(prevCards => {
+      return ([
+        ...prevCards,
+        newCard(selectedJob)
+      ])
+    });
+    setNumCards(prevNumCards => {
+      return prevNumCards+1;
+    })
+  }
+
+  // const handleSelectDemand = event => {
+  //   setSelectedDemand(event.target.innerHTML);
+  // }
+  
+  const [numCards, setNumCards] = useState(0);
+
   const newCard = selectedJob => {
     return (
       <div className="card">
-        <header class="card-header">
-          <p class="card-header-title">{selectedJob}</p> 
+        <header className="card-header">
+          <p className="card-header-title">{selectedJob}</p> 
         </header>
         <div className="box">
-  
+          <div id={`pie${numCards}`}></div>
+          <PieChart />
         </div>
           <div className="card-content">
           <p>content here</p>
         </div>
-        <footer class="card-footer">
-          <button className="button is-primary" onClick={handleSubmit}> Language</button>
-          <button className="button is-primary" onClick={handleSubmit}> Skills</button>
+        <footer className="card-footer">
+          <button className="button is-primary" onClick={handleSubmit}>Language</button>
+          <button className="button is-primary" onClick={handleSubmit}>Skills</button>
         </footer>
       </div>
     )
   }
 
+  // setNumCards(prevNumCards => {
+  //   return prevNumCards+1;
+  // });
   const [cards, setCards] = useState([newCard('Web Developer')]);
+  // setCards([newCard('Web Developer')]);
 
-
-
-  
 
   useEffect(() => {
-    console.log('dispatching with data:', data);
+    // console.log('dispatching with data:', data);
+    // console.log('effect');
     const updateEvt = new CustomEvent('chartUpdate', {detail: data});
     document.dispatchEvent(updateEvt);
   })
@@ -135,7 +156,10 @@ export default function Demo() {
     // }
   // }
 
-  
+  const handleJobChange = event => {
+    setSelectedJob(event.target.value);
+    console.log(event.target.value)
+  }
 
   return (
     <div>
@@ -143,7 +167,8 @@ export default function Demo() {
         selectedDemand, setSelectedDemand,
         selectedJob, setSelectedJob,
         data, setData,
-        chartDrawn, setChartDrawn
+        chartDrawn, setChartDrawn,
+        numCards, setNumCards
       }}
       >
 
@@ -169,11 +194,11 @@ export default function Demo() {
             </select>
           </div>
           <br/><br/>
-          <button className="button is-primary" onClick={handleSubmit}>
+          <button className="button is-primary" onClick={addCard}>
             Submit
           </button>
         </div>
-        <PieChart data={data}></PieChart>
+        {/* <PieChart ></PieChart> */}
         <br/><br/>
       </SharedContext.Provider>
     </div>
