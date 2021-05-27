@@ -3,15 +3,36 @@ from data_formatter import DataFormatter
 import os
 
 class TestDataFormatter(unittest.TestCase):
+	def test_integration(self):
+		print("\n###################### integration_test ######################\n")
+		test_jobs_file = open("dataformatter_QA/one_jobpost.txt","r")
+		dataformatter.preprocessing(test_jobs_file)
+		test_jobs_file.close()
+		for i in range(len(dataformatter.jobPosts)):  
+			o_P = dataformatter.origPosts[i].split('\n')
+			self.assertEqual(dataformatter.extract_seniority(o_P),-1)
+			#INDUSTRY
+			self.assertEqual(dataformatter.extract_industry(o_P,dataformatter.linkedin_industries),["Information Technology and Services","Computer Software","Internet"])
+			#Keyword Extraction -----
+			#Languages
+			self.assertEqual(set(dataformatter.extract_languages(dataformatter.jobPosts[i],dataformatter.languages)),set(['java','javascript']))
+			#TECH SKILLS
+			self.assertEqual(set(dataformatter.extract_tech_terms(dataformatter.jobPosts[i], dataformatter.keywords)),set(['database','testing','product','zoom','communication','web application','linux','software development','mvc']))
+			#Degree level
+			self.assertEqual(dataformatter.extract_degree_lvl(dataformatter.jobPosts[i]),['b'])
+			#DEGREE TITLE
+			self.assertEqual(dataformatter.extract_degree_title(dataformatter.jobPosts[i]),['computer science'])
+			#YoE
+			self.assertEqual(dataformatter.extract_yoe(dataformatter.jobPosts[i]),-1)
 
 	def test_read_termsFile(self):
 		print("\n###################### Testing read_termsFile ######################\n")
-		test_termsFile = open("test_termsFile.txt","w+")
-		test_termsFile.writelines(['python\n','java\n','rust\n'])
-		test_termsFile.close()
-		output = dataformatter.read_termsFile("test_termsFile.txt")
+		test_terms_file = open("test_terms_file.txt","w+")
+		test_terms_file.writelines(['python\n','java\n','rust\n'])
+		test_terms_file.close()
+		output = dataformatter.read_termsFile("test_terms_file.txt")
 		self.assertEqual(output,['python','java','rust'])
-		os.remove("test_termsFile.txt")
+		os.remove("test_terms_file.txt")
 	
 	def test_extract_seniority(self):
 		print("\n###################### Testing extract_seniority ######################\n")
@@ -67,9 +88,9 @@ class TestDataFormatter(unittest.TestCase):
 		lang = dataformatter.extract_languages(jp,dataformatter.languages)
 		self.assertEqual(set(lang),set(["python"]))
 
-		jp = " java python "
+		jp = " java python sql nosql html css scss"
 		lang = dataformatter.extract_languages(jp,dataformatter.languages)
-		self.assertEqual(set(lang),set(["java","python"]))
+		self.assertEqual(set(lang),set(["java","python","sql","nosql","html","css","scss"]))
 
 		jp = " pythonn javascript java ruby "
 		lang = dataformatter.extract_languages(jp,dataformatter.languages)
@@ -160,6 +181,43 @@ class TestDataFormatter(unittest.TestCase):
 		y = dataformatter.extract_yoe(jp)
 		self.assertEqual(y,-1)
 
+	def test_preprocessing(self):
+		print("\n###################### Testing preprocessing ######################\n")
+		#Testing just 1 job post
+		test_jobs_file = open("test_jobs.txt","w+")
+		test_jobs_file.write('BREAK123456789\nHello World, this is just a testing string')
+		test_jobs_file.close()
+		test_jobs_file = open("test_jobs.txt","r")
+		dataformatter.preprocessing(test_jobs_file)
+		test_jobs_file.close()
+		self.assertEqual(dataformatter.origPosts,['Hello World, this is just a testing string'])
+		self.assertEqual(dataformatter.jobPosts,['hello world this is just a testing string'])
+		self.assertEqual(dataformatter.id_list,[123456789])
+		os.remove("test_jobs.txt")
+		#Testing 2 job posts with multiple lines each
+		test_jobs_file = open("test_jobs.txt","w+")
+		test_jobs_file.write('BREAK123456789\nHello World, this is just a testing string\nHello people\nBREAK53234\nYesss!\nGuacomole')
+		test_jobs_file.close()
+		test_jobs_file = open("test_jobs.txt","r")
+		dataformatter.preprocessing(test_jobs_file)
+		test_jobs_file.close()
+		self.assertEqual(dataformatter.origPosts,['Hello World, this is just a testing string\nHello people\n', 'Yesss!\nGuacomole'])
+		self.assertEqual(dataformatter.jobPosts,['hello world this is just a testing string hello people ','yesss guacomole'])
+		self.assertEqual(dataformatter.id_list,[123456789,53234])
+		os.remove("test_jobs.txt")
+		#Testing replacing symbols with spaces (except +) but with no consecutive spaces
+		test_jobs_file = open("test_jobs.txt","w+")
+		test_jobs_file.write('BREAK123456789\n50+ years of experience??!@#$%^&*()_+ python. a-b testing')
+		test_jobs_file.close()
+		test_jobs_file = open("test_jobs.txt","r")
+		dataformatter.preprocessing(test_jobs_file)
+		test_jobs_file.close()
+		self.assertEqual(dataformatter.origPosts,['50+ years of experience??!@#$%^&*()_+ python. a-b testing'])
+		self.assertEqual(dataformatter.jobPosts,['50+ years of experience # _+ python a-b testing'])
+		self.assertEqual(dataformatter.id_list,[123456789])
+	
+	
+	
 if __name__ == '__main__':
 	dataformatter = DataFormatter()
 	print("Entire Test ASSUMES keywords (tech terms, keywords, degree title/level) wont be the first or last word as it doesnt rly happen, (there's space before or after words)")

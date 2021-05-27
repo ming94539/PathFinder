@@ -5,13 +5,28 @@ from databaseUpload import db_uploadFunction
 class DataFormatter:
     def __init__(self, termsFile = "lists/final_keywords2.txt", 
                     languages = "lists/topLanguages.txt", 
-                    industries = "lists/linkedin_industries.txt"):
+                    industries = "lists/linkedin_industries.txt",
+                    extra = "lists/extra_keywords.txt",
+                    bug_file = "lists/bug_keywords.txt"):
         self.keywords = self.read_termsFile(termsFile)
+        self.bug_words = self.read_termsFile(bug_file)
+        self.extra_words = self.read_termsFile(extra)
+
         self.languages = self.read_termsFile(languages)
         self.linkedin_industries = open(industries,'r').read().split('\n')
 
+        self.keywords = [item for item in self.keywords if item not in self.bug_words]
+        self.keywords.extend(self.extra_words)
     def preprocessing(self,jobs_file):
-        
+        '''
+        @Input pass in the file object, The file must contain 'BREAK<JOB ID>' between job posts
+        @Output origPosts (List of Strings) Each string is just original job post
+        @Output jobPosts (List of Strings) Each string is job post but with any that's not alphanumeric is replaced
+        and all lower case. This means \n are replaced as blank spaces. 
+        EXCEPTIONS: '+','#','-','_' is kept due to 'c++','c#','objective-c'
+        @Output id_list (List of Int), a list of int, each int represents job ID in given order
+
+        '''
         # jobsFile = open(jobs_file)
         jobslines = jobs_file.readlines()
         self.origPosts = []
@@ -33,11 +48,12 @@ class DataFormatter:
                     origPost = ""
                 continue
             origPost += jobslines[l]
+            post+= re.sub(r'[^\w\s\+\#\-]', ' ', jobslines[l].lower())
             if l == len(jobslines)-1:
                 self.jobPosts.append(post)
                 self.origPosts.append(origPost)
            # post += jobslines[l].replaceAll("[\\p{Punct}&&[^.]]", "").lower();
-            post+= re.sub(r'[^\w\s\+]', ' ', jobslines[l].lower())
+            
 
         print('----')
         for p in range(len(self.jobPosts)):
