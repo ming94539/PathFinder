@@ -37,7 +37,7 @@ YEARS_OF_EXPERIENCE = 6
 def eprint(string):
 	print(string, file=sys.stderr)
 def data_validation(table):
-	seniorityVals = ['internship', 'entry evel', 'associate', 'mid-senior level', 'director', 'executive']
+	seniorityVals = ['internship', 'entry level', 'associate', 'mid-senior level', 'director', 'executive']
 	educationVals = ['a', 'b', 'm', 'p']
 	result = []
 
