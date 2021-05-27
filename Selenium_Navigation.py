@@ -11,6 +11,7 @@ from Scraper import Scraper
 from sqlalchemy import create_engine, text
 import pprint
 from data_formatter import DataFormatter
+import platform
 class Crawler:
     
     def __init__(self, is_headless = True):
@@ -53,8 +54,11 @@ class Crawler:
         current_options = Options()
         if is_headless:     
             current_options.headless = True
-
-        browser = webdriver.Chrome("./macChromeDriver", options = current_options)
+        if(platform.system() == "Linux"):
+            driver_path = "./chromedriver" 
+        else:
+            driver_path = "./macChromeDriver"
+        browser = webdriver.Chrome(driver_path, options = current_options)
         browser.set_window_size(1920, 1080)
         browser.get("https://www.linkedin.com")
 
@@ -129,44 +133,45 @@ class Crawler:
             next_button.click()
             current+=1
         
-        current_url = self.browser.current_url
-        start_index = current_url.index("?")
+            current_url = self.browser.current_url
+            start_index = current_url.index("?")
 
-        end_index = start_index
+            end_index = start_index
 
-        if(num_jobs <= len(id_list)):
-            num_to_scrape = num_jobs
-        else:
-            num_to_scrape = len(id_list)
+            if(num_jobs <= len(id_list)):
+                num_to_scrape = num_jobs
+            else:
+                num_to_scrape = len(id_list)
 
-        for i in range(num_to_scrape):
+            for i in range(num_to_scrape):
 
-            job_id = id_list[i]
+                job_id = id_list[i]
 
-            # if not self.is_duplicate_id(job_id):
-            print("current ID is {}".format(job_id))
-            to_scrape = current_url[:start_index] + "?currentJobId=" + job_id + "&" + current_url[end_index:]
-            
-            self.scraper.get_page(to_scrape)
-            result = self.scraper.scrape_linkedin()
+                # if not self.is_duplicate_id(job_id):
+                print("current ID is {}".format(job_id))
+                to_scrape = current_url[:start_index] + "?currentJobId=" + job_id + "&" + current_url[end_index:]
+                
+                self.scraper.get_page(to_scrape)
+                result = self.scraper.scrape_linkedin()
 
-            # For now, (until we get data formatting finished)
-            # insert first 20 chars into Test table
-            # insert = f''' 
-            #     INSERT INTO Test (test_id, text)
-            #     VALUES ({job_id}, '{result[:20]}')
-            # '''
-            # self.engine.execute(text(insert))
+                # For now, (until we get data formatting finished)
+                # insert first 20 chars into Test table
+                # insert = f''' 
+                #     INSERT INTO Test (test_id, text)
+                #     VALUES ({job_id}, '{result[:20]}')
+                # '''
+                # self.engine.execute(text(insert))
 
-            # print to a results file
-            print("BREAK{}".format(job_id), file = self.output_file)
-            print(result, file = self.output_file)
-        self.output_file.seek(0)
-        self.formatter.preprocessing(self.output_file)
-        output = self.formatter.data_extraction(job_name, do_upload)
-        if(print_results):
-            pprint.pprint(output, stream = self.formatted_output)
-        self.output_file.truncate(0)
+                # print to a results file
+                print("BREAK{}".format(job_id), file = self.output_file)
+                print(result, file = self.output_file)
+            self.output_file.seek(0)
+            self.formatter.preprocessing(self.output_file)
+            output = self.formatter.data_extraction(job_name, do_upload)
+            if(print_results):
+                pprint.pprint(output, stream = self.formatted_output)
+            self.output_file.truncate(0)
+            id_list = []
 
     def end_crawling(self):
         self.scraper.end_scraping()
