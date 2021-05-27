@@ -20,11 +20,11 @@
 
 .card {
     display: inline-block;
-    height: 500px;
-    width: 500px;
-}
+    height: 700px;
+    width: 700px;
+}    
 
 .box {
-    height: 400px;
+    height: 500px;
     width: 500px;
 }

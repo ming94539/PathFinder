@@ -46,13 +46,13 @@ export default function Demo() {
   const [selectedDemand, setSelectedDemand] = useState('Pick a Statement');
   const [selectedJob, setSelectedJob] = useState('Job Title');
   const [data, setData] = useState({});
-  const [chartDrawn, setChartDrawn] = useState(false);
+  // const [chartDrawn, setChartDrawn] = useState(false);
+  let chartDrawn = false;
   
   const handleSubmit = event => {
     let demand = event.target.innerHTML;
     console.log('selected demand:', demand);
     setSelectedDemand(demand);
-    // setSelectedDemand(event.target.value);
 
     // let url = constructURL();
     let url = `http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`;
@@ -66,46 +66,48 @@ export default function Demo() {
       .then((json) => {
         // setData(json);
         setData([
-          {'less': 8},
-          {'adobe photoshop': 5},
+          {value: 'less', count: 8},
+          {value: 'adobe photoshop', count: 5},
+          {value: 'js', count: 3},
         ])
-        setChartDrawn(true);
+        chartDrawn = true;
+        // setChartDrawn(true);
       })
       .catch((error) => {
         // should throw some user interface
           // alert('invalid input');
       });
+
+      
   }
 
   const addCard = () => {
+
+    console.log('adding card with id:', numCards);
+    setNumCards(prevNumCards => {
+      return prevNumCards+1;
+    });
     setCards(prevCards => {
       return ([
         ...prevCards,
-        newCard(selectedJob)
+        newCard(selectedJob, numCards+1)
       ])
     });
-    setNumCards(prevNumCards => {
-      return prevNumCards+1;
-    })
   }
-
-  // const handleSelectDemand = event => {
-  //   setSelectedDemand(event.target.innerHTML);
-  // }
   
   const [numCards, setNumCards] = useState(0);
 
-  const newCard = selectedJob => {
+  const newCard = (selectedJob, id) => {
     return (
       <div className="card">
         <header className="card-header">
           <p className="card-header-title">{selectedJob}</p> 
         </header>
         <div className="box">
-          <div id={`pie${numCards}`}></div>
-          <PieChart />
+          <div id={`pie${id}`}></div>
         </div>
           <div className="card-content">
+          <PieChart id={id} chartDrawn={chartDrawn}/>
           <p>content here</p>
         </div>
         <footer className="card-footer">
@@ -119,7 +121,7 @@ export default function Demo() {
   // setNumCards(prevNumCards => {
   //   return prevNumCards+1;
   // });
-  const [cards, setCards] = useState([newCard('Web Developer')]);
+  const [cards, setCards] = useState([newCard('Web Developer', 0)]);
   // setCards([newCard('Web Developer')]);
 
 
@@ -167,7 +169,7 @@ export default function Demo() {
         selectedDemand, setSelectedDemand,
         selectedJob, setSelectedJob,
         data, setData,
-        chartDrawn, setChartDrawn,
+        // chartDrawn, setChartDrawn,
         numCards, setNumCards
       }}
       >

@@ -82,7 +82,6 @@ export default function PieChart(props) {
    * https://codepen.io/thecraftcoderpdx/pen/jZyzKo
    */
   const drawChart2 = () => {
-    console.log('drawing chart at pie:', `#pie${numCards}`);
     console.log('data:', data);
 
     let svg = d3.select('svg');
@@ -102,8 +101,10 @@ export default function PieChart(props) {
     // define color scale
     var color = d3.scaleOrdinal(d3.schemeSet3);
     // more color scales: https://bl.ocks.org/pstuffa/3393ff2711a53975040077b7453781a9
-
-    svg = d3.select(`#pie${numCards}`) // select element in the DOM with id 'chart'
+    const pieID = `#pie${props.id}`;
+    console.log('drawing chart at pie:', `${pieID}`);
+    
+    svg = d3.select(pieID) // select element in the DOM with id 'chart'
       .append('svg') // append an svg element to the element we've selected
       .attr('width', width) // set the width of the svg element we just added
       .attr('height', height) // set the height of the svg element we just added
@@ -115,14 +116,16 @@ export default function PieChart(props) {
       .outerRadius(radius); // size of overall chart
 
     var pie = d3.pie() // start and end angles of the segments
-      .value(function(d) { return d.count; }) // how to extract the numerical data from each entry in our data
+      .value(function(d) { 
+        return d.count; 
+      }) // how to extract the numerical data from each entry in our data
       .sort(null); // by default, data sorts in oescending value. this will mess with our animation so we set it to null
     
-    svg.append('div')
-      .attr('class', 'legend');
+    // svg.append('div')
+    //   .attr('class', 'legend');
 
     // define tooltip
-    var tooltip = d3.select(`#pie${numCards}`) // select element in the DOM with id 'chart'
+    var tooltip = d3.select(pieID) // select element in the DOM with id 'chart'
       .append('div') // append a div element to the element we've selected                                    
       .attr('class', 'tooltip'); // add class 'tooltip' on the divs we just selected
 
@@ -213,8 +216,7 @@ export default function PieChart(props) {
 
   }
 
-
-  if (Object.keys(data).length != 0 && !chartDrawn) {
+  if (Object.keys(data).length != 0 && !props.chartDrawn) {
     drawChart2();
   }
 
