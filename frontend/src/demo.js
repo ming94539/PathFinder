@@ -10,6 +10,7 @@ export default function Demo() {
   const [chartDrawn, setChartDrawn] = useState(false);
   const [checkDisable, setDisable] = useState(false);
   const [drawnStates, setDrawnStates] = useState([false, false]);
+  const [currID, setCurrID] = useState(0);
   // const drawnStates2 = [false, false];
   
   const handleSubmit = (event, id) => {
@@ -41,18 +42,21 @@ export default function Demo() {
   }
 
   const addCard = () => {
-    console.log('adding card with id:', numCards);
+    let card_idx = cards.length;
+    console.log('adding card with id:', currID+1);
     setChartDrawn(false);
-    setNumCards(prevNumCards => {
-      return prevNumCards+1;
-    });
     setCards(prevCards => {
       return ([
         ...prevCards,
-        newCard(selectedJob, numCards+1)
+        newCard(selectedJob, card_idx, currID+1)
       ])
     });
-    if (cards.length+1 == 2) {
+    console.log('before:', currID);
+    setCurrID(prevID => {
+      return (prevID+1);
+    });
+    console.log('after:', currID);
+    if (card_idx == 1) {
       setDisable(true);
     }
   }
@@ -62,20 +66,22 @@ export default function Demo() {
     console.log(event.target.value)
   }
   
-  const [numCards, setNumCards] = useState(0);
-
   function removeDisabled(key) {
+    console.log('deleting with key:', key);
     setDisable(false);
     // Fixes bug where removing left card would sometimes remove both left and right cards
     setCards(prevCards => {
       return (prevCards.filter(card => card.key != key))
     });
-    setNumCards(prevNumCards => {
-      return (prevNumCards-1);
-    });
+
+    // Decrement id of cards to the right of deleted card
+    for (let i=key; i < cards.length; ++i) {
+      document.getElementById(`pie${i}`).id = `pie${i-1}`;
+    }
+
   }
 
-  const newCard = (selectedJob, id) => {
+  const newCard = (selectedJob, idx, id) => {
     return (
       <div className="card mx-6" key={id}>
         <header className="message is-info">
@@ -90,8 +96,8 @@ export default function Demo() {
           </div>
         </header>
         <div className="box">
-          <div id={`pie${id}`}></div>
-          <PieChart id={id} chartDrawn={chartDrawn}/>
+          <div id={`pie${idx}`}></div>
+          <PieChart id={idx} chartDrawn={chartDrawn}/>
         </div>
           <div className="card-content">
           <p>content here</p>
@@ -104,11 +110,11 @@ export default function Demo() {
     )
   }
 
-  const [cards, setCards] = useState([newCard('Web Developer', 0)]);
+  const [cards, setCards] = useState([newCard('Web Developer', 0, 0)]);
 
   useEffect(() => {
     // console.log("logged");
-    console.log('dispatching with data:', data);
+    // console.log('dispatching with data:', data);
     const updateEvt = new CustomEvent('chartUpdate', {detail: data});
     document.dispatchEvent(updateEvt);
   })
@@ -121,7 +127,6 @@ export default function Demo() {
         data, setData,
         checkDisable, setDisable,
         // chartDrawn, setChartDrawn,
-        numCards, setNumCards
       }}
       >
         <section className="section">

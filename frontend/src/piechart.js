@@ -214,7 +214,7 @@ export default function PieChart(props) {
 
   }
 
-  console.log('drawn:', props.chartDrawn);
+  // console.log('drawn:', props.chartDrawn);
   if (Object.keys(data).length != 0 && !props.chartDrawn) {
     drawChart2();
   }
