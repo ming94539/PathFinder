@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import SharedContext from './SharedContext';
 import './style.css';
 import * as d3 from 'd3';
@@ -12,7 +12,8 @@ export default function PieChart(props) {
   React.useContext(SharedContext);
 
   const drawChart = () => {
-    console.log('drawing chart with data:', data);
+    // console.log('drawing chart with data:', data);
+    console.log('drawing chart with data');
 
     var keys = [];
     var counts = [];
@@ -82,7 +83,7 @@ export default function PieChart(props) {
    * https://codepen.io/thecraftcoderpdx/pen/jZyzKo
    */
   const drawChart2 = () => {
-    console.log('data:', data);
+    // console.log('data:', data);
 
     let svg = d3.select('svg');
     // let width = svg.attr('width');

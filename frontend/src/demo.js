@@ -1,47 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import SharedContext from './SharedContext';
-import {withStyles} from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
 import PieChart from './piechart';
 import './style.css';
-const StyledMenu = withStyles({
-  paper: {
-    border: '1px solid #d3d4d5',
-  },
-})((props) => (
-  <Menu
-    elevation={0}
-    getContentAnchorEl={null}
-    anchorOrigin={{
-      vertical: 'bottom',
-      horizontal: 'center',
-    }}
-    transformOrigin={{
-      vertical: 'top',
-      horizontal: 'center',
-    }}
-    {...props}
-  />
-));
-
-const StyledMenuItem = withStyles((theme) => ({
-  root: {
-    '&:focus': {
-      'backgroundColor': theme.palette.primary.main,
-      '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
-        color: theme.palette.common.white,
-      },
-    },
-  },
-}))(MenuItem);
-
 
 export default function Demo() {
   const [selectedDemand, setSelectedDemand] = useState('Skills');
@@ -147,9 +107,10 @@ export default function Demo() {
   const [cards, setCards] = useState([newCard('Web Developer', 0)]);
 
   useEffect(() => {
-    // console.log('dispatching with data:', data);
-    // const updateEvt = new CustomEvent('chartUpdate', {detail: data});
-    // document.dispatchEvent(updateEvt);
+    // console.log("logged");
+    console.log('dispatching with data:', data);
+    const updateEvt = new CustomEvent('chartUpdate', {detail: data});
+    document.dispatchEvent(updateEvt);
   })
 
   return (
@@ -168,33 +129,11 @@ export default function Demo() {
             <span className="icon"><i className="fa fa-plus"></i></span>
             <span>New Card</span>
           </button>
-
-          {/* <div className="columns is-mobile is-centered">
-            <div className="card">
-              <header className="card-header">
-                <p className="card-header-title is-centered"></p>
-              </header>
-            </div>
-
-          </div> */}
-
           <div className="cards-wrapper">
             {cards}
           </div>
           <br/><br/>
-          {/* <div className="select">
-            <select onChange={handleJobChange}>
-              <option>Job Title</option>
-              <option>Web Developer</option>
-              <option>null</option>
-            </select>
-          </div>
-          <br/><br/> */}
-          {/* <button className="button is-primary" onClick={addCard}>
-            Submit
-          </button> */}
         </section>
-        {/* <PieChart ></PieChart> */}
         <br/><br/>
       </SharedContext.Provider>
     </div>
