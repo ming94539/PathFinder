@@ -172,7 +172,7 @@ class DataFormatter:
         return -1
 
 
-    def data_extraction(self, job_name):    
+    def data_extraction(self, job_name, do_upload):    
         output = {}
         for i in range(len(self.jobPosts)):  
             output[self.id_list[i]] = {}
@@ -193,12 +193,13 @@ class DataFormatter:
             #YoE
             output[self.id_list[i]]['yoe']= self.extract_yoe(self.jobPosts[i])
             print()
-            #Do the Data Base Upload and data validation
-            dbup_table = output[self.id_list[i]].copy()
-            dbup_table['jobID'] = self.id_list[i]
+            #Do the Data Base Upload and data validation, if specified
+            if(do_upload):
+                dbup_table = output[self.id_list[i]].copy()
+                dbup_table['jobID'] = self.id_list[i]
 
-            dbup_table['table'] = job_name.replace(" ", "")
-            print(db_uploadFunction(dbup_table))
+                dbup_table['table'] = job_name.replace(" ", "")
+                print(db_uploadFunction(dbup_table))
         return output
     
 

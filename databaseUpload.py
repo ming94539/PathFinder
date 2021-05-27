@@ -1,5 +1,5 @@
 from dbconnection import DBConnection
-
+import sys
 #table = {
 #	'table': 'WebDeveloper',
 #	'jobID': '4385545',
@@ -34,6 +34,8 @@ YEARS_OF_EXPERIENCE = 6
 #	result[4] = skills
 #	result[5] = languages
 #	result[6] = yoe
+def eprint(string):
+	print(string, file=sys.stderr)
 def data_validation(table):
 	seniorityVals = ['Internship', 'Entry Level', 'Associate', 'Mid-Senior Level', 'Director', 'Executive']
 	educationVals = ['a', 'b', 'm', 'p']

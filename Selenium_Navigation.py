@@ -13,7 +13,7 @@ import pprint
 from data_formatter import DataFormatter
 class Crawler:
     
-    def __init__(self, is_headless = False):
+    def __init__(self, is_headless = True):
         # Returns initialized sqlalchemy engine for db access
         user='acraig1225'
         pw='#$%cse115a#$%'
@@ -26,6 +26,7 @@ class Crawler:
         self.formatter = DataFormatter()
         self.output_file = open("results.txt","a+")
         self.formatted_output = open("formatted.txt","a")
+        
 
     # Return True if id exists in db, False otherwise
     def is_duplicate_id(self, id):
@@ -69,7 +70,7 @@ class Crawler:
         return browser
 
     # Scrapes results given by using `job` as the search term
-    def scrape_job(self, job_name, num_pages, num_jobs = 25):
+    def scrape_job(self, job_name, num_pages, num_jobs = 25, print_results = False, do_upload= True):
         
         time.sleep(5)
         job_search_bar = self.browser.find_element_by_class_name("jobs-search-box__text-input")
@@ -162,24 +163,11 @@ class Crawler:
             print(result, file = self.output_file)
         self.output_file.seek(0)
         self.formatter.preprocessing(self.output_file)
-        print(job_name)
-        output = self.formatter.data_extraction(job_name)
-        pprint.pprint(output, stream = self.formatted_output)
+        output = self.formatter.data_extraction(job_name, do_upload)
+        if(print_results):
+            pprint.pprint(output, stream = self.formatted_output)
         self.output_file.truncate(0)
 
     def end_crawling(self):
         self.scraper.end_scraping()
         self.browser.quit()
-
-def main():
-    job_list = ['Web Developer']
-
-    crawler = Crawler(is_headless = False)
-
-    for job in job_list:
-        crawler.scrape_job(job, 2, 10)
-
-    crawler.end_crawling()
-
-if __name__ == '__main__':
-    main()
