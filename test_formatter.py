@@ -37,8 +37,8 @@ class TestDataFormatter(unittest.TestCase):
 	def test_extract_seniority(self):
 		print("\n###################### Testing extract_seniority ######################\n")
 		
-		o_P = ["Seniority Level","Mid-Senior level"]
-		self.assertEqual(dataformatter.extract_seniority(o_P),"Mid-Senior level")
+		o_P = ["Seniority Level","mid-senior level"]
+		self.assertEqual(dataformatter.extract_seniority(o_P),"mid-senior level")
 		
 		o_P = ["Seniority Level"]
 		with self.assertRaises(IndexError):
@@ -49,7 +49,7 @@ class TestDataFormatter(unittest.TestCase):
 		self.assertEqual(dataformatter.extract_seniority(o_P),-1)
 		
 		o_P = ["Seniority level","Associate"]
-		self.assertEqual(dataformatter.extract_seniority(o_P),"Associate")
+		self.assertEqual(dataformatter.extract_seniority(o_P),"associate")
 
 	def test_extract_industry(self):
 		print("\n###################### Testing extract_industry ######################\n")

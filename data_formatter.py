@@ -82,7 +82,7 @@ class DataFormatter:
         @Input list of strings o_P may contain a line "Seniority Level" (Linkedin Post attribute)
         @Output return the seniority level (standarlized) if there is one, the element (next line) after "Seniority Level" 
         '''
-        seniority_levels = ['Internship','Entry level','Associate','Mid-Senior level','Director','Executive']
+        seniority_levels = ['internship','entry level','associate','mid-senior level','director','executive']
         s_tag = ""
         s_boo =False
         #Some weird inconsistency with linkedin seniority level upperlower caseness, edge case
@@ -94,9 +94,10 @@ class DataFormatter:
             s_boo = True
         if s_boo:
             seniorityIndex = o_P.index(s_tag) +1 
-            if o_P[seniorityIndex] in seniority_levels:
+            if o_P[seniorityIndex].lower() in seniority_levels:
+                print(o_P[seniorityIndex].lower())
                 #print('SENIORITY:', seniority_levels[seniority_levels.index(o_P[seniorityIndex])])
-                return seniority_levels[seniority_levels.index(o_P[seniorityIndex])]
+                return o_P[seniorityIndex].lower()
             elif o_P[seniorityIndex] == "Not Applicable":
                 return -1
             else:
