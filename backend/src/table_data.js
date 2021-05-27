@@ -23,9 +23,9 @@ exports.getDemandWithJob = async (req, res) => {
   console.log('job title:', job);
 
   switch(demand) {
-    case('Most in Demand Skills'):
+    case('Skills'):
       demand='s'; break;
-    case('Most in Demand Languages'):
+    case('Languages'):
       demand='l'; break;
     case('What Degrees are Needed'):
       demand='d'; break;

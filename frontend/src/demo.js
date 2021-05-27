@@ -47,89 +47,19 @@ export default function Demo() {
   const [selectedJob, setSelectedJob] = useState('Job Title');
   const [data, setData] = useState({});
   const [chartDrawn, setChartDrawn] = useState(false);
-  const [cards, setCards] = useState([
-    (<div className="card">
-      <header class="card-header">
-        <p class="card-header-title">{selectedJob}</p> 
-      </header>
-      <div className="card-image">
-        <p>image here</p>
-      </div>
-      <div className="card-content">
-        <p>content here</p>
-      </div>
-      <footer class="card-footer">
-            <button className="button is-primary" > Language</button>
-            <button className="button is-primary" > Skills</button>
-      </footer>
-    </div>
-    )
-  ]);
-
-  useEffect(() => {
-    console.log('dispatching with data:', data);
-    const updateEvt = new CustomEvent('chartUpdate', {detail: data});
-    document.dispatchEvent(updateEvt);
-  })
-
-  const handleDemandChange = event => {
-    setSelectedDemand(event.target.value);
-    console.log('changed to:', event.target.value)
-  }
-
-  const handleJobChange = event => {
-    setSelectedJob(event.target.value);
-    console.log('changed to:', event.target.value)
-  }
-
-  /*
-    Issue: This guarantees that the fetched in url is always valid.
-    When invalid url gets passed, connection to db breaks and 
-    prevents any  submit buttons from having dv, even is dropdown 
-    values change. Forcing us to reconnect via rs. 
-    Fix: Resets values to default, and alerts.
-   */
-  const constructURL = event => {
-    if(selectedDemand == 'Pick a Statement'){
-      setSelectedDemand('Pick a Statement');
-      // alert("Please pick a statement");
-    } else if(selectedDemand == 'Most Popular Fields') {
-      if(selectedJob!= 'Job Title'){
-        // alert("Please do not select a job title");
-      }
-      return `http://localhost:3010/v0/data/${selectedDemand}`;  
-    }
-    else if (selectedJob == 'Job Title') {
-      setSelectedJob('Job Title');
-      // alert("Please select a job title");
-    } else{
-      return `http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`;
-    }
-  }
-
+  
   const handleSubmit = event => {
+    setSelectedDemand(event.target.value);
+
     setCards(prevCards => {
       return ([
         ...prevCards,
-        (<div className="card">
-            <header class="card-header">
-              <p class="card-header-title">{selectedJob}</p> </header>
-          <div className="card-image">
-            <p>image here</p>
-          </div>
-          <div className="card-content">
-            <p>content here</p>
-          </div>
-          <footer class="card-footer">
-            <button className="button is-primary" > Language</button>
-            <button className="button is-primary" > Skills</button>
-          </footer>
-        </div>
-        )
+        newCard(selectedJob)
       ])
     });
 
-    let url = constructURL();
+    // let url = constructURL();
+    let url = `http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`;
     fetch(url)
       .then((response) => {
         if (!response.ok) {
@@ -146,6 +76,66 @@ export default function Demo() {
           // alert('invalid input');
       });
   }
+
+  const newCard = selectedJob => {
+    return (
+      <div className="card">
+        <header class="card-header">
+          <p class="card-header-title">{selectedJob}</p> 
+        </header>
+        <div className="box">
+  
+        </div>
+          <div className="card-content">
+          <p>content here</p>
+        </div>
+        <footer class="card-footer">
+          <button className="button is-primary" onClick={handleSubmit}> Language</button>
+          <button className="button is-primary" onClick={handleSubmit}> Skills</button>
+        </footer>
+      </div>
+    )
+  }
+
+  const [cards, setCards] = useState([newCard('Web Developer')]);
+
+
+
+  
+
+  useEffect(() => {
+    console.log('dispatching with data:', data);
+    const updateEvt = new CustomEvent('chartUpdate', {detail: data});
+    document.dispatchEvent(updateEvt);
+  })
+
+  
+
+  /*
+    Issue: This guarantees that the fetched in url is always valid.
+    When invalid url gets passed, connection to db breaks and 
+    prevents any  submit buttons from having dv, even is dropdown 
+    values change. Forcing us to reconnect via rs. 
+    Fix: Resets values to default, and alerts.
+   */
+  // const constructURL = event => {
+    // if (selectedDemand === 'Skills')
+
+    // if(selectedDemand == 'Pick a Statement'){
+    //   setSelectedDemand('Pick a Statement');
+    // } else if(selectedDemand == 'Most Popular Fields') {
+    //   if(selectedJob!= 'Job Title'){
+    //   }
+    //   return `http://localhost:3010/v0/data/${selectedDemand}`;  
+    // }
+    // else if (selectedJob == 'Job Title') {
+    //   setSelectedJob('Job Title');
+    // } else{
+    
+    // }
+  // }
+
+  
 
   return (
     <div>
