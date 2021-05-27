@@ -12,11 +12,10 @@
     z-index: 10;
 }
 
-/* .scrolling-wrapper { */
-    /* overflow-y: hidden;
-    white-space: nowrap; */
-
-/* } */
+ .scrolling-wrapper { 
+    overflow-y: hidden;
+    white-space: nowrap;
+ } 
 
 .card {
     display: inline-block;

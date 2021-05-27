@@ -42,14 +42,17 @@ const StyledMenuItem = withStyles((theme) => ({
   },
 }))(MenuItem);
 
+
 export default function Demo() {
   const [selectedDemand, setSelectedDemand] = useState('Pick a Statement');
   const [selectedJob, setSelectedJob] = useState('Job Title');
   const [data, setData] = useState({});
-  // const [chartDrawn, setChartDrawn] = useState(false);
-  let chartDrawn = false;
+  const [chartDrawn, setChartDrawn] = useState(false);
+  const [checkDisable, setDisable] = useState(false);
+  // let chartDrawn = false;
   
   const handleSubmit = event => {
+    console.log("curr id is:", numCards);
     let demand = event.target.innerHTML;
     console.log('selected demand:', demand);
     setSelectedDemand(demand);
@@ -70,8 +73,8 @@ export default function Demo() {
           {value: 'adobe photoshop', count: 5},
           {value: 'js', count: 3},
         ])
-        chartDrawn = true;
-        // setChartDrawn(true);
+        // chartDrawn = true;
+        setChartDrawn(true);
       })
       .catch((error) => {
         // should throw some user interface
@@ -84,6 +87,7 @@ export default function Demo() {
   const addCard = () => {
 
     console.log('adding card with id:', numCards);
+    setChartDrawn(false);
     setNumCards(prevNumCards => {
       return prevNumCards+1;
     });
@@ -93,15 +97,23 @@ export default function Demo() {
         newCard(selectedJob, numCards+1)
       ])
     });
+      setDisable(true);
   }
   
   const [numCards, setNumCards] = useState(0);
 
+  function removeDisabled() {
+    setDisable(false);
+  }
+
   const newCard = (selectedJob, id) => {
+
     return (
       <div className="card">
-        <header className="card-header">
-          <p className="card-header-title">{selectedJob}</p> 
+        <header class="message is-info">
+          <div className="card-header-title">{selectedJob}
+          <button class="delete" onClick={removeDisabled}></button>
+          </div> 
         </header>
         <div className="box">
           <div id={`pie${id}`}></div>
@@ -122,6 +134,9 @@ export default function Demo() {
   //   return prevNumCards+1;
   // });
   const [cards, setCards] = useState([newCard('Web Developer', 0)]);
+  
+
+
   // setCards([newCard('Web Developer')]);
 
 
@@ -132,36 +147,14 @@ export default function Demo() {
     document.dispatchEvent(updateEvt);
   })
 
-  
-
-  /*
-    Issue: This guarantees that the fetched in url is always valid.
-    When invalid url gets passed, connection to db breaks and 
-    prevents any  submit buttons from having dv, even is dropdown 
-    values change. Forcing us to reconnect via rs. 
-    Fix: Resets values to default, and alerts.
-   */
-  // const constructURL = event => {
-    // if (selectedDemand === 'Skills')
-
-    // if(selectedDemand == 'Pick a Statement'){
-    //   setSelectedDemand('Pick a Statement');
-    // } else if(selectedDemand == 'Most Popular Fields') {
-    //   if(selectedJob!= 'Job Title'){
-    //   }
-    //   return `http://localhost:3010/v0/data/${selectedDemand}`;  
-    // }
-    // else if (selectedJob == 'Job Title') {
-    //   setSelectedJob('Job Title');
-    // } else{
-    
-    // }
-  // }
 
   const handleJobChange = event => {
     setSelectedJob(event.target.value);
     console.log(event.target.value)
   }
+
+
+
 
   return (
     <div>
@@ -169,6 +162,7 @@ export default function Demo() {
         selectedDemand, setSelectedDemand,
         selectedJob, setSelectedJob,
         data, setData,
+        checkDisable, setDisable,
         // chartDrawn, setChartDrawn,
         numCards, setNumCards
       }}
@@ -178,15 +172,6 @@ export default function Demo() {
           <div className="scrolling-wrapper">
             {cards}
           </div>
-          {/* <div className="select">
-            <select onChange={handleDemandChange}>
-              <option>Pick a Statement</option>
-              <option>Most in Demand Skills</option>
-              <option>Most in Demand Languages</option>
-              <option>Most Popular Fields</option>
-              <option>What Degrees are Needed</option>
-            </select>
-          </div> */}
           <br/><br/>
           <div className="select">
             <select onChange={handleJobChange}>
@@ -196,7 +181,7 @@ export default function Demo() {
             </select>
           </div>
           <br/><br/>
-          <button className="button is-primary" onClick={addCard}>
+          <button className="button is-primary" onClick={addCard} disabled={checkDisable}>
             Submit
           </button>
         </div>
