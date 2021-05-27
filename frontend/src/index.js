@@ -5,4 +5,4 @@ import ReactDOM from 'react-dom';
 /**
  *
  */
-ReactDOM.render(<Demo />, document.querySelector('#menu'));
+ReactDOM.render(<Demo />, document.querySelector('#app'));

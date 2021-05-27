@@ -64,12 +64,7 @@ export default function Demo() {
         return response.json();
       })
       .then((json) => {
-        // setData(json);
-        setData([
-          {value: 'less', count: 8},
-          {value: 'adobe photoshop', count: 5},
-          {value: 'js', count: 3},
-        ])
+        setData(json);
         chartDrawn = true;
         // setChartDrawn(true);
       })
@@ -77,12 +72,9 @@ export default function Demo() {
         // should throw some user interface
           // alert('invalid input');
       });
-
-      
   }
 
   const addCard = () => {
-
     console.log('adding card with id:', numCards);
     setNumCards(prevNumCards => {
       return prevNumCards+1;
@@ -94,25 +86,39 @@ export default function Demo() {
       ])
     });
   }
+
+  const handleJobChange = event => {
+    setSelectedJob(event.target.value);
+    console.log(event.target.value)
+  }
   
   const [numCards, setNumCards] = useState(0);
 
   const newCard = (selectedJob, id) => {
     return (
-      <div className="card">
+      <div className="card mx-6" key={id}>
         <header className="card-header">
-          <p className="card-header-title">{selectedJob}</p> 
+          {/* <p className="card-header-title is-centered">{selectedJob}</p>  */}
+          <div className="card-header-title is-centered">
+            <div className="select">
+              <select onChange={handleJobChange}>
+                <option>Job Title</option>
+                <option>Web Developer</option>
+                <option>null</option>
+              </select>
+            </div>
+          </div>
         </header>
         <div className="box">
           <div id={`pie${id}`}></div>
+          <PieChart id={id} chartDrawn={chartDrawn}/>
         </div>
           <div className="card-content">
-          <PieChart id={id} chartDrawn={chartDrawn}/>
           <p>content here</p>
         </div>
         <footer className="card-footer">
-          <button className="button is-primary" onClick={handleSubmit}>Language</button>
-          <button className="button is-primary" onClick={handleSubmit}>Skills</button>
+          <button className="card-footer-item button is-primary mx-3" onClick={handleSubmit}>Language</button>
+          <button className="card-footer-item button is-primary mx-3" onClick={handleSubmit}>Skills</button>
         </footer>
       </div>
     )
@@ -121,7 +127,8 @@ export default function Demo() {
   // setNumCards(prevNumCards => {
   //   return prevNumCards+1;
   // });
-  const [cards, setCards] = useState([newCard('Web Developer', 0)]);
+  const [cards, setCards] = useState([
+    newCard('Web Developer', 0), newCard('Web Developer', 1)]);
   // setCards([newCard('Web Developer')]);
 
 
@@ -158,10 +165,7 @@ export default function Demo() {
     // }
   // }
 
-  const handleJobChange = event => {
-    setSelectedJob(event.target.value);
-    console.log(event.target.value)
-  }
+  
 
   return (
     <div>
@@ -173,9 +177,17 @@ export default function Demo() {
         numCards, setNumCards
       }}
       >
+        <div className="section">
+          {/* <div className="columns is-mobile is-centered">
+            <div className="card">
+              <header className="card-header">
+                <p className="card-header-title is-centered"></p>
+              </header>
+            </div>
 
-        <div id="selections">
-          <div className="scrolling-wrapper">
+          </div> */}
+
+          <div className="cards-wrapper">
             {cards}
           </div>
           {/* <div className="select">
@@ -188,17 +200,17 @@ export default function Demo() {
             </select>
           </div> */}
           <br/><br/>
-          <div className="select">
+          {/* <div className="select">
             <select onChange={handleJobChange}>
               <option>Job Title</option>
               <option>Web Developer</option>
               <option>null</option>
             </select>
           </div>
-          <br/><br/>
-          <button className="button is-primary" onClick={addCard}>
+          <br/><br/> */}
+          {/* <button className="button is-primary" onClick={addCard}>
             Submit
-          </button>
+          </button> */}
         </div>
         {/* <PieChart ></PieChart> */}
         <br/><br/>

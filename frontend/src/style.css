@@ -12,19 +12,25 @@
     z-index: 10;
 }
 
-/* .scrolling-wrapper { */
-    /* overflow-y: hidden;
-    white-space: nowrap; */
-
-/* } */
+.cards-wrapper {
+    overflow-y: hidden;
+    white-space: nowrap;
+    position: relative;
+    text-align: center;
+}
 
 .card {
     display: inline-block;
-    height: 700px;
+    height: 590px;
     width: 700px;
 }    
 
+.card-header-title {
+    text-align: center;
+    box-shadow: 0 0 5px #cccccc;
+}
+
 .box {
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 700px;
 }
