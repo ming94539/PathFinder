@@ -60,13 +60,17 @@ def data_validation(table):
 		result.append(0)
 
 	educationLevels = table.get('educationLevel')
-	if len(educationLevel) == 0:
+	invalidEducation = False
+	if len(educationLevels) == 0:
 		result.append(None)
 	else:
 		for e in educationLevels:
 			if not (e in educationVals):
 				result.append(-1)
+				invalidEducation = True
 				break
+	
+	if not invalidEducation:
 		result.append(0)	
 
 	skills = table.get('skills')
