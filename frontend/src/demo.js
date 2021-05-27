@@ -49,12 +49,19 @@ export default function Demo() {
   const [chartDrawn, setChartDrawn] = useState(false);
   const [cards, setCards] = useState([
     (<div className="card">
+      <header class="card-header">
+        <p class="card-header-title">{selectedJob}</p> 
+      </header>
       <div className="card-image">
         <p>image here</p>
       </div>
       <div className="card-content">
         <p>content here</p>
       </div>
+      <footer class="card-footer">
+            <button className="button is-primary" > Language</button>
+            <button className="button is-primary" > Skills</button>
+      </footer>
     </div>
     )
   ]);
@@ -105,12 +112,18 @@ export default function Demo() {
       return ([
         ...prevCards,
         (<div className="card">
+            <header class="card-header">
+              <p class="card-header-title">{selectedJob}</p> </header>
           <div className="card-image">
             <p>image here</p>
           </div>
           <div className="card-content">
             <p>content here</p>
           </div>
+          <footer class="card-footer">
+            <button className="button is-primary" > Language</button>
+            <button className="button is-primary" > Skills</button>
+          </footer>
         </div>
         )
       ])
