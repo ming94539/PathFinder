@@ -42,14 +42,17 @@ const StyledMenuItem = withStyles((theme) => ({
   },
 }))(MenuItem);
 
+
 export default function Demo() {
   const [selectedDemand, setSelectedDemand] = useState('Pick a Statement');
   const [selectedJob, setSelectedJob] = useState('Job Title');
   const [data, setData] = useState({});
-  // const [chartDrawn, setChartDrawn] = useState(false);
-  let chartDrawn = false;
+  const [chartDrawn, setChartDrawn] = useState(false);
+  const [checkDisable, setDisable] = useState(false);
+  // let chartDrawn = false;
   
   const handleSubmit = event => {
+    console.log("curr id is:", numCards);
     let demand = event.target.innerHTML;
     console.log('selected demand:', demand);
     setSelectedDemand(demand);
@@ -66,7 +69,7 @@ export default function Demo() {
       .then((json) => {
         setData(json);
         chartDrawn = true;
-        // setChartDrawn(true);
+        setChartDrawn(true);
       })
       .catch((error) => {
         // should throw some user interface
@@ -76,6 +79,7 @@ export default function Demo() {
 
   const addCard = () => {
     console.log('adding card with id:', numCards);
+    setChartDrawn(false);
     setNumCards(prevNumCards => {
       return prevNumCards+1;
     });
@@ -85,6 +89,9 @@ export default function Demo() {
         newCard(selectedJob, numCards+1)
       ])
     });
+    if (cards.length+1 == 2) {
+      setDisable(true);
+    }
   }
 
   const handleJobChange = event => {
@@ -94,12 +101,20 @@ export default function Demo() {
   
   const [numCards, setNumCards] = useState(0);
 
+  function removeDisabled(key) {
+    setDisable(false);
+    // Fixes bug where removing left card would sometimes remove both left and right cards
+    setCards(prevCards => {
+      return (prevCards.filter(card => card.key != key))
+    });
+  }
+
   const newCard = (selectedJob, id) => {
     return (
       <div className="card mx-6" key={id}>
-        <header className="card-header">
-          {/* <p className="card-header-title is-centered">{selectedJob}</p>  */}
+        <header className="message is-info">
           <div className="card-header-title is-centered">
+            <button className="delete" onClick={() => removeDisabled(id)}></button>
             <div className="select">
               <select onChange={handleJobChange}>
                 <option>Job Title</option>
@@ -124,48 +139,13 @@ export default function Demo() {
     )
   }
 
-  // setNumCards(prevNumCards => {
-  //   return prevNumCards+1;
-  // });
-  const [cards, setCards] = useState([
-    newCard('Web Developer', 0), newCard('Web Developer', 1)]);
-  // setCards([newCard('Web Developer')]);
-
+  const [cards, setCards] = useState([newCard('Web Developer', 0)]);
 
   useEffect(() => {
     // console.log('dispatching with data:', data);
-    // console.log('effect');
     const updateEvt = new CustomEvent('chartUpdate', {detail: data});
     document.dispatchEvent(updateEvt);
   })
-
-  
-
-  /*
-    Issue: This guarantees that the fetched in url is always valid.
-    When invalid url gets passed, connection to db breaks and 
-    prevents any  submit buttons from having dv, even is dropdown 
-    values change. Forcing us to reconnect via rs. 
-    Fix: Resets values to default, and alerts.
-   */
-  // const constructURL = event => {
-    // if (selectedDemand === 'Skills')
-
-    // if(selectedDemand == 'Pick a Statement'){
-    //   setSelectedDemand('Pick a Statement');
-    // } else if(selectedDemand == 'Most Popular Fields') {
-    //   if(selectedJob!= 'Job Title'){
-    //   }
-    //   return `http://localhost:3010/v0/data/${selectedDemand}`;  
-    // }
-    // else if (selectedJob == 'Job Title') {
-    //   setSelectedJob('Job Title');
-    // } else{
-    
-    // }
-  // }
-
-  
 
   return (
     <div>
@@ -173,11 +153,17 @@ export default function Demo() {
         selectedDemand, setSelectedDemand,
         selectedJob, setSelectedJob,
         data, setData,
+        checkDisable, setDisable,
         // chartDrawn, setChartDrawn,
         numCards, setNumCards
       }}
       >
-        <div className="section">
+        <section className="section">
+          <button id="submitButton" className="button is-primary mb-5 has-text-centered" onClick={addCard} disabled={checkDisable}>
+            <span className="icon"><i className="fa fa-plus"></i></span>
+            <span>New Card</span>
+          </button>
+
           {/* <div className="columns is-mobile is-centered">
             <div className="card">
               <header className="card-header">
@@ -190,15 +176,6 @@ export default function Demo() {
           <div className="cards-wrapper">
             {cards}
           </div>
-          {/* <div className="select">
-            <select onChange={handleDemandChange}>
-              <option>Pick a Statement</option>
-              <option>Most in Demand Skills</option>
-              <option>Most in Demand Languages</option>
-              <option>Most Popular Fields</option>
-              <option>What Degrees are Needed</option>
-            </select>
-          </div> */}
           <br/><br/>
           {/* <div className="select">
             <select onChange={handleJobChange}>
@@ -211,7 +188,7 @@ export default function Demo() {
           {/* <button className="button is-primary" onClick={addCard}>
             Submit
           </button> */}
-        </div>
+        </section>
         {/* <PieChart ></PieChart> */}
         <br/><br/>
       </SharedContext.Provider>
