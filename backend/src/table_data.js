@@ -35,6 +35,8 @@ exports.getDemandWithJob = async (req, res) => {
       break;
   }
 
+  console.log('demand:', demand);
+
   // If user has chosen a job, create additional string for query
   // to match jobID with that job
   let jobTitleMatch = (job == 'JobTitle') ? '' :

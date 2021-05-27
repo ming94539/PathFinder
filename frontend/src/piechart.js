@@ -197,9 +197,6 @@ export default function PieChart(props) {
 
     document.addEventListener('chartUpdate', function(event) {
       const newData = event.detail;
-      // const newData = event.detail;
-      // console.log('data in listener:', newData);
-      // console.log('path before update:', path, data);
       path = path.data(pie(newData)); // update pie with new data
       // console.log('path after update:', path, data);
 
@@ -216,6 +213,7 @@ export default function PieChart(props) {
 
   }
 
+  console.log('drawn:', props.chartDrawn);
   if (Object.keys(data).length != 0 && !props.chartDrawn) {
     drawChart2();
   }

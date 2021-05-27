@@ -44,21 +44,22 @@ const StyledMenuItem = withStyles((theme) => ({
 
 
 export default function Demo() {
-  const [selectedDemand, setSelectedDemand] = useState('Pick a Statement');
-  const [selectedJob, setSelectedJob] = useState('Job Title');
+  const [selectedDemand, setSelectedDemand] = useState('Skills');
+  const [selectedJob, setSelectedJob] = useState('Web Developer');
   const [data, setData] = useState({});
   const [chartDrawn, setChartDrawn] = useState(false);
   const [checkDisable, setDisable] = useState(false);
-  // let chartDrawn = false;
+  const [drawnStates, setDrawnStates] = useState([false, false]);
+  // const drawnStates2 = [false, false];
   
-  const handleSubmit = event => {
-    console.log("curr id is:", numCards);
+  const handleSubmit = (event, id) => {
+    console.log("curr id is:", id);
     let demand = event.target.innerHTML;
-    console.log('selected demand:', demand);
+    if (demand == selectedDemand) return;
     setSelectedDemand(demand);
 
     // let url = constructURL();
-    let url = `http://localhost:3010/v0/data/${selectedDemand}/${selectedJob}`;
+    let url = `http://localhost:3010/v0/data/${demand}/${selectedJob}`;
     fetch(url)
       .then((response) => {
         if (!response.ok) {
@@ -67,9 +68,11 @@ export default function Demo() {
         return response.json();
       })
       .then((json) => {
+        // chartDrawn = true;
+        
+        // setChartDrawn(true);
         setData(json);
-        chartDrawn = true;
-        setChartDrawn(true);
+        console.log('got data:', json);
       })
       .catch((error) => {
         // should throw some user interface
@@ -107,6 +110,9 @@ export default function Demo() {
     setCards(prevCards => {
       return (prevCards.filter(card => card.key != key))
     });
+    setNumCards(prevNumCards => {
+      return (prevNumCards-1);
+    });
   }
 
   const newCard = (selectedJob, id) => {
@@ -117,7 +123,6 @@ export default function Demo() {
             <button className="delete" onClick={() => removeDisabled(id)}></button>
             <div className="select">
               <select onChange={handleJobChange}>
-                <option>Job Title</option>
                 <option>Web Developer</option>
                 <option>null</option>
               </select>
@@ -132,8 +137,8 @@ export default function Demo() {
           <p>content here</p>
         </div>
         <footer className="card-footer">
-          <button className="card-footer-item button is-primary mx-3" onClick={handleSubmit}>Language</button>
-          <button className="card-footer-item button is-primary mx-3" onClick={handleSubmit}>Skills</button>
+          <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Languages</button>
+          <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Skills</button>
         </footer>
       </div>
     )
@@ -143,8 +148,8 @@ export default function Demo() {
 
   useEffect(() => {
     // console.log('dispatching with data:', data);
-    const updateEvt = new CustomEvent('chartUpdate', {detail: data});
-    document.dispatchEvent(updateEvt);
+    // const updateEvt = new CustomEvent('chartUpdate', {detail: data});
+    // document.dispatchEvent(updateEvt);
   })
 
   return (
