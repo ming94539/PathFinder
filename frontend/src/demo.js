@@ -85,7 +85,6 @@ export default function Demo() {
   }
 
   const addCard = () => {
-
     console.log('adding card with id:', numCards);
     setChartDrawn(false);
     setNumCards(prevNumCards => {
@@ -104,6 +103,7 @@ export default function Demo() {
 
   function removeDisabled() {
     setDisable(false);
+    setCards(cards.splice(0,1));
   }
 
   const newCard = (selectedJob, id) => {
@@ -169,9 +169,6 @@ export default function Demo() {
       >
 
         <div id="selections">
-          <div className="scrolling-wrapper">
-            {cards}
-          </div>
           <br/><br/>
           <div className="select">
             <select onChange={handleJobChange}>
@@ -180,12 +177,15 @@ export default function Demo() {
               <option>null</option>
             </select>
           </div>
-          <br/><br/>
-          <button className="button is-primary" onClick={addCard} disabled={checkDisable}>
+          <button id='submitButton'className="button is-primary" onClick={addCard} disabled={checkDisable}>
             Submit
           </button>
+          <br></br>
+          <br></br>
+          <div className="scrolling-wrapper">
+            {cards}
+          </div>
         </div>
-        {/* <PieChart ></PieChart> */}
         <br/><br/>
       </SharedContext.Provider>
     </div>

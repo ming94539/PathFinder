@@ -11,7 +11,13 @@
     width: 80px;
     z-index: 10;
 }
+.select{
+    left:300px;
+}
 
+#submitButton{
+    left:400px;
+}
  .scrolling-wrapper { 
     overflow-y: hidden;
     white-space: nowrap;
