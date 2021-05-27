@@ -5,13 +5,28 @@ from databaseUpload import db_uploadFunction
 class DataFormatter:
     def __init__(self, termsFile = "lists/final_keywords2.txt", 
                     languages = "lists/topLanguages.txt", 
-                    industries = "lists/linkedin_industries.txt"):
+                    industries = "lists/linkedin_industries.txt",
+                    extra = "lists/extra_keywords.txt",
+                    bug_file = "lists/bug_keywords.txt"):
         self.keywords = self.read_termsFile(termsFile)
+        self.bug_words = self.read_termsFile(bug_file)
+        self.extra_words = self.read_termsFile(extra)
+
         self.languages = self.read_termsFile(languages)
         self.linkedin_industries = open(industries,'r').read().split('\n')
 
+        self.keywords = [item for item in self.keywords if item not in self.bug_words]
+        self.keywords.extend(self.extra_words)
     def preprocessing(self,jobs_file):
-        
+        '''
+        @Input pass in the file object, The file must contain 'BREAK<JOB ID>' between job posts
+        @Output origPosts (List of Strings) Each string is just original job post
+        @Output jobPosts (List of Strings) Each string is job post but with any that's not alphanumeric is replaced
+        and all lower case. This means \n are replaced as blank spaces. 
+        EXCEPTIONS: '+','#','-','_' is kept due to 'c++','c#','objective-c'
+        @Output id_list (List of Int), a list of int, each int represents job ID in given order
+
+        '''
         # jobsFile = open(jobs_file)
         jobslines = jobs_file.readlines()
         self.origPosts = []
@@ -33,11 +48,12 @@ class DataFormatter:
                     origPost = ""
                 continue
             origPost += jobslines[l]
+            post+= re.sub(r'[^\w\s\+\#\-]', ' ', jobslines[l].lower())
             if l == len(jobslines)-1:
                 self.jobPosts.append(post)
                 self.origPosts.append(origPost)
            # post += jobslines[l].replaceAll("[\\p{Punct}&&[^.]]", "").lower();
-            post+= re.sub(r'[^\w\s\+]', ' ', jobslines[l].lower())
+            
 
         print('----')
         for p in range(len(self.jobPosts)):
@@ -46,18 +62,27 @@ class DataFormatter:
         #     jobPosts[p] = word_tokenize(jobPosts[p])
         # return origPosts, jobPosts, id_list
 
-
+    
     def read_termsFile(self, termsFileName):
+        '''
+        @Input the path of the file to be opened
+        @Output return a list with each element a line in the file
+        '''
         termsFile = open(termsFileName,"r")
         terms = termsFile.readlines()
         print('opened:',termsFileName)
         print('number terms:',len(terms))
         keywords = [term.rstrip('\n').lower() for term in terms]
+        termsFile.close()
         return keywords
 
-
+    #
     def extract_seniority(self, o_P):
-        seniority_levels = ['Internship','Entry level','Associate','Mid-Senior level','Director','Executive']
+        '''
+        @Input list of strings o_P may contain a line "Seniority Level" (Linkedin Post attribute)
+        @Output return the seniority level (standarlized) if there is one, the element (next line) after "Seniority Level" 
+        '''
+        seniority_levels = ['internship','entry level','associate','mid-senior level','director','executive']
         s_tag = ""
         s_boo =False
         #Some weird inconsistency with linkedin seniority level upperlower caseness, edge case
@@ -69,13 +94,14 @@ class DataFormatter:
             s_boo = True
         if s_boo:
             seniorityIndex = o_P.index(s_tag) +1 
-            if o_P[seniorityIndex] in seniority_levels:
+            if o_P[seniorityIndex].lower() in seniority_levels:
+                print(o_P[seniorityIndex].lower())
                 #print('SENIORITY:', seniority_levels[seniority_levels.index(o_P[seniorityIndex])])
-                return seniority_levels[seniority_levels.index(o_P[seniorityIndex])]
+                return o_P[seniorityIndex].lower()
             elif o_P[seniorityIndex] == "Not Applicable":
                 return -1
             else:
-                print("Doesn't exist in seniority levels, weird.")
+                print("Doesn't exist in Linkedin's standard seniority levels, weird.")
                 return -1
         else:
             return -1
@@ -128,11 +154,19 @@ class DataFormatter:
         return list(set(skills))
 
     def extract_languages(self, post,languages):
+        '''
+        @Input ASSUMES that the a language won't appear as the first or last word, the occurence of that happening
+        is very not likely (these job posts always have starting/ending words), so didn't put in the case to handle
+        otherwise
+        '''
         lang = []
         for key in languages:
-            key= " "+key+" "
-            if key in post:
-                lang.append(key.strip())
+            key2= " "+key+" "
+            if key2 in post:
+                lang.append(key2.strip())
+            elif (key in post) and (post.index(key) == 0 or post.index(key) == len(post)-len(key)):
+                #the first word or last word
+                lang.append(key)
        #print('SKILLS',set(skills))
         return list(set(lang))
 
@@ -160,7 +194,10 @@ class DataFormatter:
             return []
     def extract_yoe(self, post):
         tokenize = post.split(' ')
-        yoe_variation = ['years of experience','years of full time','years full time','years industry experience','years of industry experience','years work experience','years of work experience']
+        yoe_variation = ['years of experience',
+        'years of full time','years full time',
+        'years industry experience','years of industry experience',
+        'years work experience','years of work experience']
         for w in range(len(tokenize)):
             if tokenize[w].isdigit():
                 #print(tokenize[w-5:w],tokenize[w],tokenize[w+1:w+5])
@@ -172,7 +209,12 @@ class DataFormatter:
         return -1
 
 
+
     def data_extraction(self, job_name, do_upload):    
+        '''
+        @Input self.jobPosts is a list of strings. Each job post is a long string with each word 
+        lower cased. Punctuations are removed.
+        '''      
         output = {}
         for i in range(len(self.jobPosts)):  
             output[self.id_list[i]] = {}

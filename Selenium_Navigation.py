@@ -54,7 +54,7 @@ class Crawler:
         if is_headless:     
             current_options.headless = True
 
-        browser = webdriver.Chrome("./chromedriver", options = current_options)
+        browser = webdriver.Chrome("./macChromeDriver", options = current_options)
         browser.set_window_size(1920, 1080)
         browser.get("https://www.linkedin.com")
 
