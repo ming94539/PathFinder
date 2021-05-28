@@ -24,3 +24,4 @@ Targeting systems
 Segmentation
 Domain adaptation
 Anomaly detection
+mpi
