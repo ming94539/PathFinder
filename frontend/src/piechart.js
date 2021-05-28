@@ -8,8 +8,11 @@ import * as d3 from 'd3';
  */
 
 export default function PieChart(props) {
-  const {data, setData, chartDrawn, setChartDrawn, numCards, setNumCards} =
-  React.useContext(SharedContext);
+  const {data, setData, 
+    chartDrawn, setChartDrawn, 
+    numCards, setNumCards,
+    currID, setCurrID,
+  } = React.useContext(SharedContext);
 
   const drawChart = () => {
     // console.log('drawing chart with data:', data);
@@ -82,7 +85,7 @@ export default function PieChart(props) {
    * Referenced:
    * https://codepen.io/thecraftcoderpdx/pen/jZyzKo
    */
-  const drawChart2 = () => {
+  const drawChart2 = (data) => {
     // console.log('data:', data);
 
     let svg = d3.select('svg');
@@ -192,12 +195,22 @@ export default function PieChart(props) {
 
     path.on('mousemove', function(d) { // when mouse moves  
       // console.log('d on mousemove:', d);               
-      tooltip.style('top', (d.clientY + 10) + 'px') // always 10px below the cursor
-        .style('left', (d.clientX + 10) + 'px'); // always 10px to the right of the mouse
+      tooltip.style('top', (d.layerY + 10) + 'px') // always 10px below the cursor
+        .style('left', (d.layerX + 10) + 'px'); // always 10px to the right of the mouse
     });
 
     document.addEventListener('chartUpdate', function(event) {
-      const newData = event.detail;
+      // if (!event.detail) return;
+      console.log('updating data');
+      let newData;
+      for (let chart of data) {
+        if (chart.id == props.id) {
+          newData = chart.data;
+          break;
+        }
+      }
+      if (!newData) return;
+      // const newData = event.detail;
       path = path.data(pie(newData)); // update pie with new data
       // console.log('path after update:', path, data);
 
@@ -215,8 +228,21 @@ export default function PieChart(props) {
   }
 
   // console.log('drawn:', props.chartDrawn);
-  if (Object.keys(data).length != 0 && !props.chartDrawn) {
-    drawChart2();
+  if (data.length != 0 && !chartDrawn) {
+    console.log('data:', data);
+    for (let chart of data) {
+      if (chart.id == currID) {
+        console.log('drawing a chart of id:', chart.id);
+        // console.log('data:', data);
+        drawChart2(chart.data)
+        break;
+      }
+        // console.log('chart:', chart);
+      // console.log('chart id:', chart.id);
+      // console.log('currID:', currID);
+    }
+    // data[0].id
+    // drawChart2();
   }
 
   return (

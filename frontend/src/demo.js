@@ -4,9 +4,9 @@ import PieChart from './piechart';
 import './style.css';
 
 export default function Demo() {
-  const [selectedDemand, setSelectedDemand] = useState('Skills');
+  const [selectedDemand, setSelectedDemand] = useState('');
   const [selectedJob, setSelectedJob] = useState('Web Developer');
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   const [chartDrawn, setChartDrawn] = useState(false);
   const [checkDisable, setDisable] = useState(false);
   const [drawnStates, setDrawnStates] = useState([false, false]);
@@ -21,6 +21,13 @@ export default function Demo() {
 
     // let url = constructURL();
     let url = `http://localhost:3010/v0/data/${demand}/${selectedJob}`;
+    // setData(prevData => {
+    //   return ([
+    //     ...prevData,
+    //     {id: currID, url: url}
+    //   ]);
+    // });
+
     fetch(url)
       .then((response) => {
         if (!response.ok) {
@@ -30,10 +37,64 @@ export default function Demo() {
       })
       .then((json) => {
         // chartDrawn = true;
+        // setData([
+        //   {value: 'postgresql', count: 8},
+        //   {value: 'javascript', count: 5},
+        //   {value: 'css', count: 4}
+        // ])
+        // setData(json);
         
-        // setChartDrawn(true);
-        setData(json);
-        console.log('got data:', json);
+        setChartDrawn(true);
+
+        let newData = data;
+        console.log('newData:', newData);
+
+        console.log('id:', id);
+        let check = newData.find((o, i) => {
+          console.log('finding', o);
+          if (o.id == id) {
+              o.data = json;
+              console.log('found')
+              return true;
+          }
+        })
+        console.log('check:', check);
+        if (!check) {
+            newData.push({id: id, data: json});
+            console.log('append')
+        }
+
+        setData(newData);
+
+        // let check = data.find((o, idx) => {
+        //   console.log('chart:', chart, 'id:', id);
+        //   if (o.id == id) {
+        //     setData(prevData => {
+        //       return prevData.filter(e => e.id != id);
+        //     });
+        //     setData(prevData => {
+        //       return ([
+        //         ...prevData,
+        //         {id: id, data: json}
+        //       ])
+        //     })
+        //     // let temp = data;
+        //     // temp[idx].data = json;
+        //     // setData(temp);
+        //     console.log('updating data');
+        //     return true;
+        //   }
+        // });
+        // if (!check) {
+        //   console.log('appending data');
+        //   setData(prevData => {
+        //     return ([
+        //       ...prevData,
+        //       {id: id, data: json}
+        //     ]);
+        //   });
+        // }
+
       })
       .catch((error) => {
         // should throw some user interface
@@ -43,19 +104,19 @@ export default function Demo() {
 
   const addCard = () => {
     let card_idx = cards.length;
-    console.log('adding card with id:', currID+1);
+    // console.log('adding card with id:', currID+1);
     setChartDrawn(false);
     setCards(prevCards => {
       return ([
         ...prevCards,
-        newCard(selectedJob, card_idx, currID+1)
+        newCard(currID+1)
       ])
     });
-    console.log('before:', currID);
+    // console.log('before:', currID);
     setCurrID(prevID => {
       return (prevID+1);
     });
-    console.log('after:', currID);
+    // console.log('after:', currID);
     if (card_idx == 1) {
       setDisable(true);
     }
@@ -78,10 +139,9 @@ export default function Demo() {
     for (let i=key; i < cards.length; ++i) {
       document.getElementById(`pie${i}`).id = `pie${i-1}`;
     }
-
   }
 
-  const newCard = (selectedJob, idx, id) => {
+  const newCard = (id) => {
     return (
       <div className="card mx-6" key={id}>
         <header className="message is-info">
@@ -96,11 +156,11 @@ export default function Demo() {
           </div>
         </header>
         <div className="box">
-          <div id={`pie${idx}`}></div>
-          <PieChart id={idx} chartDrawn={chartDrawn}/>
+          <div id={`pie${id}`}></div>
+          <PieChart id={id} chartDrawn={chartDrawn}/>
         </div>
           <div className="card-content">
-          <p>content here</p>
+          {/* <p>content here</p> */}
         </div>
         <footer className="card-footer">
           <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Languages</button>
@@ -110,11 +170,12 @@ export default function Demo() {
     )
   }
 
-  const [cards, setCards] = useState([newCard('Web Developer', 0, 0)]);
+  const [cards, setCards] = useState([newCard(0)]);
 
   useEffect(() => {
     // console.log("logged");
     // console.log('dispatching with data:', data);
+    
     const updateEvt = new CustomEvent('chartUpdate', {detail: data});
     document.dispatchEvent(updateEvt);
   })
@@ -126,6 +187,7 @@ export default function Demo() {
         selectedJob, setSelectedJob,
         data, setData,
         checkDisable, setDisable,
+        currID, setCurrID
         // chartDrawn, setChartDrawn,
       }}
       >
