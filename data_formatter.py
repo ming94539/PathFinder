@@ -95,7 +95,7 @@ class DataFormatter:
         if s_boo:
             seniorityIndex = o_P.index(s_tag) +1 
             if o_P[seniorityIndex].lower() in seniority_levels:
-                print(o_P[seniorityIndex].lower())
+                #print(o_P[seniorityIndex].lower())
                 #print('SENIORITY:', seniority_levels[seniority_levels.index(o_P[seniorityIndex])])
                 return o_P[seniorityIndex].lower()
             elif o_P[seniorityIndex] == "Not Applicable":

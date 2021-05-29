@@ -61,7 +61,7 @@ def main(argv):
     for job in job_list:
         crawler.scrape_job(job, num_pages, num_jobs, output, upload)
 
-    crawler.end_crawling()
+    #crawler.end_crawling()
 
 
 

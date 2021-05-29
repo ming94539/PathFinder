@@ -90,6 +90,7 @@ class Crawler:
 
 
         current = 0
+        pg_num = 1
         id_list = []
         while current < num_pages:
             # ------------------ Scraping the Linkedin Job Webpage's left rail (it's a two pane wrapper)
@@ -117,7 +118,7 @@ class Crawler:
 
             lxml_soup = BeautifulSoup(self.browser.page_source, 'lxml')
             page_buttons = lxml_soup.find_all('li', class_ = 'artdeco-pagination__indicator')
-            pg_num = 3
+            
             pg_id = ""
 
             for page_button in page_buttons:
@@ -126,9 +127,9 @@ class Crawler:
                     id_i= str(page_button).find('id')
                     #pg_id = str(page_buttons[1])[id_i+4:id_i+13] 
                     pg_id = "ember"+re.findall(r'%s(\d+)' % "ember", str(page_button))[0]
-                    # print(pg_id)
-                    break
 
+                    break
+            pg_num += 1
             next_button = self.browser.find_element_by_id(pg_id)
             next_button.click()
             current+=1
