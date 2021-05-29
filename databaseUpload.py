@@ -68,12 +68,13 @@ def data_validation(table):
 	else:
 		for e in educationLevels:
 			if not (e in educationVals):
+				print("educationval invalid")
 				result.append(-1)
 				invalidEducation = True
 				break
 	
-	if not invalidEducation:
-		result.append(0)	
+		if not invalidEducation:
+			result.append(0)	
 
 	skills = table.get('skills')
 	if len(skills) == 0:
@@ -90,7 +91,7 @@ def data_validation(table):
 	yoe = int(table.get('yoe'))
 	if yoe == -1:
 		result.append(None)
-	if yoe < 0 or yoe > 25:
+	elif yoe < 0 or yoe > 25:
 		result.append(-1)
 	else:
 		result.append(0)
@@ -115,7 +116,8 @@ def db_uploadFunction(dbup_table):
 	    VALUES ({jobID}, '{table}')
 	"""
 	db.add_stmt(insert_JobIDTable)
-
+	print(jobID)
+	print(len(validationResults))
 
 	# Insert to job table
 	# todo: check validation results for NULL values in seniority and yoe

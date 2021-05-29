@@ -31,6 +31,7 @@ class Crawler:
 
     # Return True if id exists in db, False otherwise
     def is_duplicate_id(self, id):
+
         query = f'''
             SELECT jobID
             FROM JobIDTable

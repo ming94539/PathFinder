@@ -5,6 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from bs4 import BeautifulSoup
 from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import WebDriverException
 import random
 import platform
 class Scraper:
@@ -33,7 +34,17 @@ class Scraper:
     def get_page(self, url):
         sleep_time = random.randint(1,11)
         sleep(sleep_time)
-        self.driver.get(url)
+        do_retry = True
+        num_retries = 0
+        while(do_retry == True and num_retries <= 5):
+            try: 
+                self.driver.get(url)
+                break
+            except(WebDriverException):
+                do_retry = True
+                sleep(random.randint(1,60))
+                num_retries = num_retries + 1
+                continue
         self.current_url = url
         sleep(2)
     #returns the title at the current page
