@@ -34,7 +34,7 @@
 
 .box {
     height: 300px;
-    width: 700px;
+    width: inherit;
 }
 
 .delete {

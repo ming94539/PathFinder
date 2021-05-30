@@ -1,43 +1,26 @@
-const x = [
-    {a: 3, data: '1'},
-    {a: 4, data: '2'}
+const data = [
+    {id: 0, data: 'data1'},
+    {id: 1, data: 'data2'}
 ]
 
-// let y = x.find(o => o.a == 5);
-// console.log(y);
+let dupe = 'data1 updated';
+let append = 'data3';
 
-// if (x.find()) {
-//     setData
-// }
+let newData = data;
 
-let id = 3
-let idx = -1
+let json = dupe;
+let id = 0;
+let entry = newData.find(e => e.id == id);
+if (entry) entry.data = json;
+else newData.push({id: id, data: json});
 
-let check = x.find((o, i) => {
-    console.log('finding', o);
-    if (o.a == id) {
-        console.log('found')
-        return true;
-    }
-})
-console.log('check:', check);
-if (!check) {
-    console.log('append')
-}
+json = append;
+id = 2;
+entry = newData.find(o => o.id == id);
+if (entry) entry.data = json
+else newData.push({id: id, data: json});
 
+console.log('newData:', newData);
 
-    // x.find((o, i) => {
-    //     if (o.a == id) {
-    //         console.log('found')
-    //         return
-    //         // let y = data;
-    //         // y[i].data = json;
-    //         // setData(y)
-    //         // let y = o.data
-    //         // y[i] = json
-    //         // setData(y[i] = json)
-    //     }
-    //     throw e
-    // })
-
-// for ()
+// Expected newData: 
+// [ { id: 0, data: 'data1 updated' }, { id: 1, data: 'data2' }, { id: 2, data: 'data3' } ]

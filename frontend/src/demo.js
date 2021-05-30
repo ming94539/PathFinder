@@ -1,33 +1,49 @@
 import React, {useState, useEffect} from 'react';
+import ReactDOM from 'react-dom';
 import SharedContext from './SharedContext';
 import PieChart from './piechart';
 import './style.css';
 
 export default function Demo() {
-  const [selectedDemand, setSelectedDemand] = useState('');
-  const [selectedJob, setSelectedJob] = useState('Web Developer');
+  const [selectedDemands, setSelectedDemands] = useState([]);
+  const [selectedJobs, setSelectedJobs] = useState([]);
   const [data, setData] = useState([]);
-  const [chartDrawn, setChartDrawn] = useState(false);
   const [checkDisable, setDisable] = useState(false);
-  const [drawnStates, setDrawnStates] = useState([false, false]);
-  const [currID, setCurrID] = useState(0);
-  // const drawnStates2 = [false, false];
+  const [currID, setCurrID] = useState(-1);
+  const [cards, setCards] = useState([]);
+  const initialDemand = 'Languages';
+  const initialJob = 'Web Developer';
   
   const handleSubmit = (event, id) => {
-    console.log("curr id is:", id);
+    // console.log("curr id is:", id);
     let demand = event.target.innerHTML;
-    if (demand == selectedDemand) return;
-    setSelectedDemand(demand);
+    let demandEntry = selectedDemands.find(e => e.id==id);
+    if (demandEntry && demand == demandEntry.demand) return;
+    // console.log('[handleSubmit] Updating with new demand:', demand);
+    updateDemands(id, demand);
+    let jobEntry = selectedJobs.find(e => e.id==id)
+    if (!jobEntry) {
+      console.log('[handleSubmit] Could not find job at id:', id);
+      console.log('All jobs:', selectedJobs);
+      return;
+    }
+    query(demand, jobEntry.job, id);
+  }
+
+  function query(demand, job, id) {
+    // let selectedJobEntry = selectedJobs.find(e => e.id==id);
+    // if (!selectedJobEntry) {
+    //   console.log('Could not find selected job at id:', id);
+    //   return;
+    // }
+    // let selectedJob = selectedJobEntry.job;
+    // console.log('[Query] Selected job:', selectedJob);
 
     // let url = constructURL();
-    let url = `http://localhost:3010/v0/data/${demand}/${selectedJob}`;
-    // setData(prevData => {
-    //   return ([
-    //     ...prevData,
-    //     {id: currID, url: url}
-    //   ]);
-    // });
-
+    let url = `http://localhost:3010/v0/data/${demand}/${job}`;
+    // let url = `v0/data/${demand}/${job}`;
+    // console.log('fetching url:', url);
+    // console.log('[query] Querying with demand:', demand);
     fetch(url)
       .then((response) => {
         if (!response.ok) {
@@ -36,109 +52,88 @@ export default function Demo() {
         return response.json();
       })
       .then((json) => {
-        // chartDrawn = true;
         // setData([
         //   {value: 'postgresql', count: 8},
         //   {value: 'javascript', count: 5},
         //   {value: 'css', count: 4}
         // ])
-        // setData(json);
-        
-        setChartDrawn(true);
+        updateData(id, json);
 
-        let newData = data;
-        console.log('newData:', newData);
-
-        console.log('id:', id);
-        let check = newData.find((o, i) => {
-          console.log('finding', o);
-          if (o.id == id) {
-              o.data = json;
-              console.log('found')
-              return true;
-          }
-        })
-        console.log('check:', check);
-        if (!check) {
-            newData.push({id: id, data: json});
-            console.log('append')
-        }
-
-        setData(newData);
-
-        // let check = data.find((o, idx) => {
-        //   console.log('chart:', chart, 'id:', id);
-        //   if (o.id == id) {
-        //     setData(prevData => {
-        //       return prevData.filter(e => e.id != id);
-        //     });
-        //     setData(prevData => {
-        //       return ([
-        //         ...prevData,
-        //         {id: id, data: json}
-        //       ])
-        //     })
-        //     // let temp = data;
-        //     // temp[idx].data = json;
-        //     // setData(temp);
-        //     console.log('updating data');
-        //     return true;
-        //   }
-        // });
-        // if (!check) {
-        //   console.log('appending data');
-        //   setData(prevData => {
-        //     return ([
-        //       ...prevData,
-        //       {id: id, data: json}
-        //     ]);
-        //   });
+        // let card = cards.find(card => card.key==id);
+        // if (!card) {
+        //   console.log('Card does not exist at id:', id, cards);
+        //   return;
         // }
-
+        // console.log('card:', card);
+        // ReactDOM.render(<PieChart id={id} data={json} />, card);
+        // <PieChart id={id} data={json}/>;
       })
       .catch((error) => {
+        console.log('[handleSubmit] Error fetching data');
+        console.log(error);
         // should throw some user interface
           // alert('invalid input');
-      });
+    });
   }
 
   const addCard = () => {
-    let card_idx = cards.length;
     // console.log('adding card with id:', currID+1);
-    setChartDrawn(false);
     setCards(prevCards => {
       return ([
         ...prevCards,
         newCard(currID+1)
       ])
     });
-    // console.log('before:', currID);
+    setSelectedDemands(prevDemands => {
+      return ([
+        ...prevDemands,
+        {id: currID+1, demand: initialDemand}
+      ]);
+    });
+    let newJobs = selectedJobs;
+    newJobs.push({id: currID+1, job: initialJob});
+    setSelectedJobs(newJobs)
+    query(initialDemand, initialJob, currID+1);
+
+    if (cards.length >= 1) {
+      setDisable(true);
+    }
     setCurrID(prevID => {
       return (prevID+1);
     });
-    // console.log('after:', currID);
-    if (card_idx == 1) {
-      setDisable(true);
-    }
-  }
-
-  const handleJobChange = event => {
-    setSelectedJob(event.target.value);
-    console.log(event.target.value)
   }
   
-  function removeDisabled(key) {
-    console.log('deleting with key:', key);
+  // useEffect(() => {
+  //   console.log('[useEffect | selectedDemands] Querying using initialDemand:', initialDemand);
+  //   query(initialDemand, currID);
+  // }, [selectedDemands]);
+  
+  function deleteCard(id) {
+    // console.log('deleting with id:', id);
     setDisable(false);
     // Fixes bug where removing left card would sometimes remove both left and right cards
     setCards(prevCards => {
-      return (prevCards.filter(card => card.key != key))
+      return (prevCards.filter(card => card.key != id))
     });
-
+    
     // Decrement id of cards to the right of deleted card
-    for (let i=key; i < cards.length; ++i) {
-      document.getElementById(`pie${i}`).id = `pie${i-1}`;
-    }
+    // for (let i=id; i < cards.length; ++i) {
+    //   console.log('[deleteCard] Decrementing id of pie:', id);
+    //   document.getElementById(`pie${i}`).id = `pie${i-1}`;
+    // }
+  }
+  
+  const handleJobChange = (event, id) => {
+    let job = event.target.value;
+    let newSelectedJobs = selectedJobs;
+    let jobEntry = newSelectedJobs.find(e => e.id==id);
+    if (jobEntry) jobEntry.job = job;
+    else newSelectedJobs.push({id: id, job: job});
+    setSelectedJobs(newSelectedJobs);
+    // console.log(`[handleJobChange] Set job to ${job} at ID: ${id}`);
+    // updateJobs(id, )
+    // setSelectedJob(event.target.value);
+    // console.log(event.target.value)
   }
 
   const newCard = (id) => {
@@ -146,9 +141,9 @@ export default function Demo() {
       <div className="card mx-6" key={id}>
         <header className="message is-info">
           <div className="card-header-title is-centered">
-            <button className="delete" onClick={() => removeDisabled(id)}></button>
+            <button className="delete" onClick={() => deleteCard(id)}></button>
             <div className="select">
-              <select onChange={handleJobChange}>
+              <select onChange={event => handleJobChange(event, id)}>
                 <option>Web Developer</option>
                 <option>null</option>
               </select>
@@ -157,11 +152,12 @@ export default function Demo() {
         </header>
         <div className="box">
           <div id={`pie${id}`}></div>
-          <PieChart id={id} chartDrawn={chartDrawn}/>
+          {/* <PieChart id={id} data={data}/> */}
         </div>
           <div className="card-content">
           {/* <p>content here</p> */}
         </div>
+        {/* TODO: Change selected button color */}
         <footer className="card-footer">
           <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Languages</button>
           <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Skills</button>
@@ -170,25 +166,47 @@ export default function Demo() {
     )
   }
 
-  const [cards, setCards] = useState([newCard(0)]);
+  // Init
+  useEffect(() => {
+    addCard();
+  }, []);
 
   useEffect(() => {
     // console.log("logged");
     // console.log('dispatching with data:', data);
-    
     const updateEvt = new CustomEvent('chartUpdate', {detail: data});
     document.dispatchEvent(updateEvt);
-  })
+  }, [data]);
+
+  function updateDemands(id, demand) {
+    let newDemand = selectedDemands;
+    let entry = newDemand.find(e => e.id == id);
+    if (entry) entry.demand = demand;
+    else newDemand.push({id: id, demand, demand});
+    setSelectedDemands(newDemand);
+  }
+
+  // random JSDoc example
+  /**
+   * Update data
+   * @param {int}     id    ID to either update or add
+   * @param {Object}  json  New incoming data
+   */
+  function updateData(id, json) {
+    let newData = data;
+    let entry = newData.find(e => e.id == id);
+    if (entry) entry.data = json;
+    else newData.push({id: id, data: json});
+    setData(newData);
+  }
 
   return (
     <div>
       <SharedContext.Provider value={{
-        selectedDemand, setSelectedDemand,
-        selectedJob, setSelectedJob,
-        data, setData,
-        checkDisable, setDisable,
-        currID, setCurrID
-        // chartDrawn, setChartDrawn,
+        // selectedJob, setSelectedJob,
+        // data, setData,
+        // checkDisable, setDisable,
+        // currID, setCurrID
       }}
       >
         <section className="section">
