@@ -4,6 +4,15 @@ import SharedContext from './SharedContext';
 import PieChart from './piechart';
 import './style.css';
 
+// jest.config.js
+// Sync object
+/** @type {import('@jest/types').Config.InitialOptions} */
+const config = {
+  verbose: true,
+};
+
+module.exports = config;
+
 export default function Demo() {
   const [selectedDemands, setSelectedDemands] = useState([]);
   const [selectedJobs, setSelectedJobs] = useState([]);
