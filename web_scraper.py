@@ -17,7 +17,9 @@ def main(argv):
     headless = True 
     upload = True
     output = False
-    job_list = ["Web Developer"]
+    job_list = ["Web Developer", "Systems Architect", "Database Administrator", "Dev Ops", "Security Analyst", 
+                "IT Architect", "Data Scientist", "Software Engineer", "Firmware Engineer"
+                "Data Engineer", "Machine Learning Engineer"]
     options = "p:j:ou:h"
     long_options = ["pages=", "jobs=", "output", "upload=", "head", "help"]
 
@@ -59,9 +61,10 @@ def main(argv):
     crawler = Crawler(headless)
 
     for job in job_list:
+        print("Current job is {}".format(job))
         crawler.scrape_job(job, num_pages, num_jobs, output, upload)
 
-    #crawler.end_crawling()
+    crawler.end_crawling()
 
 
 

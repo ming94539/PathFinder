@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from bs4 import BeautifulSoup
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import WebDriverException
+from selenium.common.exceptions import ElementNotInteractableException
 import random
 import platform
 class Scraper:
@@ -40,11 +41,12 @@ class Scraper:
             try: 
                 self.driver.get(url)
                 break
-            except(WebDriverException):
+            except(WebDriverException) as e:
                 do_retry = True
                 sleep(random.randint(1,60))
                 num_retries = num_retries + 1
                 continue
+
         self.current_url = url
         sleep(2)
     #returns the title at the current page
@@ -68,7 +70,9 @@ class Scraper:
                 self.get_page(self.current_url)
                 description_exists = self.check_element("description")
         if(self.check_element("show-more-less-html__button")):
-            self.driver.find_element_by_class_name("show-more-less-html__button").click()
+            is_clicked = self.try_click("show-more-less-html__button")
+            if(is_clicked != True):
+                print("Click unsuccessful, check logs")
         return self.driver.find_element_by_class_name("description").text
 
         # print(self.driver.find_element_by_class_name("description").text, file = open("results.txt","a"))
@@ -80,4 +84,10 @@ class Scraper:
             self.driver.find_element_by_class_name(element)
             return True
         except(NoSuchElementException) as e:
+            return False
+    def try_click(self, element):
+        try:
+            self.driver.find_element_by_class_name(element).click()
+            return True
+        except(ElementNotInteractableException) as e:
             return False

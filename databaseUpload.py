@@ -139,12 +139,11 @@ def db_uploadFunction(dbup_table):
 	table_validation(db, table)
 
 	insert_JobIDTable = f"""
-	    INSERT INTO JobIDTable (jobID, tableName)
-	    VALUES ({jobID}, '{table}')
+		INSERT INTO JobIDTable (jobID, tableName)
+		VALUES ({jobID}, '{table}')
 	"""
 	db.add_stmt(insert_JobIDTable)
-	print(jobID)
-	print(len(validationResults))
+
 
 	# Insert to job table
 	if validationResults[SENIORITY] != -1 and validationResults[YEARS_OF_EXPERIENCE] != -1:
@@ -152,23 +151,23 @@ def db_uploadFunction(dbup_table):
 		yoe = dbup_table['yoe']
 		if validationResults[SENIORITY] == None and validationResults[YEARS_OF_EXPERIENCE] == None:
 			insert_JobTable = f"""
-			    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
-			    VALUES ({jobID}, NULL, NULL)
+				INSERT INTO {table} (jobID, seniority, yearsOfExperience)
+				VALUES ({jobID}, NULL, NULL)
 			"""			
 		elif validationResults[SENIORITY] == None:
 			insert_JobTable = f"""
-			    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
-			    VALUES ({jobID}, NULL, '{yoe}')
+				INSERT INTO {table} (jobID, seniority, yearsOfExperience)
+				VALUES ({jobID}, NULL, '{yoe}')
 			"""
 		elif validationResults[YEARS_OF_EXPERIENCE] == None:
 			insert_JobTable = f"""
-			    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
-			    VALUES ({jobID}, '{seniority}', NULL)
+				INSERT INTO {table} (jobID, seniority, yearsOfExperience)
+				VALUES ({jobID}, '{seniority}', NULL)
 			"""		
 		else:
 			insert_JobTable = f"""
-			    INSERT INTO {table} (jobID, seniority, yearsOfExperience)
-			    VALUES ({jobID}, '{seniority}', '{yoe}')
+				INSERT INTO {table} (jobID, seniority, yearsOfExperience)
+				VALUES ({jobID}, '{seniority}', '{yoe}')
 			"""
 		db.add_stmt(insert_JobTable)
 	else:
@@ -185,8 +184,8 @@ def db_uploadFunction(dbup_table):
 		industry = dbup_table['industry']
 		for i in industry:
 			insert_IndustyTable = f"""
-			    INSERT INTO Industries (jobID, industry)
-			    VALUES ({jobID}, '{i}')
+				INSERT INTO Industries (jobID, industry)
+				VALUES ({jobID}, '{i}')
 			"""
 			db.add_stmt(insert_IndustyTable)
 	elif validationResults[INDUSTRY] == -1:
@@ -198,8 +197,8 @@ def db_uploadFunction(dbup_table):
 		educationLevel = dbup_table['educationLevel']
 		for e in educationLevel:
 			insert_EducationTable = f"""
-			    INSERT INTO Education (jobID, educationLevel)
-			    VALUES ({jobID}, '{e}')
+				INSERT INTO Education (jobID, educationLevel)
+				VALUES ({jobID}, '{e}')
 			"""
 			db.add_stmt(insert_EducationTable)
 	elif validationResults[EDUCATION_LEVEL] == -1:
@@ -210,8 +209,8 @@ def db_uploadFunction(dbup_table):
 		degreeTitle = dbup_table['degreeTitle']
 		for d in degreeTitle:
 			insert_EducationTable = f"""
-			    INSERT INTO Degrees (jobID, degreeTitle)
-			    VALUES ({jobID}, '{d}')
+				INSERT INTO Degrees (jobID, degreeTitle)
+				VALUES ({jobID}, '{d}')
 			"""
 			db.add_stmt(insert_EducationTable)
 	elif validationResults[DEGREE_TITLE] == -1:
@@ -223,8 +222,8 @@ def db_uploadFunction(dbup_table):
 		skills = dbup_table['skills']
 		for s in skills:
 			insert_SkillsTable = f"""
-			    INSERT INTO Skills (jobID, skill)
-			    VALUES ({jobID}, '{s}')
+				INSERT INTO Skills (jobID, skill)
+				VALUES ({jobID}, '{s}')
 			"""
 			db.add_stmt(insert_SkillsTable)
 	elif validationResults[SKILLS] == -1:
@@ -236,8 +235,8 @@ def db_uploadFunction(dbup_table):
 		languages = dbup_table['languages']
 		for l in languages:
 			insert_LanguagesTable = f"""
-			    INSERT INTO Languages (jobID, language)
-			    VALUES ({jobID}, '{l}')
+				INSERT INTO Languages (jobID, language)
+				VALUES ({jobID}, '{l}')
 			"""
 			db.add_stmt(insert_LanguagesTable)
 	elif validationResults[LANGUAGES] == -1:

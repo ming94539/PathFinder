@@ -35,7 +35,7 @@ class Crawler:
         query = f'''
             SELECT jobID
             FROM JobIDTable
-            WHERE jobID = {id}
+            WHERE jobID = '{id}'
         '''
         # query = f'''
         #     SELECT test_id
@@ -93,7 +93,8 @@ class Crawler:
         current = 0
         pg_num = 1
         id_list = []
-        while current < num_pages:
+        max_pages = 40
+        while current < num_pages and current < max_pages:
             # ------------------ Scraping the Linkedin Job Webpage's left rail (it's a two pane wrapper)
             # parsing the visible webpage
             pageSource = self.browser.page_source
@@ -115,7 +116,7 @@ class Crawler:
                     if len(i) == 10: #hardcoding that ID is always 10 digits")
 
                         id_list.append(i)
-                        break
+                        break 
 
             lxml_soup = BeautifulSoup(self.browser.page_source, 'lxml')
             page_buttons = lxml_soup.find_all('li', class_ = 'artdeco-pagination__indicator')
@@ -124,12 +125,16 @@ class Crawler:
 
             for page_button in page_buttons:
                 target_button = "data-test-pagination-page-btn=\""+str(pg_num)+"\""
-                if str(page_button).find(target_button) >= 0:
+                exception_button = "aria-label=\"Page "+str(pg_num)+"\""
+                
+                if str(page_button).find(target_button) >= 0 or str(page_button).find(exception_button) >= 0:
                     id_i= str(page_button).find('id')
+                    
                     #pg_id = str(page_buttons[1])[id_i+4:id_i+13] 
                     pg_id = "ember"+re.findall(r'%s(\d+)' % "ember", str(page_button))[0]
-
+                    
                     break
+
             pg_num += 1
             next_button = self.browser.find_element_by_id(pg_id)
             next_button.click()
@@ -149,24 +154,16 @@ class Crawler:
 
                 job_id = id_list[i]
 
-                # if not self.is_duplicate_id(job_id):
-                print("current ID is {}".format(job_id))
-                to_scrape = current_url[:start_index] + "?currentJobId=" + job_id + "&" + current_url[end_index:]
-                
-                self.scraper.get_page(to_scrape)
-                result = self.scraper.scrape_linkedin()
+                if not self.is_duplicate_id(job_id):
+                    print("current ID is {}".format(job_id))
+                    to_scrape = current_url[:start_index] + "?currentJobId=" + job_id + "&" + current_url[end_index:]
+                    
+                    self.scraper.get_page(to_scrape)
+                    result = self.scraper.scrape_linkedin()
 
-                # For now, (until we get data formatting finished)
-                # insert first 20 chars into Test table
-                # insert = f''' 
-                #     INSERT INTO Test (test_id, text)
-                #     VALUES ({job_id}, '{result[:20]}')
-                # '''
-                # self.engine.execute(text(insert))
-
-                # print to a results file
-                print("BREAK{}".format(job_id), file = self.output_file)
-                print(result, file = self.output_file)
+                    # print to a results file
+                    print("BREAK{}".format(job_id), file = self.output_file)
+                    print(result, file = self.output_file)
             self.output_file.seek(0)
             self.formatter.preprocessing(self.output_file)
             output = self.formatter.data_extraction(job_name, do_upload)
