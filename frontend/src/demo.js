@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
-import ReactDOM from 'react-dom';
 import SharedContext from './SharedContext';
-import PieChart from './piechart';
+// import PieChart from './piechart';
+import piechart from './piechart';
 import './style.css';
 
 // jest.config.js
@@ -14,17 +14,17 @@ import './style.css';
 // module.exports = config;
 // https://stackoverflow.com/questions/55724642/react-useeffect-hook-when-only-one-of-the-effects-deps-changes-but-not-the-oth
 const useEffectWhen = (effect, deps, whenDeps) => {
-  // console.log('[useEffectWhen] (effect, deps, whenDeps):',
-    // effect +'; ' + deps +'; ' + whenDeps);
+//   // console.log('[useEffectWhen] (effect, deps, whenDeps):',
+//     // effect +'; ' + deps +'; ' + whenDeps);
   const whenRef = useRef(whenDeps || []);
-  // console.log('whenRef:', whenRef);
+//   // console.log('whenRef:', whenRef);
   const initial = whenRef.current === whenDeps;
-  // console.log('Initial:', initial);
+//   // console.log('Initial:', initial);
   const whenDepsChanged = 
     initial || !whenRef.current.every((w, i) => w === whenDeps[i]);
   // console.log('whenDepsChanged:', whenDepsChanged);
-  whenRef.current = whenDeps;
-  const nullDeps = deps.map(() => null);
+    whenRef.current = whenDeps;
+    const nullDeps = deps.map(() => null);
 
   return useEffect(
     whenDepsChanged ? effect : () => {},
@@ -32,34 +32,41 @@ const useEffectWhen = (effect, deps, whenDeps) => {
   );
 };
 
-// const useEffectWhen = (effect, deps, whenDeps) => {
-  
-// }
-
 export default function Demo() {
   const initialDemand = 'Languages';
   const initialJob = 'Web Developer';
-  const initialData = [
-        {value: 'postgresql', count: 8},
-        {value: 'javascript', count: 5},
-        {value: 'css', count: 4}
-      ]
+  // let initialData;
+  // fetch(`http://localhost:3010/v0/data/${initialDemand}/${initialJob}`)
+  // .then((response) => {
+  //   return response.json();
+  // }).then((json) => initialData = json);
+  // const initialData = [
+  //   {value: 'postgresql', count: 8},
+  //   {value: 'javascript', count: 5},
+  //   {value: 'css', count: 4}
+  // ]
   // const [selectedDemands, setSelectedDemands] = useState([{id: 0, demand: initialDemand}]);
   // const [selectedJobs, setSelectedJobs] = useState([{id: 0, job: initialJob}]);
+  // console.log('initialData:', initialData);
   const [selectedDemands, setSelectedDemands] = useState([]);
   const [selectedJobs, setSelectedJobs] = useState([]);
-  const [data, setData] = useState([{id: 0, data: initialData}]);
+  const [data, setData] = useState([]);
+  // {id: 0, data: initialData}
   const [checkDisable, setDisable] = useState(false);
   const [currID, setCurrID] = useState(-1);
   const [cards, setCards] = useState([]);
+
+  // Init
+  useEffect(() => {
+    addCard();
+  }, []);
   
-  const handleSubmit = (event, id) => {
-    console.log('Demands:', selectedDemands);
+  function handleSubmit (event, id) {
+    // console.log('Demands:', selectedDemands);
     // console.log("curr id is:", id);
     let demand = event.target.innerHTML;
     let demandEntry = selectedDemands.find(e => e.id==id);
     if (demandEntry && demand == demandEntry.demand) return;
-    console.log('[handleSubmit] Updating with new demand:', demand);
     updateDemands(id, demand);
     let jobEntry = selectedJobs.find(e => e.id==id)
     if (!jobEntry) {
@@ -67,7 +74,15 @@ export default function Demo() {
       console.log('All jobs:', selectedJobs);
       return;
     }
+    console.log('[handleSubmit] Updating with new demand:', demand);
     query(demand, jobEntry.job, id);
+
+    // force update
+    setCards(prevCards => {
+      return [
+        ...prevCards
+      ]
+    });
   }
 
   function query(demand, job, id) {
@@ -91,7 +106,6 @@ export default function Demo() {
         // ])
 
         updateData(id, json);
-
         // let card = cards.find(card => card.key==id);
         // if (!card) {
         //   console.log('Card does not exist at id:', id, cards);
@@ -110,7 +124,6 @@ export default function Demo() {
   }
 
   const addCard = () => {
-    // console.log('adding card with id:', currID+1);
     setCards(prevCards => {
       return ([
         ...prevCards,
@@ -130,6 +143,7 @@ export default function Demo() {
     let newJobs = selectedJobs;
     newJobs.push({id: currID+1, job: initialJob});
     setSelectedJobs(newJobs);
+
     query(initialDemand, initialJob, currID+1);
   
     if (cards.length >= 1) {
@@ -138,30 +152,19 @@ export default function Demo() {
     setCurrID(prevID => {
       return (prevID+1);
     });
-  }
-
-  
-  // useEffect(() => {
-  //   console.log('[useEffect | selectedDemands] Querying using initialDemand:', initialDemand);
-  //   query(initialDemand, currID);
-  // }, [selectedDemands]);
+    setData(prevData => {
+      return [...prevData]
+    });
+  };
   
   function deleteCard(id) {
-    // console.log('deleting with id:', id);
     setDisable(false);
-    // Fixes bug where removing left card would sometimes remove both left and right cards
     setCards(prevCards => {
       return (prevCards.filter(card => card.key != id))
     });
     setData(prevData => {
       return (prevData.filter(e => e.id != id));
     });
-    
-    // Decrement id of cards to the right of deleted card
-    // for (let i=id; i < cards.length; ++i) {
-    //   console.log('[deleteCard] Decrementing id of pie:', id);
-    //   document.getElementById(`pie${i}`).id = `pie${i-1}`;
-    // }
   }
   
   const handleJobChange = (event, id) => {
@@ -193,7 +196,7 @@ export default function Demo() {
         </header>
         <div className="box">
           <div id={`pie${id}`}></div>
-          <PieChart id={id} />
+          {/* <PieChart id={id} /> */}
         </div>
           <div className="card-content">
           {/* <p>content here</p> */}
@@ -204,36 +207,34 @@ export default function Demo() {
           <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Skills</button>
         </footer>
       </div>
-    )
-  }
-
-  // Init
-  useEffect(() => {
-    addCard();
-  }, []);
+    );
+  };
 
   // When data is added
-  useEffect(
-    () => console.log('useEffect', data),
-    [data]
-  );
+  // useEffect(
+  //   () => console.log('useEffect', data),
+  //   [data]
+  // );
 
-  // When data is updated
+  // New data entry added
   useEffectWhen(() => {
-    console.log("useEffectWhen", data, data.length)
+    if (currID >= 0) {
+      console.log("useEffectWhen with id:", currID);
+      setCards(prevCards => {
+        return [
+          ...prevCards
+        ]
+      });
+      // <PieChart id={currID} />;
+      piechart(currID, data);
+    }
   }, [data, data.length], [data.length]);
-
-  // useEffect((e) => {
-  //   // console.log("logged");
-  //   console.log('e:', e);
-  //   // if new data, draw chart
-
-  //   // else, update chart with event listener
-
-  //   console.log('[useEffect] Data updated to:', data);
-  //   const updateEvt = new CustomEvent('chartUpdate', {detail: data});
-  //   document.dispatchEvent(updateEvt);
-  // }, [data]);
+  
+  useEffect(() => {
+    console.log('[useEffect] Data updated to:', data);
+    const updateEvt = new CustomEvent('chartUpdate', {detail: data});
+    document.dispatchEvent(updateEvt);
+  }, [data, cards]);
 
   function updateDemands(id, demand) {
     let newDemand = selectedDemands;
@@ -254,10 +255,11 @@ export default function Demo() {
     let entry = newData.find(e => e.id == id);
     if (entry) entry.data = json;
     else newData.push({id: id, data: json});
-    console.log('Updating data to:', newData);
+    // console.log('Updating data to:', newData);
     setData(newData);
   }
 
+  // let card = (cards.length > 0) ? (cards) : (<InitialCard id={0}/>);
   return (
     <div>
       <SharedContext.Provider value={{
@@ -266,8 +268,7 @@ export default function Demo() {
         data, setData,
         // checkDisable, setDisable,
         currID, setCurrID
-      }}
-      >
+      }}>
         <section className="section">
           <button id="submitButton" className="button is-primary mb-5 has-text-centered" onClick={addCard} disabled={checkDisable}>
             <span className="icon"><i className="fa fa-plus"></i></span>
@@ -275,6 +276,9 @@ export default function Demo() {
           </button>
           <div className="cards-wrapper">
             {cards}
+            {/* {card} */}
+            {/* <InitialCard id={0}/> */}
+            {/* {cards.length > 0 ? cards : initialCard} */}
           </div>
           <br/><br/>
         </section>
