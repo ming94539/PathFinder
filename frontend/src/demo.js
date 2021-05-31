@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import ReactDOM from 'react-dom';
 import SharedContext from './SharedContext';
 import PieChart from './piechart';
@@ -6,29 +6,60 @@ import './style.css';
 
 // jest.config.js
 // Sync object
-/** @type {import('@jest/types').Config.InitialOptions} */
-const config = {
-  verbose: true,
+// /** @type {import('@jest/types').Config.InitialOptions} */
+// const config = {
+//   verbose: true,
+// };
+
+// module.exports = config;
+// https://stackoverflow.com/questions/55724642/react-useeffect-hook-when-only-one-of-the-effects-deps-changes-but-not-the-oth
+const useEffectWhen = (effect, deps, whenDeps) => {
+  // console.log('[useEffectWhen] (effect, deps, whenDeps):',
+    // effect +'; ' + deps +'; ' + whenDeps);
+  const whenRef = useRef(whenDeps || []);
+  // console.log('whenRef:', whenRef);
+  const initial = whenRef.current === whenDeps;
+  // console.log('Initial:', initial);
+  const whenDepsChanged = 
+    initial || !whenRef.current.every((w, i) => w === whenDeps[i]);
+  // console.log('whenDepsChanged:', whenDepsChanged);
+  whenRef.current = whenDeps;
+  const nullDeps = deps.map(() => null);
+
+  return useEffect(
+    whenDepsChanged ? effect : () => {},
+    whenDepsChanged ? deps : nullDeps
+  );
 };
 
-module.exports = config;
+// const useEffectWhen = (effect, deps, whenDeps) => {
+  
+// }
 
 export default function Demo() {
+  const initialDemand = 'Languages';
+  const initialJob = 'Web Developer';
+  const initialData = [
+        {value: 'postgresql', count: 8},
+        {value: 'javascript', count: 5},
+        {value: 'css', count: 4}
+      ]
+  // const [selectedDemands, setSelectedDemands] = useState([{id: 0, demand: initialDemand}]);
+  // const [selectedJobs, setSelectedJobs] = useState([{id: 0, job: initialJob}]);
   const [selectedDemands, setSelectedDemands] = useState([]);
   const [selectedJobs, setSelectedJobs] = useState([]);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([{id: 0, data: initialData}]);
   const [checkDisable, setDisable] = useState(false);
   const [currID, setCurrID] = useState(-1);
   const [cards, setCards] = useState([]);
-  const initialDemand = 'Languages';
-  const initialJob = 'Web Developer';
   
   const handleSubmit = (event, id) => {
+    console.log('Demands:', selectedDemands);
     // console.log("curr id is:", id);
     let demand = event.target.innerHTML;
     let demandEntry = selectedDemands.find(e => e.id==id);
     if (demandEntry && demand == demandEntry.demand) return;
-    // console.log('[handleSubmit] Updating with new demand:', demand);
+    console.log('[handleSubmit] Updating with new demand:', demand);
     updateDemands(id, demand);
     let jobEntry = selectedJobs.find(e => e.id==id)
     if (!jobEntry) {
@@ -40,14 +71,6 @@ export default function Demo() {
   }
 
   function query(demand, job, id) {
-    // let selectedJobEntry = selectedJobs.find(e => e.id==id);
-    // if (!selectedJobEntry) {
-    //   console.log('Could not find selected job at id:', id);
-    //   return;
-    // }
-    // let selectedJob = selectedJobEntry.job;
-    // console.log('[Query] Selected job:', selectedJob);
-
     // let url = constructURL();
     let url = `http://localhost:3010/v0/data/${demand}/${job}`;
     // let url = `v0/data/${demand}/${job}`;
@@ -66,6 +89,7 @@ export default function Demo() {
         //   {value: 'javascript', count: 5},
         //   {value: 'css', count: 4}
         // ])
+
         updateData(id, json);
 
         // let card = cards.find(card => card.key==id);
@@ -93,17 +117,21 @@ export default function Demo() {
         newCard(currID+1)
       ])
     });
-    setSelectedDemands(prevDemands => {
-      return ([
-        ...prevDemands,
-        {id: currID+1, demand: initialDemand}
-      ]);
-    });
+    // setSelectedDemands(prevDemands => {
+    //   return ([
+    //     ...prevDemands,
+    //     {id: currID+1, demand: initialDemand}
+    //   ]);
+    // });
+    let newDemands = selectedDemands;
+    newDemands.push({id: currID+1, demand: initialDemand});
+    setSelectedDemands(newDemands);
+
     let newJobs = selectedJobs;
     newJobs.push({id: currID+1, job: initialJob});
-    setSelectedJobs(newJobs)
+    setSelectedJobs(newJobs);
     query(initialDemand, initialJob, currID+1);
-
+  
     if (cards.length >= 1) {
       setDisable(true);
     }
@@ -111,6 +139,7 @@ export default function Demo() {
       return (prevID+1);
     });
   }
+
   
   // useEffect(() => {
   //   console.log('[useEffect | selectedDemands] Querying using initialDemand:', initialDemand);
@@ -123,6 +152,9 @@ export default function Demo() {
     // Fixes bug where removing left card would sometimes remove both left and right cards
     setCards(prevCards => {
       return (prevCards.filter(card => card.key != id))
+    });
+    setData(prevData => {
+      return (prevData.filter(e => e.id != id));
     });
     
     // Decrement id of cards to the right of deleted card
@@ -161,7 +193,7 @@ export default function Demo() {
         </header>
         <div className="box">
           <div id={`pie${id}`}></div>
-          {/* <PieChart id={id} data={data}/> */}
+          <PieChart id={id} />
         </div>
           <div className="card-content">
           {/* <p>content here</p> */}
@@ -180,12 +212,28 @@ export default function Demo() {
     addCard();
   }, []);
 
-  useEffect(() => {
-    // console.log("logged");
-    // console.log('dispatching with data:', data);
-    const updateEvt = new CustomEvent('chartUpdate', {detail: data});
-    document.dispatchEvent(updateEvt);
-  }, [data]);
+  // When data is added
+  useEffect(
+    () => console.log('useEffect', data),
+    [data]
+  );
+
+  // When data is updated
+  useEffectWhen(() => {
+    console.log("useEffectWhen", data, data.length)
+  }, [data, data.length], [data.length]);
+
+  // useEffect((e) => {
+  //   // console.log("logged");
+  //   console.log('e:', e);
+  //   // if new data, draw chart
+
+  //   // else, update chart with event listener
+
+  //   console.log('[useEffect] Data updated to:', data);
+  //   const updateEvt = new CustomEvent('chartUpdate', {detail: data});
+  //   document.dispatchEvent(updateEvt);
+  // }, [data]);
 
   function updateDemands(id, demand) {
     let newDemand = selectedDemands;
@@ -206,16 +254,18 @@ export default function Demo() {
     let entry = newData.find(e => e.id == id);
     if (entry) entry.data = json;
     else newData.push({id: id, data: json});
+    console.log('Updating data to:', newData);
     setData(newData);
   }
 
   return (
     <div>
       <SharedContext.Provider value={{
-        // selectedJob, setSelectedJob,
-        // data, setData,
+        selectedJobs, setSelectedJobs,
+        selectedDemands, setSelectedDemands,
+        data, setData,
         // checkDisable, setDisable,
-        // currID, setCurrID
+        currID, setCurrID
       }}
       >
         <section className="section">

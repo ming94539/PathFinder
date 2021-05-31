@@ -8,11 +8,11 @@ import * as d3 from 'd3';
  */
 
 export default function PieChart(props) {
-  // const {data, setData, 
+  const {data, setData, 
   //   chartDrawn, setChartDrawn, 
   //   numCards, setNumCards,
-  //   currID, setCurrID,
-  // } = React.useContext(SharedContext);
+    // currID, setCurrID,
+  } = React.useContext(SharedContext);
 
   /**
    * Referenced:
@@ -41,13 +41,13 @@ export default function PieChart(props) {
     const pieID = `#pie${props.id}`;
     console.log('[drawChart] Drawing chart at pie:', `${pieID}`);
 
-    let dataEntry = props.data.find(e => e.id == props.id);
+    let dataEntry = data.find(e => e.id == props.id);
     if (!dataEntry) {
       console.log('[drawChart] Data entry not found at id:', props.id);
       return;
     }
-    let data = dataEntry.data;
-    console.log('[drawChart] Drawing chart with data:', data);
+    let pieData = dataEntry.data;
+    console.log('[drawChart] Drawing chart with data:', pieData);
     
     svg = d3.select(pieID) // select element in the DOM with id 'chart'
       .append('svg') // append an svg element to the element we've selected
@@ -55,6 +55,8 @@ export default function PieChart(props) {
       .attr('height', height) // set the height of the svg element we just added
       .append('g') // append 'g' element to the svg element
       .attr('transform', 'translate(' + (width / 2) + ',' + (height / 2) + ')'); // our reference is now to the 'g' element. centerting the 'g' element to the svg element
+
+    // console.log('svg:', svg);  
 
     var arc = d3.arc()
       .innerRadius(0) // none for pie chart
@@ -85,7 +87,7 @@ export default function PieChart(props) {
 
     // creating the chart
     var path = svg.selectAll('path') // select all path elements inside the svg. specifically the 'g' element. they don't exist yet but they will be created below
-      .data(pie(data)) //associate data wit he path elements we're about to create. must pass through the pie function. it magically knows how to extract values and bakes it into the pie
+      .data(pie(pieData)) //associate data wit he path elements we're about to create. must pass through the pie function. it magically knows how to extract values and bakes it into the pie
       .enter() //creates placeholder nodes for each of the values
       .append('path') // replace placeholders with path elements
       .attr('d', arc) // define d attribute with arc function above
@@ -95,7 +97,7 @@ export default function PieChart(props) {
     // mouse event handlers are attached to path so they need to come after its definition
     path.on('mouseover', function(d) {  // when mouse enters div      
       // tooltip.style('display', 'show')
-      var total = d3.sum(data.map(function(d) { // calculate the total number of tickets in the data         
+      var total = d3.sum(pieData.map(function(d) { // calculate the total number of tickets in the data         
         return d.count;
         // return (d.enabled) ? d.count : 0; // checking to see if the entry is enabled. if it isn't, we return 0 and cause other percentages to increase                                      
       }));               
@@ -146,7 +148,7 @@ export default function PieChart(props) {
             return arc(interpolate(t));
           };
         });
-    })
+    });
 
   }
 
