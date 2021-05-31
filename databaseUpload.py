@@ -1,5 +1,5 @@
 from dbconnection import DBConnection
-import sys
+
 #table = {
 #	'table': 'WebDeveloper',
 #	'jobID': '4385545',
@@ -34,17 +34,15 @@ YEARS_OF_EXPERIENCE = 6
 #	result[4] = skills
 #	result[5] = languages
 #	result[6] = yoe
-def eprint(string):
-	print(string, file=sys.stderr)
 def data_validation(table):
-	seniorityVals = ['internship', 'entry level', 'associate', 'mid-senior level', 'director', 'executive']
-	educationVals = ['a', 'b', 'm', 'p']
+	seniority_values = ['internship', 'entry level', 'associate', 'mid-senior level', 'director', 'executive']
+	education_values = ['a', 'b', 'm', 'p']
 	result = []
 
 	seniority = table.get('seniority')
 	if seniority == -1:
 		result.append(None)
-	elif not (seniority in seniorityVals):
+	elif not (seniority in seniority_values):
 		result.append(-1)
 	else:
 		result.append(0)
@@ -67,12 +65,11 @@ def data_validation(table):
 		result.append(None)
 	else:
 		for e in educationLevels:
-			if not (e in educationVals):
-				print("educationval invalid")
+			if not (e in education_values):
 				result.append(-1)
 				invalidEducation = True
 				break
-	
+
 		if not invalidEducation:
 			result.append(0)	
 
@@ -98,6 +95,34 @@ def data_validation(table):
 
 	return result
 
+'''
+	Checks if a given table already exists in the database.
+	If not then it creates that table in the database.
+'''
+def table_validation(db, table_name):
+	sql_query = f'''
+		SELECT DISTINCT tablename
+		FROM jobidtable
+	'''
+	query_results = db.query(sql_query)
+	table_names = []
+	for table in query_results:
+		table_names.append(table[0])
+
+	if table_name not in table_names:
+		sql_create_table = f'''
+			CREATE TABLE {table_name} (
+				jobID VARCHAR(15) NOT NULL,
+				seniority VARCHAR(30),
+				yearsOfExperience INTEGER,
+				PRIMARY KEY (jobID),
+				FOREIGN KEY (jobID) REFERENCES JobIDTable(jobID)
+			)
+		'''
+		db.add_stmt(sql_create_table)
+		db.execute()
+
+
 def db_uploadFunction(dbup_table):
 
 	# establish session to database
@@ -111,6 +136,8 @@ def db_uploadFunction(dbup_table):
 
 	jobID = dbup_table['jobID']
 
+	table_validation(db, table)
+
 	insert_JobIDTable = f"""
 	    INSERT INTO JobIDTable (jobID, tableName)
 	    VALUES ({jobID}, '{table}')
@@ -120,7 +147,6 @@ def db_uploadFunction(dbup_table):
 	print(len(validationResults))
 
 	# Insert to job table
-	# todo: check validation results for NULL values in seniority and yoe
 	if validationResults[SENIORITY] != -1 and validationResults[YEARS_OF_EXPERIENCE] != -1:
 		seniority = dbup_table['seniority']
 		yoe = dbup_table['yoe']

@@ -18,7 +18,7 @@ class DBConnection(object):
             }
         )   
         self.stmts = []
-	
+    
     def execute(self):
         """
         Sequentially execute each SQL statement, then 
@@ -36,7 +36,7 @@ class DBConnection(object):
             print(e, file=sys.stderr)
             session.rollback()
 
-        self.stmts = []
+        self.stmts.clear()
         session.close()
 
     def add_stmt(self, stmt):
