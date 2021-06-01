@@ -29,6 +29,7 @@
   "scripts": {
     "backend": "cd backend && npm start",
     "frontend": "cd frontend && npm start",
+    "init install": "(cd frontend && npm install) & (cd backend && npm install)", 
     "start": "(npm run backend) & (npm run frontend)",
     "build": "cd backend && npm run build",
     "test": "jest --runInBand --testTimeout=2000 --coverage",
