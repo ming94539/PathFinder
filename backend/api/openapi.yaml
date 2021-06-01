@@ -1,0 +1,56 @@
+#
+# CSE 115A Backend
+#
+
+openapi: '3.0.3'
+
+info:
+  description: CSE115A PathFinder
+  version: 0.1.0
+  title: CSE115A PathFinder
+
+servers:
+  - url: http://localhost:3010/
+
+paths:
+  /v0/data/{selectedDemand}/{selectedJobTitle}:
+    get:
+      description: Returns array of all emails
+      parameters:
+        - in: query
+          name: demandJobTitle
+          schema:
+            type: string
+          description: check mailbox
+      responses:
+        200:
+          description: Emails Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          description: Unexpected Error
+  /v0/data/{selectedDemand}:
+    get:
+      description: Most popular field
+      parameters:
+        - in: query
+          name: demand
+          schema:
+            type: string
+          description: grab all job tables
+      responses:
+        200:
+          description: Emails Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          description: Unexpected Error
+
+components:
+  schemas:
+    Error:
+      type: array

@@ -1,0 +1,60 @@
+{
+  "name": "cse115a-pathfinder",
+  "version": "1.0.0",
+  "description": "CSE115A PathFinder",
+  "author": "Alice Liang <aliang12@ucsc.edu>",
+  "license": "UNLICENSED",
+  "repository": "none",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.12.1",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "jest": "26.6.0",
+    "jest-dev-server": "^4.4.0",
+    "puppeteer": "^5.4.1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "axios": "^0.21.0",
+    "d3": "^6.7.0",
+    "draft-js": "^0.11.7",
+    "prop-types": "^15.7.2",
+    "react": "17.0.1",
+    "react-autosuggest": "^10.0.4",
+    "react-dom": "17.0.1",
+    "react-draft-wysiwyg": "^1.14.5",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.0"
+  },
+  "jest": {
+    "globalSetup": "./src/globalSetup.js",
+    "globalTeardown": "./src/globalTeardown.js",
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js"
+    ]
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint . --ext .js",
+    "start": "react-scripts start",
+    "test-start": "react-scripts start",
+    "test": "jest --runInBand --testTimeout=10000",
+    "build": "react-scripts build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
