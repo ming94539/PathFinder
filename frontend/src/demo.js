@@ -11,18 +11,12 @@ import './style.css';
 //   verbose: true,
 // };
 
-// module.exports = config;
 // https://stackoverflow.com/questions/55724642/react-useeffect-hook-when-only-one-of-the-effects-deps-changes-but-not-the-oth
 const useEffectWhen = (effect, deps, whenDeps) => {
-//   // console.log('[useEffectWhen] (effect, deps, whenDeps):',
-//     // effect +'; ' + deps +'; ' + whenDeps);
   const whenRef = useRef(whenDeps || []);
-//   // console.log('whenRef:', whenRef);
   const initial = whenRef.current === whenDeps;
-//   // console.log('Initial:', initial);
   const whenDepsChanged = 
     initial || !whenRef.current.every((w, i) => w === whenDeps[i]);
-  // console.log('whenDepsChanged:', whenDepsChanged);
     whenRef.current = whenDeps;
     const nullDeps = deps.map(() => null);
 
@@ -35,22 +29,9 @@ const useEffectWhen = (effect, deps, whenDeps) => {
 export default function Demo() {
   const initialDemand = 'Languages';
   const initialJob = 'Web Developer';
-  // let initialData;
-  // fetch(`http://localhost:3010/v0/data/${initialDemand}/${initialJob}`)
-  // .then((response) => {
-  //   return response.json();
-  // }).then((json) => initialData = json);
-  // const initialData = [
-  //   {value: 'postgresql', count: 8},
-  //   {value: 'javascript', count: 5},
-  //   {value: 'css', count: 4}
-  // ]
-  // const [selectedDemands, setSelectedDemands] = useState([{id: 0, demand: initialDemand}]);
-  // const [selectedJobs, setSelectedJobs] = useState([{id: 0, job: initialJob}]);
-  // console.log('initialData:', initialData);
   const [selectedDemands, setSelectedDemands] = useState([]);
   const [selectedJobs, setSelectedJobs] = useState([]);
-  const [data, setData] = useState([]);
+  const [ data, setData] = useState([]);
   const [checkDisable, setDisable] = useState(false);
   const [currID, setCurrID] = useState(-1);
   const [cards, setCards] = useState([]);
@@ -61,9 +42,7 @@ export default function Demo() {
   }, []);
   
   function handleSubmit (event, id) {
-    // console.log('Demands:', selectedDemands);
     console.log('[handleSubmit] data at submit:', data);
-    // console.log("curr id is:", id);
     let demand = event.target.innerHTML;
     let demandEntry = selectedDemands.find(e => e.id==id);
     if (demandEntry && demand == demandEntry.demand) return;
@@ -76,13 +55,6 @@ export default function Demo() {
     }
     console.log('[handleSubmit] Updating with new demand:', demand);
     query(demand, jobEntry.job, id);
-
-    // force update
-    // setCards(prevCards => {
-    //   return [
-    //     ...prevCards
-    //   ]
-    // });
   }
 
   function query(demand, job, id) {
@@ -122,12 +94,6 @@ export default function Demo() {
         newCard(currID+1)
       ])
     });
-    // setSelectedDemands(prevDemands => {
-    //   return ([
-    //     ...prevDemands,
-    //     {id: currID+1, demand: initialDemand}
-    //   ]);
-    // });
     let newDemands = selectedDemands;
     newDemands.push({id: currID+1, demand: initialDemand});
     setSelectedDemands(newDemands);
@@ -137,14 +103,6 @@ export default function Demo() {
     setSelectedJobs(newJobs);
 
     query(initialDemand, initialJob, currID+1);
-    
-    // if (cards.length >= 1) {
-      //   setDisable(true);
-      // }
-
-    // setData(prevData => {
-    //   return [...prevData, {id: currID+1, data: []}]
-    // });
 
     setCurrID(prevID => {
       return (prevID+1);
@@ -206,23 +164,20 @@ export default function Demo() {
         <footer className="card-footer">
           <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Languages</button>
           <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Skills</button>
+          <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Degrees</button>
         </footer>
       </div>
     );
   };
 
+  // When data is updated
   useEffect(() => {
-    // if (data && data[0] && data[0].data) {
     console.log('[useEffect] Data updated to:', data);
     const updateEvt = new CustomEvent('chartUpdate', {detail: data});
     document.dispatchEvent(updateEvt);
-    // }
   });
-    // console.log('data length:', data.length);
-    // console.log('data0:', data[0]);
-  // }
 
-  // New data entry added
+  // When a new data entry added
   useEffectWhen(() => {
     if (currID >= 0) {
       console.log("useEffectWhen with id:", currID);
@@ -249,7 +204,6 @@ export default function Demo() {
     console.log('data before update:', data);
     let newData = data;
     console.log('newData:', newData);
-    // let entry = newData.find(e => e.id == id);
     let entry;
     for (let e of newData) {
       if (e.id == id) {
@@ -258,24 +212,21 @@ export default function Demo() {
       }
     }
     if (entry) {
-      console.log("[updateData] newData before entry:", newData);
+      // console.log("[updateData] newData before entry:", newData);
       entry.data = json;
-      console.log("[updateData] newData after entry:", newData);
+      // console.log("[updateData] newData after entry:", newData);
     }
     else {
       console.log('[updateData] Pushing new data at id:', id);
       newData.push({id: id, data: json});
     }
-    console.log('[updateData] Updating data to:', newData);
-    // let 
+    // console.log('[updateData] Updating data to:', newData);
     // setData(newData);
     setData(() => {
       return [...newData]
     });
   }
 
-
-  // let card = (cards.length > 0) ? (cards) : (<InitialCard id={0}/>);
   return (
     <div>
       <SharedContext.Provider value={{
@@ -292,9 +243,6 @@ export default function Demo() {
           </button>
           <div className="cards-wrapper">
             {cards}
-            {/* {card} */}
-            {/* <InitialCard id={0}/> */}
-            {/* {cards.length > 0 ? cards : initialCard} */}
           </div>
           <br/><br/>
         </section>

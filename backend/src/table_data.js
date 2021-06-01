@@ -27,7 +27,7 @@ exports.getDemandWithJob = async (req, res) => {
       demand='s'; break;
     case('Languages'):
       demand='l'; break;
-    case('What Degrees are Needed'):
+    case('Degrees'):
       demand='d'; break;
     case('Most Popular Fields'):
       demand='f'; break;
@@ -62,7 +62,7 @@ exports.getDemandWithJob = async (req, res) => {
     // Most popular language 
     let degreeDemand = `
     SELECT d.degreetitle as value, COUNT(*) AS count
-    FROM Degree d ${jobTitleMatch}
+    FROM Degrees d ${jobTitleMatch}
     GROUP BY d.degreetitle
     ORDER BY count DESC
   `;

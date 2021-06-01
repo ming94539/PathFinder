@@ -40,7 +40,7 @@
     "start": "react-scripts start",
     "test-start": "react-scripts start",
     "test": "jest --runInBand --testTimeout=2000",
-    "build": "react-scripts build"
+    "build": "(npm install) && (react-scripts build)"
   },
   "browserslist": {
     "production": [

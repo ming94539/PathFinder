@@ -38,7 +38,10 @@ export default function piechart(id, data) {
       .attr('width', width) // set the width of the svg element we just added
       .attr('height', height) // set the height of the svg element we just added
       .append('g') // append 'g' element to the svg element
-      .attr('transform', 'translate(' + (width / 2) + ',' + (height / 2) + ')'); // our reference is now to the 'g' element. centerting the 'g' element to the svg element
+      .attr('transform', 'translate(' + (width / 2) + ',' + (height / 2) + ')') // our reference is now to the 'g' element. centerting the 'g' element to the svg element
+      .attr('stroke', 'black')
+      .style("stroke-width", "1px")
+      .style('stroke-opacity', 0.5)
 
     var arc = d3.arc()
       .innerRadius(0) // none for pie chart
@@ -78,21 +81,19 @@ export default function piechart(id, data) {
 
     // mouse event handlers are attached to path so they need to come after its definition
     path.on('mouseover', function(d) {  // when mouse enters div      
-      // tooltip.style('display', 'show')
-      var total = d3.sum(pieData.map(function(d) { // calculate the total number of tickets in the data         
-        return d.count;
-        // return (d.enabled) ? d.count : 0; // checking to see if the entry is enabled. if it isn't, we return 0 and cause other percentages to increase                                      
-      }));               
+      let total = path.data().map(e => parseInt(e.data.count)).reduce((acc, cur) => acc+cur);
+
       d = d.path[0].__data__;                                       
-      // console.log('d in mouseover:', d);
+      
       var percent = Math.round(1000 * d.data.count / total) / 10; // calculate percent
+      // console.log('pieData:', pieData);
       tooltip.select('.label').html(d.data.value); // set current label           
       // tooltip.select('.count').html('$' + d.data.count); // set current count            
       tooltip.select('.percent').html(percent + '%'); // set percent calculated above          
       tooltip.style('display', 'block');
       // Variable box length
       const box_width = d.data.value.split(' ').map(word => word.length).reduce((acc, curr) => acc+curr);
-      tooltip.style('width', box_width*9 + 40 + 'px')
+      tooltip.style('width', box_width*8 + 50 + 'px')
     });                                                           
 
     path.on('mouseout', function() { // when mouse leaves div                        
@@ -101,8 +102,8 @@ export default function piechart(id, data) {
 
     path.on('mousemove', function(d) { // when mouse moves  
       // console.log('d on mousemove:', d);               
-      tooltip.style('top', (d.layerY + 10) + 'px') // always 10px below the cursor
-        .style('left', (d.layerX + 10) + 'px'); // always 10px to the right of the mouse
+      tooltip.style('top', (d.offsetY + 100) + 'px')
+            .style('left', (d.offsetX + 200) + 'px');
     });
 
     document.addEventListener(`chartUpdate`, function(event) {
@@ -116,8 +117,12 @@ export default function piechart(id, data) {
       }
       if (!newData) return;
       newData = newData.slice(0, 20);
+      while (newData.length < 20) {
+        newData.push({value: '', count: 0});
+      }
+      console.log('newData:', newData);
 
-      console.log('color before:', color);
+      // console.log('color before:', color);
       if (currColor > 0) {
         console.log('setting to scheme2');
         color = d3.scaleOrdinal(d3.schemeSet2);
@@ -126,23 +131,35 @@ export default function piechart(id, data) {
         color = d3.scaleOrdinal(d3.schemeSet3);
       }
       currColor *= -1;
-      console.log('color after:', color);
-
+      // console.log('color after:', color);
       path = path.data(pie(newData)); // update pie with new data
+
+      // path.attr('d', null)
 
       path.transition() // transition of redrawn pie
         .duration(500) // 
         .attrTween('d', function(d) { // 'd' specifies the d attribute that we'll be animating
-          var interpolate = d3.interpolate(this._current, d); // this = current path element
-          let _this = this;
+          // var interpolate = d3.interpolate(this._current, d); // this = current path element
+          // console.log('d:', d);
+          // let curr = this._current;
+          if (this.current) {
+            this.current.startAngle = 0;
+            this.current.endAngle = 0;
+          }
+          
+          // console.log('this:', this.current);
+          var interpolate = d3.interpolate(this.current, d); // this = current path element
+          this.current = interpolate(0) ;
+          // let _this = this;
           return function(t) {
-            _this._current = interpolate(t)
-            return arc(_this._current);
+            return arc(interpolate(t));
+            // _this._current = interpolate(t)
+            // return arc(_this._current);
           };
         });
 
-      d3.selectAll("path").style("fill", function(d){
-        return color(d.data.value);
-      })
+      // d3.selectAll("path").style("fill", function(d){
+      //   return color(d.data.value);
+      // })
     });
 }
