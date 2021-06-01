@@ -13,7 +13,11 @@
     "supertest": "^6.0.1"
   },
   "jest": {
-    "verbose": true
+    "verbose": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js"
+    ]
   },
   "dependencies": {
     "bcrypt": "^5.0.0",

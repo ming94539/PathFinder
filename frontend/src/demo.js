@@ -3,14 +3,14 @@ import SharedContext from './SharedContext';
 import PieChart from './piechart';
 import './style.css';
 
-// jest.config.js
-// Sync object
-/** @type {import('@jest/types').Config.InitialOptions} */
-const config = {
-  verbose: true,
-};
+// // jest.config.js
+// // Sync object
+// /** @type {import('@jest/types').Config.InitialOptions} */
+// const config = {
+//   verbose: true,
+// };
 
-module.exports = config;
+// module.exports = config;
 
 export default function Demo() {
   const [selectedDemand, setSelectedDemand] = useState('');
@@ -203,7 +203,7 @@ export default function Demo() {
         <section className="section">
           <button id="submitButton" className="button is-primary mb-5 has-text-centered" onClick={addCard} disabled={checkDisable}>
             <span className="icon"><i className="fa fa-plus"></i></span>
-            <span>New Card</span>
+            <span id="blah"className="newCardButton">New Card</span>
           </button>
           <div className="cards-wrapper">
             {cards}
