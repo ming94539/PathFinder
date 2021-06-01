@@ -23,7 +23,7 @@
 
 .card {
     display: inline-block;
-    height: 650px;
+    height: 750px;
     width: 700px;
 }    
 
@@ -33,7 +33,7 @@
 }
 
 .box {
-    height: 350px;
+    height: 400px;
     width: inherit;
 }
 

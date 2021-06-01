@@ -51,7 +51,6 @@ export default function Demo() {
   const [selectedDemands, setSelectedDemands] = useState([]);
   const [selectedJobs, setSelectedJobs] = useState([]);
   const [data, setData] = useState([]);
-  // {id: 0, data: initialData}
   const [checkDisable, setDisable] = useState(false);
   const [currID, setCurrID] = useState(-1);
   const [cards, setCards] = useState([]);
@@ -63,6 +62,7 @@ export default function Demo() {
   
   function handleSubmit (event, id) {
     // console.log('Demands:', selectedDemands);
+    console.log('[handleSubmit] data at submit:', data);
     // console.log("curr id is:", id);
     let demand = event.target.innerHTML;
     let demandEntry = selectedDemands.find(e => e.id==id);
@@ -78,11 +78,11 @@ export default function Demo() {
     query(demand, jobEntry.job, id);
 
     // force update
-    setCards(prevCards => {
-      return [
-        ...prevCards
-      ]
-    });
+    // setCards(prevCards => {
+    //   return [
+    //     ...prevCards
+    //   ]
+    // });
   }
 
   function query(demand, job, id) {
@@ -104,16 +104,8 @@ export default function Demo() {
         //   {value: 'javascript', count: 5},
         //   {value: 'css', count: 4}
         // ])
-
+        console.log('[query] Data before update:', data);
         updateData(id, json);
-        // let card = cards.find(card => card.key==id);
-        // if (!card) {
-        //   console.log('Card does not exist at id:', id, cards);
-        //   return;
-        // }
-        // console.log('card:', card);
-        // ReactDOM.render(<PieChart id={id} data={json} />, card);
-        // <PieChart id={id} data={json}/>;
       })
       .catch((error) => {
         console.log('[handleSubmit] Error fetching data');
@@ -145,15 +137,17 @@ export default function Demo() {
     setSelectedJobs(newJobs);
 
     query(initialDemand, initialJob, currID+1);
-  
-    if (cards.length >= 1) {
-      setDisable(true);
-    }
+    
+    // if (cards.length >= 1) {
+      //   setDisable(true);
+      // }
+
+    // setData(prevData => {
+    //   return [...prevData, {id: currID+1, data: []}]
+    // });
+
     setCurrID(prevID => {
       return (prevID+1);
-    });
-    setData(prevData => {
-      return [...prevData]
     });
   };
   
@@ -174,13 +168,13 @@ export default function Demo() {
     if (jobEntry) jobEntry.job = job;
     else newSelectedJobs.push({id: id, job: job});
     setSelectedJobs(newSelectedJobs);
-    // console.log(`[handleJobChange] Set job to ${job} at ID: ${id}`);
-    // updateJobs(id, )
-    // setSelectedJob(event.target.value);
-    // console.log(event.target.value)
+
+    let demandEntry = selectedDemands.find(e => e.id==id);
+    if (!demandEntry) {return;}
+    query(demandEntry.demand, job, id);
   }
 
-  const newCard = (id) => {
+  function newCard (id) {
     return (
       <div className="card mx-6" key={id}>
         <header className="message is-info">
@@ -189,7 +183,14 @@ export default function Demo() {
             <div className="select">
               <select onChange={event => handleJobChange(event, id)}>
                 <option>Web Developer</option>
-                <option>null</option>
+                <option>Database Administrator</option>
+                <option>Data Engineer</option>
+                <option>Data Scientist</option>
+                <option>Firmware Engineer</option>
+                <option>IT Architect</option>
+                <option>Machine Learning Engineer</option>
+                <option>Security Analyst</option>
+                <option>System Architect</option>
               </select>
             </div>
           </div>
@@ -210,31 +211,25 @@ export default function Demo() {
     );
   };
 
-  // When data is added
-  // useEffect(
-  //   () => console.log('useEffect', data),
-  //   [data]
-  // );
+  useEffect(() => {
+    // if (data && data[0] && data[0].data) {
+    console.log('[useEffect] Data updated to:', data);
+    const updateEvt = new CustomEvent('chartUpdate', {detail: data});
+    document.dispatchEvent(updateEvt);
+    // }
+  });
+    // console.log('data length:', data.length);
+    // console.log('data0:', data[0]);
+  // }
 
   // New data entry added
   useEffectWhen(() => {
     if (currID >= 0) {
       console.log("useEffectWhen with id:", currID);
-      setCards(prevCards => {
-        return [
-          ...prevCards
-        ]
-      });
-      // <PieChart id={currID} />;
+      setCards(prevCards => {return [...prevCards]});
       piechart(currID, data);
     }
   }, [data, data.length], [data.length]);
-  
-  useEffect(() => {
-    console.log('[useEffect] Data updated to:', data);
-    const updateEvt = new CustomEvent('chartUpdate', {detail: data});
-    document.dispatchEvent(updateEvt);
-  }, [data, cards]);
 
   function updateDemands(id, demand) {
     let newDemand = selectedDemands;
@@ -251,13 +246,34 @@ export default function Demo() {
    * @param {Object}  json  New incoming data
    */
   function updateData(id, json) {
+    console.log('data before update:', data);
     let newData = data;
-    let entry = newData.find(e => e.id == id);
-    if (entry) entry.data = json;
-    else newData.push({id: id, data: json});
-    // console.log('Updating data to:', newData);
-    setData(newData);
+    console.log('newData:', newData);
+    // let entry = newData.find(e => e.id == id);
+    let entry;
+    for (let e of newData) {
+      if (e.id == id) {
+        entry = e;
+        break;
+      }
+    }
+    if (entry) {
+      console.log("[updateData] newData before entry:", newData);
+      entry.data = json;
+      console.log("[updateData] newData after entry:", newData);
+    }
+    else {
+      console.log('[updateData] Pushing new data at id:', id);
+      newData.push({id: id, data: json});
+    }
+    console.log('[updateData] Updating data to:', newData);
+    // let 
+    // setData(newData);
+    setData(() => {
+      return [...newData]
+    });
   }
+
 
   // let card = (cards.length > 0) ? (cards) : (<InitialCard id={0}/>);
   return (
