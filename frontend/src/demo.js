@@ -80,10 +80,6 @@ export default function Demo() {
         newCard(currID+1)
       ])
     });
-<<<<<<< HEAD
-=======
-
->>>>>>> d50477243a988451f56695cc9aac47f3070469aa
     let newDemands = selectedDemands;
     newDemands.push({id: currID+1, demand: initialDemand});
     setSelectedDemands(newDemands);
