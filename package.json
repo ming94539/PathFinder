@@ -7,12 +7,24 @@
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.14.3",
     "@babel/preset-react": "^7.13.13",
-    "bestzip": "^2.1.7"
+    "bestzip": "^2.1.7",
+    "jest": "26.6.0",
+    "jest-cli": "26.6.0",
+    "jest-dev-server": "^4.4.0",
+    "puppeteer": "5.4.1",
+    "react-scripts": "4.0.0"
   },
   "jest": {
     "moduleNameMapper": {
       "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
-    }
+    },
+    "globalSetup": "./frontend/src/globalSetup.js",
+    "globalTeardown": "./frontend/src/globalTeardown.js",
+    "testTimeout": 10000,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js"
+    ]
   },
   "scripts": {
     "backend": "cd backend && npm start",
@@ -20,7 +32,8 @@
     "init install": "(cd frontend && npm install) & (cd backend && npm install)", 
     "start": "(npm run backend) & (npm run frontend)",
     "build": "cd backend && npm run build",
-    "test": "jest --runInBand --testTimeout=2000 --coverage"
+    "test": "jest --runInBand --testTimeout=2000 --coverage",
+    "test-start": "BROWSER=none react-scripts start"
   },
   "dependencies": {
     "@babel/preset-env": "^7.14.4",
@@ -29,10 +42,28 @@
     "d3": "^6.7.0",
     "d3-scale-chromatic": "^2.0.0",
     "draft-js": "^0.11.7",
-    "jest": "^27.0.1",
+    "jest": "26.6.0",
+    "jest-css-modules": "^2.1.0",
+    "path": "^0.12.7",
     "react-draft-wysiwyg": "^1.14.5",
     "supertest": "^6.1.3",
+<<<<<<< HEAD
+    "yarn": "^1.22.10"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+=======
     "yarn": "^1.22.10",
     "react-scripts": "^4.0.0"
+>>>>>>> 988586eacba6f11b32d8b0f118ccb1f0818b4303
   }
 }
