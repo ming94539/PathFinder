@@ -28,15 +28,34 @@ test('Title', async () => {
 });
 
 
-test('Language Btn',async () => {
+test('New Card Btn',async () => {
   const page = await browser.newPage();
   await page.goto('http://localhost:3000/');
-  // await page.waitForTimeout(500);
   const elem = await page.$(".newCardButton");
-  console.log(elem);
-  // const cont = await (await elem.getProperty('value')).jsonValue();
   const text = await page.evaluate(element => element.textContent, elem);
-
-  console.log(text);
   expect(text).toBe("New Card");
+});
+
+test('empty pie',async () => {
+  const page = await browser.newPage();
+  await page.goto('http://localhost:3000/');
+  const elem = await page.$("pie0");
+  expect(elem).toBe(null);
+});
+
+test('empty card set',async () => {
+  const page = await browser.newPage();
+  await page.goto('http://localhost:3000/');
+  const elem = await page.$("initCardSet");
+  expect(elem).toBe(null);
+});
+
+test('Initial Piechart Load', async () => {
+  const page = await browser.newPage();   
+  await page.goto('http://localhost:3000/');
+  await page.click(".newCardButton");
+  await page.waitForTimeout(500);
+  const elem = await page.$("#pie0");
+  expect(elem._remoteObject.description).toBe("div#pie0");
+
 });

@@ -1,28 +1,14 @@
 import React, {useState, useEffect, useRef} from 'react';
 import SharedContext from './SharedContext';
-// import PieChart from './piechart';
 import piechart from './piechart';
 import './style.css';
 
-// jest.config.js
-// Sync object
-// /** @type {import('@jest/types').Config.InitialOptions} */
-// const config = {
-//   verbose: true,
-// };
-
-// module.exports = config;
 // https://stackoverflow.com/questions/55724642/react-useeffect-hook-when-only-one-of-the-effects-deps-changes-but-not-the-oth
 const useEffectWhen = (effect, deps, whenDeps) => {
-//   // console.log('[useEffectWhen] (effect, deps, whenDeps):',
-//     // effect +'; ' + deps +'; ' + whenDeps);
   const whenRef = useRef(whenDeps || []);
-//   // console.log('whenRef:', whenRef);
   const initial = whenRef.current === whenDeps;
-//   // console.log('Initial:', initial);
   const whenDepsChanged = 
     initial || !whenRef.current.every((w, i) => w === whenDeps[i]);
-  // console.log('whenDepsChanged:', whenDepsChanged);
     whenRef.current = whenDeps;
     const nullDeps = deps.map(() => null);
 
@@ -74,23 +60,11 @@ export default function Demo() {
       console.log('All jobs:', selectedJobs);
       return;
     }
-    console.log('[handleSubmit] Updating with new demand:', demand);
     query(demand, jobEntry.job, id);
-
-    // force update
-    // setCards(prevCards => {
-    //   return [
-    //     ...prevCards
-    //   ]
-    // });
   }
 
   function query(demand, job, id) {
-    // let url = constructURL();
     let url = `http://localhost:3010/v0/data/${demand}/${job}`;
-    // let url = `v0/data/${demand}/${job}`;
-    // console.log('fetching url:', url);
-    // console.log('[query] Querying with demand:', demand);
     fetch(url)
       .then((response) => {
         if (!response.ok) {
@@ -104,14 +78,13 @@ export default function Demo() {
         //   {value: 'javascript', count: 5},
         //   {value: 'css', count: 4}
         // ])
-        console.log('[query] Data before update:', data);
         updateData(id, json);
       })
       .catch((error) => {
         console.log('[handleSubmit] Error fetching data');
         console.log(error);
         // should throw some user interface
-          // alert('invalid input');
+          alert('invalid input');
     });
   }
 
@@ -122,12 +95,7 @@ export default function Demo() {
         newCard(currID+1)
       ])
     });
-    // setSelectedDemands(prevDemands => {
-    //   return ([
-    //     ...prevDemands,
-    //     {id: currID+1, demand: initialDemand}
-    //   ]);
-    // });
+
     let newDemands = selectedDemands;
     newDemands.push({id: currID+1, demand: initialDemand});
     setSelectedDemands(newDemands);
@@ -137,14 +105,6 @@ export default function Demo() {
     setSelectedJobs(newJobs);
 
     query(initialDemand, initialJob, currID+1);
-    
-    // if (cards.length >= 1) {
-      //   setDisable(true);
-      // }
-
-    // setData(prevData => {
-    //   return [...prevData, {id: currID+1, data: []}]
-    // });
 
     setCurrID(prevID => {
       return (prevID+1);
@@ -190,17 +150,15 @@ export default function Demo() {
                 <option>IT Architect</option>
                 <option>Machine Learning Engineer</option>
                 <option>Security Analyst</option>
-                <option>System Architect</option>
+                <option>Systems Architect</option>
               </select>
             </div>
           </div>
         </header>
         <div className="box">
           <div id={`pie${id}`}></div>
-          {/* <PieChart id={id} /> */}
         </div>
           <div className="card-content">
-          {/* <p>content here</p> */}
         </div>
         {/* TODO: Change selected button color */}
         <footer className="card-footer">
@@ -213,14 +171,10 @@ export default function Demo() {
 
   useEffect(() => {
     // if (data && data[0] && data[0].data) {
-    console.log('[useEffect] Data updated to:', data);
     const updateEvt = new CustomEvent('chartUpdate', {detail: data});
     document.dispatchEvent(updateEvt);
     // }
   });
-    // console.log('data length:', data.length);
-    // console.log('data0:', data[0]);
-  // }
 
   // New data entry added
   useEffectWhen(() => {
@@ -288,13 +242,10 @@ export default function Demo() {
         <section className="section">
           <button id="submitButton" className="button is-primary mb-5 has-text-centered" onClick={addCard} disabled={checkDisable}>
             <span className="icon"><i className="fa fa-plus"></i></span>
-            <span id="blah"className="newCardButton">New Card</span>
+            <span className="newCardButton">New Card</span>
           </button>
-          <div className="cards-wrapper">
+          <div id="initCardSet"className="cards-wrapper">
             {cards}
-            {/* {card} */}
-            {/* <InitialCard id={0}/> */}
-            {/* {cards.length > 0 ? cards : initialCard} */}
           </div>
           <br/><br/>
         </section>
