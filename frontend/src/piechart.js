@@ -1,96 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import SharedContext from './SharedContext';
 import './style.css';
 import * as d3 from 'd3';
 
-/**
- * @return {object} JSX
- */
-
-export default function PieChart(props) {
-  const {data, setData, 
-    chartDrawn, setChartDrawn, 
-    numCards, setNumCards,
-    currID, setCurrID,
-  } = React.useContext(SharedContext);
-
-  const drawChart = () => {
-    // console.log('drawing chart with data:', data);
-    console.log('drawing chart with data');
-
-    var keys = [];
-    var counts = [];
-    
-    /*
-      Up to the first 10 entries of data
-     */
-    let data_len = Object.keys(data).length;
-    let cnt = data_len < 10 ? data_len : 10;
-
-    for (let i=0; i < cnt; ++i) {
-      keys.push(data[i].value);
-      counts.push(data[i].count);
-    }
-
-
-		var svg = d3.select("svg"),
-			width = svg.attr("width"),
-			height = svg.attr("height"),
-      margin = 5,
-			radius = Math.min(width, height) / 2 - margin,
-			g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-    var color = d3.scaleOrdinal()
-      .domain(counts)
-      .range(d3.schemeSet3);
-
-		// Generate the pie
-		var pie = d3.pie();
-
-		// Generate the arcs
-		var arc = d3.arc()
-      .innerRadius(0)
-      .outerRadius(radius);
-
-		//Generate groups
-		var arcs = g.selectAll("arc")
-					.data(pie(counts))
-					.enter()
-					.append("g")
-					.attr("class", "arc")
-
-		//Draw arc paths
-		arcs.append("path")
-			.attr("fill", function(d, i) {
-				return color(i);
-			})
-			.attr("d", arc)
-      .attr("stroke", "black")
-      .attr("stroke-width", "2px");
-
-    arcs.append("text")
-      .text(function(d) {
-        return keys[d.index];
-        // return keys[keys.length-d.index-1];
-      })
-      .attr("transform", function(d) {
-        return "translate(" + arc.centroid(d) + ")";
-      })
-      .style("text-anchor", "middle")
-      .style("font-size", 17)
-
-  };
-
-  /**
-   * Referenced:
-   * https://codepen.io/thecraftcoderpdx/pen/jZyzKo
-   */
-  const drawChart2 = (data) => {
-    // console.log('data:', data);
-
-    let svg = d3.select('svg');
-    // let width = svg.attr('width');
-    // let height = svg.attr('height');
+export default function piechart(id, data) {
+  let svg = d3.select('svg');
     let width=350;
     let height=350;
     let margin = 10;
@@ -99,14 +13,25 @@ export default function PieChart(props) {
     var radius = Math.min(width, height) / 2 - margin;
 
     // legend dimensions
-    var legendRectSize = 25; // defines the size of the colored squares in legend
-    var legendSpacing = 6; // defines spacing between squares
+    // var legendRectSize = 25; // defines the size of the colored squares in legend
+    // var legendSpacing = 6; // defines spacing between squares
 
     // define color scale
     var color = d3.scaleOrdinal(d3.schemeSet3);
+    let currColor = 1;
     // more color scales: https://bl.ocks.org/pstuffa/3393ff2711a53975040077b7453781a9
-    const pieID = `#pie${props.id}`;
-    console.log('drawing chart at pie:', `${pieID}`);
+    const pieID = `#pie${id}`;
+    console.log('[drawChart] Drawing chart at pie:', `${pieID}`);
+
+    let dataEntry = data.find(e => e.id == id);
+    if (!dataEntry) {
+      console.log('[drawChart] Data entry not found at id:', id);
+      return;
+    }
+    let pieData = dataEntry.data;
+    console.log('[drawChart] Drawing chart with data:', pieData);
+
+    pieData = pieData.slice(0, 20);
     
     svg = d3.select(pieID) // select element in the DOM with id 'chart'
       .append('svg') // append an svg element to the element we've selected
@@ -142,27 +67,9 @@ export default function PieChart(props) {
     tooltip.append('div') // add divs to the tooltip defined above  
       .attr('class', 'percent'); // add class 'percent' on the selection
 
-    // Confused? see below:
-
-    // <div id="chart">
-    //   <div class="tooltip">
-    //     <div class="label">
-    //     </div>
-    //     <div class="count">
-    //     </div>
-    //     <div class="percent">
-    //     </div>
-    //   </div>
-    // </div>
-
-    // data.forEach(function(d) {
-    //   d.count = +d.count; // calculate count as we iterate through the data
-    //   // d.enabled = true; // add enabled property to track which entries are checked
-    // });
-
     // creating the chart
     var path = svg.selectAll('path') // select all path elements inside the svg. specifically the 'g' element. they don't exist yet but they will be created below
-      .data(pie(data)) //associate data wit he path elements we're about to create. must pass through the pie function. it magically knows how to extract values and bakes it into the pie
+      .data(pie(pieData)) //associate data wit he path elements we're about to create. must pass through the pie function. it magically knows how to extract values and bakes it into the pie
       .enter() //creates placeholder nodes for each of the values
       .append('path') // replace placeholders with path elements
       .attr('d', arc) // define d attribute with arc function above
@@ -172,7 +79,7 @@ export default function PieChart(props) {
     // mouse event handlers are attached to path so they need to come after its definition
     path.on('mouseover', function(d) {  // when mouse enters div      
       // tooltip.style('display', 'show')
-      var total = d3.sum(data.map(function(d) { // calculate the total number of tickets in the data         
+      var total = d3.sum(pieData.map(function(d) { // calculate the total number of tickets in the data         
         return d.count;
         // return (d.enabled) ? d.count : 0; // checking to see if the entry is enabled. if it isn't, we return 0 and cause other percentages to increase                                      
       }));               
@@ -183,14 +90,13 @@ export default function PieChart(props) {
       // tooltip.select('.count').html('$' + d.data.count); // set current count            
       tooltip.select('.percent').html(percent + '%'); // set percent calculated above          
       tooltip.style('display', 'block');
-      // Variable box length based on longest word in term
-      const box_width = Math.max(...(d.data.value.split(' ').map(word => word.length)))
+      // Variable box length
+      const box_width = d.data.value.split(' ').map(word => word.length).reduce((acc, curr) => acc+curr);
       tooltip.style('width', box_width*9 + 40 + 'px')
     });                                                           
 
     path.on('mouseout', function() { // when mouse leaves div                        
       tooltip.style('display', 'none'); // hide tooltip for that element
-      // console.log('hid the element');
     });
 
     path.on('mousemove', function(d) { // when mouse moves  
@@ -199,53 +105,44 @@ export default function PieChart(props) {
         .style('left', (d.layerX + 10) + 'px'); // always 10px to the right of the mouse
     });
 
-    document.addEventListener('chartUpdate', function(event) {
-      // if (!event.detail) return;
-      console.log('updating data');
+    document.addEventListener(`chartUpdate`, function(event) {
+      console.log('[chartUpdate] data:', event.detail);
       let newData;
-      for (let chart of data) {
-        if (chart.id == props.id) {
+      for (let chart of event.detail) {
+        if (chart.id == id) {
           newData = chart.data;
           break;
         }
       }
       if (!newData) return;
-      // const newData = event.detail;
+      newData = newData.slice(0, 20);
+
+      console.log('color before:', color);
+      if (currColor > 0) {
+        console.log('setting to scheme2');
+        color = d3.scaleOrdinal(d3.schemeSet2);
+      } else {
+        console.log('setting to scheme3');
+        color = d3.scaleOrdinal(d3.schemeSet3);
+      }
+      currColor *= -1;
+      console.log('color after:', color);
+
       path = path.data(pie(newData)); // update pie with new data
-      // console.log('path after update:', path, data);
 
       path.transition() // transition of redrawn pie
-        .duration(750) // 
+        .duration(500) // 
         .attrTween('d', function(d) { // 'd' specifies the d attribute that we'll be animating
           var interpolate = d3.interpolate(this._current, d); // this = current path element
-          this._current = interpolate(0); // interpolate between current value and the new value of 'd'
+          let _this = this;
           return function(t) {
-            return arc(interpolate(t));
+            _this._current = interpolate(t)
+            return arc(_this._current);
           };
         });
-    })
 
-  }
-
-  // console.log('drawn:', props.chartDrawn);
-  if (data.length != 0 && !chartDrawn) {
-    console.log('data:', data);
-    for (let chart of data) {
-      if (chart.id == currID) {
-        console.log('drawing a chart of id:', chart.id);
-        // console.log('data:', data);
-        drawChart2(chart.data)
-        break;
-      }
-        // console.log('chart:', chart);
-      // console.log('chart id:', chart.id);
-      // console.log('currID:', currID);
-    }
-    // data[0].id
-    // drawChart2();
-  }
-
-  return (
-    <div></div>
-  )
+      d3.selectAll("path").style("fill", function(d){
+        return color(d.data.value);
+      })
+    });
 }
