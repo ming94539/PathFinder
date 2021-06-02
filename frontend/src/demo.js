@@ -187,13 +187,16 @@ export default function Demo() {
     query(demandEntry.demand, job, id);
   }
 
-
+  /**
+   * Returns new card element
+   * @param   {int} id  ID of card to create
+   * @return  {JSX} The new card
+   */
   function newCard (id) {
     return (
       <div className="card mx-6" key={id}>
         <header className="message is-info">
           <div className="card-header-title is-centered">
-            {/* <button className="delete" onClick={() => deleteCard(id)}></button> */}
             <div className="select">
               <select onChange={event => handleJobChange(event, id)}>
                 <option>Web Developer</option>
