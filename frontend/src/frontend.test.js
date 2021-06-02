@@ -50,12 +50,16 @@ test('empty card set',async () => {
   expect(elem).toBe(null);
 });
 
-test('Initial Piechart Load', async () => {
-  const page = await browser.newPage();   
-  await page.goto('http://localhost:3000/');
-  await page.click(".newCardButton");
-  await page.waitForTimeout(500);
-  const elem = await page.$("#pie0");
-  expect(elem._remoteObject.description).toBe("div#pie0");
+/*
+  Removed because new front end changes
+  No more adding / deleting cards
+ */
+// test('Initial Piechart Load', async () => {
+//   const page = await browser.newPage();   
+//   await page.goto('http://localhost:3000/');
+//   await page.click(".newCardButton");
+//   await page.waitForTimeout(500);
+//   const elem = await page.$("#pie0");
+//   expect(elem._remoteObject.description).toBe("div#pie0");
 
-});
+// });

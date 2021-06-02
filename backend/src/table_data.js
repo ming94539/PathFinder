@@ -1,92 +1,62 @@
 const db = require('./db');
 
+/**
+ * Executes query, then sets response data and/or HTTP status code
+ * @param {Response}  res   Response from Express request
+ * @param {String}        query SQL statement for querying data
+ */
 async function callQuery(res, query) {
   const result = await db.dbGet(query);
 
   if (result) {
-    console.log("200 status", result);
     res.status(200).json(result);
     return;
   } else {
-    console.log('404');
     res.status(404).send();
     return;
   }
 }
 
+/**
+ * Creates query from demand and job parameters
+ * @param {express.Request}   req Express request
+ * @param {express.Response}  res Express response
+ * @param {String} req.params.s   Demand query
+ * @param {String} req.params.t   Job query
+ */
 exports.getDemandWithJob = async (req, res) => {
-
   let demand = req.params.s;
   let job = req.params.t.replace(/ /g, '');
 
   console.log('demand:', demand);
   console.log('job title:', job);
 
+  let value = '';
   switch(demand) {
     case('Skills'):
-      demand='s'; break;
+      value = 'skill'; break;
     case('Languages'):
-      demand='l'; break;
+      value = 'language'; break;
     case('Degrees'):
-      demand='d'; break;
+      value = 'degreetitle'; break;
+    case 'Education':
+      value = 'educationlevel'; break;
+    case 'Industries':
+      value = 'industry'; break;
     case('Most Popular Fields'):
       demand='f'; break;
     default:
       break;
   }
 
-  console.log('demand:', demand);
-
-  // If user has chosen a job, create additional string for query
-  // to match jobID with that job
-  let jobTitleMatch = (job == 'JobTitle') ? '' :
-    `, ${job} as j
-    WHERE ${demand}.jobID = j.jobID`;
-
-  // Most popular skill 
-  let skillDemand = `
-    SELECT s.skill as value, COUNT(*) AS count
-    FROM Skills s ${jobTitleMatch}
-    GROUP BY s.skill
+  let demandQuery = `
+    SELECT ${demand}.${value} as value, COUNT(*) AS count
+    FROM ${demand}, ${job}
+    WHERE ${demand}.jobID = ${job}.jobID
+    GROUP BY value
     ORDER BY count DESC
-  `;
-
-    // Most popular language 
-    let languageDemand = `
-    SELECT l.language as value, COUNT(*) AS count
-    FROM Languages l ${jobTitleMatch}
-    GROUP BY l.language
-    ORDER BY count DESC
-  `;
-
-    // Most popular language 
-    let degreeDemand = `
-    SELECT d.degreetitle as value, COUNT(*) AS count
-    FROM Degrees d ${jobTitleMatch}
-    GROUP BY d.degreetitle
-    ORDER BY count DESC
-  `;
-  
-  let query = '';
-  switch(demand) {
-    case 's':
-      query = skillDemand;
-      break;
-    case 'l':
-      query = languageDemand;
-      break;
-    case 'd':
-      query = degreeDemand;
-      break;
-    case 'f':
-      query = rowsOfJobTitles;
-      break;
-    default:
-      break;
-  }
-
-  console.log('USING QUERY:', query);
-  await callQuery(res, query);
+  `
+  await callQuery(res, demandQuery);
 };
 
 exports.getPopularFields = async (req, res) => {

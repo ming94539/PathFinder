@@ -1,9 +1,11 @@
 import React, {useState, useEffect, useRef} from 'react';
-import SharedContext from './SharedContext';
 import piechart from './piechart';
 import './style.css';
 
 // https://stackoverflow.com/questions/55724642/react-useeffect-hook-when-only-one-of-the-effects-deps-changes-but-not-the-oth
+/**
+ * 
+ */
 const useEffectWhen = (effect, deps, whenDeps) => {
   const whenRef = useRef(whenDeps || []);
   const initial = whenRef.current === whenDeps;
@@ -18,6 +20,7 @@ const useEffectWhen = (effect, deps, whenDeps) => {
   );
 };
 
+
 export default function Demo() {
   const initialDemand = 'Languages';
   const initialJob = 'Web Developer';
@@ -27,35 +30,74 @@ export default function Demo() {
   const [checkDisable, setDisable] = useState(false);
   const [currID, setCurrID] = useState(-1);
   const [cards, setCards] = useState([]);
+  let buttonsArr = [
+    <button className="card-footer-item button is-link mx-3"
+      onClick={event => {handleSubmit(event, currID+1)}}
+      key={'Languages'}
+    >
+      Languages
+    </button>
+  ];
+  for (let demand of ['Skills', 'Degrees', 'Education', 'Industries']) {
+    buttonsArr.push(
+      <button className="card-footer-item button is-primary mx-3"
+        onClick={event => {handleSubmit(event, currID+1)}}
+        key={demand}
+      >
+        {demand}
+      </button>
+    );
+  }
+  const [buttons, setButtons] = useState([{id: 0, buttons: buttonsArr}]);
+  const subheader = useRef('Top 20 Languages');
 
   // Init
   useEffect(() => {
-    addCard();
+    if (cards.length < 1) {
+      addCard();
+    }
   }, []);
   
   function handleSubmit (event, id) {
-    console.log('[handleSubmit] data at submit:', data);
+    let allButtons = document.getElementsByClassName('is-link')
+    for (let button of allButtons) {
+      button.className = "card-footer-item button is-primary mx-3"
+    }
+    event.target.className = "card-footer-item button is-link mx-3";
+
     let demand = event.target.innerHTML;
     let demandEntry = selectedDemands.find(e => e.id==id);
     if (demandEntry && demand == demandEntry.demand) return;
     updateDemands(id, demand);
+
     let jobEntry = selectedJobs.find(e => e.id==id)
     if (!jobEntry) {
       console.log('[handleSubmit] Could not find job at id:', id);
       console.log('All jobs:', selectedJobs);
       return;
     }
+
+    if (demand == 'Degrees' || demand == 'Education') {
+      subheader.current.innerHTML = `${demand}`;
+    } else {
+      subheader.current.innerHTML = `Top 20 ${demand}`;
+    }
+    
     query(demand, jobEntry.job, id);
   }
 
   function query(demand, job, id) {
     let url = `http://localhost:3010/v0/data/${demand}/${job}`;
+    // let url = `https://pathfinder0.herokuapp.com/v0/data/${demand}/${job}`;
     fetch(url)
       .then((response) => {
         if (!response.ok) {
           throw response;
         }
-        return response.json();
+        let json = response.json();
+        console.log('response:', response);
+        return json;
+        // return response.json();
       })
       .then((json) => {
         // setData([
@@ -73,7 +115,7 @@ export default function Demo() {
     });
   }
 
-  const addCard = () => {
+  function addCard() {
     setCards(prevCards => {
       return ([
         ...prevCards,
@@ -89,6 +131,33 @@ export default function Demo() {
     setSelectedJobs(newJobs);
 
     query(initialDemand, initialJob, currID+1);
+
+    // setButtons(prevButtons => {
+    //   let demands = ['Languages', 'Skills', 'Degrees', 'Education', 'Industries'];
+    //   let buttonsArr = [];
+    //   for (let demand in demands) {
+    //     buttonsArr.push(
+    //       <button className="card-footer-item button is-primary mx-3"
+    //         onClick={event => {handleSubmit(event, currID+1)}}
+    //         key={demand}>{demand}</button>
+    //     )
+    //   }
+    //   return ([
+    //     ...prevButtons,
+    //     {id: currID+1, buttons: buttonsArr
+          // <button className="card-footer-item button is-primary mx-3"
+          //   onClick={event => {handleSubmit(event, currID+1)}}
+          //   key={"Languages"}>Languages</button>,
+          // <button className="card-footer-item button is-primary mx-3" 
+          //   onClick={event => {handleSubmit(event, currID+1)}}
+          //   key={"Skills"}>Skills</button>,
+          // <button className="card-footer-item button is-primary mx-3" 
+          // onClick={event => {handleSubmit(event, currID+1)}}
+          // key={"Degrees"}>Degrees</button>
+
+      //   }
+      // ])
+    // })
 
     setCurrID(prevID => {
       return (prevID+1);
@@ -114,22 +183,27 @@ export default function Demo() {
     setSelectedJobs(newSelectedJobs);
 
     let demandEntry = selectedDemands.find(e => e.id==id);
-    if (!demandEntry) {return;}
+    if (!demandEntry) return;
     query(demandEntry.demand, job, id);
   }
 
+  /**
+   * Returns new card element
+   * @param   {int} id  ID of card to create
+   * @return  {JSX} The new card
+   */
   function newCard (id) {
     return (
       <div className="card mx-6" key={id}>
         <header className="message is-info">
           <div className="card-header-title is-centered">
-            <button className="delete" onClick={() => deleteCard(id)}></button>
             <div className="select">
               <select onChange={event => handleJobChange(event, id)}>
                 <option>Web Developer</option>
                 <option>Database Administrator</option>
                 <option>Data Engineer</option>
                 <option>Data Scientist</option>
+                <option>DevOps</option>
                 <option>Firmware Engineer</option>
                 <option>IT Architect</option>
                 <option>Machine Learning Engineer</option>
@@ -140,31 +214,27 @@ export default function Demo() {
           </div>
         </header>
         <div className="box">
+          <div ref={subheader} className="subtitle">Top 20 Languages</div>
           <div id={`pie${id}`}></div>
         </div>
           <div className="card-content">
         </div>
-        {/* TODO: Change selected button color */}
         <footer className="card-footer">
-          <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Languages</button>
-          <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Skills</button>
-          <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Degrees</button>
+          {buttons.find(e => e.id==id).buttons}
         </footer>
       </div>
     );
   };
 
-  // When data is updated
+  // Update chart on data update
   useEffect(() => {
-    console.log('[useEffect] Data updated to:', data);
     const updateEvt = new CustomEvent('chartUpdate', {detail: data});
     document.dispatchEvent(updateEvt);
   });
 
-  // When a new data entry added
+  // Draw new chart when a new data entry is added
   useEffectWhen(() => {
     if (currID >= 0) {
-      console.log("useEffectWhen with id:", currID);
       setCards(prevCards => {return [...prevCards]});
       piechart(currID, data);
     }
@@ -180,14 +250,12 @@ export default function Demo() {
 
   // random JSDoc example
   /**
-   * Update data
-   * @param {int}     id    ID to either update or add
-   * @param {Object}  json  New incoming data
+   * Update data state
+   * @param {int}   id    ID to either update or add
+   * @param {Array.<{value: String, count: String}} json  New incoming data
    */
   function updateData(id, json) {
-    console.log('data before update:', data);
     let newData = data;
-    console.log('newData:', newData);
     let entry;
     for (let e of newData) {
       if (e.id == id) {
@@ -196,16 +264,11 @@ export default function Demo() {
       }
     }
     if (entry) {
-      // console.log("[updateData] newData before entry:", newData);
       entry.data = json;
-      // console.log("[updateData] newData after entry:", newData);
     }
     else {
-      console.log('[updateData] Pushing new data at id:', id);
       newData.push({id: id, data: json});
     }
-    // console.log('[updateData] Updating data to:', newData);
-    // setData(newData);
     setData(() => {
       return [...newData]
     });
@@ -213,25 +276,17 @@ export default function Demo() {
 
   return (
     <div>
-      <SharedContext.Provider value={{
-        selectedJobs, setSelectedJobs,
-        selectedDemands, setSelectedDemands,
-        data, setData,
-        // checkDisable, setDisable,
-        currID, setCurrID
-      }}>
-        <section className="section">
-          <button id="submitButton" className="button is-primary mb-5 has-text-centered" onClick={addCard} disabled={checkDisable}>
-            <span className="icon"><i className="fa fa-plus"></i></span>
-            <span className="newCardButton">New Card</span>
-          </button>
-          <div id="initCardSet"className="cards-wrapper">
-            {cards}
-          </div>
-          <br/><br/>
-        </section>
+      <section className="section">
+        {/* <button id="submitButton" className="button is-primary mb-5 has-text-centered" onClick={addCard} disabled={checkDisable}>
+          <span className="icon"><i className="fa fa-plus"></i></span>
+          <span className="newCardButton">New Card</span>
+        </button> */}
+        <div id="initCardSet"className="cards-wrapper">
+          {cards}
+        </div>
         <br/><br/>
-      </SharedContext.Provider>
+      </section>
+      <br/><br/>
     </div>
   )
 }
