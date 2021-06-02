@@ -1,21 +1,30 @@
 const db = require('./db');
 
+/**
+ * Executes query, then sets response data and/or HTTP status code
+ * @param {Response}  res   Response from Express request
+ * @param {String}        query SQL statement for querying data
+ */
 async function callQuery(res, query) {
   const result = await db.dbGet(query);
 
   if (result) {
-    console.log("200 status", result);
     res.status(200).json(result);
     return;
   } else {
-    console.log('404');
     res.status(404).send();
     return;
   }
 }
 
+/**
+ * Creates query from demand and job parameters
+ * @param {express.Request}   req Express request
+ * @param {express.Response}  res Express response
+ * @param {String} req.params.s   Demand query
+ * @param {String} req.params.t   Job query
+ */
 exports.getDemandWithJob = async (req, res) => {
-
   let demand = req.params.s;
   let job = req.params.t.replace(/ /g, '');
 
@@ -47,8 +56,6 @@ exports.getDemandWithJob = async (req, res) => {
     GROUP BY value
     ORDER BY count DESC
   `
-
-  console.log('USING QUERY:', demandQuery);
   await callQuery(res, demandQuery);
 };
 
