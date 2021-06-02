@@ -22,71 +22,34 @@ exports.getDemandWithJob = async (req, res) => {
   console.log('demand:', demand);
   console.log('job title:', job);
 
+  let value = '';
   switch(demand) {
     case('Skills'):
-      demand='s'; break;
+      value = 'skill'; break;
     case('Languages'):
-      demand='l'; break;
+      value = 'language'; break;
     case('Degrees'):
-      demand='d'; break;
+      value = 'degreetitle'; break;
+    case 'Education':
+      value = 'educationlevel'; break;
+    case 'Industries':
+      value = 'industry'; break;
     case('Most Popular Fields'):
       demand='f'; break;
     default:
       break;
   }
 
-  console.log('demand:', demand);
-
-  // If user has chosen a job, create additional string for query
-  // to match jobID with that job
-  let jobTitleMatch = (job == 'JobTitle') ? '' :
-    `, ${job} as j
-    WHERE ${demand}.jobID = j.jobID`;
-
-  // Most popular skill 
-  let skillDemand = `
-    SELECT s.skill as value, COUNT(*) AS count
-    FROM Skills s ${jobTitleMatch}
-    GROUP BY s.skill
+  let demandQuery = `
+    SELECT ${demand}.${value} as value, COUNT(*) AS count
+    FROM ${demand}, ${job}
+    WHERE ${demand}.jobID = ${job}.jobID
+    GROUP BY value
     ORDER BY count DESC
-  `;
+  `
 
-    // Most popular language 
-    let languageDemand = `
-    SELECT l.language as value, COUNT(*) AS count
-    FROM Languages l ${jobTitleMatch}
-    GROUP BY l.language
-    ORDER BY count DESC
-  `;
-
-    // Most popular language 
-    let degreeDemand = `
-    SELECT d.degreetitle as value, COUNT(*) AS count
-    FROM Degrees d ${jobTitleMatch}
-    GROUP BY d.degreetitle
-    ORDER BY count DESC
-  `;
-  
-  let query = '';
-  switch(demand) {
-    case 's':
-      query = skillDemand;
-      break;
-    case 'l':
-      query = languageDemand;
-      break;
-    case 'd':
-      query = degreeDemand;
-      break;
-    case 'f':
-      query = rowsOfJobTitles;
-      break;
-    default:
-      break;
-  }
-
-  console.log('USING QUERY:', query);
-  await callQuery(res, query);
+  console.log('USING QUERY:', demandQuery);
+  await callQuery(res, demandQuery);
 };
 
 exports.getPopularFields = async (req, res) => {
