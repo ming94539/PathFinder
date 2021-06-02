@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import time
-from Scraper import Scraper
+from scraper import Scraper
 from sqlalchemy import create_engine, text
 import pprint
 from data_formatter import DataFormatter

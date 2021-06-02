@@ -1,15 +1,20 @@
 import sys
 import getopt
-from Selenium_Navigation import Crawler
+from selenium_navigation import Crawler
 
 def main(argv):
     """
     arguments:
-    -p --pages: scrapes the number of pages equal to the proceeding number
-    -j --jobs: scrapes this number of jobs per page
-    -o --output: creates an output of formatted data for testing
-    -u --upload: defaults to true. arguement is <true> or <false>
+    -p --pages: scrapes the number of pages equal to the proceeding number. Defaults to 0.
+
+    -j --jobs: scrapes UP TO this number of jobs per page. Defaults to 25.
+
+    -o --output: creates an output of formatted data for testing stored in 'formatted.txt'
+
+    -u --upload: disables or enables data upload. Defaults to true. Argument is <true> or <false>
+
     -h --head: defaults to false. if given, will NOT run in headless mode
+
     --help: prints this message
     """
     # The full list of jobs we scrape are:

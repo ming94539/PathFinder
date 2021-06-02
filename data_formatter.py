@@ -3,16 +3,16 @@ from nltk.tokenize import word_tokenize
 from databaseUpload import db_uploadFunction
 
 class DataFormatter:
-    def __init__(self, termsFile = "lists/final_keywords2.txt", 
+    def __init__(self, terms_file = "lists/final_keywords2.txt", 
                     languages = "lists/topLanguages.txt", 
                     industries = "lists/linkedin_industries.txt",
                     extra = "lists/extra_keywords.txt",
                     bug_file = "lists/bug_keywords.txt"):
-        self.keywords = self.read_termsFile(termsFile)
-        self.bug_words = self.read_termsFile(bug_file)
-        self.extra_words = self.read_termsFile(extra)
+        self.keywords = self.read_terms_file(terms_file)
+        self.bug_words = self.read_terms_file(bug_file)
+        self.extra_words = self.read_terms_file(extra)
 
-        self.languages = self.read_termsFile(languages)
+        self.languages = self.read_terms_file(languages)
         self.linkedin_industries = open(industries,'r').read().split('\n')
 
         self.keywords = [item for item in self.keywords if item not in self.bug_words]
@@ -20,60 +20,60 @@ class DataFormatter:
     def preprocessing(self,jobs_file):
         '''
         @Input pass in the file object, The file must contain 'BREAK<JOB ID>' between job posts
-        @Output origPosts (List of Strings) Each string is just original job post
-        @Output jobPosts (List of Strings) Each string is job post but with any that's not alphanumeric is replaced
+        @Output orig_posts (List of Strings) Each string is just original job post
+        @Output job_posts (List of Strings) Each string is job post but with any that's not alphanumeric is replaced
         and all lower case. This means \n are replaced as blank spaces. 
         EXCEPTIONS: '+','#','-','_' is kept due to 'c++','c#','objective-c'
         @Output id_list (List of Int), a list of int, each int represents job ID in given order
 
         '''
         # jobsFile = open(jobs_file)
-        jobslines = jobs_file.readlines()
-        self.origPosts = []
-        self.jobPosts = []
+        jobs_lines = jobs_file.readlines()
+        self.orig_posts = []
+        self.job_posts = []
         self.id_list = []
         post = ""
-        origPost = ""
-        firstOne = True
+        orig_post = ""
+        first_one = True
         
-        for l in range(len(jobslines)):
-            if "BREAK" in jobslines[l]:
-                self.id_list.append(int(jobslines[l][5:]))
-                if firstOne:
-                    firstOne = False
+        for l in range(len(jobs_lines)):
+            if "BREAK" in jobs_lines[l]:
+                self.id_list.append(int(jobs_lines[l][5:]))
+                if first_one:
+                    first_one = False
                 else:
-                    self.jobPosts.append(post)
-                    self.origPosts.append(origPost)
+                    self.job_posts.append(post)
+                    self.orig_posts.append(orig_post)
                     post = ""
-                    origPost = ""
+                    orig_post = ""
                 continue
-            origPost += jobslines[l]
-            post+= re.sub(r'[^\w\s\+\#\-]', ' ', jobslines[l].lower())
-            if l == len(jobslines)-1:
-                self.jobPosts.append(post)
-                self.origPosts.append(origPost)
-           # post += jobslines[l].replaceAll("[\\p{Punct}&&[^.]]", "").lower();
+            orig_post += jobs_lines[l]
+            post+= re.sub(r'[^\w\s\+\#\-]', ' ', jobs_lines[l].lower())
+            if l == len(jobs_lines)-1:
+                self.job_posts.append(post)
+                self.orig_posts.append(orig_post)
+           # post += jobs_lines[l].replaceAll("[\\p{Punct}&&[^.]]", "").lower();
             
 
         print('----')
-        for p in range(len(self.jobPosts)):
-            self.jobPosts[p]= re.sub(' +', ' ', self.jobPosts[p].replace('\n',' ')) #remove unnecessary double/triple white space
-        # for p in range(len(jobPosts)):
-        #     jobPosts[p] = word_tokenize(jobPosts[p])
-        # return origPosts, jobPosts, id_list
+        for p in range(len(self.job_posts)):
+            self.job_posts[p]= re.sub(' +', ' ', self.job_posts[p].replace('\n',' ')) #remove unnecessary double/triple white space
+        # for p in range(len(job_posts)):
+        #     job_posts[p] = word_tokenize(job_posts[p])
+        # return orig_posts, job_posts, id_list
 
     
-    def read_termsFile(self, termsFileName):
+    def read_terms_file(self, terms_file_name):
         '''
         @Input the path of the file to be opened
         @Output return a list with each element a line in the file
         '''
-        termsFile = open(termsFileName,"r")
-        terms = termsFile.readlines()
-        print('opened:',termsFileName)
+        terms_file = open(terms_file_name,"r")
+        terms = terms_file.readlines()
+        print('opened:',terms_file_name)
         print('number terms:',len(terms))
         keywords = [term.rstrip('\n').lower() for term in terms]
-        termsFile.close()
+        terms_file.close()
         return keywords
 
     #
@@ -93,12 +93,12 @@ class DataFormatter:
             s_tag = "Seniority level"
             s_boo = True
         if s_boo:
-            seniorityIndex = o_P.index(s_tag) +1 
-            if o_P[seniorityIndex].lower() in seniority_levels:
-                #print(o_P[seniorityIndex].lower())
-                #print('SENIORITY:', seniority_levels[seniority_levels.index(o_P[seniorityIndex])])
-                return o_P[seniorityIndex].lower()
-            elif o_P[seniorityIndex] == "Not Applicable":
+            seniority_index = o_P.index(s_tag) +1 
+            if o_P[seniority_index].lower() in seniority_levels:
+                #print(o_P[seniority_index].lower())
+                #print('SENIORITY:', seniority_levels[seniority_levels.index(o_P[seniority_index])])
+                return o_P[seniority_index].lower()
+            elif o_P[seniority_index] == "Not Applicable":
                 return -1
             else:
                 print("Doesn't exist in Linkedin's standard seniority levels, weird.")
@@ -184,9 +184,9 @@ class DataFormatter:
             s_tag = "Industries"
             s_boo = True
         if s_boo:
-            industryIndex = o_P.index(s_tag) +1 
+            industry_index = o_P.index(s_tag) +1 
             for ind in linkedin_industries:
-                if ind in o_P[industryIndex] or ind.replace("&","and") in o_P[industryIndex]:
+                if ind in o_P[industry_index] or ind.replace("&","and") in o_P[industry_index]:
                     industries.append(ind)
             #print('INDUSTRIES:', industries)
             return industries
@@ -212,28 +212,28 @@ class DataFormatter:
 
     def data_extraction(self, job_name, do_upload):    
         '''
-        @Input self.jobPosts is a list of strings. Each job post is a long string with each word 
+        @Input self.job_posts is a list of strings. Each job post is a long string with each word 
         lower cased. Punctuations are removed.
         '''      
         output = {}
-        for i in range(len(self.jobPosts)):  
+        for i in range(len(self.job_posts)):  
             output[self.id_list[i]] = {}
-            o_P = self.origPosts[i].split('\n')
+            o_P = self.orig_posts[i].split('\n')
             #SENIORITY
             output[self.id_list[i]]['seniority']=self.extract_seniority(o_P)
             #INDUSTRY
             output[self.id_list[i]]['industry']=self.extract_industry(o_P,self.linkedin_industries)
             #Keyword Extraction -----
             #Languages
-            output[self.id_list[i]]['languages'] = self.extract_languages(self.jobPosts[i],self.languages)
+            output[self.id_list[i]]['languages'] = self.extract_languages(self.job_posts[i],self.languages)
             #TECH SKILLS
-            output[self.id_list[i]]['skills']= self.extract_tech_terms(self.jobPosts[i], self.keywords)
+            output[self.id_list[i]]['skills']= self.extract_tech_terms(self.job_posts[i], self.keywords)
             #Degree level
-            output[self.id_list[i]]['educationLevel'] = self.extract_degree_lvl(self.jobPosts[i])
+            output[self.id_list[i]]['educationLevel'] = self.extract_degree_lvl(self.job_posts[i])
             #DEGREE TITLE
-            output[self.id_list[i]]['degreeTitle'] = self.extract_degree_title(self.jobPosts[i])
+            output[self.id_list[i]]['degreeTitle'] = self.extract_degree_title(self.job_posts[i])
             #YoE
-            output[self.id_list[i]]['yoe']= self.extract_yoe(self.jobPosts[i])
+            output[self.id_list[i]]['yoe']= self.extract_yoe(self.job_posts[i])
             print()
             #Do the Data Base Upload and data validation, if specified
             if(do_upload):
@@ -246,13 +246,13 @@ class DataFormatter:
     
 
 
-# orig_posts, jobPosts, id_list = preprocessing("sample_jobposts.txt")
-# print('There\'s',len(jobPosts), 'job posts')
-# keywords = read_termsFile("lists/final_keywords2.txt")
-# languages = read_termsFile("lists/topLanguages.txt")
+# orig_posts, job_posts, id_list = preprocessing("sample_job_posts.txt")
+# print('There\'s',len(job_posts), 'job posts')
+# keywords = read_terms_file("lists/final_keywords2.txt")
+# languages = read_terms_file("lists/topLanguages.txt")
 # linkedin_industries = open("lists/linkedin_industries.txt",'r').read().split('\n')
 # print('opened lists/linkedin_industries.txt:\nnumber of terms',len(linkedin_industries))
-# output = data_extraction(orig_posts, jobPosts, keywords,id_list,linkedin_industries,languages)
+# output = data_extraction(orig_posts, job_posts, keywords,id_list,linkedin_industries,languages)
 # import pprint
 
 #pprint.pprint(output)
