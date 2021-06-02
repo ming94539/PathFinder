@@ -3,8 +3,8 @@ import * as d3 from 'd3';
 
 /**
  * Returns more readable version of a data label
- * @param   {string}  value Data label to process
- * @return  {string}  Processed data label
+ * @param   {String}  value Data label to process
+ * @return  {String}  Processed data label
  */
 function processLabel(value) {
   if (value.length == 0) return '';
@@ -66,15 +66,15 @@ export default function piechart(id, data) {
     const pieID = `#pie${id}`;
 
     // Define chart attributes
-    svg = d3.select(pieID) // select element in the DOM with id 'chart'
-      .append('svg') // append an svg element to the element we've selected
-      .attr('width', width) // set the width of the svg element we just added
-      .attr('height', height) // set the height of the svg element we just added
-      .append('g') // append 'g' element to the svg element
+    svg = d3.select(pieID) 
+      .append('svg') 
+      .attr('width', width) 
+      .attr('height', height)
+      .append('g')
       .attr('transform', 'translate(' + (width / 2) + ',' + (height / 2) + ')') // our reference is now to the 'g' element. centerting the 'g' element to the svg element
       .attr('stroke', 'black')
       .style("stroke-width", "0.5px")
-      // .style('stroke-opacity', 0.5)
+      
 
     // Set arc sizes
     var arc = d3.arc()
@@ -143,19 +143,15 @@ export default function piechart(id, data) {
 
     // Update chart when data is updated
     document.addEventListener(`chartUpdate`, function(event) {
-      console.log('[chartUpdate] data:', event.detail);
-      let newData;
-      for (let chart of event.detail) {
-        if (chart.id == id) {
-          newData = chart.data;
-          break;
-        }
-      }
-      if (!newData) return;
+      // Get new data, then set to fixed length of 20
+      let dataEntry = event.detail.find(e => e.id==id);
+      if (!dataEntry) return;
+      let newData = dataEntry.data;
       newData = newData.slice(0, 20);
       while (newData.length < 20) {
         newData.push({value: '', count: 0});
       }
+
       path = path.data(pie(newData));
 
       // Animate transition to new data

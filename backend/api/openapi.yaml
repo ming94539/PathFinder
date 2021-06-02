@@ -1,7 +1,3 @@
-#
-# CSE 115A Backend
-#
-
 openapi: '3.0.3'
 
 info:
@@ -15,16 +11,16 @@ servers:
 paths:
   /v0/data/{selectedDemand}/{selectedJobTitle}:
     get:
-      description: Returns array of all emails
+      description: Pass in query parameters
       parameters:
         - in: query
           name: demandJobTitle
           schema:
             type: string
-          description: check mailbox
+          description: Pass in query parameters
       responses:
         200:
-          description: Emails Response
+          description: Pass in query parameters
           content:
             application/json:
               schema:
@@ -39,10 +35,10 @@ paths:
           name: demand
           schema:
             type: string
-          description: grab all job tables
+          description: Pass in query parameters
       responses:
         200:
-          description: Emails Response
+          description: Pass in query parameters
           content:
             application/json:
               schema:

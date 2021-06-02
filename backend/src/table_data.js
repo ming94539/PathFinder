@@ -28,9 +28,6 @@ exports.getDemandWithJob = async (req, res) => {
   let demand = req.params.s;
   let job = req.params.t.replace(/ /g, '');
 
-  console.log('demand:', demand);
-  console.log('job title:', job);
-
   let value = '';
   switch(demand) {
     case('Skills'):
@@ -57,27 +54,4 @@ exports.getDemandWithJob = async (req, res) => {
     ORDER BY count DESC
   `
   await callQuery(res, demandQuery);
-};
-
-exports.getPopularFields = async (req, res) => {
-// referenced and altered from: https://www.sisense.com/blog/exact-row-counts-for-every-database-table/
-  let rowsOfEachTable = `
-  select table_schema, table_name, (xpath('/row/cnt/text()', xml_count))[1]::text::int as row_count
-  from (                             
-    select table_name, table_schema, 
-      query_to_xml(format('select count(*) as cnt from %I.%I', table_schema, table_name), false, true, '') as xml_count
-      from information_schema.tables
-  where table_schema = 'public' 
-  ) t order by row_count DESC`;
-
-  let rowsOfJobTitles = `select table_schema, table_name as value, (xpath('/row/cnt/text()', xml_count))[1]::text::int as count
-  from (                             
-    select table_name, table_schema, 
-      query_to_xml(format('select count(*) as cnt from %I.%I', table_schema, table_name), false, true, '') as xml_count
-      from information_schema.tables
-  where table_schema = 'public' and table_name != 'skills' and table_name != 'languages' and table_name != 'industries' 
-  and table_name != 'jobidtable' and table_name != 'education' and table_name != 'degree' 
-  ) t order by count DESC`;
-
-  await callQuery(res, rowsOfJobTitles);
 };

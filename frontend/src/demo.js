@@ -4,7 +4,10 @@ import './style.css';
 
 // https://stackoverflow.com/questions/55724642/react-useeffect-hook-when-only-one-of-the-effects-deps-changes-but-not-the-oth
 /**
- * 
+ * Trigger custom hook when WHENDEPS is changed
+ * @callback effect The callback function that is executed when WHENDEPS is changed
+ * @param deps      The dependencies
+ * @param whenDeps  The dependencies that cause the callback function to execute on change
  */
 const useEffectWhen = (effect, deps, whenDeps) => {
   const whenRef = useRef(whenDeps || []);
@@ -20,7 +23,9 @@ const useEffectWhen = (effect, deps, whenDeps) => {
   );
 };
 
-
+/**
+ * Function component that handles user interactions
+ */
 export default function Demo() {
   const initialDemand = 'Languages';
   const initialJob = 'Web Developer';
@@ -51,70 +56,55 @@ export default function Demo() {
   const [buttons, setButtons] = useState([{id: 0, buttons: buttonsArr}]);
   const subheader = useRef('Top 20 Languages');
 
-  // Init
+  // Add new card on reload
   useEffect(() => {
     if (cards.length < 1) {
       addCard();
     }
   }, []);
-  
-  function handleSubmit (event, id) {
-    let allButtons = document.getElementsByClassName('is-link')
-    for (let button of allButtons) {
-      button.className = "card-footer-item button is-primary mx-3"
-    }
-    event.target.className = "card-footer-item button is-link mx-3";
 
-    let demand = event.target.innerHTML;
-    let demandEntry = selectedDemands.find(e => e.id==id);
-    if (demandEntry && demand == demandEntry.demand) return;
-    updateDemands(id, demand);
+   /**
+   * Returns new card element
+   * @param   {int}     id ID of card to create
+   * @return  {Object}  The new card JSX
+   */
+    function newCard (id) {
+      return (
+        <div className="card mx-6" key={id}>
+          <header className="message is-info">
+            <div className="card-header-title is-centered">
+              <div className="select">
+                <select onChange={event => handleJobChange(event, id)}>
+                  <option>Web Developer</option>
+                  <option>Database Administrator</option>
+                  <option>Data Engineer</option>
+                  <option>Data Scientist</option>
+                  <option>DevOps</option>
+                  <option>Firmware Engineer</option>
+                  <option>IT Architect</option>
+                  <option>Machine Learning Engineer</option>
+                  <option>Security Analyst</option>
+                  <option>Systems Architect</option>
+                </select>
+              </div>
+            </div>
+          </header>
+          <div className="box">
+            <div ref={subheader} className="subtitle">Top 20 Languages</div>
+            <div id={`pie${id}`}></div>
+          </div>
+            <div className="card-content">
+          </div>
+          <footer className="card-footer">
+            {buttons.find(e => e.id==id).buttons}
+          </footer>
+        </div>
+      );
+    };
 
-    let jobEntry = selectedJobs.find(e => e.id==id)
-    if (!jobEntry) {
-      console.log('[handleSubmit] Could not find job at id:', id);
-      console.log('All jobs:', selectedJobs);
-      return;
-    }
-
-    if (demand == 'Degrees' || demand == 'Education') {
-      subheader.current.innerHTML = `${demand}`;
-    } else {
-      subheader.current.innerHTML = `Top 20 ${demand}`;
-    }
-    
-    query(demand, jobEntry.job, id);
-  }
-
-  function query(demand, job, id) {
-    let url = `http://localhost:3010/v0/data/${demand}/${job}`;
-    // let url = `https://pathfinder0.herokuapp.com/v0/data/${demand}/${job}`;
-    fetch(url)
-      .then((response) => {
-        if (!response.ok) {
-          throw response;
-        }
-        let json = response.json();
-        console.log('response:', response);
-        return json;
-        // return response.json();
-      })
-      .then((json) => {
-        // setData([
-        //   {value: 'postgresql', count: 8},
-        //   {value: 'javascript', count: 5},
-        //   {value: 'css', count: 4}
-        // ])
-        updateData(id, json);
-      })
-      .catch((error) => {
-        console.log('[handleSubmit] Error fetching data');
-        console.log(error);
-        // should throw some user interface
-          alert('invalid input');
-    });
-  }
-
+  /**
+   * Creates new card and updates states
+   */
   function addCard() {
     setCards(prevCards => {
       return ([
@@ -132,38 +122,16 @@ export default function Demo() {
 
     query(initialDemand, initialJob, currID+1);
 
-    // setButtons(prevButtons => {
-    //   let demands = ['Languages', 'Skills', 'Degrees', 'Education', 'Industries'];
-    //   let buttonsArr = [];
-    //   for (let demand in demands) {
-    //     buttonsArr.push(
-    //       <button className="card-footer-item button is-primary mx-3"
-    //         onClick={event => {handleSubmit(event, currID+1)}}
-    //         key={demand}>{demand}</button>
-    //     )
-    //   }
-    //   return ([
-    //     ...prevButtons,
-    //     {id: currID+1, buttons: buttonsArr
-          // <button className="card-footer-item button is-primary mx-3"
-          //   onClick={event => {handleSubmit(event, currID+1)}}
-          //   key={"Languages"}>Languages</button>,
-          // <button className="card-footer-item button is-primary mx-3" 
-          //   onClick={event => {handleSubmit(event, currID+1)}}
-          //   key={"Skills"}>Skills</button>,
-          // <button className="card-footer-item button is-primary mx-3" 
-          // onClick={event => {handleSubmit(event, currID+1)}}
-          // key={"Degrees"}>Degrees</button>
-
-      //   }
-      // ])
-    // })
-
     setCurrID(prevID => {
       return (prevID+1);
     });
   };
   
+  /**
+   * Delete card at ID
+   * NOTE: Not currently being used due to removal of multi card functionality
+   * @param {int} id  ID of card to delete
+   */
   function deleteCard(id) {
     setDisable(false);
     setCards(prevCards => {
@@ -173,58 +141,31 @@ export default function Demo() {
       return (prevData.filter(e => e.id != id));
     });
   }
-  
-  const handleJobChange = (event, id) => {
-    let job = event.target.value;
-    let newSelectedJobs = selectedJobs;
-    let jobEntry = newSelectedJobs.find(e => e.id==id);
-    if (jobEntry) jobEntry.job = job;
-    else newSelectedJobs.push({id: id, job: job});
-    setSelectedJobs(newSelectedJobs);
-
-    let demandEntry = selectedDemands.find(e => e.id==id);
-    if (!demandEntry) return;
-    query(demandEntry.demand, job, id);
-  }
 
   /**
-   * Returns new card element
-   * @param   {int} id  ID of card to create
-   * @return  {JSX} The new card
+   * Requests for queried data using DEMAND and JOB
+   * @param {String}  demand  The demand used to determine the query
+   * @param {String}  job     The job used to determine the query
+   * @param {int}     id      The ID of the card whose data will be updated by query result
    */
-  function newCard (id) {
-    return (
-      <div className="card mx-6" key={id}>
-        <header className="message is-info">
-          <div className="card-header-title is-centered">
-            <div className="select">
-              <select onChange={event => handleJobChange(event, id)}>
-                <option>Web Developer</option>
-                <option>Database Administrator</option>
-                <option>Data Engineer</option>
-                <option>Data Scientist</option>
-                <option>DevOps</option>
-                <option>Firmware Engineer</option>
-                <option>IT Architect</option>
-                <option>Machine Learning Engineer</option>
-                <option>Security Analyst</option>
-                <option>Systems Architect</option>
-              </select>
-            </div>
-          </div>
-        </header>
-        <div className="box">
-          <div ref={subheader} className="subtitle">Top 20 Languages</div>
-          <div id={`pie${id}`}></div>
-        </div>
-          <div className="card-content">
-        </div>
-        <footer className="card-footer">
-          {buttons.find(e => e.id==id).buttons}
-        </footer>
-      </div>
-    );
-  };
+  function query(demand, job, id) {
+    let url = `http://localhost:3010/v0/data/${demand}/${job}`;
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw response;
+        }
+        return response.json();
+      })
+      .then((json) => {
+        updateData(id, json);
+      })
+      .catch((error) => {
+        console.error('[handleSubmit] Error fetching data');
+        console.error(error);
+        alert('invalid input');
+    });
+  }
 
   // Update chart on data update
   useEffect(() => {
@@ -240,57 +181,92 @@ export default function Demo() {
     }
   }, [data, data.length], [data.length]);
 
+  /**
+   * Update selectedDemands state
+   * Replaces demand at ID if it exists, else creates new entry
+   * @param {int}     id      The ID of the card interacted with
+   * @param {String}  demand  The name of the demand selected
+   */
   function updateDemands(id, demand) {
     let newDemand = selectedDemands;
     let entry = newDemand.find(e => e.id == id);
     if (entry) entry.demand = demand;
-    else newDemand.push({id: id, demand, demand});
+    else newDemand.push({id: id, demand: demand});
     setSelectedDemands(newDemand);
   }
 
-  // random JSDoc example
   /**
    * Update data state
+   * Replaces data at ID if it exists, else creates new entry
    * @param {int}   id    ID to either update or add
    * @param {Array.<{value: String, count: String}} json  New incoming data
    */
   function updateData(id, json) {
     let newData = data;
-    let entry;
-    for (let e of newData) {
-      if (e.id == id) {
-        entry = e;
-        break;
-      }
-    }
-    if (entry) {
-      entry.data = json;
-    }
-    else {
-      newData.push({id: id, data: json});
-    }
+    let entry = newData.find(e => e.id==id);
+    if (entry) entry.data = json;
+    else newData.push({id: id, data: json})
     setData(() => {
-      return [...newData]
+      return [...newData];
     });
+  }
+
+  /**
+   * Event handler for selecting a new job
+   * @param {MouseEvent}  event The mouse event
+   * @param {int}         id    The ID of the card that was interacted with
+   */
+  function handleJobChange(event, id) {
+    let job = event.target.value;
+    let newSelectedJobs = selectedJobs;
+    let jobEntry = newSelectedJobs.find(e => e.id==id);
+    if (jobEntry) jobEntry.job = job;
+    else newSelectedJobs.push({id: id, job: job});
+    setSelectedJobs(newSelectedJobs);
+
+    let demandEntry = selectedDemands.find(e => e.id==id);
+    if (!demandEntry) return;
+    query(demandEntry.demand, job, id);
+  }
+
+  /**
+   * @param {MouseEvent}  event The mouse event
+   * @param {int}         id    The ID of the card interacted with
+   */
+   function handleSubmit (event, id) {
+    let allButtons = document.getElementsByClassName('is-link')
+    for (let button of allButtons) {
+      button.className = "card-footer-item button is-primary mx-3"
+    }
+    event.target.className = "card-footer-item button is-link mx-3";
+
+    let demand = event.target.innerHTML;
+    let demandEntry = selectedDemands.find(e => e.id==id);
+    if (demandEntry && demand == demandEntry.demand) return;
+    updateDemands(id, demand);
+
+    let jobEntry = selectedJobs.find(e => e.id==id)
+    if (!jobEntry) {
+      console.error('[handleSubmit] Could not find job at id:', id);
+      return;
+    }
+
+    if (demand == 'Degrees' || demand == 'Education') {
+      subheader.current.innerHTML = `${demand}`;
+    } else {
+      subheader.current.innerHTML = `Top 20 ${demand}`;
+    }
+    
+    query(demand, jobEntry.job, id);
   }
 
   return (
     <div>
       <section className="section">
-        {/* <button id="submitButton" className="button is-primary mb-5 has-text-centered" onClick={addCard} disabled={checkDisable}>
-          <span className="icon"><i className="fa fa-plus"></i></span>
-          <span className="newCardButton">New Card</span>
-        </button> */}
-        <div id="initCardSet"className="cards-wrapper">
+        <div className="cards-wrapper">
           {cards}
         </div>
-        <br/><br/>
       </section>
-      <br/><br/>
     </div>
   )
 }
-
-/**
- * @return {object} JSX
- */

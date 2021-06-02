@@ -1,6 +1,6 @@
-/* 
-  Database connection
-*/
+/**
+ * Database connection
+ */
 const {Pool} = require('pg');
 
 const pool = new Pool({
@@ -11,21 +11,14 @@ const pool = new Pool({
     port: 5432,
 });
 
-/* 
-  connecting to db,  removed db disconnection
-*/
 pool.connect();
 
-/*
-  Queries
-  - dbGetAll is the actual query, which gets called by table_data to ensure
-  - that data is retrieved, and returns 200 or 404 or others.
-  - table_data has function getAll, which is called in app.js for path
-  - that path is used by front end
+/**
+ * Exeucutes the passed in query
+ * @param   {String}  query SQL statement to be executed
+ * @return  {Array}   Query result in JSON format
  */
-
 exports.dbGet = async (query) => {
-  
   const q = {
     text: query,
     values: []
