@@ -28,13 +28,13 @@ test('Title', async () => {
 });
 
 
-test('New Card Btn',async () => {
-  const page = await browser.newPage();
-  await page.goto('http://localhost:3000/');
-  const elem = await page.$(".newCardButton");
-  const text = await page.evaluate(element => element.textContent, elem);
-  expect(text).toBe("New Card");
-});
+// test('New Card Btn',async () => {
+//   const page = await browser.newPage();
+//   await page.goto('http://localhost:3000/');
+//   const elem = await page.$(".newCardButton");
+//   const text = await page.evaluate(element => element.textContent, elem);
+//   expect(text).toBe("New Card");
+// });
 
 test('empty pie',async () => {
   const page = await browser.newPage();
