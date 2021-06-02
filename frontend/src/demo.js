@@ -31,7 +31,7 @@ export default function Demo() {
   const initialJob = 'Web Developer';
   const [selectedDemands, setSelectedDemands] = useState([]);
   const [selectedJobs, setSelectedJobs] = useState([]);
-  const [ data, setData] = useState([]);
+  const [data, setData] = useState([]);
   const [checkDisable, setDisable] = useState(false);
   const [currID, setCurrID] = useState(-1);
   const [cards, setCards] = useState([]);
@@ -230,6 +230,7 @@ export default function Demo() {
   }
 
   /**
+   * Event handler for clicking a demand button
    * @param {MouseEvent}  event The mouse event
    * @param {int}         id    The ID of the card interacted with
    */
