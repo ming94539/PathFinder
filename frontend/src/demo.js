@@ -3,6 +3,9 @@ import piechart from './piechart';
 import './style.css';
 
 // https://stackoverflow.com/questions/55724642/react-useeffect-hook-when-only-one-of-the-effects-deps-changes-but-not-the-oth
+/**
+ * 
+ */
 const useEffectWhen = (effect, deps, whenDeps) => {
   const whenRef = useRef(whenDeps || []);
   const initial = whenRef.current === whenDeps;
@@ -16,6 +19,7 @@ const useEffectWhen = (effect, deps, whenDeps) => {
     whenDepsChanged ? deps : nullDeps
   );
 };
+
 
 export default function Demo() {
   const initialDemand = 'Languages';
@@ -74,7 +78,7 @@ export default function Demo() {
     }
 
     if (demand == 'Degrees' || demand == 'Education') {
-      subheader.current.innerHTML = '&nbsp';
+      subheader.current.innerHTML = `${demand}`;
     } else {
       subheader.current.innerHTML = `Top 20 ${demand}`;
     }
@@ -111,7 +115,7 @@ export default function Demo() {
     });
   }
 
-  const addCard = () => {
+  function addCard() {
     setCards(prevCards => {
       return ([
         ...prevCards,
@@ -183,6 +187,7 @@ export default function Demo() {
     query(demandEntry.demand, job, id);
   }
 
+
   function newCard (id) {
     return (
       <div className="card mx-6" key={id}>
@@ -206,31 +211,25 @@ export default function Demo() {
           </div>
         </header>
         <div className="box">
-          <div ref={subheader}>Top 20 Languages</div>
-          {/* {subheader.current} */}
-          {/* <h1 className="subtitle">Top 20 {selectedDemands.find(e=>e.id==id).demand}</h1> */}
+          <div ref={subheader} className="subtitle">Top 20 Languages</div>
           <div id={`pie${id}`}></div>
         </div>
           <div className="card-content">
         </div>
-        {/* TODO: Change selected button color */}
         <footer className="card-footer">
           {buttons.find(e => e.id==id).buttons}
-          {/* <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Languages</button>
-          <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Skills</button>
-          <button className="card-footer-item button is-primary mx-3" onClick={event => {handleSubmit(event, id)}}>Degrees</button> */}
         </footer>
       </div>
     );
   };
 
-  // When data is updated
+  // Update chart on data update
   useEffect(() => {
     const updateEvt = new CustomEvent('chartUpdate', {detail: data});
     document.dispatchEvent(updateEvt);
   });
 
-  // When a new data entry added
+  // Draw new chart when a new data entry is added
   useEffectWhen(() => {
     if (currID >= 0) {
       setCards(prevCards => {return [...prevCards]});
