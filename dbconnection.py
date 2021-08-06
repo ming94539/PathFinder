@@ -6,10 +6,10 @@ class DBConnection(object):
     def __init__(self):
         """Initialize DBConnection object to interact with database"""
         
-        user='acraig1225'
-        pw='#$%cse115a#$%'
-        host='highlanderdb.cjnqiycyzhsl.us-east-2.rds.amazonaws.com'
-        db_name='testing'
+        user='user'
+        pw='password'
+        host='rds.amazonaws.com'
+        db_name='database'
         conn_string = f"postgresql://{user}:{pw}@{host}/{db_name}"
 
         self.engine = create_engine(conn_string, 
