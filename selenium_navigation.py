@@ -77,9 +77,9 @@ class Crawler:
         browser.set_window_size(1920, 1080)
         browser.get("https://www.linkedin.com")
         username = browser.find_element_by_id("session_key")
-        username.send_keys("mjeng@ucsc.edu")
+        username.send_keys("linkedinuser")
         password = browser.find_element_by_id("session_password")
-        password.send_keys("CSE115Project")
+        password.send_keys("linkedinpassword")
 
         login_button=browser.find_element_by_class_name("sign-in-form__submit-button")
         login_button.click()
