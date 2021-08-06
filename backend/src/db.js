@@ -4,10 +4,10 @@
 const {Pool} = require('pg');
 
 const pool = new Pool({
-  user: 'acraig1225',
-    host: 'highlanderdb.cjnqiycyzhsl.us-east-2.rds.amazonaws.com',
+  user: 'user',
+    host: 'rds.amazonaws.com',
     database: 'testing',
-    password: '#$%cse115a#$%',
+    password: 'password',
     port: 5432,
 });
 
