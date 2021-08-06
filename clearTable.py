@@ -5,9 +5,9 @@
 from sqlalchemy import create_engine, text
 import sys
 
-user='acraig1225'
-pw='#$%cse115a#$%'
-host='highlanderdb.cjnqiycyzhsl.us-east-2.rds.amazonaws.com'
+user='user'
+pw='password'
+host='rds.amazonaws.com'
 db_name='testing'
 conn_string = f"postgresql://{user}:{pw}@{host}/{db_name}"
 engine = create_engine(conn_string)
