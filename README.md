@@ -1,6 +1,6 @@
 # PathFinder
 
-New website is on Pathfinder.fyi 
+New website is on https://pathfinder.fyi/
 
 # Frontend:
 
