@@ -1,5 +1,6 @@
 # PathFinder
 
+New website is on Pathfinder.fyi 
 
 # Frontend:
 
